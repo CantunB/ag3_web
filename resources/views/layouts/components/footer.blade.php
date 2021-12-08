@@ -111,13 +111,13 @@
 </footer>  --}}
 <footer>
 
-    <div class="container__footer">
+    <div class="container__footer text-center">
         <div class="box__footer">
             <div class="logo">
                 <img src="{{ asset('assets/images/logo.png') }}" alt=""  >
             </div>
             <div class="terms">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas impedit cum cumque velit libero officiis quam doloremque reprehenderit quae corporis! Delectus architecto officia praesentium atque laudantium, nam deleniti sapiente deserunt.</p>
+                <p>AG3 VIP Luxury es una empresa lider en el transporte de lujo, con vehiculos equipados para cada ocasion o la necesidad que tengas</p>
             </div>
         </div>
         <div class="box__footer">
@@ -128,14 +128,16 @@
             <a href="#">{{ __('serv_abi') }}</a>
         </div>
 
-        {{-- <div class="box__footer">
-            <h2>Compañia</h2>
+        <div class="box__footer">
+            <h2>{{ __('compañia') }}</h2>
             <a href="about">Acerca de</a>
             <a href="services">Servicios</a>
-        </div> --}}
+            <a href="services">Servicios</a>
+
+        </div>
 
         <div class="box__footer">
-            <h2>Redes Sociales</h2>
+            <h2>{{ __('redes_soc') }}</h2>
             <a href="#"> <i class="fab fa-facebook-square"></i> Facebook</a>
             <a href="#"><i class="fab fa-twitter-square"></i> Twitter</a>
             <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
@@ -145,6 +147,6 @@
 
     <div class="box__copyright">
         <hr>
-        <p>Todos los derechos reservados © 2021 <b>StigmaCode</b></p>
+        <p>Todos los derechos reservados © 2021 <b><a style="text-decoration:none" href="https://www.stigmacode.com/">StigmaCode</a></b></p>
     </div>
 </footer>

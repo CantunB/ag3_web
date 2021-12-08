@@ -5,9 +5,14 @@
                 <div class="home_search_container">
                     <div class="home_search_title">Search for your trip</div>
                     <div class="home_search_content">
-                        <form action="#" class="home_search_form" id="home_search_form">
+                        <form action="search_form" class="home_search_form" id="home_search_form">
                             <div
-                                class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+                                class=" d-flex
+                                    flex-lg-row
+                                    flex-column
+                                    align-items-start
+                                    justify-content-lg-between
+                                    justify-content-start">
                                         <input type='text'
                                             placeholder='{{ __('hoteles') }}'
                                             class='search_input search_input_hotel flexdatalist_hotels'
@@ -15,7 +20,7 @@
                                             data-search-in='hotel'
                                             data-selection-required='true'
                                             data-min-length='1'
-                                            name='country_name_required_selection'>
+                                            name='country_name_required_selection' required="required">
                                         <input type='text'
                                             placeholder='{{ __('aerolineas') }}'
                                             class='search_input search_input_airlines flexdatalist_airlines'
@@ -23,19 +28,21 @@
                                             data-search-in='airline'
                                             data-selection-required='true'
                                             data-min-length='1'
-                                            name='country_name_required_selection'>
-                                {{-- <input type="text" class="search_input search_input_2" placeholder="Departure"
-                                    required="required"> --}}
-                                <input type="text" class="search_input search_input_3 selector" placeholder="{{ __('fecha') }}"
+                                            name='country_name_required_selection' required="required">
+                                <input type="text"
+                                    class="search_input search_input_3 selector"
+                                    placeholder="{{ __('fecha') }}"
                                     required="required">
-                                <input type="text" class="search_input search_input_3 timer" placeholder="{{ __('hora') }}"
+                                <input type="text"
+                                    class="search_input search_input_3 timer"
+                                    placeholder="{{ __('hora') }}"
                                     required="required">
-                                <input type="text" class="search_input search_input_4" placeholder="{{ __('passenger') }}"
+                                <input type="text"
+                                    class="search_input search_input_4"
+                                    placeholder="{{ __('passenger') }}"
                                     required="required">
-
-                                <button class="home_search_button">{{ __('buscar') }}</button>
+                                    <button class="home_search_button">{{ __('buscar') }}</button>
                             </div>
-
                         </form>
                     </div>
                 </div>

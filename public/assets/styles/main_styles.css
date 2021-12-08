@@ -107,10 +107,6 @@ p a:hover::after
 {
 	opacity: 0.2;
 }
-::selection
-{
-
-}
 p::selection
 {
 
@@ -584,7 +580,7 @@ section
 }
 .home_title h2
 {
-	font-size: 100px;
+	font-size: 75px;
 	line-height: 1.1;
 	font-weight: 400;
 	color: #FFFFFF;
@@ -693,8 +689,8 @@ section
 {
 	width: 100%;
 	background: #FFFFFF;
-	padding-top: 18px;
-	padding-bottom: 18px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	padding-left: 67px;
 	padding-right: 83px;
 }
@@ -832,6 +828,19 @@ section
 	font-size: 18px;
 	color: #181818;
 	font-weight: 400;
+}
+
+/*********************************
+8. Reservation
+*********************************/
+.reservation{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.reservation_car{
+    padding-top: 5%;
 }
 
 /*********************************

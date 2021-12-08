@@ -25,4 +25,7 @@ class Controller extends BaseController
         return abort(404);
     }
 
+    public function reservation(Request $request){
+        return view('reservation');
+    }
 }

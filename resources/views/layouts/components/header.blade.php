@@ -11,7 +11,7 @@
                         <nav class="main_nav">
                             <ul class="d-flex flex-row align-items-start justify-content-start">
                                 <li class="active"><a href="#index">{{ __('inicio') }}</a></li>
-                                <li><a href="#reservation">{{ __('reservacion') }}</a></li>
+                                <li><a href="{{ route('reservation', app()->getLocale()) }}">{{ __('reservacion') }}</a></li>
                                 <li><a href="#about">{{ __('acerca') }}</a></li>
                                 <li><a href="#services">{{ __('servicios') }}</a></li>
                                 <li><a href="#contact">{{ __('contacto') }}</a></li>
@@ -21,7 +21,6 @@
                                         link-en ="{{ route(Route::currentRouteName(), 'en') }}"
                                         link-fr ="{{ route(Route::currentRouteName(), 'fr') }}"
                                         link-es ="{{ route(Route::currentRouteName(), 'es') }}"
-
                                     ></language-switcher>
                                 </li>
                             </ul>
@@ -68,6 +67,7 @@
     <div class="menu_content">
         <ul>
             <li><a href="#index">{{ __('inicio') }}</a></li>
+            <li><a href="{{ route('reservation', app()->getLocale()) }}">{{ __('reservacion') }}</li>
             <li><a href="#about">{{ __('acerca') }}</a></li>
             <li><a href="#services">{{ __('servicios') }}</a></li>
             <li><a href="#contact">{{ __('contacto') }}</a></li>
