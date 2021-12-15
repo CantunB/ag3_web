@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
-Route::redirect('/', 'es');
+Route::redirect('/', 'es')->name('main');
 
 Route::group([
     'prefix' => '{language}',

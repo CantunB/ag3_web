@@ -10,7 +10,7 @@
                         </div>
                         <nav class="main_nav">
                             <ul class="d-flex flex-row align-items-start justify-content-start">
-                                <li class="active"><a href="#index">{{ __('inicio') }}</a></li>
+                                <li class="active"><a href="{{ route('index',app()->getLocale()) }}">{{ __('inicio') }}</a></li>
                                 {{-- <li><a href="{{ route('reservation', app()->getLocale()) }}">{{ __('reservacion') }}</a></li> --}}
                                 <li><a href="#about">{{ __('acerca') }}</a></li>
                                 <li><a href="#services">{{ __('servicios') }}</a></li>
@@ -66,7 +66,7 @@
     </div>
     <div class="menu_content">
         <ul>
-            <li><a href="#index">{{ __('inicio') }}</a></li>
+            <li><a href="{{ route('index',app()->getLocale()) }}">{{ __('inicio') }}</a></li>
             {{-- <li><a href="{{ route('reservation', app()->getLocale()) }}">{{ __('reservacion') }}</li> --}}
             <li><a href="#about">{{ __('acerca') }}</a></li>
             <li><a href="#services">{{ __('servicios') }}</a></li>

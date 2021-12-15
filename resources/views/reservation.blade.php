@@ -123,7 +123,7 @@
                                             <li><p><i style="color: lime" class="fas fa-check"></i> TRAVEL INSURANCE</p></li>
                                         </ul>
                                         <h4 class="p-1 text-center text-dark">$40.00 USD</h4>
-                                        <button type="button" class="btn btn-primary">RESERVAR</button>
+                                        <a href="{{ route('booking', app()->getLocale()) }}" type="button" class="btn btn-primary">RESERVAR</a>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -137,7 +137,7 @@
                                             <li><p><i style="color: lime" class="fas fa-check"></i> INSURANCE</p></li>
                                         </ul>
                                         <h4 class="p1- text-center text-dark">$75.00 USD</h4>
-                                        <button type="button" class="btn btn-success aling-center">RESERVAR</button>
+                                        <a href="{{ route('booking', app()->getLocale()) }}" type="button" class="btn btn-success aling-center">RESERVAR</a>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +184,7 @@
                                         <li><p><i style="color: lime" class="fas fa-check"></i> TRAVEL INSURANCE</p></li>
                                     </ul>
                                     <h4 class="p-1 text-center text-dark" >$65.00 USD</h4>
-                                    <button type="button" class="btn btn-primary">RESERVAR</button>
+                                    <a href="{{ route('booking', app()->getLocale()) }}" type="button" class="btn btn-primary">RESERVAR</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -198,7 +198,7 @@
                                         <li><p><i style="color: lime" class="fas fa-check"></i> INSURANCE</p></li>
                                     </ul>
                                     <h4 class="p-1 text-center text-dark" >$105.00 USD</h4>
-                                    <button type="button" class="btn btn-success">RESERVAR</button>
+                                    <a href="{{ route('booking', app()->getLocale()) }}" type="button" class="btn btn-success">RESERVAR</a>
                                 </div>
                             </div>
                         </div>
