@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Airline;
+use App\Models\Hotel;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Controller extends BaseController
 {
@@ -19,13 +22,31 @@ class Controller extends BaseController
      */
     public function index(Request $request)
     {
-        if (view()->exists($request->path())) {
-            return view($request->path());
-        }
-        return abort(404);
+        //$airlines = DB::table('airlines')->groupBy('airline');
+        $airlines = Airline::groupBy('airline')->get();
+        $hoteles = Hotel::all();
+        //$hoteles = DB::table('hotels')->first();
+        return view('layouts.master', compact('airlines','hoteles'));
+        // if (view()->exists($request->path())) {
+
+        //     return view($request->path());
+        // }
+        // return abort(404);
     }
 
-    public function reservation(Request $request){
-        return view('reservation');
+
+    public function booking(Request $request, $reservation)
+    {
+        $reservation = $reservation;
+        return view('booking', compact('reservation'));
     }
+
+    public function CreateBooking(Request $request)
+    {
+        return $request->all();
+        return view('booking', compact('reservation'));
+    }
+
 }
+
+

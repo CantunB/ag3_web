@@ -86,7 +86,7 @@
             @include('layouts.components.searcher')
 
             <div  class="mt-5 container  shadow-lg rounded">
-            <h4>List of service available for your Arrival transportation to Park Royal Beach Cancún for 1 Passengers</h4>
+            <h4>List of service available for your Arrival transportation to {{ $destino }} for {{ $passengers }} Passengers</h4>
 
                 <div class="row">
                         <div class="mt-4 mb-4 col-md-4 shadow text-center">
