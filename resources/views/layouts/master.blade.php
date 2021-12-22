@@ -7,6 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="AG3 Landing page">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
     @include('layouts.components.css')
 </head>
     <body>
@@ -326,13 +328,7 @@
                     </div>
                 </div>
             </div>
-            @hasSection('contact')
-                <div class="pull-right">
-                    @yield('contact')
-                </div>
-
-                <div class="clearfix"></div>
-            @endif
+            @include('contact')
             <br>
             <br>
             @include('layouts.components.footer')

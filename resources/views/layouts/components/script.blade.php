@@ -1,6 +1,6 @@
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('assets/styles/bootstrap4/popper.js') }}"></script>
     <script src="{{ asset('assets/styles/bootstrap4/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js') }}"></script>
@@ -11,30 +11,64 @@
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('assets/js/parsley.min.js') }}"></script>
     <script src="{{ asset('assets/js/parsley.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('assets/js/jquery.spinner.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="{{ mix('/js/app.js') }}"></script>
-<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-
-    <script src="https://www.paypal.com/sdk/js?client-id=AZfbozolttQGU4sqSlcmNdK6b3BTPv4YatStoNybGLwfksLwUYgeO2y1Ufq2miZqy31Hr-FXWpMeKDJO"></script>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AYh6SsC21DLPKSQlkxE4XEPxcTq6-UDo_S6xtbD0Q3l2FH1EUEoTkvPbx0YC0NWktEm1NqjhR2FhxHCT&components=buttons&currency=MXN&locale=es_MX"></script>
     <script>
+        var price = $("#price").val();
         paypal.Buttons({
             createOrder: function(data, actions) {
               // This function sets up the details of the transaction, including the amount and line item details.
-              return actions.order.create({
+            return actions.order.create({
                 purchase_units: [{
-                  amount: {
-                    value: '80.00'
-                  }
+                    amount: {
+                    value: price
+                    }
                 }]
-              });
+                });
             },
             onApprove: function(data, actions) {
               // This function captures the funds from the transaction.
               return actions.order.capture().then(function(details) {
                 // This function shows a transaction success message to your buyer.
-                alert('Transaction completed by ' + details.payer.name.given_name);
+                //alert('Transaction completed by ' + details.payer.name.given_name);
+                $.ajax({
+                    type: "POST",
+                    url: "{!! route('payment',app()->getLocale()) !!}",
+                    data:  $("#booking_form").serialize(),
+                    dataType: "json",
+                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+
+                    success: function(response){
+                       //console.log('Formulario enviado');
+                        Swal.fire({
+                            title: "Reservacion!",
+                            text: response.data,
+                            icon: "success",
+                            timer: 3500
+                        });
+                    //window.location = '{!! route('index',app()->getLocale()) !!}';
+                    },
+                    error: function(response){
+                        console.log(response);
+                        var errors = response.responseJSON;
+                        errorsHtml = '<ul>';
+                        $.each(errors.errors,function (k,v) {
+                        errorsHtml += '<li>'+ v + '</li>';
+                        });
+                        errorsHtml += '</ul>';
+                        Swal.fire({
+                            title: "Ooops!",
+                            html: errorsHtml,
+                            icon: "error",
+                            confirmButtonText: "Volver!",
+                        });
+                    }
+                });
               });
             }
           }).render('#paypal-button-container');
@@ -43,34 +77,34 @@
     <script>
         var numberSpinner = (function() {
             $('.number-spinner>.ns-btn>a').click(function() {
-              var btn = $(this),
+            var btn = $(this),
                 oldValue = btn.closest('.number-spinner').find('input').val().trim(),
                 newVal = 0;
 
-              if (btn.attr('data-dir') === 'up') {
+            if (btn.attr('data-dir') === 'up') {
                 newVal = parseInt(oldValue) + 1;
-              } else {
+            } else {
                 if (oldValue > 1) {
-                  newVal = parseInt(oldValue) - 1;
+                    newVal = parseInt(oldValue) - 1;
                 } else {
-                  newVal = 1;
+                    newVal = 1;
                 }
-              }
-              btn.closest('.number-spinner').find('input').val(newVal);
+            }
+                btn.closest('.number-spinner').find('input').val(newVal);
             });
             $('.number-spinner>input').keypress(function(evt) {
-              evt = (evt) ? evt : window.event;
-              var charCode = (evt.which) ? evt.which : evt.keyCode;
-              if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                evt = (evt) ? evt : window.event;
+                var charCode = (evt.which) ? evt.which : evt.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
                 return false;
-              }
-              return true;
+            }
+            return true;
             });
-          })();
+        })();
     </script>
     <script>
         $(".selector").flatpickr({
-            minDate: "today"
+            minDate: "today",
         });
         $(".timer").flatpickr({
             enableTime: true,
@@ -90,150 +124,170 @@
         $('#contact_form').parsley();
     </script>
     <script>
-        $(document).ready(function () {
-            $(".form-spinner input").each(function (i, spinner) {
-                if ($(this).data("type") === "text") {
-                    let index = $(this).data("spinner-index") || 0;
-                    let items = $(this).data("spinner-items");
-
-                    $(this).val(items[index]);
-                }
-            });
-
-            $(".form-spinner .btn-increment").click(function () {
-                let $this		= $(this);
-                let input		= $this.siblings("input");
-
-                if (input.data("type") === "number") {
-                    let step		 = input.attr("step");
-                    let oldValue = input.val();
-                    let newValue = parseInt(oldValue) + parseInt(step || 1);
-                    let maxValue = input.attr("max");
-                    let minValue = input.attr("min");
-
-                    if (!maxValue || newValue <= maxValue)
-                        input.val(newValue);
-                    else if (input.data("spinner-loop"))
-                        input.val(minValue);
-                    else
-                        input.val(maxValue);
-                } else if (input.data("type") === "text") {
-                    let oldIndex = input.data("spinner-index") || 0;
-                    let items 	 = input.data("spinner-items");
-                    let newIndex = oldIndex + 1;
-
-                    if (newIndex < items.length) {
-                        input.val(items[newIndex]);
-                        input.data("spinner-index", newIndex);
-                    } else if (input.data("spinner-loop")){
-                        input.val(items[0]);
-                        input.data("spinner-index", 0);
-                    }
-               }
-
-            });
-            $(".form-spinner .btn-decrement").click(function () {
-                let $this		= $(this);
-                let input		= $this.siblings("input");
-
-                if (input.data("type") === "number") {
-                    let step		 = input.attr("step");
-                    let oldValue = input.val();
-                    let newValue = parseInt(oldValue) - parseInt(step || 1);
-                    let maxValue = input.attr("max");
-                    let minValue = input.attr("min");
-
-                    if (!minValue || newValue >= minValue)
-                        input.val(newValue);
-                    else if (input.data("spinner-loop"))
-                        input.val(maxValue);
-                    else
-                        input.val(minValue);
-                } else if (input.data("type") === "text") {
-                    let oldIndex = input.data("spinner-index") || 0;
-                    let items 	 = input.data("spinner-items");
-                    let newIndex = oldIndex - 1;
-
-                    if (newIndex >= 0) {
-                        input.val(items[newIndex]);
-                        input.data("spinner-index", newIndex);
-                    } else if (input.data("spinner-loop")){
-                        input.val(items[items.length - 1]);
-                        input.data("spinner-index", items.length - 1);
-                    }
-                }
-            });
-        });
-    </script>
-    <script>
         $(document).ready(function(){
+            $("#date").removeAttr("readonly", false);
+            $("#pickup").removeAttr("readonly", false);
+            $("#time_comeback").removeAttr("readonly", false);
+            $("#date_comeback").removeAttr("readonly", false);
             $("#date_comeback").hide();
             $("#time_comeback").hide();
-            $('#retorno').on('change',function(){
+            /* $('#retorno').on('change',function(){
             if (this.checked) {
                 $("#date_comeback").show();
                 $("#time_comeback").show();
             } else {
                 $("#date_comeback").hide();
                 $("#time_comeback").hide();
-
             }
-            })
+            }) */
+            $('#services').on('change',function(){
+                if ($("#services option:selected").val() == 4) {
+                    $("#date_comeback").show();
+                    $("#time_comeback").show();
+                } else {
+                    $("#date_comeback").hide();
+                    $("#time_comeback").hide();
+                }
+                })
         });
     </script>
     <script>
         $(document).ready(function(){
-            $('.origen').select2({
-                placeholder: "Selecciona una aerolinea",
-                theme: "classic",
+
+            $('#services').select2({
+                placeholder: "Selecciona un servicio",
+                theme: 'bootstrap4',
             });
-            $('.destino').select2({
-                placeholder: "Selecciona una aerolinea",
-                theme: "classic",
-            });
-            jQuery(".origen_airline").select2().next().hide();
-            jQuery(".destino_hotel").select2().next().hide();
             jQuery(".origen_hotel").select2().next().hide();
-            jQuery(".destino_airline").select2().next().hide();
-            $('#form_search input').on('change', function() {
-                var service = $('input[name=service]:checked', '#form_search').val();
+            jQuery(".destino_hotel").select2().next().hide();
+            $(".origen_airline").hide();
+            $(".destino_airline").hide();
+
+            $('#retorno').prop('checked', false);
+
+            $('#form_search select').on('change', function() {
+                var service = $("#services option:selected").val();
+                //alert(service);
                 switch(service){
-                    case('Llegadas'):
-                        $('.origen_airline').select2({
-                            placeholder: "Selecciona una aerolinea",
-                            theme: "classic",
-                        });
-
+                    case('1'):
+                    /** AEROPUERTO A HOTEL */
+                        $(".origen_airline").show();
                         $('.destino_hotel').select2({
-                            placeholder: "Selecciona una aerolinea",
-                            theme: "classic",
-                        });
+                            placeholder: "Selecciona un hotel",
+                            theme: 'bootstrap4',
 
-                        jQuery(".origen").select2().next().hide();
-                        jQuery(".destino").select2().next().hide();
+                        });
                         jQuery(".origen_hotel").select2().next().hide();
-                        jQuery(".destino_airline").select2().next().hide();
+                        $('#retorno').attr("disabled",true).prop('checked', false);
+                        $(".destino_airline").attr("disabled",true).hide();
                         break;
-                    case('Salidas'):
+                    case('2'):
+                    /** HOTEL AL AEROPUERTO */
                         $('.origen_hotel').select2({
-                            placeholder: "Selecciona una aerolinea",
-                            theme: "classic",
+                            placeholder: "Selecciona un hotel",
+                            theme: 'bootstrap4',
 
                         });
-                        $('.destino_airline').select2({
-                            placeholder: "Selecciona una aerolinea",
-                            theme: "classic",
-                        });
+                        $(".destino_airline").show();
+                        $(".origen_airline").attr("disabled",true).hide();
 
-                        jQuery(".origen").select2().next().hide();
-                        jQuery(".destino").select2().next().hide();
-                        jQuery(".origen_airline").select2().next().hide();
+
                         jQuery(".destino_hotel").select2().next().hide();
+                        $('#retorno').attr("disabled",true).prop('checked', false);
+
+                        break;
+                    case('3'):
+                    /** HOTEL AL HOTEL */
+                        $('.origen_hotel').select2({
+                            placeholder: "Selecciona un hotel",
+                            theme: 'bootstrap4',
+
+                        });
+                        $('.destino_hotel').select2({
+                            placeholder: "Selecciona un hotel",
+                            theme: 'bootstrap4',
+
+                        });
+                        $(".origen_airline").attr("disabled",true).hide();
+                        $(".destino_airline").attr("disabled",true).hide();
+                        $('#retorno').attr("disabled",true).prop('checked', false);
+
+                        break;
+                    case('4'):
+                    /** AEROPUERTO A HOTEL AL AEROPUERTO */
+                        $('.destino_hotel').select2({
+                            placeholder: "Selecciona un hotel",
+                            theme: 'bootstrap4',
+
+                        });
+                        $(".origen_airline").attr("disabled",false).hide();
+                        $(".destino_airline").attr("disabled",true).hide();
+                        $('#retorno').prop('checked', true);
                         break;
                 }
             });
         });
     </script>
-@yield('scripts')
+    <script>
+        $(document).ready(function(){
+            $('#countries').select2({
+                placeholder: "Selecciona un pais",
+                theme: 'bootstrap4',
 
+            });
+            $('#states').select2({
+                placeholder: "Selecciona un estado",
+                theme: 'bootstrap4',
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#countries').on('change', function () {
+                var idCountry = this.value;
+                $("#states").html('');
+                $.ajax({
+                    url: "{{route('fetchState', app()->getLocale())}}",
+                    type: "POST",
+                    data: {
+                        country_id: idCountry,
+                        _token: '{{csrf_token()}}'
+                    },
+                    dataType: 'json',
+                    success: function (result) {
+                        $('#states').html('<option value="">Select State</option>');
+                        $.each(result.states, function (key, value) {
+                            $("#states").append('<option value="' + value
+                                .id + '">' + value.name + '</option>');
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // bind parsley to the form
+            $("#booking_form").parsley();
+
+            // on form submit
+            $("#booking_form").on('submit', function(event) {
+                // validate form with parsley.
+                $(this).parsley().validate();
+
+                // if this form is valid
+                if ($(this).parsley().isValid()) {
+                    // show alert message
+                    $('.btnPayment').click(function(){
+                        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+                    });
+                }
+
+                // prevent default so the form doesn't submit. We can return true and
+                // the form will be submited or proceed with a ajax request.
+                event.preventDefault();
+            });
+        });
+    </script>
 

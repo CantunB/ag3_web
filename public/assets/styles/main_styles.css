@@ -96,7 +96,7 @@ a, a:hover, a:visited, a:active, a:link
 p a:active
 {
 	position: relative;
-	color: #FF6347;
+	color: #000000;
 }
 p a:hover
 {
@@ -135,7 +135,7 @@ h6::selection
 }
 .form-control
 {
-	color: #db5246;
+	color: #000000;
 }
 section
 {
@@ -697,14 +697,13 @@ section
 .search_input
 {
 	height: 50px;
-	background: #f2f5f6;
 	border: none;
 	outline: none;
 	padding-left: 17px;
 	font-family: 'Oswald', sans-serif;
 	font-size: 14px !important;
 	font-weight: 500 !important;
-	color: #72728c !important;
+	color: #ffffff !important;
 }
 .search_input_hotel
 {
@@ -728,6 +727,10 @@ section
 .search_input_6
 {
 	width: 15%;
+}
+.checkmark
+{
+	width: 18%;
 }
 
 .search_input_text

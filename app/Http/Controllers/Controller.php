@@ -33,20 +33,6 @@ class Controller extends BaseController
         // }
         // return abort(404);
     }
-
-
-    public function booking(Request $request, $reservation)
-    {
-        $reservation = $reservation;
-        return view('booking', compact('reservation'));
-    }
-
-    public function CreateBooking(Request $request)
-    {
-        return $request->all();
-        return view('booking', compact('reservation'));
-    }
-
 }
 
 

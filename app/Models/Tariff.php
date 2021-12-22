@@ -13,12 +13,22 @@ class Tariff extends Model
     public $timestamps = false;
 
     /**
-     * Get the user that owns the Tariff
+     * Get the Type Unit that owns the Tariff
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function units(): BelongsTo
+    public function type_unit(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'foreign_key', 'other_key');
+        return $this->belongsTo(TypeUnit::class, 'type_unit_id', 'id');
+    }
+
+    /**
+     * Get the Type Trip that owns the Tariff
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function type_trip(): BelongsTo
+    {
+        return $this->belongsTo(TypeTrip::class, 'type_trip_id', 'id');
     }
 }

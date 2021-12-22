@@ -7,11 +7,12 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class MessageReceived extends Mailable
+class BookingMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $msg;
+
     /**
      * Create a new message instance.
      *
@@ -29,7 +30,8 @@ class MessageReceived extends Mailable
      */
     public function build()
     {
-        return $this->subject('Solicitud de Contacto AG3 Luxury Travel')
-                    ->view('emails.message_received');
+        return $this->subject('Booking Confirmation AG3 Luxury Travel')
+                    ->view('emails.booking');
+       // return $this->view('emails.booking');
     }
 }

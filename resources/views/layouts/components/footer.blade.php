@@ -109,7 +109,7 @@
     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </div>
 </footer>  --}}
-<footer>
+<footer style=" -webkit-mask-image: {{ asset('assets/images/background-footer.svg') }}">
 
     <div class="container__footer text-center">
         <div class="box__footer">
