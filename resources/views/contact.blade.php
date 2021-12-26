@@ -4,28 +4,28 @@
         <h2 class="h1-responsive font-weight-bold text-center my-4">{{ __('contactanos') }}</h2>
         <p class="text-center w-responsive mx-auto mb-5">{{ __('text_contact') }}</p>
         <div class="row">
-            <div  class="col-md-2 mb-md-0 mb-5 text-center">
+            <div  class="col-md-2 mb-md-0 mb-5 p-2 text-center">
                 <img style="width: 200px; " src="{{ asset('assets/images/icons/undraw_mail_re_duel.svg') }}">
             </div>
             <div class="col-md-8 mb-md-0 mb-5">
-                <form id="contact_form" name="contact-form" action="{{ route('email.contact', app()->getLocale()) }}" method="POST"  data-parsley-validate>
+                <form id="contact_form" name="contact-form" method="POST"  data-parsley-validate>
                     @csrf
                     <div class="row">
                         <div class="col-md-4">
                             <div class="md-form mb-0">
-                                <label style="color: black" for="name" class=""><h6>{{ __('fullname') }}</h6></label>
+                                <label style="color: black" for="name" class="mt-2"><h6>{{ __('fullname') }}</h6></label>
                                 <input type="text" id="name" name="name" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="md-form mb-0">
-                                <label style="color: black" for="email" class=""><h6>{{ __('correo') }}</h6></label>
+                                <label style="color: black" for="email" class="mt-2"><h6>{{ __('correo') }}</h6></label>
                                 <input type="email" id="email" name="email" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="md-form mb-0">
-                                <label style="color: black" for="phone" class=""><h6>{{ __('telefono') }}</h6></label>
+                                <label style="color: black" for="phone" class="mt-2"><h6>{{ __('telefono') }}</h6></label>
                                 <input type="text" data-parsley-type="digits" id="phone" name="phone" class="form-control" required>
                             </div>
                         </div>
@@ -33,15 +33,15 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="md-form mb-0">
-                                <label style="color: black" for="name" class=""><h6>{{ __('asunto') }}</h6></label>
-                                <input type="text" id="subject" name="subject" class="form-control" required>
+                                <label style="color: black" for="name" class="mt-2"><h6>{{ __('asunto') }}</h6></label>
+                                <input type="text" id="subject" name="subject" class=" form-control" required>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="md-form">
-                                <label style="color: black" for="name" class=""><h6>{{ __('mensaje') }}</h6></label>
+                                <label style="color: black" for="name" class="mt-2"><h6>{{ __('mensaje') }}</h6></label>
                                 <textarea type="text" id="content" name="content" rows="2" class="form-control md-textarea" required></textarea>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                     <br>
                     <div class="row">
                         <div class="col-md-2 text-center text-md-rigth">
-                            <button type="submit" class="btn btn-primary">Send</button>
+                            <button type="submit" class="btn btn-primary">{{ __('enviar') }}</button>
                         </div>
                     </div>
                 </form>

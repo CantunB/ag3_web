@@ -121,7 +121,47 @@
         });
     </script>
     <script>
-        $('#contact_form').parsley();
+        $(document).ready(function() {
+            $('#contact_form').parsley();
+            $("#contact_form").on('submit', function(event) {
+                $(this).parsley().validate();
+                if ($(this).parsley().isValid()) {
+                    $.ajax({
+                        type: "POST",
+                        url: "{!! route('contact',app()->getLocale()) !!}",
+                        data:  $("#contact_form").serialize(),
+                        dataType: "json",
+                        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                        success: function(response){
+                            Swal.fire({
+                                title: "Gracias por contactarnos!",
+                                text: response.data,
+                                icon: "success",
+                                timer: 3500
+                            });
+                            $('#contact_form').parsley().reset();
+                            $("#contact").hide();
+                        },
+                        error: function(response){
+                            console.log(response);
+                            var errors = response.responseJSON;
+                            errorsHtml = '<ul>';
+                            $.each(errors.errors,function (k,v) {
+                            errorsHtml += '<li>'+ v + '</li>';
+                            });
+                            errorsHtml += '</ul>';
+                            Swal.fire({
+                                title: "Ooops!",
+                                html: errorsHtml,
+                                icon: "error",
+                                confirmButtonText: "Volver!",
+                            });
+                        }
+                    });
+                }
+                event.preventDefault();
+            });
+        });
     </script>
     <script>
         $(document).ready(function(){
@@ -290,4 +330,14 @@
             });
         });
     </script>
+    <script>
+        function write_name() {
+            let name = document.getElementById("name").value;
+            let paterno = document.getElementById("paterno").value;
+            let materno = document.getElementById("materno").value;
+            //Se actualiza en municipio inm
+            document.getElementById("passenger_arrival").value = name + ' ' + paterno + ' ' + materno;
+            document.getElementById("passenger_departure").value = name + ' ' + paterno + ' ' + materno;
 
+        }
+    </script>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\BookingMail;
 use App\Models\Airline;
+use App\Models\Booking;
 use App\Models\Country;
 use App\Models\Hotel;
 use App\Models\Tariff;
@@ -109,20 +110,43 @@ class BookingController extends Controller
     {
         //return $request->all();ç
 
-        $id = IdGenerator::generate(['table' => 'invoices', 'length' => 6, 'prefix' =>'BOOk-']);
+        $id = IdGenerator::generate(['table' => 'bookings', 'length' => 8, 'prefix' =>'BOOk-']);
 
-        $todo = new Todo();
-        $todo->id = $id;
-        $todo->title = $request->get('title');
-        $todo->save();
+        $booking = new Booking();
+        $booking->id = $id;
+        $booking->name = $request->name;
+        $booking->paterno = $request->paterno;
+        $booking->materno = $request->materno;
+        $booking->email = $request->email;
+        $booking->phone = $request->phone;
+        $booking->country_id = $request->country_id;
+        $booking->state_id = $request->state_id;
+        $booking->type_service = $request->type_service;
+        $booking->origin = $request->origin;
+        $booking->destiny = $request->destiny;
+        $booking->passengers = $request->passengers;
+        $booking->date_arrival = $request->date_arrival;
+        $booking->time_arrival = $request->time_arrival;
+        $booking->round_service = $request->round_service;
+        $booking->date_departure = $request->date_departure;
+        $booking->time_departure = $request->time_departure;
+        $booking->request_unit = $request->request_unit;
+        $booking->price = $request->price;
+        $booking->type_payment = $request->type_payment;
+        $booking->status_payment = $request->status_payment;
+        $booking->status_booking = $request->status_booking;
+        $booking->save();
 
         $msg = [
             'name' => $request->name,
             'phone' => $request->phone,
             'email' => $request->email,
-            'country' => $request->country,
-            'state' => $request->state,
-
+            'service' => $request->type_service,
+            'origen' => $request->origin,
+            'destiny' => $request->destiny,
+            'passengers' => $request->passengers,
+            'unit' => $request->request_unit,
+            'price' => $request->price,
         ];
         Mail::to($request->email)->send(new BookingMail($msg));
         return response()->json(['data' => 'Su reservación se ha realizado correctamente'], 201);

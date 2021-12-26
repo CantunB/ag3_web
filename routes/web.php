@@ -14,9 +14,7 @@ Route::group([
     ], function() {
 
     Route::get('/', [Controller::class, 'index'])->name('index');
-    Route::post('contact', [ContactController::class, 'contact'])->name('email.contact');
-
-
+    Route::post('contact', [ContactController::class, 'contact'])->name('contact');
     Route::view('testimonials', 'pages.testimonialss')->name('testimonials');
     Route::view('terms', 'pages.terms')->name('terms');
     Route::view('privacy', 'pages.privacy')->name('privacy');
@@ -27,15 +25,12 @@ Route::group([
         //Route::post('/order/create',[\App\Http\Controllers\Front\PaypalPaymentController::class,'create']);
         //Route::post('/order/capture/',[\App\Http\Controllers\Front\PaypalPaymentController::class,'capture']);
     });
-
     Route::group(['prefix' => 'booking'], function(){
         Route::post('vehicles', [BookingController::class, 'vehicles'])->name('vehicles');
         Route::post('complete', [BookingController::class, 'complete'])->name('complete');
         Route::post('payment', [BookingController::class, 'payment'])->name('payment');
 
     });
-
-
     //Route::get('dependent-dropdown', [CountryStateCityController::class, 'index']);
     Route::post('getState', [CountryStateCityController::class, 'getState'])->name('fetchState');
     Route::post('getCity', [CountryStateCityController::class, 'getCity'])->name('fetchCities');

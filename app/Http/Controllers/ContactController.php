@@ -12,6 +12,6 @@ class ContactController extends Controller
     public function contact(ContactRequest $request){
         $message = $request->all();
         Mail::to('cantunberna@gmail.com')->queue(new MessageReceived($message));
-        return 'Mensaje Enviado';
+        return response()->json(['data' => 'Mensaje enviado correctamente'], 201);
     }
 }

@@ -125,7 +125,7 @@ img.g-img + div {
 	background: #000000;
 }
 .bg_dark{
-	background: rgba(0,0,0,.8);
+	background: rgb(0, 0, 0);
 }
 .email-section{
 	padding:2.5em;
@@ -302,7 +302,7 @@ ul.social li{
           			<td class="logo" style="text-align: center;">
                         <a href="http://ag3.stigmacode.com/es" class="logo logo-dark text-center">
                             <span class="logo-lg">
-                                <img src="{{ asset('assets/images/logo.png') }}" alt="AG3" height="100">
+                                <img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="AG3" height="100">
                             </span>
                         </a>
 			          </td>
@@ -316,7 +316,7 @@ ul.social li{
             	<tr>
             		<td style="padding: 0 2.5em; text-align: left;">
             			<div class="text">
-            				<h2>Ronald your booking confirmation</h2>
+            				<h2>{{ $msg['name'] }} your booking confirmation</h2>
             			</div>
             		</td>
             	</tr>
@@ -334,16 +334,20 @@ ul.social li{
 					  		<div class="product-entry">
 					  			<img src="images/prod-1.jpg" alt="" style="width: 100px; max-width: 600px; height: auto; margin-bottom: 20px; display: block;">
 					  			<div class="text">
-					  				<h3>Servicio de Aeropuerto a Hotel </h3>
-					  				<p>Aeropuerto Intenacional a Hotel X</p>
+					  				<h3>{{ $msg['service'] }}</h3>
+					  				<p>{{ $msg['origen'] }} a {{ $msg['destiny'] }}</p>
 					  				<h3>Vehiculo solicitado: </h3>
-                                    <p>Suburban para 4 pasajeros</p>
+                                    @if ($msg['unit'] == 1)
+                                    <p>SUBURBAN para {{ $msg['passengers'] }} pasajeros</p>
+                                    @else
+                                    <p>VAN para {{ $msg['passengers'] }} pasajeros</p>
+                                    @endif
 
 					  			</div>
 					  		</div>
 					  	</td>
 					  	<td valign="middle" width="20%" style="text-align:left; padding: 0 2.5em;">
-					  		<span class="price" style="color: #000; font-size: 20px;">$2400</span>
+					  		<span class="price" style="color: #000; font-size: 20px;">${{ $msg['price'] }} MXN</span>
 					  	</td>
 					  </tr>
 					  <tr>

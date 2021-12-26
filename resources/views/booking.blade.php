@@ -18,19 +18,19 @@
                 @include('layouts.components.slider')
             </div>
             <div  class="mt-5 container shadow-lg rounded">
-            <h4>Registro de informacion del pasajero para su reserva</h4>
+            <h4 class="p-5 text-center text-uppercase">Registro de informacion del pasajero para su reserva</h4>
                 <div class="container">
                     <div class="row">
                         <div class="container">
                             <ul class="nav nav-tabs  nav-fill flex-column  flex-sm-row" id="myTab" role="tablist">
-                                <li class="nav-item ">
-                                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Select your Service</a>
+                                <li class="nav-item">
+                                    <a class="nav-link text-uppercase" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">SERVICIO</a>
                                 </li>
                                 <li class="nav-item active">
-                                    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Your Information</a>
+                                    <a class="nav-link active text-uppercase" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">INFORMACION</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="payment-tab" data-toggle="tab" href="#payment" role="tab" aria-controls="contact" aria-selected="false">Complete your booking</a>
+                                    <a class="nav-link text-uppercase" id="payment-tab" data-toggle="tab" href="#payment" role="tab" aria-controls="contact" aria-selected="false">PAGOS</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">

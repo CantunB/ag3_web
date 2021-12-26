@@ -6,27 +6,27 @@
             <div class="row">
                 <div class="p-2 col-md-12">
                     <div  class="mt-5 p-3 col-md-12 bg-ligth rounded">
-                        <h4 class="text-dark text-uppercase text-center">Booking Summary</h4>
+                        <h4 class="text-dark text-uppercase text-center">RESUMEN DE RESERVA</h4>
                         <label class="mt-2 text-uppercase text-dark">Tipo de servicio</label>
-                        <input type="text" readonly class="form-control" name="service" value="{{ $service }}">
-                        <input type="hidden" readonly class="form-control" name="unit" id="unit" value="{{ $unit }}">
+                        <input type="text" readonly class="form-control" name="type_service" value="{{ $service }}">
+                        <input type="hidden" readonly class="form-control" name="request_unit" id="unit" value="{{ $unit }}">
                         <input type="hidden" readonly class="form-control" name="price" id="price" value="{{ $price }}">
                         <label class="mt-2 text-uppercase text-dark">Desde</label>
-                        <input type="text" readonly class="form-control" name="origen" value="{{ $origen }}">
+                        <input type="text" readonly class="form-control" name="origin" value="{{ $origen }}">
                         <label class="mt-2 text-uppercase text-dark">Hasta</label>
-                        <input type="text" readonly class="form-control" name="destino" value="{{ $destino }}">
+                        <input type="text" readonly class="form-control" name="destiny" value="{{ $destino }}">
                         <label class="mt-2 text-uppercase text-dark">Numero de pasajeros</label>
                         <input type="text" readonly  class="form-control" name="passengers" value="{{ $passengers }}">
                         <label class="mt-2 text-uppercase text-dark">Fecha</label>
-                        <input type="text" readonly  class="form-control" name="date" value="{{ $date }}">
+                        <input type="text" readonly  class="form-control" name="date_arrival" value="{{ $date }}">
                         <label class="mt-2 text-uppercase text-dark">Hora</label>
-                        <input type="text" readonly  class="form-control" name="pickup" value="{{ $pickup }}">
+                        <input type="text" readonly  class="form-control" name="time_arrival" value="{{ $pickup }}">
                         @if ($retorno == 'si')
                         <label class="mt-2 text-uppercase text-dark">Fecha de regreso</label>
-                        <input type="hidden" readonly class="form-control" name="retorno"  value="{{ $retorno }}">
-                        <input type="text" readonly class="form-control" name="date_comeback"  value="{{ $date_comeback }}">
+                        <input type="hidden" readonly class="form-control" name="round_service"  value="{{ $retorno }}">
+                        <input type="text" readonly class="form-control" name="date_departure"  value="{{ $date_comeback }}">
                         <label class="mt-2 text-uppercase text-dark">Hora de regreso</label>
-                        <input type="text" readonly class="form-control" name="time_comeback" value="{{ $time_comeback }}">
+                        <input type="text" readonly class="form-control" name="time_departure" value="{{ $time_comeback }}">
                         @endif
                         <label class="mt-2 text-uppercase text-dark">Total</label>
                         <h4 class="text-warning text-center">${{ $price }} MXN</h4>
@@ -62,30 +62,29 @@
 
                 <div class="p-2 col-md-12">
                     <div class="p-3 mt-5 container bg-light rounded">
-                        <h4 class="text-dark">01 Client Information</h4>
-
+                        <h4 class="text-uppercase text-dark">01 Client Information</h4>
                         <div class="form-row">
                           <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label 	 for="inputEmail4">Nombre</label>
-                                <input data-parsley-minlength="3" data-parsley-trigger="focusout" required type="text" class="form-control" id="name" name="name">
+                                <input  oninput="write_name()" data-parsley-minlength="3" data-parsley-trigger="focusout" required type="text" class="form-control" id="name" name="name">
                               </div>
                               <div class="form-group col-md-4">
                                 <label 	 for="inputEmail4">Ap. Paterno</label>
-                                <input data-parsley-minlength="3" data-parsley-trigger="focusout" required type="text" class="form-control" id="paterno" name="paterno">
+                                <input  oninput="write_name()" data-parsley-minlength="3" data-parsley-trigger="focusout" required type="text" class="form-control" id="paterno" name="paterno">
                               </div>
                               <div class="form-group col-md-4">
                                 <label 	 for="inputEmail4">Ap. Materno</label>
-                                <input data-parsley-minlength="3" data-parsley-trigger="focusout" type="text" class="form-control" id="materno" name="materno">
+                                <input  oninput="write_name()" data-parsley-minlength="3" data-parsley-trigger="focusout" type="text" class="form-control" id="materno" name="materno">
                               </div>
                           </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Phone number</label>
+                                    <label for="inputPassword4">Numero teleofico</label>
                                     <input data-parsley-trigger="focusout" required data-parsley-type="digits" name="phone" type="tel" class="form-control" id="inputPassword4">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="inputAddress">Email</label>
+                                    <label for="inputAddress">Correo electronico</label>
                                     <input data-parsley-trigger="focusout" required type="email" name="email" class="form-control" id="email">
                                 </div>
                             </div>
@@ -95,8 +94,8 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputState">Country</label>
-                                <select required id="countries" name="country" class="form-control">
+                                <label for="inputState">País</label>
+                                <select required id="countries" name="country_id" class="form-control">
                                     <option selected value="null" disabled>Selecciona un pais</option>
                                   @foreach ($countries as $country)
                                   <option value="{{$country->id}}">
@@ -106,8 +105,8 @@
                                 </select>
                               </div>
                               <div class="form-group col-md-6">
-                                <label for="inputState">State</label>
-                                <select required id="states" name="state" class="form-control">
+                                <label for="inputState">Estado</label>
+                                <select required id="states" name="state_id" class="form-control">
                                     <option selected value="null" disabled>Selecciona un estado</option>
                                 </select>
                               </div>
@@ -115,67 +114,132 @@
 
                     </div>
                 </div>
-                {{-- <div class="p-2 col-md-12">
+                <div class="p-2 col-md-12">
                     <div class="mt-2 p-3 bg-light rounded">
-                        <h4 class="text-dark">02 Travel Information</h4>
-                    <h5>Arrival Information</h5>
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                            <label for="inputEmail4">Arrival airline</label>
-                            <input type="text" class="form-control" id="inputEmail4">
-                        </div>
-                            <div class="form-group col-md-6">
-                            <label for="inputPassword4">Arrival Flight Number</label>
-                            <input type="text" class="form-control" id="inputPassword4">
+                        <h4 class="p-2 text-uppercase text-dark">02 Informacion de viaje</h4>
+                    @if($service === 'Aeropuerto a Hotel')
+                        <div id="arrival">
+                            <h5 class="text-uppercase text-blue text-primary">Información de llegada</h5>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Aerolinea de llegada</label>
+                                    <input type="text" class="form-control" id="inputEmail4">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Numero de vuelo</label>
+                                    <input type="text" class="form-control" id="inputPassword4">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4">Nombre del pasajero</label>
+                                    <input readonly type="text" class="form-control" id="passenger_arrival">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress">Fecha de llegada</label>
+                                    <input type="date" class="form-control" id="inputAddress">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2">Hora de llegada</label>
+                                    <input type="text" class="form-control" id="inputAddress2">
+                                </div>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputAddress">Date</label>
-                                <input type="date" class="form-control" id="inputAddress">
+                    @elseif($service === 'Hotel a Aeropuerto')
+                        <div id="departure">
+                            <h5 class="text-uppercase text-primary">Información de salida</h5>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Aerolinea de salida</label>
+                                    <input type="text" class="form-control" id="inputEmail4" >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Numero de vuelo</label>
+                                    <input type="text" class="form-control" id="inputPassword4">
+                                </div>
                             </div>
-                            <div class="form-group col-md-3">
-                                <label for="inputAddress2">Hour</label>
-                                <input type="text" class="form-control" id="inputAddress2">
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4">Nombre del pasajero</label>
+                                    <input readonly type="text" class="form-control"  id="passenger_departure">
+                                </div>
                             </div>
-                            <div class="form-group col-md-3">
-                                <label for="inputAddress2">Minutes</label>
-                                <input type="text" class="form-control" id="inputAddress2">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="mt-2 p-2 bg-light rounded">
-                    <h5 class="">Departure Information</h5>
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputEmail4">Departure airline</label>
-                                <input type="text" class="form-control" id="inputEmail4" >
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="inputPassword4">Arrival Flight Number</label>
-                                <input type="text" class="form-control" id="inputPassword4">
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputAddress">Date Flight</label>
-                                <input type="date" class="form-control" id="inputAddress">
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="inputAddress2">Hour Flight</label>
-                                <input type="text" class="form-control" id="inputAddress2">
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="inputAddress2">Minutes Flight</label>
-                                <input type="text" class="form-control" id="inputAddress2" >
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress">Fecha de salida</label>
+                                    <input type="date" class="form-control" id="inputAddress">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2">Hora de salida</label>
+                                    <input type="text" class="form-control" id="inputAddress2">
+                                </div>
                             </div>
                         </div>
-                    </form>
-                </div> --}}
+                    @elseif($service === 'Aeropuerto a Hotel a Aeropuerto')
+                        <div id="arrival">
+                            <h5 class="text-uppercase text-blue text-primary">Información de llegada</h5>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Aerolinea de llegada</label>
+                                    <input type="text" class="form-control" id="inputEmail4">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Numero de vuelo</label>
+                                    <input type="text" class="form-control" id="inputPassword4">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4">Nombre del pasajero</label>
+                                    <input readonly type="text" class="form-control" id="passenger_arrival">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress">Fecha de llegada</label>
+                                    <input type="date" class="form-control" id="inputAddress">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2">Hora de llegada</label>
+                                    <input type="text" class="form-control" id="inputAddress2">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="departure">
+                            <h5 class="text-uppercase text-primary">Información de salida</h5>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail4">Aerolinea de salida</label>
+                                    <input type="text" class="form-control" id="inputEmail4" >
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Numero de vuelo</label>
+                                    <input type="text" class="form-control" id="inputPassword4">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputEmail4">Nombre del pasajero</label>
+                                    <input readonly type="text" class="form-control"  id="passenger_departure">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress">Fecha de salida</label>
+                                    <input type="date" class="form-control" id="inputAddress">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputAddress2">Hora de salida</label>
+                                    <input type="text" class="form-control" id="inputAddress2">
+                                </div>
+                            </div>
+                        </div>
+                    @endif
 
+                </div>
+            </div>
                 <div class="mt-2 p-2 col-md-12 bg-light rounded">
                     <div class="mt-4 p-2">
                         <h4 class="text-dark">Total to pay</h4>
@@ -183,11 +247,11 @@
                         <div class="p-3 col-md-12">
                             <button type="button" class="btn btn-block btn-primary btnPayment"> RESERVAR</button>
                         </div>
-                        <spam>By clicking submit you are agreeing to the terms and conditions</spam>
+                        <spam>Al hacer clic en enviar, acepta los términos y condiciones.</spam>
                     </div>
                 </div>
-                </div>
-                </div>
+            </div>
+        </div>
     </div>
     </form>
 </div>

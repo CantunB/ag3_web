@@ -22,6 +22,7 @@ class Controller extends BaseController
      */
     public function index(Request $request)
     {
+
         //$airlines = DB::table('airlines')->groupBy('airline');
         $airlines = Airline::groupBy('airline')->get();
         $hoteles = Hotel::all();
