@@ -292,127 +292,119 @@ ul.social li{
     <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
       &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </div>
-    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
-    	<!-- BEGIN BODY -->
-      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-      	<tr>
-          <td valign="top" class="bg_dark" style="padding: 1em 2.5em 0 2.5em;">
-          	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-          		<tr>
-          			<td class="logo" style="text-align: center;">
-                        <a href="http://ag3.stigmacode.com/es" class="logo logo-dark text-center">
-                            <span class="logo-lg">
-                                <img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="AG3" height="100">
-                            </span>
-                        </a>
-			          </td>
-          		</tr>
-          	</table>
-          </td>
-	      </tr><!-- end tr -->
-				<tr>
-          <td valign="middle" class="hero bg_white" style="padding: 2em 0 2em 0;">
-            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-            	<tr>
-            		<td style="padding: 0 2.5em; text-align: left;">
-            			<div class="text">
-            				<h2>{{ $msg['name'] }} your booking confirmation</h2>
-            			</div>
-            		</td>
-            	</tr>
-            </table>
-          </td>
-	      </tr><!-- end tr -->
-	      <tr>
-	      	<table class="bg_white" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-	      		<tr style="border-bottom: 1px solid rgba(0,0,0,.05);">
-					    <th width="80%" style="text-align:left; padding: 0 2.5em; color: #000; padding-bottom: 20px">Item</th>
-					    <th width="20%" style="text-align:right; padding: 0 2.5em; color: #000; padding-bottom: 20px">Price</th>
-					  </tr>
-					  <tr style="border-bottom: 1px solid rgba(0,0,0,.05);">
-					  	<td valign="middle" width="80%" style="text-align:left; padding: 0 2.5em;">
-					  		<div class="product-entry">
-					  			<img src="images/prod-1.jpg" alt="" style="width: 100px; max-width: 600px; height: auto; margin-bottom: 20px; display: block;">
-					  			<div class="text">
-					  				<h3>{{ $msg['service'] }}</h3>
-					  				<p>{{ $msg['origen'] }} a {{ $msg['destiny'] }}</p>
-					  				<h3>Vehiculo solicitado: </h3>
-                                    @if ($msg['unit'] == 1)
-                                    <p>SUBURBAN para {{ $msg['passengers'] }} pasajeros</p>
-                                    @else
-                                    <p>VAN para {{ $msg['passengers'] }} pasajeros</p>
-                                    @endif
-
-					  			</div>
-					  		</div>
-					  	</td>
-					  	<td valign="middle" width="20%" style="text-align:left; padding: 0 2.5em;">
-					  		<span class="price" style="color: #000; font-size: 20px;">${{ $msg['price'] }} MXN</span>
-					  	</td>
-					  </tr>
-					  <tr>
-					  	<td valign="middle" style="text-align:left; padding: 1em 2.5em;">
-					  		<p><a href="http://ag3.stigmacode.com/es" class="btn btn-primary">Realizar otra reserva</a></p>
-					  	</td>
-					  </tr>
-	      	</table>
-	      </tr><!-- end tr -->
-      <!-- 1 Column Text + Button : END -->
-      </table>
-      <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-      	<tr>
-          <td valign="middle" style="color: white" class="bg_dark  footer email-section">
-            <table>
-            	<tr>
-                <td valign="top" width="33.333%" style="padding-top: 20px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: left; padding-right: 10px;">
-                      	<h3 style="color: white" class="heading">Acerca de nosotro</h3>
-                      	<p>AG3 VIP Luxury es una empresa lider en el transporte de lujo, con vehiculos equipados para cada ocasion o la necesidad que tengas</p>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td  style="color: white" valign="top" width="33.333%" style="padding-top: 20px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: left; padding-left: 5px; padding-right: 5px;">
-                      	<h3 style="color: white" class="heading">Informacion de contacto</h3>
-                      	<ul>
-					                <li><span class="text">203 Fake St. Mountain View, San Francisco, Cancun, Mexico</span></li>
-					                <li><span class="text">+2 392 3929 210</span></a></li>
-					              </ul>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="color: white" valign="top" width="33.333%" style="padding-top: 20px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td  style="color: white text-align: left; padding-left: 10px;">
-                      	<h3 style="color: white" class="heading">Redes Socialies</h3>
-                      	<ul>
-					                <li><a style="color: white" href="#">Facebook</a></li>
-					                <li><a style="color: white" href="#">Instagram</a></li>
-					                <li><a style="color: white" href="#">Whatsapp</a></li>
-					                <li><a style="color: white" href="#">Twitter</a></li>
-					              </ul>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
+    <div style="max-width: 800px; margin: 0 auto;" class="email-container">
+        <style type="text/css">
+            .tg  {border-collapse:collapse;border-spacing:0;}
+            .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+              padding:10px 5px;word-break:normal;}
+            .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+              overflow:hidden;padding:10px 5px;word-break:normal;}
+            .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+            .tg .tg-vvf4{border-color:inherit;color:#3166ff;font-size:26px;font-weight:bold;text-align:center;vertical-align:top}
+            .tg .tg-qz2x{background-color:#ffcb2f;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+            .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+            .tg .tg-4qqe{border-color:inherit;font-size:22px;font-weight:bold;text-align:center;vertical-align:top}
+            .tg .tg-958c{background-color:#ffcc67;border-color:inherit;text-align:center;vertical-align:top}
+            .tg .tg-nlhk{background-color:#000000;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+            </style>
+            <table class="tg bg_light" style="undefined;table-layout: fixed; width: 915px">
+            <colgroup>
+            <col style="width: 41px">
+            <col style="width: 42px">
+            <col style="width: 66px">
+            <col style="width: 54px">
+            <col style="width: 41px">
+            <col style="width: 90px">
+            <col style="width: 91px">
+            <col style="width: 54px">
+            <col style="width: 89px">
+            <col style="width: 89px">
+            <col style="width: 44px">
+            <col style="width: 44px">
+            <col style="width: 44px">
+            <col style="width: 82px">
+            <col style="width: 44px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="tg-nlhk" colspan="15" rowspan="2"><img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="AG3" width="120" height="100"></th>
               </tr>
+              <tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-vvf4" colspan="15">Estimado {{ 'Bernabe' ?? $msg['name']}} su orden de confirmacion de reserva</td>
+              </tr>
+              <tr>
+                <td class="tg-qz2x" colspan="11">DETALLES </td>
+                <td class="tg-qz2x" colspan="4">PRECIO</td>
+              </tr>
+              <tr>
+                <td class="tg-c3ow"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky" colspan="7" rowspan="4"><span style="font-weight:bold">NOMBRE: </span>{{ 'BERNABE CANTUN DOMINGUEZ' ?? $msg['fullname'] }}<br><span style="font-weight:bold">CORREO:</span> {{ 'EMAIL@GMAIL.COM' ?? $msg['email'] }}<br><span style="font-weight:bold">TELEFONO:</span> {{ '98776621' ?? msg['phone'] }}<br><span style="font-weight:bold">PAIS:</span> {{ 'MEXICO'  }} <span style="font-weight:bold"> ESTADO:</span> {{ 'CAMPECHE' }} <br><br><br><span style="font-weight:bold">{{ 'TIPO DE SERVICIO' ?? $msg['service'] }}:</span><br>{{ 'ORIGEN' ?? $msg['origen'] }} - {{ 'DESTINO' ?? $msg['destiny'] }}<br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br> @if (  'text' ?? $msg['unit'] == 1) SUBURBAN PARA {{ 'N' ?? $msg['passengers'] }} PASAJEROS @else  SUBURBAN PARA {{ 'N' ?? $msg['passengers'] }} PASAJEROS @endif <br></td>
+                <td class="tg-4qqe" colspan="4" rowspan="4"><br><br><br><br><br><span style="font-weight:bold">${{ '500.00 ' ?? $msg['price'] }}MX</span><br></td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"></td>
+                <td class="tg-c3ow" colspan="2" rowspan="2"><img src="http://ag3.stigmacode.com/assets/images/icons/van.png" width="100" height="200"></td>
+                <td class="tg-0pky"></td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+              </tr>
+                @if ('type_service' ?? $msg['service'] == 'Aeropuerto a Hotel')
+                    <tr>
+                        <td class="tg-qz2x" colspan="7">INFORMACION DE LLEGADA</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_arrival'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_arrival'] }}</span> <br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_arrival'] }}</span>  <span style="font-weight:bold">NUMERO DE VUELO:  {{ 'N.Vuelo' ?? $msg['fn_arrival'] }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_arrival'] }}</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
+                    </tr>
+                @elseif('type_service' ?? $msg['service'] == 'Aeropuerto a Hotel')
+                    <tr>
+                        <td class="tg-qz2x" colspan="7">INFORMACION DE SALIDAD</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ 'N.Vuelo' ?? $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
+                    </tr>
+                @else
+                    <tr>
+                        <td class="tg-qz2x" colspan="7">INFORMACION DE LLEGADA</td>
+                        <td class="tg-qz2x"></td>
+                        <td class="tg-qz2x" colspan="7">INFORMACION DE SALIDAD</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_arrival'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_arrival'] }}</span> <br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_arrival'] }}</span>  <span style="font-weight:bold">NUMERO DE VUELO:  {{ 'N.Vuelo' ?? $msg['fn_arrival'] }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_arrival'] }}</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
+                        <td class="tg-0pky" rowspan="2"></td>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ 'N.Vuelo' ?? $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
+                    </tr>
+                @endif
+              <tr>
+              </tr>
+              <tr>
+                <td class="tg-qz2x" colspan="15"><strong style="font-weight:bold">METODO DE PAGO SELECCIONADO:</strong>    </td>
+              </tr>
+              <tr>
+                <td class="tg-nlhk" colspan="5" rowspan="3">ACERCA DE AG3 <br><br><br>AG3 VIP Luxury es una empresa lider en el transporte de lujo, con vehiculos equipados para cada ocasion o la necesidad que tengas</td>
+                <td class="tg-nlhk" colspan="5" rowspan="3">SERVICIOS<br><br><br>SERVICIOS DE TRANSPORTE LUXURY</td>
+                <td class="tg-nlhk" colspan="5" rowspan="3">REDES SOCIALES<br><br><br>FACEBOOK<br>TWITTER<br>WHATSAPP<br>INSTAGRAM</td>
+              </tr>
+              <tr>
+              </tr>
+              <tr>
+              </tr>
+            </tbody>
             </table>
-          </td>
-        </tr><!-- end: tr -->
-        <tr>
-          <td class="bg_white" style="text-align: center;">
-          	<p><a href="#" style="color: rgba(0,0,0,.8);"></a></p>
-          </td>
-        </tr>
-      </table>
-
     </div>
   </center>
 </body>
