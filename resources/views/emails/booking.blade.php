@@ -292,7 +292,7 @@ ul.social li{
     <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
       &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </div>
-    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+    <div style="max-width: 800px; margin: 0 auto;" class="email-container">
         <style type="text/css">
             .tg  {border-collapse:collapse;border-spacing:0;}
             .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
@@ -300,62 +300,104 @@ ul.social li{
             .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
               overflow:hidden;padding:10px 5px;word-break:normal;}
             .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-            .tg .tg-4f0n{background-color:#000000;border-color:inherit;color:#ffffff;text-align:center;vertical-align:top}
-            .tg .tg-mw2h{background-color:#ffcc67;border-color:inherit;color:#000000;font-weight:bold;text-align:center;vertical-align:top}
-            .tg .tg-wgv3{border-color:inherit;color:#3166ff;font-weight:bold;text-align:center;vertical-align:top}
-            .tg .tg-cnwr{background-color:#ffcc67;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+            .tg .tg-vvf4{border-color:inherit;color:#3166ff;font-size:26px;font-weight:bold;text-align:center;vertical-align:top}
+            .tg .tg-qz2x{background-color:#ffcb2f;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
             .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-            .tg .tg-auie{border-color:inherit;font-family:"Arial Black", Gadget, sans-serif !important;;font-size:20px;text-align:center;
-              vertical-align:top}
-            .tg .tg-s2cz{background-color:#ffcc67;border-color:#000000;font-weight:bold;text-align:center;vertical-align:top}
-            .tg .tg-73oq{border-color:#000000;text-align:left;vertical-align:top}
+            .tg .tg-4qqe{border-color:inherit;font-size:22px;font-weight:bold;text-align:center;vertical-align:top}
+            .tg .tg-958c{background-color:#ffcc67;border-color:inherit;text-align:center;vertical-align:top}
+            .tg .tg-nlhk{background-color:#000000;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
             </style>
-            <table class="tg">
+            <table class="tg bg_light" style="undefined;table-layout: fixed; width: 915px">
+            <colgroup>
+            <col style="width: 41px">
+            <col style="width: 42px">
+            <col style="width: 66px">
+            <col style="width: 54px">
+            <col style="width: 41px">
+            <col style="width: 90px">
+            <col style="width: 91px">
+            <col style="width: 54px">
+            <col style="width: 89px">
+            <col style="width: 89px">
+            <col style="width: 44px">
+            <col style="width: 44px">
+            <col style="width: 44px">
+            <col style="width: 82px">
+            <col style="width: 44px">
+            </colgroup>
             <thead>
               <tr>
-                <th class="tg-4f0n" colspan="15" rowspan="2"><img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="AG3" width="120" height="120"></th>
+                <th class="tg-nlhk" colspan="15" rowspan="2"><img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="AG3" width="120" height="100"></th>
               </tr>
               <tr>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="tg-wgv3" colspan="15"><h1>Estimado Bernabe su orden de confirmacion de reserva</h1></td>
+                <td class="tg-vvf4" colspan="15">Estimado {{ 'Bernabe' ?? $msg['name']}} su orden de confirmacion de reserva</td>
               </tr>
               <tr>
-                <td class="tg-cnwr" colspan="11">DETALLES </td>
-                <td class="tg-cnwr" colspan="4">PRECIO</td>
+                <td class="tg-qz2x" colspan="11">DETALLES </td>
+                <td class="tg-qz2x" colspan="4">PRECIO</td>
               </tr>
               <tr>
-                <td class="tg-c3ow" colspan="4" rowspan="4"><img src="http://ag3.stigmacode.com/assets/images/icons/van.png" width="120" height="120"></td>
-                <td class="tg-0pky" colspan="7" rowspan="4"><span style="font-weight:bold">NOMBRE: </span>BERNABE CANTUN DOMINGUEZ<br><span style="font-weight:bold">CORREO:</span> EMAIL@GMAIL.COM<br><span style="font-weight:bold">TELEFONO:</span> 98776621<br><span style="font-weight:bold">PAIS:</span> MEXICO. <span style="font-weight:bold"> ESTADO:</span> CAMPECHE <br><br><br><span style="font-weight:bold">SERVICIO DE AEROPUERTO:</span><br>AEROMEXICO - A HOTEL BEL AIR<br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br>SUBURBAN PARA 4 PASAJEROS<br></td>
-                <td class="tg-auie" colspan="4" rowspan="4"><br><br><br><br><br><span style="font-weight:bold">$500.00 MX</span><br></td>
+                <td class="tg-c3ow"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky" colspan="7" rowspan="4"><span style="font-weight:bold">NOMBRE: </span>{{ 'BERNABE CANTUN DOMINGUEZ' ?? $msg['fullname'] }}<br><span style="font-weight:bold">CORREO:</span> {{ 'EMAIL@GMAIL.COM' ?? $msg['email'] }}<br><span style="font-weight:bold">TELEFONO:</span> {{ '98776621' ?? msg['phone'] }}<br><span style="font-weight:bold">PAIS:</span> {{ 'MEXICO'  }} <span style="font-weight:bold"> ESTADO:</span> {{ 'CAMPECHE' }} <br><br><br><span style="font-weight:bold">{{ 'TIPO DE SERVICIO' ?? $msg['service'] }}:</span><br>{{ 'ORIGEN' ?? $msg['origen'] }} - {{ 'DESTINO' ?? $msg['destiny'] }}<br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br> @if (  'text' ?? $msg['unit'] == 1) SUBURBAN PARA {{ 'N' ?? $msg['passengers'] }} PASAJEROS @else  SUBURBAN PARA {{ 'N' ?? $msg['passengers'] }} PASAJEROS @endif <br></td>
+                <td class="tg-4qqe" colspan="4" rowspan="4"><br><br><br><br><br><span style="font-weight:bold">${{ '500.00 ' ?? $msg['price'] }}MX</span><br></td>
               </tr>
+              <tr>
+                <td class="tg-0pky"></td>
+                <td class="tg-c3ow" colspan="2" rowspan="2"><img src="http://ag3.stigmacode.com/assets/images/icons/van.png" width="100" height="200"></td>
+                <td class="tg-0pky"></td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+                <td class="tg-0pky"></td>
+              </tr>
+                @if ('type_service' ?? $msg['service'] == 'Aeropuerto a Hotel')
+                    <tr>
+                        <td class="tg-qz2x" colspan="7">INFORMACION DE LLEGADA</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_arrival'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_arrival'] }}</span> <br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_arrival'] }}</span>  <span style="font-weight:bold">NUMERO DE VUELO:  {{ 'N.Vuelo' ?? $msg['fn_arrival'] }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_arrival'] }}</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
+                    </tr>
+                @elseif('type_service' ?? $msg['service'] == 'Aeropuerto a Hotel')
+                    <tr>
+                        <td class="tg-qz2x" colspan="7">INFORMACION DE SALIDAD</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ 'N.Vuelo' ?? $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
+                    </tr>
+                @else
+                    <tr>
+                        <td class="tg-qz2x" colspan="7">INFORMACION DE LLEGADA</td>
+                        <td class="tg-qz2x"></td>
+                        <td class="tg-qz2x" colspan="7">INFORMACION DE SALIDAD</td>
+                    </tr>
+                    <tr>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_arrival'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_arrival'] }}</span> <br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_arrival'] }}</span>  <span style="font-weight:bold">NUMERO DE VUELO:  {{ 'N.Vuelo' ?? $msg['fn_arrival'] }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_arrival'] }}</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
+                        <td class="tg-0pky" rowspan="2"></td>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ 'N.Vuelo' ?? $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
+                    </tr>
+                @endif
               <tr>
               </tr>
               <tr>
+                <td class="tg-qz2x" colspan="15"><strong style="font-weight:bold">METODO DE PAGO SELECCIONADO:</strong>    </td>
               </tr>
               <tr>
-              </tr>
-              <tr>
-                <td class="tg-s2cz" colspan="7">INFORMACION DE LLEGADA</td>
-                <td class="tg-s2cz"></td>
-                <td class="tg-s2cz" colspan="7">INFORMACION DE SALIDAD</td>
-              </tr>
-              <tr>
-                <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA:</span><br><span style="font-weight:bold">HORA:</span> <br><span style="font-weight:bold">AEROLINEA: </span>       <span style="font-weight:bold">NUMERO DE VUELO: </span>    <br><br><span style="font-weight:bold">COMENTARIOS:</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
-                <td class="tg-73oq" rowspan="2"></td>
-                <td class="tg-73oq" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA:</span><br><span style="font-weight:bold">HORA:</span><br><span style="font-weight:bold">AEROLINEA: </span>       <span style="font-weight:bold">NUMERO DE VUELO:</span>     <br><span style="font-weight:bold">COMENTARIOS:</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
-              </tr>
-              <tr>
-              </tr>
-              <tr>
-                <td class="tg-mw2h" colspan="15">METODO DE PAGO SELECCIONADO:    </td>
-              </tr>
-              <tr>
-                <td class="tg-4f0n" colspan="5" rowspan="3">ACERCA DE AG3 <br><br><br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, iusto! Esse, ad! Repellat culpa voluptate eligendi, cupiditate consequuntur reiciendis rem vitae dolore, laudantium architecto blanditiis facilis, quos id alias atque.</td>
-                <td class="tg-4f0n" colspan="5" rowspan="3">SERVICIOS<br><br><br>SERVICIOS DE TRANSPORTE LUXURY</td>
-                <td class="tg-4f0n" colspan="5" rowspan="3">REDES SOCIALES<br><br><br>FACEBOOK<br>TWITTER<br>WHATSAPP<br>INSTAGRAM</td>
+                <td class="tg-nlhk" colspan="5" rowspan="3">ACERCA DE AG3 <br><br><br>AG3 VIP Luxury es una empresa lider en el transporte de lujo, con vehiculos equipados para cada ocasion o la necesidad que tengas</td>
+                <td class="tg-nlhk" colspan="5" rowspan="3">SERVICIOS<br><br><br>SERVICIOS DE TRANSPORTE LUXURY</td>
+                <td class="tg-nlhk" colspan="5" rowspan="3">REDES SOCIALES<br><br><br>FACEBOOK<br>TWITTER<br>WHATSAPP<br>INSTAGRAM</td>
               </tr>
               <tr>
               </tr>

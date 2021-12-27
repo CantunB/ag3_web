@@ -88,6 +88,7 @@
                                     <input data-parsley-trigger="focusout" required type="email" name="email" class="form-control" id="email">
                                 </div>
                             </div>
+
                         </div>
                         <div class="form-group">
 
@@ -151,6 +152,12 @@
                                     <input style="background-color: white" type="text" class="form-control" name="t_arrival"  id="inputAddress2">
                                 </div>
                             </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Comentarios</label>
+                                    <input data-parsley-trigger="focusout" required type="text" name="c_arrival" class="form-control">
+                                </div>
+                            </div>
                         </div>
                     @elseif($service === 'Hotel a Aeropuerto')
                         <div id="departure">
@@ -184,6 +191,12 @@
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress2">Hora de salida</label>
                                     <input required style="background-color: white" type="time" class="form-control timer" name="t_departure" id="t_departure">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Comentarios</label>
+                                    <input data-parsley-trigger="focusout" required type="text" name="c_departure" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -221,6 +234,12 @@
                                     <input style="background-color: white" type="text" class="form-control" name="t_arrival"  id="inputAddress2">
                                 </div>
                             </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Comentarios</label>
+                                    <input data-parsley-trigger="focusout" required type="text" name="c_arrival" class="form-control">
+                                </div>
+                            </div>
                         </div>
                         <div id="departure">
                             <h5 class="text-uppercase text-primary">Información de salida</h5>
@@ -253,6 +272,12 @@
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress2">Hora de salida</label>
                                     <input required style="background-color: white" type="time" class="form-control timer" name="t_departure" id="t_departure">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Comentarios</label>
+                                    <input data-parsley-trigger="focusout" required type="text" name="c_departure" class="form-control">
                                 </div>
                             </div>
                         </div>

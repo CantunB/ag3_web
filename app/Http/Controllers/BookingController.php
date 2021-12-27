@@ -142,6 +142,7 @@ class BookingController extends Controller
         $booking->save();
 
         $msg = [
+            'fullname' => $request->name . ' ' . $request->paterno . ' ' . $request->materno,
             'name' => $request->name,
             'phone' => $request->phone,
             'email' => $request->email,
@@ -155,6 +156,7 @@ class BookingController extends Controller
             'a_arrival' => $request->a_arrival,
             'fn_arrival' => $request->fn_arrival,
             'd_arrival' => $request->d_arrival,
+            'c_arrival' => $request->c_arrival,
             't_arrival' => $request->t_arrival,
             'a_departure' => $request->a_departure,
             'fn_departure' => $request->fn_departure,

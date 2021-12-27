@@ -22,7 +22,7 @@ class Controller extends BaseController
      */
     public function index(Request $request)
     {
-        //git return view('emails.booking');
+        // return view('emails.booking');
         $hoteles = Hotel::all();
         return view('layouts.master', compact('hoteles'));
         // if (view()->exists($request->path())) {
