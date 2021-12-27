@@ -283,7 +283,20 @@ ul.social li{
 
 
     </style>
-
+    <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
+        padding:10px 5px;word-break:normal;}
+    .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
+        overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-vvf4{border-color:inherit;color:#3166ff;font-size:26px;font-weight:bold;text-align:center;vertical-align:top}
+    .tg .tg-qz2x{background-color:#ffcb2f;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+    .tg .tg-4qqe{border-color:inherit;font-size:22px;font-weight:bold;text-align:center;vertical-align:top}
+    .tg .tg-958c{background-color:#ffcc67;border-color:inherit;text-align:center;vertical-align:top}
+    .tg .tg-nlhk{background-color:#000000;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
+    </style>
 
 </head>
 
@@ -293,20 +306,7 @@ ul.social li{
       &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </div>
     <div style="max-width: 800px; margin: 0 auto;" class="email-container">
-        <style type="text/css">
-            .tg  {border-collapse:collapse;border-spacing:0;}
-            .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
-              padding:10px 5px;word-break:normal;}
-            .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
-              overflow:hidden;padding:10px 5px;word-break:normal;}
-            .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-            .tg .tg-vvf4{border-color:inherit;color:#3166ff;font-size:26px;font-weight:bold;text-align:center;vertical-align:top}
-            .tg .tg-qz2x{background-color:#ffcb2f;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-            .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-            .tg .tg-4qqe{border-color:inherit;font-size:22px;font-weight:bold;text-align:center;vertical-align:top}
-            .tg .tg-958c{background-color:#ffcc67;border-color:inherit;text-align:center;vertical-align:top}
-            .tg .tg-nlhk{background-color:#000000;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
-            </style>
+
             <table class="tg bg_light" style="undefined;table-layout: fixed; width: 915px">
             <colgroup>
             <col style="width: 41px">
@@ -334,7 +334,7 @@ ul.social li{
             </thead>
             <tbody>
               <tr>
-                <td class="tg-vvf4" colspan="15">Estimado {{ 'Bernabe' ?? $msg['name']}} su orden de confirmacion de reserva</td>
+                <td class="tg-vvf4" colspan="15">Estimado {{ $msg['name']}} su orden de confirmacion de reserva</td>
               </tr>
               <tr>
                 <td class="tg-qz2x" colspan="11">DETALLES </td>
@@ -345,8 +345,8 @@ ul.social li{
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
-                <td class="tg-0pky" colspan="7" rowspan="4"><span style="font-weight:bold">NOMBRE: </span>{{ 'BERNABE CANTUN DOMINGUEZ' ?? $msg['fullname'] }}<br><span style="font-weight:bold">CORREO:</span> {{ 'EMAIL@GMAIL.COM' ?? $msg['email'] }}<br><span style="font-weight:bold">TELEFONO:</span> {{ '98776621' ?? msg['phone'] }}<br><span style="font-weight:bold">PAIS:</span> {{ 'MEXICO'  }} <span style="font-weight:bold"> ESTADO:</span> {{ 'CAMPECHE' }} <br><br><br><span style="font-weight:bold">{{ 'TIPO DE SERVICIO' ?? $msg['service'] }}:</span><br>{{ 'ORIGEN' ?? $msg['origen'] }} - {{ 'DESTINO' ?? $msg['destiny'] }}<br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br> @if (  'text' ?? $msg['unit'] == 1) SUBURBAN PARA {{ 'N' ?? $msg['passengers'] }} PASAJEROS @else  SUBURBAN PARA {{ 'N' ?? $msg['passengers'] }} PASAJEROS @endif <br></td>
-                <td class="tg-4qqe" colspan="4" rowspan="4"><br><br><br><br><br><span style="font-weight:bold">${{ '500.00 ' ?? $msg['price'] }}MX</span><br></td>
+                <td class="tg-0pky" colspan="7" rowspan="4"><span style="font-weight:bold">NOMBRE: </span>{{ $msg['fullname'] }}<br><span style="font-weight:bold">CORREO:</span> {{ $msg['email'] }}<br><span style="font-weight:bold">TELEFONO:</span> {{ $msg['phone'] }}<br><span style="font-weight:bold">PAIS:</span> {{ 'MEXICO'  }} <span style="font-weight:bold"> ESTADO:</span> {{ 'CAMPECHE' }} <br><br><br><span style="font-weight:bold">{{ $msg['service'] }}:</span><br>{{ $msg['origen'] }} - {{ $msg['destiny'] }}<br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br> @if ( $msg['unit'] == 1) SUBURBAN PARA {{ $msg['passengers'] }} PASAJEROS @else  SUBURBAN PARA {{ $msg['passengers'] }} PASAJEROS @endif <br></td>
+                <td class="tg-4qqe" colspan="4" rowspan="4"><br><br><br><br><br><span style="font-weight:bold">${{ $msg['price'] }}MX</span><br></td>
               </tr>
               <tr>
                 <td class="tg-0pky"></td>
@@ -363,19 +363,19 @@ ul.social li{
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
               </tr>
-                @if ('type_service' ?? $msg['service'] == 'Aeropuerto a Hotel')
+                @if ( $msg['service'] == 'Aeropuerto a Hotel')
                     <tr>
-                        <td class="tg-qz2x" colspan="7">INFORMACION DE LLEGADA</td>
+                        <td style="padding: 2" class="tg-qz2x" colspan="15">INFORMACION DE LLEGADA</td>
                     </tr>
                     <tr>
-                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_arrival'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_arrival'] }}</span> <br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_arrival'] }}</span>  <span style="font-weight:bold">NUMERO DE VUELO:  {{ 'N.Vuelo' ?? $msg['fn_arrival'] }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_arrival'] }}</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
+                        <td style="padding: 2" class="tg-0pky" colspan="15" rowspan="2"><span style="font-weight:bold">FECHA:</span> {{ $msg['d_arrival'] }}<br><span style="font-weight:bold">HORA: </span>{{  $msg['t_arrival'] }} <br><span style="font-weight:bold">AEROLINEA:  </span>{{ $msg['a_arrival'] }}  <span style="font-weight:bold">NUMERO DE VUELO:  </span> {{  $msg['fn_arrival'] }}   <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $msg['c_arrival'] }}<br><br><span style="font-weight:bold">PICK-UP:</span></td>
                     </tr>
-                @elseif('type_service' ?? $msg['service'] == 'Aeropuerto a Hotel')
+                @elseif( $msg['service'] == 'Hotel a Aeropuerto')
                     <tr>
-                        <td class="tg-qz2x" colspan="7">INFORMACION DE SALIDAD</td>
+                        <td class="tg-qz2x" colspan="15">INFORMACION DE SALIDAD</td>
                     </tr>
                     <tr>
-                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ 'N.Vuelo' ?? $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
+                        <td class="tg-0pky" colspan="15" rowspan="2"><span style="font-weight:bold">FECHA: {{ $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{$msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
                     </tr>
                 @else
                     <tr>
@@ -384,9 +384,9 @@ ul.social li{
                         <td class="tg-qz2x" colspan="7">INFORMACION DE SALIDAD</td>
                     </tr>
                     <tr>
-                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_arrival'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_arrival'] }}</span> <br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_arrival'] }}</span>  <span style="font-weight:bold">NUMERO DE VUELO:  {{ 'N.Vuelo' ?? $msg['fn_arrival'] }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_arrival'] }}</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ $msg['d_arrival'] }}</span><br><span style="font-weight:bold">HORA: {{ $msg['t_arrival'] }}</span> <br><span style="font-weight:bold">AEROLINEA:  {{ $msg['a_arrival'] }}</span>  <span style="font-weight:bold">NUMERO DE VUELO:  {{ $msg['fn_arrival'] }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: {{ $msg['c_arrival'] }}</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
                         <td class="tg-0pky" rowspan="2"></td>
-                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ 'date' ?? $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ 'time' ?? $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{ 'airline' ?? $msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ 'N.Vuelo' ?? $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ 'COMENTARIOS' ?? $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
+                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{ $msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
                     </tr>
                 @endif
               <tr>

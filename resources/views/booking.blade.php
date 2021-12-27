@@ -41,13 +41,7 @@
                                     @include('layouts.booking_tabs.information')
                                 </div>
                                 <div class="tab-pane fade" id="payment" role="tabpanel" aria-labelledby="payment-tab">
-                                    <div class="container ">
-                                        <div class="row">
-                                            <div class="p-5 col-md-12 text-center">
-                                                <div id="paypal-button-container"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @include('layouts.booking_tabs.payment')
 
                                 </div>
                             </div>

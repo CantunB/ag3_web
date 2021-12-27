@@ -280,6 +280,11 @@
                 theme: 'bootstrap4',
 
             });
+            $('#airline_arrival').select2({
+                placeholder: "Selecciona una aerolinea",
+                theme: 'bootstrap4',
+
+            });
             $('#airline_departure').select2({
                 placeholder: "Selecciona una aerolinea",
                 theme: 'bootstrap4',
@@ -322,7 +327,7 @@
             $("#booking_form").parsley();
 
             // on form submit
-            $("#booking_form").on('submit', function(event) {
+            $("#booking_form").on('click', function(event) {
                 // validate form with parsley.
                 $(this).parsley().validate();
 

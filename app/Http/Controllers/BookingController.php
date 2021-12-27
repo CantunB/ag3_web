@@ -161,6 +161,7 @@ class BookingController extends Controller
             'a_departure' => $request->a_departure,
             'fn_departure' => $request->fn_departure,
             'd_departure' => $request->d_departure,
+            'c_departure' => $request->c_departure,
             't_departure' => $request->t_departure
         ];
         Mail::to($request->email)->send(new BookingMail($msg));

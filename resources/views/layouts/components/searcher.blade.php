@@ -6,7 +6,7 @@
                 <div class="home_search_container">
                     <div class="home_search_title">Search for your trip</div>
                     <div class="home_search_content">
-                        <form class="home_search_form" action="{{ route('vehicles',app()->getLocale()) }}" method="POST" id="form_search">
+                        <form class="home_search_form" action="{{ route('vehicles',app()->getLocale()) }}" method="POST" id="form_search" autocomplete="off">
                             @csrf
                             @method('POST')
                             <div class="d-flex
