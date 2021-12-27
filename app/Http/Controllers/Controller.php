@@ -22,12 +22,9 @@ class Controller extends BaseController
      */
     public function index(Request $request)
     {
-
-        //$airlines = DB::table('airlines')->groupBy('airline');
-        $airlines = Airline::groupBy('airline')->get();
+        //git return view('emails.booking');
         $hoteles = Hotel::all();
-        //$hoteles = DB::table('hotels')->first();
-        return view('layouts.master', compact('airlines','hoteles'));
+        return view('layouts.master', compact('hoteles'));
         // if (view()->exists($request->path())) {
 
         //     return view($request->path());

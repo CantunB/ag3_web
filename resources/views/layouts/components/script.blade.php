@@ -280,6 +280,16 @@
                 theme: 'bootstrap4',
 
             });
+            $('#airline_departure').select2({
+                placeholder: "Selecciona una aerolinea",
+                theme: 'bootstrap4',
+
+            });
+            $('#states').select2({
+                placeholder: "Selecciona un estado",
+                theme: 'bootstrap4',
+
+            });
         });
     </script>
     <script>
