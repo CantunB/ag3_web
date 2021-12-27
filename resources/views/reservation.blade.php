@@ -8,19 +8,17 @@
 	<meta name="description" content="AG3 Landing page">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     {{-- @include('layouts.components.css') --}}
-    {{-- mis estilos  --}}
-    <!-- Bootstrap CSS -->
+
+    {{-- Bootstrap 5 --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {{-- Mis estilos  --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
     <body>
-        {{-- <div id="app" class="super_container"> --}}
-            {{-- esto es el header  --}}
-            {{-- @include('layouts.components.header') --}}
-
-            {{-- esto es el slider de home --}}
-            {{-- <div class="home">
+        {{-- <div id="app" class="super_container">
+            @include('layouts.components.header')
+            <div class="home">
                 <div class="home_slider_container">
                     <div class="owl-carousel owl-theme home_slider">
                         <!-- Slide -->
@@ -90,13 +88,11 @@
                         </ul>
                     </div>
                 </div>
-            </div> --}}
+            </div>
+            @include('layouts.components.searcher')
 
-            {{-- esto es el buscador  --}}
-            {{-- @include('layouts.components.searcher') --}}
-
-            {{-- <div  class="mt-5 container  shadow-lg rounded">
-            <h4>List of service available for your Arrival transportation to {{ $destino }} for {{ $passengers }} Passengers</h4>
+            <div  class="mt-5 container  shadow-lg rounded">
+            <h4>Pequeña modificacion de prueba -- for your Arrival transportation to {{ $destino }} for {{ $passengers }} Passengers</h4>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
@@ -347,15 +343,24 @@
                         </div>
                     </div>
                 </div>
-
-            </div> --}}
-            {{-- esto es el footer  --}}
-            {{-- @include('layouts.components.footer') --}}
+                <div class="row">
 
 
+                </div>
+                <div class="row">
 
-{{-- ---------------------------- esta es mi seccion ----------------------------------------- --}}
+                    <div class="mt-4 col-md-4 border rounded">
 
+                    </div>
+
+                </div>
+
+
+                <h1> ESTO ES UNA MODIIFICACION HECHA POR BERNA </h1>
+            </div>
+            @include('layouts.components.footer')
+        </div> --}}
+        
         <!-- section navbar start -->
         <nav class="navbar navbar-expand-lg bg-dark" aria-label="navbar-ag3">
             <div class="container">
@@ -416,7 +421,7 @@
                                 <!-- section left -->
                                 <div class="col-md-3 left">
                                     <h4 class="mt-2 title-service">TRANSPORTE {{ $tariff[0]->type_unit->type_units }}</h4>
-                                    <img class="service-img" src="{{ asset('assets/images/service2.png') }}" alt="transport-suburban">
+                                    <img class="service-img" src="{{ asset('assets/images/transport-suburban.png') }}" alt="transport-suburban">
                                     <ul>
                                         <li><i class="fas fa-users"></i> Max. 8 pax.</li>
                                         <li><i class="fas fa-suitcase-rolling"></i> Max. 7 maletas</li>
@@ -520,7 +525,7 @@
                                         </form>
                                     </li>
                                 </ul>
-                                </div>
+                                </div>  
 
                             </div>
                         </div>
@@ -534,7 +539,7 @@
                                 <!-- section left -->
                                 <div class="col-md-3 left">
                                     <h4 class="mt-2 title-service">TRANSPORTE {{ $tariff[2]->type_unit->type_units }}</h4>
-                                    <img class="service-img" src="{{ asset('assets/images/service1.png') }}" alt="transport-van">
+                                    <img class="service-img" src="{{ asset('assets/images/transport-van.png') }}" alt="transport-van">
                                     <ul>
                                         <li><i class="fas fa-users"></i> Max. 8 pax.</li>
                                         <li><i class="fas fa-suitcase-rolling"></i> Max. 7 maletas</li>
@@ -638,14 +643,14 @@
                                         </form>
                                     </li>
                                 </ul>
-                                </div>
+                                </div>  
                             </div>
                         </div>
                     </div>
                     <!-- service-van end -->
                 </div>
                 <!-- section left end  -->
-
+                                    
 
                 <!-- section right start  -->
                 <div class="col-md-12 col-lg-4 mt-4">
@@ -733,13 +738,9 @@
                         <h6 class="text-center mt-2">Creado por <a href="https://www.stigmacode.com/">StigmaCode</a> & <span>JS Arthuro</span> | Todos los derechos reservados © {{ now()->year }}</h6>
                     </div>
                 </div>
-
-
-                <h1> ESTO ES UNA MODIIFICACION HECHA POR BERNA </h1>
             </div>
         </div>
         <!-- section footer end -->
-
 
         @include('layouts.components.script')
     </body>
