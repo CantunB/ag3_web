@@ -348,6 +348,9 @@
                     </div>
 
                 </div>
+
+
+                <h1> ESTO ES UNA MODIIFICACION HECHA POR BERNA </h1>
             </div>
             @include('layouts.components.footer')
         </div>
