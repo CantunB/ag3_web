@@ -88,6 +88,9 @@ class BookingController extends Controller
 
         $data['countries'] = Country::get(["name","id"]);
 
+        $airlines = Airline::groupBy('airline')->get();
+
+
         return view('booking', $data, compact(
                 'unit',
             'service',
@@ -102,7 +105,8 @@ class BookingController extends Controller
             'type_trip',
             'type_unit',
             'price',
-            'data'
+            'data',
+            'airlines'
         ));
     }
 
@@ -138,6 +142,7 @@ class BookingController extends Controller
         $booking->save();
 
         $msg = [
+            'fullname' => $request->name . ' ' . $request->paterno . ' ' . $request->materno,
             'name' => $request->name,
             'phone' => $request->phone,
             'email' => $request->email,
@@ -147,6 +152,16 @@ class BookingController extends Controller
             'passengers' => $request->passengers,
             'unit' => $request->request_unit,
             'price' => $request->price,
+            'round' => $request->round_service,
+            'a_arrival' => $request->a_arrival,
+            'fn_arrival' => $request->fn_arrival,
+            'd_arrival' => $request->d_arrival,
+            'c_arrival' => $request->c_arrival,
+            't_arrival' => $request->t_arrival,
+            'a_departure' => $request->a_departure,
+            'fn_departure' => $request->fn_departure,
+            'd_departure' => $request->d_departure,
+            't_departure' => $request->t_departure
         ];
         Mail::to($request->email)->send(new BookingMail($msg));
         return response()->json(['data' => 'Su reservación se ha realizado correctamente'], 201);

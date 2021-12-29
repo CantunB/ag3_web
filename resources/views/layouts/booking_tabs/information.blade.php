@@ -62,7 +62,7 @@
 
                 <div class="p-2 col-md-12">
                     <div class="p-3 mt-5 container bg-light rounded">
-                        <h4 class="text-uppercase text-dark">01 Client Information</h4>
+                        <h4 class="text-uppercase text-dark">01 INFORMACION DEL CLIENTE</h4>
                         <div class="form-row">
                           <div class="form-row">
                             <div class="form-group col-md-4">
@@ -88,6 +88,7 @@
                                     <input data-parsley-trigger="focusout" required type="email" name="email" class="form-control" id="email">
                                 </div>
                             </div>
+
                         </div>
                         <div class="form-group">
 
@@ -98,11 +99,11 @@
                                 {{-- quite el id="countries" en el select  --}}
                                 <select required  name="country_id" class="form-control">
                                     <option selected value="null" disabled>Selecciona un pais</option>
-                                  @foreach ($countries as $country)
-                                  <option value="{{$country->id}}">
-                                   {{$country->name}}
-                                  </option>
-                              @endforeach
+                                    @foreach ($countries as $country)
+                                    <option value="{{$country->id}}">
+                                    {{$country->name}}
+                                    </option>
+                                @endforeach
                                 </select>
                               </div>
                               <div class="form-group col-md-6">
@@ -125,11 +126,16 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Aerolinea de llegada</label>
-                                    <input type="text" class="form-control" id="inputEmail4">
+                                    <select  class="form-control" name="a_arrival" id="airline_arrival">
+                                        <option selected value="null" disabled>Selecciona una aerolinea</option>
+                                        @foreach ($airlines as $airline)
+                                            <option value="{{ $airline->airline  }}">{{ $airline->airline }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputPassword4">Numero de vuelo</label>
-                                    <input type="text" class="form-control" id="inputPassword4">
+                                    <input type="text" class="form-control" name="fn_arrival" id="fn_arrival">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -141,11 +147,17 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress">Fecha de llegada</label>
-                                    <input type="date" class="form-control" id="inputAddress">
+                                    <input style="background-color: white"  type="date" class="form-control" name="d_arrival" id="inputAddress">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress2">Hora de llegada</label>
-                                    <input type="text" class="form-control" id="inputAddress2">
+                                    <input style="background-color: white" type="text" class="form-control" name="t_arrival"  id="inputAddress2">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Comentarios</label>
+                                    <input data-parsley-trigger="focusout" required type="text" name="c_arrival" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -155,27 +167,38 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Aerolinea de salida</label>
-                                    <input type="text" class="form-control" id="inputEmail4" >
+                                    <select  class="form-control" name="a_departure" id="airline_departure">
+                                        <option selected value="null" disabled>Selecciona una aerolinea</option>
+                                        @foreach ($airlines as $airline)
+                                            <option value="{{ $airline->airline  }}">{{ $airline->airline }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputPassword4">Numero de vuelo</label>
-                                    <input type="text" class="form-control" id="inputPassword4">
+                                    <input required type="text" class="form-control" name="fn_departure" id="fn_departure">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">Nombre del pasajero</label>
-                                    <input readonly type="text" class="form-control"  id="passenger_departure">
+                                    <input  readonly type="text" class="form-control"  id="passenger_departure">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress">Fecha de salida</label>
-                                    <input type="date" class="form-control" id="inputAddress">
+                                    <input required style="background-color: white" type="date" class="form-control selector" name="d_departure" id="d_departure">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress2">Hora de salida</label>
-                                    <input type="text" class="form-control" id="inputAddress2">
+                                    <input required style="background-color: white" type="time" class="form-control timer" name="t_departure" id="t_departure">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Comentarios</label>
+                                    <input data-parsley-trigger="focusout" required type="text" name="c_departure" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -185,11 +208,16 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Aerolinea de llegada</label>
-                                    <input type="text" class="form-control" id="inputEmail4">
+                                    <select  class="form-control" name="a_arrival" id="airline_arrival">
+                                        <option selected value="null" disabled>Selecciona una aerolinea</option>
+                                        @foreach ($airlines as $airline)
+                                            <option value="{{ $airline->airline  }}">{{ $airline->airline }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputPassword4">Numero de vuelo</label>
-                                    <input type="text" class="form-control" id="inputPassword4">
+                                    <input type="text" class="form-control" name="fn_arrival" id="fn_arrival">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -201,11 +229,17 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress">Fecha de llegada</label>
-                                    <input type="date" class="form-control" id="inputAddress">
+                                    <input style="background-color: white"  type="date" class="form-control" name="d_arrival" id="inputAddress">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress2">Hora de llegada</label>
-                                    <input type="text" class="form-control" id="inputAddress2">
+                                    <input style="background-color: white" type="text" class="form-control" name="t_arrival"  id="inputAddress2">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Comentarios</label>
+                                    <input data-parsley-trigger="focusout" required type="text" name="c_arrival" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -214,27 +248,38 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputEmail4">Aerolinea de salida</label>
-                                    <input type="text" class="form-control" id="inputEmail4" >
+                                    <select  class="form-control" name="a_departure" id="airline_departure">
+                                        <option selected value="null" disabled>Selecciona una aerolinea</option>
+                                        @foreach ($airlines as $airline)
+                                            <option value="{{ $airline->airline  }}">{{ $airline->airline }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputPassword4">Numero de vuelo</label>
-                                    <input type="text" class="form-control" id="inputPassword4">
+                                    <input required type="text" class="form-control" name="fn_departure" id="fn_departure">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">Nombre del pasajero</label>
-                                    <input readonly type="text" class="form-control"  id="passenger_departure">
+                                    <input  readonly type="text" class="form-control"  id="passenger_departure">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress">Fecha de salida</label>
-                                    <input type="date" class="form-control" id="inputAddress">
+                                    <input required style="background-color: white" type="date" class="form-control selector" name="d_departure" id="d_departure">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputAddress2">Hora de salida</label>
-                                    <input type="text" class="form-control" id="inputAddress2">
+                                    <input required style="background-color: white" type="time" class="form-control timer" name="t_departure" id="t_departure">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Comentarios</label>
+                                    <input data-parsley-trigger="focusout" required type="text" name="c_departure" class="form-control">
                                 </div>
                             </div>
                         </div>
