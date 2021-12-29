@@ -67,15 +67,15 @@
                           <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label 	 for="inputEmail4">Nombre</label>
-                                <input  oninput="write_name()" data-parsley-minlength="3" data-parsley-trigger="focusout" required type="text" class="form-control" id="name" name="name">
+                                {{-- <input  oninput="write_name()" data-parsley-minlength="3" data-parsley-trigger="focusout" required type="text" class="form-control" id="name" name="name"> --}}
                               </div>
                               <div class="form-group col-md-4">
                                 <label 	 for="inputEmail4">Ap. Paterno</label>
-                                <input  oninput="write_name()" data-parsley-minlength="3" data-parsley-trigger="focusout" required type="text" class="form-control" id="paterno" name="paterno">
+                                {{-- <input  oninput="write_name()" data-parsley-minlength="3" data-parsley-trigger="focusout" required type="text" class="form-control" id="paterno" name="paterno"> --}}
                               </div>
                               <div class="form-group col-md-4">
                                 <label 	 for="inputEmail4">Ap. Materno</label>
-                                <input  oninput="write_name()" data-parsley-minlength="3" data-parsley-trigger="focusout" type="text" class="form-control" id="materno" name="materno">
+                                {{-- <input  oninput="write_name()" data-parsley-minlength="3" data-parsley-trigger="focusout" type="text" class="form-control" id="materno" name="materno"> --}}
                               </div>
                           </div>
                             <div class="form-row">
@@ -95,7 +95,8 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputState">País</label>
-                                <select required id="countries" name="country_id" class="form-control">
+                                {{-- quite el id="countries" en el select  --}}
+                                <select required  name="country_id" class="form-control">
                                     <option selected value="null" disabled>Selecciona un pais</option>
                                   @foreach ($countries as $country)
                                   <option value="{{$country->id}}">
@@ -106,7 +107,8 @@
                               </div>
                               <div class="form-group col-md-6">
                                 <label for="inputState">Estado</label>
-                                <select required id="states" name="state_id" class="form-control">
+                                {{-- quite el id="states" en el select --}}
+                                <select required name="state_id" class="form-control">
                                     <option selected value="null" disabled>Selecciona un estado</option>
                                 </select>
                               </div>
@@ -133,7 +135,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-12">
                                     <label for="inputEmail4">Nombre del pasajero</label>
-                                    <input readonly type="text" class="form-control" id="passenger_arrival">
+                                    {{-- <input readonly type="text" class="form-control" id="passenger_arrival"> --}}
                                 </div>
                             </div>
                             <div class="form-row">
@@ -247,7 +249,7 @@
                         <div class="p-3 col-md-12">
                             <button type="button" class="btn btn-block btn-primary btnPayment"> RESERVAR</button>
                         </div>
-                        <spam>Al hacer clic en enviar, acepta los términos y condiciones.</spam>
+                        <span>Al hacer clic en enviar, acepta los términos y condiciones.</span>
                     </div>
                 </div>
             </div>
@@ -255,3 +257,7 @@
     </div>
     </form>
 </div>
+
+
+
+

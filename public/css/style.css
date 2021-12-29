@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600;800&display=swap');
+
 body {
-    background: #F9F9F9;
+    /* background: #F9F9F9; */
+    background: #FFFFFF;
+    /* background: #212529; */
+
+    /* tipografia para parrafos y texto en general  */
+    font-family: 'Montserrat', sans-serif;
+    /* tipografia para titulares y cabeceras */
+    /* font-family: 'Poppins', sans-serif;  */
 }
 
 /* ----------------------------------------- navbar ------------------------------------- */
@@ -9,6 +18,12 @@ body {
 }
 
 .navbar .nav-link {
+    color: #fff;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 300;
+}
+
+.navbar li.nav-item i {
     color: #fff;
 }
 
@@ -31,6 +46,8 @@ body {
 
 .navbar .dropdown-menu a {
     color: #fff;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 300;
 }
 
 .navbar .flags {
@@ -46,10 +63,163 @@ body {
 }
 
 
+/* --------------------------------------- service-list -------------------------------- */
+
+h5.list {
+    font-family: 'Poppins', sans-serif;
+}
+
+.service-list {
+    background: #FBFBFD;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+/* ------ section left ------------ */
+
+.service-list .left h4.title-service {
+    line-height: 1;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600; 
+    color: #FF8427;
+}
+
+.service-list .left img.service-img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.service-list .left ul, li {
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none;
+}
+
+.service-list .left i.icons-specifications {
+    color: #538083;
+    margin-right: 5px;
+}
+
+.service-list .left i.icons-specifications.icon-second {
+    margin-right: 8px;
+}
+
+.service-list .left li.specifications {
+    font-size: 14px;
+}
+
+.service-list .left ul.buttons li.btn-green {
+    background: #EDFDF3;
+    color: #2F6339;
+    font-size: 10px;
+    width: 160px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.service-list .left ul.buttons li.btn-blue {
+    background: #EDF5FF;
+    color: #245AC2;
+    font-size: 10px;
+    width: 130px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* ------ section right ------------ */
+
+.service-list .right ul.table-row {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    list-style: none;
+}
+
+.service-list .right ul, li {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.service-list .right ul.table-row > :nth-child(2) {
+    background: rgba(213, 218, 236, .17);
+    margin-right: 5px;
+}
+
+.service-list .right ul.table-row > :nth-child(3) {
+    background: rgba(213, 218, 236, .17);
+    margin-left: 5px;
+}
+
+.service-list .right .title-eco,
+.service-list .right .title-pre {
+    color: #0582CA;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600; 
+}
+
+.service-list .right ul.table-row li i.fa-check {
+    color: #32CD32;
+}
+
+.service-list .right ul.table-row li i.fa-times {
+    color: #FF1544;
+}
+
+.service-list .right ul.table-row li.price-eco {
+    /* color: #00CE7C; */
+    color: #0582CA;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.service-list .right ul.table-row button.button-eco {
+    /* background: #00CE7C; */
+    background: #0582CA;
+    color: #fff;
+    padding: 10px 0;
+    text-decoration: none;
+    width: 100%;
+    border: 0;
+}
+
+.service-list .right ul.table-row button.button-eco:hover {
+    box-shadow: 0 0 3px #000;
+    color: #000;
+}
+
+.service-list .right ul.table-row li.price-pre {
+    /* color: #FFA500; */
+    color: #FF8427;;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.service-list .right ul.table-row button.button-pre {
+    background: #FF8427;
+    color: #fff;
+    padding: 10px 0;
+    text-decoration: none;
+    width: 100%;
+    border: 0;
+}
+
+.service-list .right ul.table-row button.button-pre:hover {
+    box-shadow: 0 0 3px #000;
+    color: #000;
+}
+
+
 /* ----------------------------------------- steps ------------------------------------- */
 
 .steps {
-    background: #fff;
+    /* background: #fff; */
+    /* background: #30323D; */
+    background: #FBFBFD;
+    font-family: 'Poppins', sans-serif; 
+    /* font-weight: 600; */
 }
 
 .step-one {
@@ -70,22 +240,41 @@ body {
     color: rgba(0, 0, 0, 0.4);
 }
 
-.step-four {
-    width: 100%;
-    height: 100%;
-    color: rgba(0, 0, 0, 0.4);
-}
-
 .step-active {
-    border-top: 3px solid #FFA500;
-    color: #FFA500;
-    font-weight: 700;
+    border-top: 3px solid #0582CA;
+    color: #0582CA;
+    font-weight: 600;
 }
 
-/* ----------------------------------------- form-section ------------------------------------- */
+
+/* ------------------------------------ form-section ------------------------------------ */
+
+.back {
+    text-decoration: none;
+    color: #0582CA;
+}
 
 .form-section {
-    background: #fff;
+    background: #FBFBFD;
+}
+
+.form-section h5 {
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600; 
+}
+
+.form-section h5.title-arrival {
+    color: #28AFB0;
+    color: #FF8427;
+    font-size: 18px;
+}
+
+.form-section label {
+    font-size: 15px;
+}
+
+.form-section span {
+    font-size: 15px;
 }
 
 .form-section .number__section {
@@ -94,53 +283,69 @@ body {
 }
 
 .form-section .input__icon {
-    color: #0064FF;
+    color: #538083;
 }
 
-/* ---------------------------------------------- total ------------------------------------- */
+.terms {
+    font-size: 14px;
+    /* margin-left: -10spx; */
+    /* padding-left: 0; */
+}
 
 .total {
-    height: 60px;
+    height: 70px;
 }
 
 .total .price {
-    color: #FFA500;
-    font-weight: 700;
+    /* color: #FFA500; */
+    color: #0582CA;
 }
 
-/* ------------------------------------ reservation__summary ------------------------------------- */
+
+/* -------------------------------- reservation__summary ------------------------------ */
 
 .reservation__summary {
-    background: #fff;
+    /* background: #fff; */
+    background: #FBFBFD;
+    font-size: 15px;
 }
 
 .reservation__summary .title__reservation {
-    color: #FFA500;
-    font-weight: 700;
+    /* color: #FFA500;
+    font-weight: 700; */
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600; 
+    color: #FF8427;
 }
 
 .reservation__summary .icon-resume {
-    color: #00BFFF;
+    /* color: #00BFFF; */
+    color: #538083;
 }
 
 .reservation__summary .description {
     border-bottom: 2px solid #E9ECEF;
 }
 
-.reservation__summary .total {
+/* .reservation__summary .total {
     background: #FFA500;
+    background: #F0C808;
     height: 50px;
-}
+} */
 
-/* ----------------------------------------------- widgets ------------------------------------- */
+
+/* --------------------------------------- widgets ---------------------------------- */
 
 .widget {
-    background: #fff;
+    background: #FBFBFD;
+    font-size: 15px;
 }
 
 .widget .title__widget {
-    color: #FFA500;
-    font-weight: 700;
+    /* color: #FFA500; */
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600; 
+    color: #FF8427;
 }
 
 .widget p {
@@ -149,22 +354,27 @@ body {
 
 .widget p.text-phone {
     color: #000;
-    font-weight: 600;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600; 
 }
 
 .widget .fa-check {
     color: #32CD32;
 }
 
-/* -------------------------------------------- footer ------------------------------------- */
+
+/* ----------------------------------------- footer ------------------------------------ */
 
 .bg-footer {
     background: #212529;
     color: #fff;
+    font-size: 15px;
 }
 
 .bg-footer h3 {
     color: #FACC01;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 300;
 }
 
 .bg-footer a {
@@ -195,138 +405,7 @@ body {
 }
 
 
-
-
-
-
-
-/* ---------------------------------------- service-list ------------------------------------- */
-
-.service-list {
-    background: #fff;
-    margin-bottom: 0;
-}
-
-/* ------ section left ------------ */
-
-.service-list .left h4.title-service {
-    color: #FFA500;
-    font-weight: 600;
-    line-height: 1;
-}
-
-.service-list .left img.service-img {
-    width: 150px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.service-list .left ul, li {
-    padding-left: 0;
-    margin-left: 0;
-    list-style: none;
-}
-
-.service-list .left ul.buttons li.btn-green {
-    background: #EDFDF3;
-    color: #2F6339;
-    font-size: 14px;
-    width: 160px;
-}
-
-.service-list .left ul.buttons li.btn-blue {
-    background: #EDF5FF;
-    color: #245AC2;
-    font-size: 14px;
-    width: 130px;
-}
-
-/* ------ section right ------------ */
-
-.service-list .right ul.table-row {
-    display: grid;
-    grid-template-columns: 200px 1fr 1fr;
-    list-style: none;
-}
-
-.service-list .right ul, li {
-    padding-left: 0;
-    margin-left: 0;
-}
-
-.service-list .right ul.table-row > :nth-child(2) {
-    background: rgba(213, 218, 236, .17);
-    margin-right: 5px;
-}
-
-.service-list .right ul.table-row > :nth-child(3) {
-    background: rgba(213, 218, 236, .17);
-    margin-left: 5px;
-}
-
-.service-list .right .title-eco,
-.service-list .right .title-pre {
-    color: #FFA500;
-    font-weight: 700;
-    font-size: 18px;
-}
-
-.service-list .right ul.table-row li i.fa-check {
-    color: #32CD32;
-}
-
-.service-list .right ul.table-row li i.fa-times {
-    color: #FF1544;
-}
-
-.service-list .right ul.table-row li.price-eco {
-    color: #00CE7C;
-    font-size: 20px;
-    font-weight: 700;
-    padding-bottom: 20px;
-}
-
-.service-list .right ul.table-row button.button-eco {
-    background: #00CE7C;
-    color: #fff;
-    padding: 10px 0;
-    text-decoration: none;
-    width: 100%;
-    border: 0;
-    /* display: flex;
-    justify-content: center; */
-}
-
-.service-list .right ul.table-row button.button-eco:hover {
-    box-shadow: 0 0 3px #000;
-    color: #000;
-}
-
-.service-list .right ul.table-row li.price-pre {
-    color: #FFA500;
-    font-size: 20px;
-    font-weight: 700;
-    padding-bottom: 20px;
-}
-
-.service-list .right ul.table-row button.button-pre {
-    background: #FFA500;
-    color: #fff;
-    padding: 10px 0;
-    text-decoration: none;
-    width: 100%;
-    border: 0;
-    /* display: flex;
-    justify-content: center; */
-}
-
-.service-list .right ul.table-row button.button-pre:hover {
-    box-shadow: 0 0 3px #000;
-    color: #000;
-}
-
-
-
+/* -------------------------------------- media queries -------------------------------- */
 
 @media (max-width: 450px){
     .service-list .right .title-eco,

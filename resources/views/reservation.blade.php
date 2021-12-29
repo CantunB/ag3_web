@@ -361,58 +361,14 @@
             @include('layouts.components.footer')
         </div> --}}
         
-        <!-- section navbar start -->
-        <nav class="navbar navbar-expand-lg bg-dark" aria-label="navbar-ag3">
-            <div class="container">
-                <!-- Navbar-brand -->
-                <a class="navbar-brand" href="#"><img src="{{ asset('assets/images/logo.png') }}" alt="logo" class="navbar-brand__img"></a>
-                <!-- Button collapse  -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contenido-nav"
-                    aria-controls="contenido-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Nav-content -->
-                <div class="collapse navbar-collapse" id="contenido-nav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Acerca de nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
-                        </li>
-                    </ul>
-                    <!-- section-right-language  -->
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-language" data-bs-toggle="dropdown"
-                                aria-expanded="false">Cambiar idioma</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown-language">
-                                <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/images/flags/4x3/en.svg') }}" alt="english-flag" class="flags">
-                                        Inglés</a></li>
-                                <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/images/flags/4x3/es.svg') }}" alt="spanish-flag" class="flags">
-                                        Español</a></li>
-                                <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/images/flags/4x3/fr.svg') }}" alt="french-flag" class="flags">
-                                        Francés</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- section navbar end -->
+        @include('layouts.components.new-header')
 
         <!-- section content start -->
         <div class="container">
             <div class="row">
                 {{-- section left start --}}
                 <div class="col-lg-8 mt-4">
-                    <h4>Lista de servicios disponibles para su transporte de llegada a {{ $destino }} para {{ $passengers }} pasajeros. </h4>
+                    <h5 class="list">Lista de servicios disponibles para su transporte de llegada a {{ $destino }} para {{ $passengers }} pasajeros. </h5>
 
                     <!-- service-suburban start  -->
                     <div class="row">
@@ -423,9 +379,9 @@
                                     <h4 class="mt-2 title-service">TRANSPORTE {{ $tariff[0]->type_unit->type_units }}</h4>
                                     <img class="service-img" src="{{ asset('assets/images/transport-suburban.png') }}" alt="transport-suburban">
                                     <ul>
-                                        <li><i class="fas fa-users"></i> Max. 8 pax.</li>
-                                        <li><i class="fas fa-suitcase-rolling"></i> Max. 7 maletas</li>
-                                        <li><i class="fas fa-car-side"></i> Precio por vehiculo</li>
+                                        <li class="specifications"><i class="fas fa-users icons-specifications"></i> Max. 8 pax.</li>
+                                        <li class="specifications"> <i class="fas fa-suitcase icons-specifications icon-second"></i>  Max. 7 maletas</li>
+                                        <li class="specifications"><i class="fas fa-car-side icons-specifications"></i> Precio por vehiculo</li>
                                     </ul>
                                     <ul class="buttons">
                                         <li class="btn-green p-2 mb-2"><i class="fas fa-coins"></i> Impuestos incluidos</li>
@@ -541,9 +497,9 @@
                                     <h4 class="mt-2 title-service">TRANSPORTE {{ $tariff[2]->type_unit->type_units }}</h4>
                                     <img class="service-img" src="{{ asset('assets/images/transport-van.png') }}" alt="transport-van">
                                     <ul>
-                                        <li><i class="fas fa-users"></i> Max. 8 pax.</li>
-                                        <li><i class="fas fa-suitcase-rolling"></i> Max. 7 maletas</li>
-                                        <li><i class="fas fa-car-side"></i> Precio por vehiculo</li>
+                                        <li class="specifications"><i class="fas fa-users icons-specifications"></i> Max. 8 pax.</li>
+                                        <li class="specifications"><i class="fas fa-suitcase icons-specifications icon-second"></i> Max. 7 maletas</li>
+                                        <li class="specifications"><i class="fas fa-car-side icons-specifications"></i> Precio por vehiculo</li>
                                     </ul>
                                     <ul class="buttons">
                                         <li class="btn-green p-2 mb-2"><i class="fas fa-coins"></i> Impuestos incluidos</li>
@@ -671,6 +627,12 @@
                             <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $pickup }}</p>
                             <p class="title mb-0">Numero de pasajeros</p>
                             <p class="description"><i class="fas fa-users icon-resume"></i> {{ $passengers }}</p>
+                            @if ($retorno == 'si')
+                            <p class="title mb-0">Fecha de regreso</p>
+                            <p class="description"><i class="fas fa-calendar-alt icon-resume"></i> {{ $date_comeback }}</p>
+                            <p class="title mb-0">Hora de regreso</p>   
+                            <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $time_comeback }}</p>                             
+                            @endif
                         </div>
 
                         <div class="col-md-12 col-lg-11 mb-4 shadow-sm border widget">
@@ -698,50 +660,7 @@
         </div>
         <!-- section content end -->
 
-        <!-- section footer start -->
-        <div class="bg-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 mt-2 d-flex flex-column justify-content-center align-items-center">
-                        <img src="{{ asset('assets/images/logo.png') }}" alt="logo" class="my-2 logo">
-                        <p>AG3 VIP Luxury es una empresa lider en el transporte de lujo, con vehiculos equipados para cada ocasion o la necesidad que tengas</p>
-                    </div>
-                    <div class="col-sm-6 col-md-3 mt-2">
-                        <h3>Servicios</h3>
-                        <div class="d-flex flex-column">
-                            <a href="#">Aeropuerto a hotel</a>
-                            <a href="#">Hotel a aeropuerto</a>
-                            <a href="#">Hotel a hotel</a>
-                            <a href="#">Aeropuerto a hotel a aeropuerto</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 mt-2">
-                        <h3>Compañia</h3>
-                        <div class="d-flex flex-column">
-                            <a href="#">Inicio</a>
-                            <a href="#">Acerca de</a>
-                            <a href="#">Contacto</a>
-                            <a href="#">Terminos y condiciones</a>
-                            <a href="#">Aviso de privacidad</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 mt-2">
-                        <h3>Siguenos</h3>
-                        <div class="d-flex flex-column">
-                            <a href="#"><i class="face fab fa-facebook-f"></i> Facebook</a>
-                            <a href="#"><i class="insta fab fa-instagram"></i> Instagram</a>
-                            <a href="#"><i class="twit fab fa-twitter"></i> Twitter</a>
-                            <a href="#"><i class="whats fab fa-whatsapp"></i> Whatsapp</a>
-                        </div>
-                    </div>
-                    <div class="col-12 mt-2 copyright">
-                        <h6 class="text-center mt-2">Creado por <a href="https://www.stigmacode.com/">StigmaCode</a> & <span>JS Arthuro</span> | Todos los derechos reservados © {{ now()->year }}</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- section footer end -->
-
+        @include('layouts.components.new-footer')
         @include('layouts.components.script')
     </body>
 </html>
