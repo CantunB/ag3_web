@@ -11,7 +11,7 @@
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('assets/js/parsley.min.js') }}"></script>
     <script src="{{ asset('assets/js/parsley.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
     <script src="{{ asset('assets/js/jquery.spinner.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="{{ mix('/js/app.js') }}"></script>
@@ -272,12 +272,12 @@
         $(document).ready(function(){
             $('#countries').select2({
                 placeholder: "Selecciona un pais",
-                theme: 'bootstrap4',
+                theme: 'bootstrap-5',
 
             });
             $('#states').select2({
                 placeholder: "Selecciona un estado",
-                theme: 'bootstrap4',
+                theme: 'bootstrap-5',
 
             });
             $('#airline_arrival').select2({
