@@ -215,35 +215,23 @@ h5.list {
 /* ----------------------------------------- steps ------------------------------------- */
 
 .steps {
-    /* background: #fff; */
-    /* background: #30323D; */
     background: #FBFBFD;
     font-family: 'Poppins', sans-serif; 
-    /* font-weight: 600; */
 }
 
-.step-one {
-    width: 100%;
-    height: 100%;
-    color: rgba(0, 0, 0, 0.4);
+button.nav-link {
+    color: #A6A6A8;
 }
 
-.step-two {
-    width: 100%;
-    height: 100%;
-    color: rgba(0, 0, 0, 0.4);
-}
-
-.step-three {
-    width: 100%;
-    height: 100%;
-    color: rgba(0, 0, 0, 0.4);
-}
-
-.step-active {
-    border-top: 3px solid #0582CA;
-    color: #0582CA;
+button.nav-link.active {
+    color: #0582CA !important;
     font-weight: 600;
+    background: #fff;
+    border-bottom: 3px solid #0582CA !important;
+}
+
+button.nav-link:hover {
+    color: #0582CA;
 }
 
 
