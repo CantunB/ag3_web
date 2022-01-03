@@ -88,7 +88,7 @@
                             <label for="arrival" class="form-label">Aerolinea de llegada</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
-                                        class="fas fa-plane input__icon"></i></span>
+                                        class="fas fa-plane-arrival input__icon"></i></span>
                                 <select required id="airline_arrival" name="a_arrival"  class="form-select" aria-describedby="icon-plane">
                                     <option selected value="null" disabled>Selecciona una aerolinea...</option>
                                     @foreach ($airlines as $airline)
@@ -122,7 +122,7 @@
                                 <input readonly type="date" id="date_arrival" name="d_arrival" class="form-control" aria-describedby="icon-date" value="{{ $date }}">
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 mb-4">
+                        <div class="col-sm-6 col-md-6 mb-1">
                             <label for="hour" class="form-label">Hora de llegada</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
@@ -148,7 +148,7 @@
                             <label for="arrival" class="form-label">Aerolinea de Salida</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
-                                        class="fas fa-plane input__icon"></i></span>
+                                        class="fas fa-plane-departure input__icon"></i></span>
                                         <select required id="airline_departure" name="a_departure" class="form-select" aria-describedby="icon-plane">
                                             <option selected value="null" disabled>Selecciona una aerolinea...</option>
                                             @foreach ($airlines as $airline)
@@ -182,7 +182,7 @@
                                 <input readonly type="date" class="form-control" id="date_departure" name="d_departure" aria-describedby="icon-date" value="{{ $date }}">
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 mb-4">
+                        <div class="col-sm-6 col-md-6 mb-1">
                             <label for="hour" class="form-label">Hora de salida</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
@@ -208,8 +208,8 @@
                             <label for="arrival" class="form-label">Aerolinea de llegada</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
-                                        class="fas fa-plane input__icon"></i></span>
-                                        <select required id="airline_departure" name="a_arrival" class="form-select" aria-describedby="icon-plane">
+                                        class="fas fa-plane-arrival input__icon"></i></span>
+                                        <select required id="airline_arrival" name="a_arrival" class="form-select" aria-describedby="icon-plane">
                                             <option selected value="null" disabled>Selecciona una aerolinea...</option>
                                             @foreach ($airlines as $airline)
                                                 <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
@@ -243,12 +243,12 @@
 
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 mb-4">
+                        <div class="col-sm-6 col-md-6 mb-1">
                             <label for="hour" class="form-label">Hora de llegada</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="hour" name="t_arrival" aria-describedby="icon-hour">
+                                <input readonly type="text" class="form-control" id="hour" name="t_arrival" aria-describedby="icon-hour" value="{{ $pickup }}">
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
@@ -264,7 +264,7 @@
                             <label for="arrival" class="form-label">Aerolinea de salida</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
-                                        class="fas fa-plane input__icon"></i></span>
+                                        class="fas fa-plane-departure input__icon"></i></span>
                                     <select required id="airline_departure" name="a_departure" class="form-select" aria-describedby="icon-plane">
                                         <option selected value="null" disabled>Selecciona una aerolinea...</option>
                                         @foreach ($airlines as $airline)
@@ -298,7 +298,7 @@
                                 <input readonly type="date" class="form-control" id="date" name="d_departure" aria-describedby="icon-date" value="{{ $date_comeback }}">
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 mb-4">
+                        <div class="col-sm-6 col-md-6 mb-1">
                             <label for="hour" class="form-label">Hora de salida</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
