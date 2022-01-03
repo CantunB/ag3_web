@@ -35,7 +35,8 @@ class BookingController extends Controller
             1 => 'Aeropuerto a Hotel',
             2 => 'Hotel a Aeropuerto',
             3 => 'Hotel a Hotel',
-            4 => 'Aeropuerto a Hotel a Aeropuerto'
+            4 => 'Aeropuerto a Hotel a Aeropuerto',
+            5 => 'Traslados'
         ];
 
         foreach ($list_services as $list_service) {
@@ -112,7 +113,7 @@ class BookingController extends Controller
 
     public function payment(Request $request)
     {
-        //return $request->all();ç
+        //return $request->all();
 
         $id = IdGenerator::generate(['table' => 'bookings', 'length' => 8, 'prefix' =>'BOOk-']);
 
@@ -129,18 +130,26 @@ class BookingController extends Controller
         $booking->origin = $request->origin;
         $booking->destiny = $request->destiny;
         $booking->passengers = $request->passengers;
-        $booking->date_arrival = $request->date_arrival;
-        $booking->time_arrival = $request->time_arrival;
+        $booking->airline_arrival = $request->a_arrival;
+        $booking->flight_number_arrival = $request->fn_arrival;
+        $booking->date_arrival = $request->d_arrival;
+        $booking->time_arrival = $request->t_arrival;
+        $booking->comments_arrival = $request->c_arrival;
         $booking->round_service = $request->round_service;
-        $booking->date_departure = $request->date_departure;
-        $booking->time_departure = $request->time_departure;
+        $booking->airline_departure = $request->a_departure;
+        $booking->flight_number_departure = $request->fn_departure;
+        $booking->date_departure = $request->d_departure;
+        $booking->time_departure = $request->t_departure;
+        $booking->comments_departure = $request->c_departure;
         $booking->request_unit = $request->request_unit;
         $booking->price = $request->price;
         $booking->type_payment = $request->type_payment;
+        $booking->transaction_id = $request->transaction_id;
         $booking->status_payment = $request->status_payment;
         $booking->status_booking = $request->status_booking;
         $booking->save();
 
+        /*
         $msg = [
             'fullname' => $request->name . ' ' . $request->paterno . ' ' . $request->materno,
             'name' => $request->name,
@@ -164,7 +173,9 @@ class BookingController extends Controller
             'c_departure' => $request->c_departure,
             't_departure' => $request->t_departure
         ];
-        Mail::to($request->email)->send(new BookingMail($msg));
+         */
+
+        Mail::to($request->email)->send(new BookingMail($booking));
         return response()->json(['data' => 'Su reservación se ha realizado correctamente'], 201);
     }
 }

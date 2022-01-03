@@ -8,10 +8,27 @@
     <script src="{{ asset('assets/plugins/scrollTo/jquery.scrollTo.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/easing/easing.js') }}"></script>
     <script src="{{ asset('assets/plugins/parallax-js-master/parallax.min.js') }}"></script>
+
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('assets/js/parsley.min.js') }}"></script>
     <script src="{{ asset('assets/js/parsley.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <script src="{{ asset('assets/js/i18n/es.js') }}"></script>
+    <script src="{{ asset('assets/js/i18n/fr.js') }}"></script>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            //var parsley_lang = navigator.language || navigator.userLanguage;
+            var locale =  "{{ app()->getLocale() }}";
+            if (locale == 'es') {
+                window.ParsleyValidator.setLocale('es');
+            }else if (locale == 'en') {
+                window.ParsleyValidator.setLocale('en');
+            }else if (locale == 'fr') {
+                window.ParsleyValidator.setLocale('fr');
+            }
+        }
+     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('assets/js/jquery.spinner.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="{{ mix('/js/app.js') }}"></script>
@@ -25,6 +42,7 @@
               // This function sets up the details of the transaction, including the amount and line item details.
             return actions.order.create({
                 purchase_units: [{
+                    label: 'Reserva AG3 Luxury Travel',
                     amount: {
                     value: price
                     }
@@ -35,11 +53,15 @@
               // This function captures the funds from the transaction.
               return actions.order.capture().then(function(details) {
                 // This function shows a transaction success message to your buyer.
-                //alert('Transaction completed by ' + details.payer.name.given_name);
+                //alert('Transaction completed by ' + details.payer.name.given_name + details.id);
+                form = $('#booking_form,#payment_form').serialize();
                 $.ajax({
                     type: "POST",
                     url: "{!! route('payment',app()->getLocale()) !!}",
-                    data:  $("#booking_form").serialize(),
+                    data: form+'&'+$.param({
+                        transaction_id : details.id,
+                        status_payment: 1
+                    }),
                     dataType: "json",
                     headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
 
@@ -74,33 +96,43 @@
           }).render('#paypal-button-container');
           //This function displays payment buttons on your web page.
       </script>
-    <script>
-        var numberSpinner = (function() {
-            $('.number-spinner>.ns-btn>a').click(function() {
-            var btn = $(this),
-                oldValue = btn.closest('.number-spinner').find('input').val().trim(),
-                newVal = 0;
+      <script>
+        $("#cash_submit").click(function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: "{!! route('payment',app()->getLocale()) !!}",
+                data:  $('#booking_form,#payment_form').serialize(),
+                dataType: "json",
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
 
-            if (btn.attr('data-dir') === 'up') {
-                newVal = parseInt(oldValue) + 1;
-            } else {
-                if (oldValue > 1) {
-                    newVal = parseInt(oldValue) - 1;
-                } else {
-                    newVal = 1;
+                success: function(response){
+                   //console.log('Formulario enviado');
+                    Swal.fire({
+                        title: "Reservacion!",
+                        text: response.data,
+                        icon: "success",
+                        timer: 3500
+                    });
+                //window.location = '{!! route('index',app()->getLocale()) !!}';
+                },
+                error: function(response){
+                    console.log(response);
+                    var errors = response.responseJSON;
+                    errorsHtml = '<ul>';
+                    $.each(errors.errors,function (k,v) {
+                    errorsHtml += '<li>'+ v + '</li>';
+                    });
+                    errorsHtml += '</ul>';
+                    Swal.fire({
+                        title: "Ooops!",
+                        html: errorsHtml,
+                        icon: "error",
+                        confirmButtonText: "Volver!",
+                    });
                 }
-            }
-                btn.closest('.number-spinner').find('input').val(newVal);
             });
-            $('.number-spinner>input').keypress(function(evt) {
-                evt = (evt) ? evt : window.event;
-                var charCode = (evt.which) ? evt.which : evt.keyCode;
-                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-                return false;
-            }
-            return true;
-            });
-        })();
+        });
     </script>
     <script>
         $(".selector").flatpickr({
@@ -122,7 +154,8 @@
     </script>
     <script>
         $(document).ready(function() {
-            $('#contact_form').parsley();
+            $('#contact_form').parsley({
+            });
             $("#contact_form").on('submit', function(event) {
                 $(this).parsley().validate();
                 if ($(this).parsley().isValid()) {
@@ -264,6 +297,13 @@
                         $(".destino_airline").attr("disabled",true).hide();
                         $('#retorno').prop('checked', true);
                         break;
+                    case('5'):
+                        jQuery(".origen_hotel").select2().next().hide();
+                        jQuery(".destino_hotel").select2().next().hide();
+                        $(".origen_airline").attr("disabled",true).hide();
+                        $(".destino_airline").attr("disabled",true).hide();
+
+                        break;
                 }
             });
         });
@@ -282,17 +322,17 @@
             });
             $('#airline_arrival').select2({
                 placeholder: "Selecciona una aerolinea",
-                theme: 'bootstrap4',
+                theme: 'bootstrap-5',
 
             });
             $('#airline_departure').select2({
                 placeholder: "Selecciona una aerolinea",
-                theme: 'bootstrap4',
+                theme: 'bootstrap-5',
 
             });
             $('#states').select2({
                 placeholder: "Selecciona un estado",
-                theme: 'bootstrap4',
+                theme: 'bootstrap-5',
 
             });
         });
@@ -322,26 +362,36 @@
         });
     </script>
     <script>
+        /*
         $(document).ready(function() {
-            // bind parsley to the form
-            $("#booking_form").parsley();
+            form = $("#booking_form").parsley();
+            alert('formulario valido');
 
-            // on form submit
-            $("#booking_form").on('click', function(event) {
-                // validate form with parsley.
-                $(this).parsley().validate();
+            $(".btnNext").on('click', function(event) {
+                form.parsley().validate();
 
-                // if this form is valid
-                if ($(this).parsley().isValid()) {
-                    // show alert message
-                    $('.btnPayment').click(function(){
-                        $('.nav-tabs > .active').next('li').find('a').trigger('click');
-                    });
+                if (form.parsley().isValid()) {
+                    var selected = $("#tabs").tabs("option", "selected");
+                    $("#tabs").tabs("option", "selected", selected + 1);
                 }
+            });
 
-                // prevent default so the form doesn't submit. We can return true and
-                // the form will be submited or proceed with a ajax request.
-                event.preventDefault();
+        });
+*/
+
+
+        $(document).ready(function() {
+            $("#btnPayment").on('click', function(e){
+                e.preventDefault();
+                $("#booking_form").parsley();
+                $("#booking_form").parsley().validate();
+                if ($("#booking_form").parsley().isValid()){
+                    alert('valid');
+                    //$('.btnPayment').click(function(){
+                        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+                    //});
+
+                }
             });
         });
     </script>
@@ -355,4 +405,24 @@
             document.getElementById("passenger_departure").value = name + ' ' + paterno + ' ' + materno;
 
         }
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            paypal = $('#paypal_opt').hide();
+            cash = $('#cash_opt').hide();
+
+            $("#img1, #img2").change(function () {
+                if ($("#img1").is(":checked")) {
+                    cash.show();
+                    paypal.hide();
+                }
+                else if ($("#img2").is(":checked")) {
+                    cash.hide();
+                    paypal.show();
+                }
+                //else
+                  //  $('#div3').show();
+            });
+        });
     </script>

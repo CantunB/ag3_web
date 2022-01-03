@@ -290,7 +290,7 @@ ul.social li{
     .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
         overflow:hidden;padding:10px 5px;word-break:normal;}
     .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-    .tg .tg-vvf4{border-color:inherit;color:#3166ff;font-size:26px;font-weight:bold;text-align:center;vertical-align:top}
+    .tg .tg-vvf4{border-color:inherit;color:#00CE7C;font-size:20px;font-weight:bold;text-align:center;vertical-align:top}
     .tg .tg-qz2x{background-color:#ffcb2f;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
     .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
     .tg .tg-4qqe{border-color:inherit;font-size:22px;font-weight:bold;text-align:center;vertical-align:top}
@@ -334,7 +334,7 @@ ul.social li{
             </thead>
             <tbody>
               <tr>
-                <td class="tg-vvf4" colspan="15">Estimado {{ $msg['name']}} su orden de confirmacion de reserva</td>
+                <td style="text-transform: uppercase" class="tg-vvf4" colspan="15">Del aeropuerto a tu destino,  tu transportación VIP LUXURY como te lo mereces </td>
               </tr>
               <tr>
                 <td class="tg-qz2x" colspan="11">DETALLES </td>
@@ -345,12 +345,22 @@ ul.social li{
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
-                <td class="tg-0pky" colspan="7" rowspan="4"><span style="font-weight:bold">NOMBRE: </span>{{ $msg['fullname'] }}<br><span style="font-weight:bold">CORREO:</span> {{ $msg['email'] }}<br><span style="font-weight:bold">TELEFONO:</span> {{ $msg['phone'] }}<br><span style="font-weight:bold">PAIS:</span> {{ 'MEXICO'  }} <span style="font-weight:bold"> ESTADO:</span> {{ 'CAMPECHE' }} <br><br><br><span style="font-weight:bold">{{ $msg['service'] }}:</span><br>{{ $msg['origen'] }} - {{ $msg['destiny'] }}<br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br> @if ( $msg['unit'] == 1) SUBURBAN PARA {{ $msg['passengers'] }} PASAJEROS @else  SUBURBAN PARA {{ $msg['passengers'] }} PASAJEROS @endif <br></td>
-                <td class="tg-4qqe" colspan="4" rowspan="4"><br><br><br><br><br><span style="font-weight:bold">${{ $msg['price'] }}MX</span><br></td>
+                <td style=" padding:25px;" class="tg-0pky" colspan="7" rowspan="4">
+                    <div class="container" style="border:2px solid orange; border-radius: 25px; padding: 4%">
+                        <span style="font-weight: bold">No.SERVICIO:</span> <span style="text-transform: uppercase">{{ $booking->id }}</span> <br><br><span style="font-weight:bold">NOMBRE: </span><span style="text-transform: uppercase; ">{{ $booking->fullname }}</span><br><span style="font-weight:bold">CORREO:</span> {{ $booking->email }}<br><span style="font-weight:bold">TELEFONO:</span> {{ $booking->phone }}<br><span style="font-weight:bold">PAIS:</span> {{ 'MEXICO'  }} <span style="font-weight:bold"> ESTADO:</span> {{ 'CAMPECHE' }} <br><br><br><span style="text-transform: uppercase; font-weight:bold">{{ $booking->type_service }}:</span><br><span style="text-transform: uppercase;">{{ $booking->origin }}</span> - <span style="text-transform: uppercase;">{{ $booking->destiny }}</span><br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br> @if ( $booking['unit'] == 1) SUBURBAN PARA {{ $booking->passengers }} PASAJEROS @else  SUBURBAN PARA {{ $booking->passengers }} PASAJEROS @endif <br>
+                    </div>
+                </td>
+                <td class="tg-4qqe" colspan="4" rowspan="4"><br><br><br><br><br><span style="font-weight:bold">${{ $booking->price }}MX</span><br></td>
               </tr>
               <tr>
                 <td class="tg-0pky"></td>
-                <td class="tg-c3ow" colspan="2" rowspan="2"><img src="http://ag3.stigmacode.com/assets/images/icons/van.png" width="100" height="200"></td>
+                <td class="tg-c3ow" colspan="2" rowspan="2">
+                    @if ($booking->request_unit == 1)
+                        <img src="http://ag3.stigmacode.com/assets/images/transport-suburban.png" width="250" height="250">
+                    @else
+                        <img src="http://ag3.stigmacode.com/assets/images/transport-van.png" width="250" height="250">
+                    @endif
+                </td>
                 <td class="tg-0pky"></td>
               </tr>
               <tr>
@@ -363,19 +373,28 @@ ul.social li{
                 <td class="tg-0pky"></td>
                 <td class="tg-0pky"></td>
               </tr>
-                @if ( $msg['service'] == 'Aeropuerto a Hotel')
+                @if ( $booking->type_service == 'Aeropuerto a Hotel')
                     <tr>
                         <td style="padding: 2" class="tg-qz2x" colspan="15">INFORMACION DE LLEGADA</td>
                     </tr>
                     <tr>
-                        <td style="padding: 2" class="tg-0pky" colspan="15" rowspan="2"><span style="font-weight:bold">FECHA:</span> {{ $msg['d_arrival'] }}<br><span style="font-weight:bold">HORA: </span>{{  $msg['t_arrival'] }} <br><span style="font-weight:bold">AEROLINEA:  </span>{{ $msg['a_arrival'] }}  <span style="font-weight:bold">NUMERO DE VUELO:  </span> {{  $msg['fn_arrival'] }}   <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $msg['c_arrival'] }}<br><br><span style="font-weight:bold">PICK-UP:</span></td>
+                        <td style=" padding:25px;" class="tg-0pky" colspan="15" rowspan="2">
+                            <div class="container" style="border:2px solid orange; border-radius: 25px; padding: 3%">
+                                <span style="font-weight:bold">FECHA:</span> {{ $booking->date_arrival }}<br><span style="font-weight:bold">HORA: </span>{{  $booking->time_arrival }} <br><span style="text-transform: uppercase; font-weight:bold">AEROLINEA:  </span> <span style="text-transform: uppercase">{{ $booking->airline_arrival }} </span> <span style="text-transform: uppercase;  font-weight:bold">NUMERO DE VUELO:  </span> {{  $booking->flight_number_arrival}}   <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_arrival }}<br><br><span style="font-weight:bold">PICK-UP:</span>
+                            </div>
+                        </td>
+
                     </tr>
-                @elseif( $msg['service'] == 'Hotel a Aeropuerto')
+                @elseif( $booking->type_service == 'Hotel a Aeropuerto')
                     <tr>
                         <td class="tg-qz2x" colspan="15">INFORMACION DE SALIDAD</td>
                     </tr>
                     <tr>
-                        <td class="tg-0pky" colspan="15" rowspan="2"><span style="font-weight:bold">FECHA: {{ $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{$msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
+                        <td style=" padding:25px;" class="tg-0pky" colspan="15" rowspan="2">
+                            <div class="container" style="border:2px solid orange; border-radius: 25px; padding: 3%">
+                            <span style="font-weight:bold">FECHA: </span>{{ $booking->date_departure }}<br><span style="font-weight:bold">HORA: </span>{{ $booking->time_departure }}<br><span style="text-transform: uppercase;  font-weight:bold">AEROLINEA:  </span> <span style="text-transform: uppercase">{{ $booking->airline_departure }}<span>   <span style="text-transform: uppercase;  font-weight:bold">NUMERO DE VUELO: </span> <span style="text-transform: uppercase">{{  $booking->flight_number_departure }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_departure }}<br><br><span style="font-weight:bold">PICK-UP: </span>
+                            </div>
+                        </td>
                     </tr>
                 @else
                     <tr>
@@ -384,15 +403,19 @@ ul.social li{
                         <td class="tg-qz2x" colspan="7">INFORMACION DE SALIDAD</td>
                     </tr>
                     <tr>
-                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ $msg['d_arrival'] }}</span><br><span style="font-weight:bold">HORA: {{ $msg['t_arrival'] }}</span> <br><span style="font-weight:bold">AEROLINEA:  {{ $msg['a_arrival'] }}</span>  <span style="font-weight:bold">NUMERO DE VUELO:  {{ $msg['fn_arrival'] }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: {{ $msg['c_arrival'] }}</span><br><br><span style="font-weight:bold">PICK-UP:</span></td>
+                        <td class="tg-0pky" colspan="7" rowspan="2">
+                            <span style="font-weight:bold">FECHA: </span>{{ $booking->date_arrival }}<br><span style="font-weight:bold">HORA: </span>{{ $booking->time_arrival }}<br><span style="text-transform: uppercase; font-weight:bold">AEROLINEA: </span> <span style="text-transform: uppercase">{{ $booking->airline_arrival }} </span> <span style="text-transform: uppercase; font-weight:bold">NUMERO DE VUELO:  </span> <span style="text-transform: uppercase"> {{ $booking->flight_number_arrival }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_arrival }}<br><br><span style="font-weight:bold">PICK-UP:</span>
+                        </td>
                         <td class="tg-0pky" rowspan="2"></td>
-                        <td class="tg-0pky" colspan="7" rowspan="2"><span style="font-weight:bold">FECHA: {{ $msg['d_departure'] }}</span><br><span style="font-weight:bold">HORA: {{ $msg['t_departure'] }}</span><br><span style="font-weight:bold">AEROLINEA:  {{ $msg['a_departure'] }} </span>  <span style="font-weight:bold">NUMERO DE VUELO: {{ $msg['fn_departure'] }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: {{ $msg['c_departure'] }}</span><br><br><span style="font-weight:bold">PICK-UP: </span></td>
+                        <td class="tg-0pky" colspan="7" rowspan="2">
+                            <span style="font-weight:bold">FECHA: </span>{{ $booking->date_departure }}<br><span style="font-weight:bold">HORA: </span>{{ $booking->time_departure }}<br><span style=" text-transform: uppercase; font-weight:bold">AEROLINEA:  </span> <span style="text-transform: uppercase">{{ $booking->airline_departure }} </span>  <span style="text-transform: uppercase; font-weight:bold">NUMERO DE VUELO: </span><span style="text-transform: uppercase">{{ $booking->flight_number_departure }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_departure }}<br><br><span style="font-weight:bold">PICK-UP: </span>
+                        </td>
                     </tr>
                 @endif
               <tr>
               </tr>
               <tr>
-                <td class="tg-qz2x" colspan="15"><strong style="font-weight:bold">METODO DE PAGO SELECCIONADO:</strong>    </td>
+                <td class="tg-qz2x" colspan="15"><strong style="text-transform: uppercase; font-weight:bold">METODO DE PAGO SELECCIONADO: {{ $booking->type_payment }}</strong>    </td>
               </tr>
               <tr>
                 <td class="tg-nlhk" colspan="5" rowspan="3">ACERCA DE AG3 <br><br><br>AG3 VIP Luxury es una empresa lider en el transporte de lujo, con vehiculos equipados para cada ocasion o la necesidad que tengas</td>

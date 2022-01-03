@@ -32,4 +32,9 @@ class Booking extends Model
         'status_payment',
         'status_booking'
     ];
+
+    public function getFullNameAttribute()
+    {
+        return "{$this->name} {$this->paterno} {$this->materno}";
+    }
 }

@@ -25,14 +25,16 @@
                                 </div> --}}
                                 <select name="services" id="services" required>
                                     <option selected value="null" disabled>Selecciona un servicio</option>
-                                    <optgroup label="ONE WAY">
+                                    <optgroup label="VIAJE REDONDO">
+                                        <option value="4">Aeropuerto a Hotel a Aeropuerto</option>
+                                    </optgroup>
+                                    <optgroup label="VIAJE SENCILLO">
                                         <option value="1">Aeropuerto a Hotel</option>
                                         <option value="2">Hotel a Aeropuerto</option>
                                         <option value="3">Hotel a Hotel</option>
+                                        <option value="5">Traslado</option>
                                     </optgroup>
-                                    <optgroup label="ROUND TRIP">
-                                        <option value="4">Aeropuerto a Hotel a Aeropuerto</option>
-                                    </optgroup>
+
                                 </select>
                             </div>
                             <div
@@ -54,7 +56,7 @@
                                                 <option>{{ $airline->airline }}</option>
                                             @endforeach
                                         </select> --}}
-                                        <input type="text" readonly class="form-control search_input_hotel  origen_airline" name="origen" value="Aeropuerto Internacional de Cancun">
+                                        <input type="hidden" readonly class="form-control search_input_hotel  origen_airline" name="origen" value="Aeropuerto Internacional de Cancun">
 
                                         <select class="search_input search_input_hotel origen_hotel" name="origen">
                                             <option selected value="null" disabled>Selecciona un hotel</option>
@@ -68,7 +70,7 @@
                                                     <option>{{ $hotel->hotel }}</option>
                                                 @endforeach
                                         </select>
-                                        <input type="text" readonly class="form-control search_input_hotel destino_airline" name="destino" value="Aeropuerto Internacional de Cancun">
+                                        <input type="hidden" readonly class="form-control search_input_hotel destino_airline" name="destino" value="Aeropuerto Internacional de Cancun">
 
                                         {{-- <select class="search_input search_input_hotel destino_airline" name="origen">
                                             <option selected value="null" disabled>Selecciona una aerolinea</option>
@@ -76,20 +78,20 @@
                                                     <option>{{ $airline->airline }}</option>
                                                 @endforeach --}}
                                         </select>
-                                <input type="text"
+                                <input required type="text"
                                     class="form-control search_input_3 selector"
                                     placeholder="{{ __('fecha') }}"
                                     name="date"
                                     id="date"
                                     required>
-                                <input type="text"
+                                <input required type="text"
                                     class="form-control search_input_3 timer"
                                     placeholder="{{ __('hora') }}"
                                     name="pickup"
                                     id="pickup"
                                     >
 
-                                <input type="text"
+                                <input required type="text"
                                     class="form-control search_input_4"
                                     placeholder="{{ __('pasajeros') }}"
                                     name="passengers"
