@@ -3,6 +3,7 @@
 body {
     /* background: #F9F9F9; */
     background: #FFFFFF;
+    /* background: red !important; */
     /* background: #212529; */
 
     /* tipografia para parrafos y texto en general  */
@@ -351,7 +352,73 @@ button.nav-link:hover {
 }
 
 
-/* ----------------------------------------- footer ------------------------------------ */
+/* --------------------------------------- tours ------------------------------------ */
+
+.tours-section h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.tours-section .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.tours-section .box-container .box {
+    flex: 1 1 16rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    background: #FBFBFD;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1)
+}
+
+.tours-section .box-container .box img {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tours-section .box-container .box .content {
+    padding: 1rem;
+}
+
+.tours-section .box-container .box .content h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.tours-section .box-container .box .content h4 i {
+    color: #538083;
+}
+
+.tours-section .box-container .box .content .stars i {
+    color: #538083;
+}
+
+.tours-section .box-container .box .content .price {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tours-section .box-container .box .content .price span {
+    color: #666;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.tours-section .box-container .box .content a.btn {
+    background: #0582CA;
+    color: #fff;
+    border: 2px solid #0582CA;
+}
+
+.tours-section .box-container .box .content a.btn:hover {
+    background: rgba(5, 130, 202, 0.2);
+    color: #0582CA;
+}
+
+
+/* --------------------------------------- footer ------------------------------------ */
 
 .bg-footer {
     background: #212529;
