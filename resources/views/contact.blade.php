@@ -1,5 +1,5 @@
 
-<div class="container" id="contact" style="color: #F1C40F">
+<div class="container" id="contact" style="color: #F1C40F; overflow-x: hidden;">
     <section class="mb-4">
         <h2 class="h1-responsive font-weight-bold text-center my-4">{{ __('contactanos') }}</h2>
         <p class="text-center w-responsive mx-auto mb-5">{{ __('text_contact') }}</p>

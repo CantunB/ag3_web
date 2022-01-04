@@ -6,25 +6,34 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="AG3 Landing page">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    @include('layouts.components.css')
+    {{-- @include('layouts.components.css') --}}
+
+    <!-- Bootstrap v5.0.2 -->
+    <link rel="stylesheet" href="{{ asset('assets/my_styles/bootstrap.min.css') }}">
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
     <body>
         <div id="app" class="super_container">
-            @include('layouts.components.header')
-            <div class="home">
+            {{-- @include('layouts.components.header') --}}
+
+            {{-- <div class="home">
                 <!-- Home Slider -->
                 @include('layouts.components.slider')
-            </div>
+            </div> --}}
 
             <!-- Search -->
 
-            @include('layouts.components.searcher')
+            {{-- @include('layouts.components.searcher') --}}
 
-            <!-- Intro -->
+            <div class="new-home">
+                @include('layouts.components.new-home')
+            </div>
 
+            {{-- <!-- Intro -->
             <div class="intro">
                 <div class="container">
                     <div class="row">
@@ -76,7 +85,6 @@
             </div>
 
             <!-- Destinations -->
-
             <div class="destinations" id="about">
                 <div class="container">
                     <div class="row">
@@ -142,7 +150,6 @@
             </div>
 
             <!-- Testimonials -->
-
             <div class="contact" id="testimonials">
                 <div class="parallax_background parallax-window" data-parallax="scroll"
                     data-image-src="{{ asset('assets/images/testimonials.jpg') }}" data-speed="0.8"></div>
@@ -327,12 +334,16 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+
+
             @include('contact')
-            <br>
-            <br>
-            @include('layouts.components.footer')
+            {{-- @include('layouts.components.footer') --}}
+
+            @include('layouts.components.new-footer')
+            @include('layouts.components.new-script')
+           
         </div>
-        @include('layouts.components.script')
+        {{-- @include('layouts.components.script') --}}
     </body>
 </html>
