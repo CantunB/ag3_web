@@ -33,6 +33,8 @@
                 @include('layouts.components.new-home')
             </div>
 
+            @include('layouts.components.tours')
+
             {{-- <!-- Intro -->
             <div class="intro">
                 <div class="container">
