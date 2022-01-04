@@ -24,7 +24,7 @@
                                     <label class="search_input_text form-check-label" for="inlineCheckbox2">Hotel to Airline</label>
                                 </div> --}}
                                 <select name="services" id="services" required>
-                                    <option selected value="null" disabled>Selecciona un servicio</option>
+                                    <option selected value="" disabled  >Selecciona un servicio</option>
                                     <optgroup label="VIAJE REDONDO">
                                         <option value="4">Aeropuerto a Hotel a Aeropuerto</option>
                                     </optgroup>
@@ -84,14 +84,14 @@
                                     name="date"
                                     id="date"
                                     required>
-                                <input required type="text"
-                                    class="form-control search_input_3 timer"
+                                <input required type="time"
+                                    class="form-control search_input_3"
                                     placeholder="{{ __('hora') }}"
                                     name="pickup"
                                     id="pickup"
                                     >
 
-                                <input required type="text"
+                                <input required type="number" min="1"
                                     class="form-control search_input_4"
                                     placeholder="{{ __('pasajeros') }}"
                                     name="passengers"

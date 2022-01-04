@@ -28,6 +28,7 @@
             }
         }
      </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('assets/js/jquery.spinner.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
@@ -35,6 +36,11 @@
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://www.paypal.com/sdk/js?client-id=AYh6SsC21DLPKSQlkxE4XEPxcTq6-UDo_S6xtbD0Q3l2FH1EUEoTkvPbx0YC0NWktEm1NqjhR2FhxHCT&components=buttons&currency=MXN&locale=es_MX"></script>
+    <script src="{{ asset('assets/js/bootstrap-input-spinner.js') }}"></script>
+    <script>
+
+       // $("input[type='number']").inputSpinner();
+    </script>
     <script>
         var price = $("#price").val();
         paypal.Buttons({
@@ -67,13 +73,62 @@
 
                     success: function(response){
                        //console.log('Formulario enviado');
-                        Swal.fire({
-                            title: "Reservacion!",
-                            text: response.data,
-                            icon: "success",
-                            timer: 3500
-                        });
-                    //window.location = '{!! route('index',app()->getLocale()) !!}';
+                       Swal.fire({
+                        title: "¿Desea descargar el comprobante de reserva?",
+                        text: "Su reservación se ha realizado correctamente", //response.data,
+                        icon: "success",
+                        showCancelButton: true,
+                        confirmButtonText: 'Descargar',
+                        cancelButtonText: 'Cancelar',
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        //timer: 3500
+                    }).then((result) => {
+                        /* Read more about isConfirmed, isDenied below */
+                        if (result.isConfirmed) {
+                            $.ajax({
+                                type: 'GET',
+                                url: "{!! route('voucher', app()->getLocale()) !!}",
+                                data: response.data,
+                                xhrFields: {
+                                    responseType: 'blob'
+                                },
+                                success: function(response){
+                                    var blob = new Blob([response]);
+                                    var link = document.createElement('a');
+                                    link.href = window.URL.createObjectURL(blob);
+                                    link.download = "ComprobanteAg3.pdf";
+                                    link.click();
+                                },
+                                error: function(blob){
+                                    console.log(blob);
+                                }
+                            });
+                            let timerInterval
+                            Swal.fire({
+                              title: 'Descargando!',
+                              html: 'Tu archivo estara listo en...  <b></b> milliseconds.',
+                              timer: 5000,
+                              timerProgressBar: true,
+                              didOpen: () => {
+                                Swal.showLoading()
+                                const b = Swal.getHtmlContainer().querySelector('b')
+                                timerInterval = setInterval(() => {
+                                  b.textContent = Swal.getTimerLeft()
+                                }, 100)
+                              },
+                              willClose: () => {
+                                clearInterval(timerInterval)
+                              }
+                            }).then((result) => {
+                              /* Read more about handling dismissals below */
+                              if (result.dismiss === Swal.DismissReason.timer) {
+                                console.log('I was closed by the timer')
+                              }
+                            })
+                        }
+
+                    });
                     },
                     error: function(response){
                         console.log(response);
@@ -91,6 +146,8 @@
                         });
                     }
                 });
+                //window.location = '{!! route('index',app()->getLocale()) !!}';
+
               });
             }
           }).render('#paypal-button-container');
@@ -108,13 +165,63 @@
 
                 success: function(response){
                    //console.log('Formulario enviado');
-                    Swal.fire({
-                        title: "Reservacion!",
-                        text: response.data,
-                        icon: "success",
-                        timer: 3500
-                    });
-                //window.location = '{!! route('index',app()->getLocale()) !!}';
+                Swal.fire({
+                    title: "¿Desea descargar el comprobante de reserva?",
+                    text: "Su reservación se ha realizado correctamente", //response.data,
+                    icon: "success",
+                    showCancelButton: true,
+                    confirmButtonText: 'Descargar',
+                    cancelButtonText: 'Cancelar',
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    //timer: 3500
+                }).then((result) => {
+                    /* Read more about isConfirmed, isDenied below */
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            type: 'GET',
+                            url: "{!! route('voucher', app()->getLocale()) !!}",
+                            data: response.data,
+                            xhrFields: {
+                                responseType: 'blob'
+                            },
+                            success: function(response){
+                                var blob = new Blob([response]);
+                                var link = document.createElement('a');
+                                link.href = window.URL.createObjectURL(blob);
+                                link.download = "ComprobanteAg3.pdf";
+                                link.click();
+                            },
+                            error: function(blob){
+                                console.log(blob);
+                            }
+                        });
+                        let timerInterval
+                        Swal.fire({
+                          title: 'Descargando!',
+                          html: 'Tu archivo estara listo en...  <b></b> milliseconds.',
+                          timer: 5000,
+                          timerProgressBar: true,
+                          didOpen: () => {
+                            Swal.showLoading()
+                            const b = Swal.getHtmlContainer().querySelector('b')
+                            timerInterval = setInterval(() => {
+                              b.textContent = Swal.getTimerLeft()
+                            }, 100)
+                          },
+                          willClose: () => {
+                            clearInterval(timerInterval)
+                          }
+                        }).then((result) => {
+                          /* Read more about handling dismissals below */
+                          if (result.dismiss === Swal.DismissReason.timer) {
+                            console.log('I was closed by the timer')
+                          }
+                        })
+                    }
+                    //window.location = '{!! route('index',app()->getLocale()) !!}';
+
+                });
                 },
                 error: function(response){
                     console.log(response);
@@ -386,9 +493,10 @@
                 $("#booking_form").parsley();
                 $("#booking_form").parsley().validate();
                 if ($("#booking_form").parsley().isValid()){
-                    alert('valid');
+                    //alert('valid');
                     //$('.btnPayment').click(function(){
-                        $('.nav-tabs > .active').next('li').find('a').trigger('click');
+                        $('#contact-tab').tab('show')
+                    $('.nav-item > .active').next('li').find('a').trigger('click');
                     //});
 
                 }

@@ -74,7 +74,7 @@
         <div class="mt-3 steps border shadow-sm">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
+                    <button class="nav-link disabled" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
                         type="button" role="tab" aria-controls="home" aria-selected="false">Seleccionar
                         traslado</button>
                 </li>
@@ -84,9 +84,8 @@
                         informacion</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
-                        type="button" role="tab" aria-controls="contact" aria-selected="false">Finalizar
-                        reserva</button>
+                    <button class="nav-link disabled" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact"
+                        type="button" role="tab" aria-controls="contact" aria-selected="false">Forma de pago</button>
                 </li>
             </ul>
         </div>

@@ -76,7 +76,7 @@
    <div class="container col-md-4 offset-md-4 mb-0 border search_title">
        <h5 class="text-center">Empieza la busqueda</h5>
    </div>
-   
+
    <div class="container shadow-sm border search">
        <div class="search_content">
            <form class="row my-2" action="{{ route('vehicles', app()->getLocale()) }}" method="POST"
@@ -154,7 +154,7 @@
                <div class="col-lg-2 mb-2">
                    <div class="input-group">
                        <span class="input-group-text" id="icon-time"><i class="fas fa-clock"></i></span>
-                       <input type="text" class="form-control search_input_3 timer" aria-describedby="icon-time"
+                       <input type="time" class="form-control search_input_3 " aria-describedby="icon-time"
                            placeholder="{{ __('hora') }}" name="pickup" id="pickup" required>
                    </div>
                </div>

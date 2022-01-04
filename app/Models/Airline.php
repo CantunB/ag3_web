@@ -11,4 +11,5 @@ class Airline extends Model
     protected $table = 'airlines';
     protected $fillable = [ 'terminal','airport', 'airline','destiny','code' ];
 
+
 }

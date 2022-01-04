@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
+use Barryvdh\DomPDF\Facade as PDF;
+
 class BookingController extends Controller
 {
     public function vehicles(Request $request)
@@ -115,7 +117,7 @@ class BookingController extends Controller
     {
         //return $request->all();
 
-        $id = IdGenerator::generate(['table' => 'bookings', 'length' => 8, 'prefix' =>'BOOk-']);
+        $id = IdGenerator::generate(['table' => 'bookings', 'length' => 8, 'prefix' =>'BOOK-']);
 
         $booking = new Booking();
         $booking->id = $id;
@@ -148,34 +150,19 @@ class BookingController extends Controller
         $booking->status_payment = $request->status_payment;
         $booking->status_booking = $request->status_booking;
         $booking->save();
+        return response()->json(['data' => $booking], 201);
+    }
 
-        /*
-        $msg = [
-            'fullname' => $request->name . ' ' . $request->paterno . ' ' . $request->materno,
-            'name' => $request->name,
-            'phone' => $request->phone,
-            'email' => $request->email,
-            'service' => $request->type_service,
-            'origen' => $request->origin,
-            'destiny' => $request->destiny,
-            'passengers' => $request->passengers,
-            'unit' => $request->request_unit,
-            'price' => $request->price,
-            'round' => $request->round_service,
-            'a_arrival' => $request->a_arrival,
-            'fn_arrival' => $request->fn_arrival,
-            'd_arrival' => $request->d_arrival,
-            'c_arrival' => $request->c_arrival,
-            't_arrival' => $request->t_arrival,
-            'a_departure' => $request->a_departure,
-            'fn_departure' => $request->fn_departure,
-            'd_departure' => $request->d_departure,
-            'c_departure' => $request->c_departure,
-            't_departure' => $request->t_departure
-        ];
-         */
+    public function voucher(Request $request)
+    {
+        $id = $request->id;
+        $booking = Booking::findOrFail($id);
+        $voucher_pdf = PDF::loadView('pdf.voucher', compact('booking'))->setPaper('a4');
+        $path = public_path('booking');
+        $fileName =  $booking->id . '.' . 'pdf' ;
+        $voucher_pdf->save($path . '/' . $fileName);
+        return $voucher_pdf->download($fileName);
+        //return response()->download($voucher_pdf);
 
-        Mail::to($request->email)->send(new BookingMail($booking));
-        return response()->json(['data' => 'Su reservación se ha realizado correctamente'], 201);
     }
 }

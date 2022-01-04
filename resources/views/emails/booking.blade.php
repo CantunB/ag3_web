@@ -322,12 +322,14 @@ ul.social li{
             <col style="width: 44px">
             <col style="width: 44px">
             <col style="width: 44px">
-            <col style="width: 82px">
+            <col style="width: 44px">
             <col style="width: 44px">
             </colgroup>
             <thead>
               <tr>
-                <th class="tg-nlhk" colspan="15" rowspan="2"><img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="AG3" width="120" height="100"></th>
+                <th class="tg-nlhk" colspan="15" rowspan="2">
+                    <img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="AG3" width="120" height="100">
+                </th>
               </tr>
               <tr>
               </tr>
@@ -347,7 +349,7 @@ ul.social li{
                 <td class="tg-0pky"></td>
                 <td style=" padding:25px;" class="tg-0pky" colspan="7" rowspan="4">
                     <div class="container" style="border:2px solid orange; border-radius: 25px; padding: 4%">
-                        <span style="font-weight: bold">No.SERVICIO:</span> <span style="text-transform: uppercase">{{ $booking->id }}</span> <br><br><span style="font-weight:bold">NOMBRE: </span><span style="text-transform: uppercase; ">{{ $booking->fullname }}</span><br><span style="font-weight:bold">CORREO:</span> {{ $booking->email }}<br><span style="font-weight:bold">TELEFONO:</span> {{ $booking->phone }}<br><span style="font-weight:bold">PAIS:</span> {{ 'MEXICO'  }} <span style="font-weight:bold"> ESTADO:</span> {{ 'CAMPECHE' }} <br><br><br><span style="text-transform: uppercase; font-weight:bold">{{ $booking->type_service }}:</span><br><span style="text-transform: uppercase;">{{ $booking->origin }}</span> - <span style="text-transform: uppercase;">{{ $booking->destiny }}</span><br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br> @if ( $booking['unit'] == 1) SUBURBAN PARA {{ $booking->passengers }} PASAJEROS @else  SUBURBAN PARA {{ $booking->passengers }} PASAJEROS @endif <br>
+                        <span style="font-weight: bold">No.SERVICIO:</span> <span style="text-transform: uppercase">{{ $booking->id }}</span> <br><br><span style="font-weight:bold">NOMBRE: </span><span style="text-transform: uppercase; ">{{ $booking->fullname }}</span><br><span style="font-weight:bold">CORREO:</span> {{ $booking->email }}<br><span style="font-weight:bold">TELEFONO:</span> {{ $booking->phone }}<br><span style="font-weight:bold">PAIS:</span> {{ 'MEXICO'  }} <span style="font-weight:bold"> ESTADO:</span> {{ 'CAMPECHE' }} <br><br><br><span style="text-transform: uppercase; font-weight:bold">{{ $booking->type_service }}:</span><br><span style="text-transform: uppercase;">{{ $booking->origin }}</span> - <span style="text-transform: uppercase;">{{ $booking->destiny }}</span><br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br> @if ( $booking->request_unit == 1) SUBURBAN PARA {{ $booking->passengers }} PASAJEROS @else  SUBURBAN PARA {{ $booking->passengers }} PASAJEROS @endif <br>
                     </div>
                 </td>
                 <td class="tg-4qqe" colspan="4" rowspan="4"><br><br><br><br><br><span style="font-weight:bold">${{ $booking->price }}MX</span><br></td>
@@ -380,7 +382,7 @@ ul.social li{
                     <tr>
                         <td style=" padding:25px;" class="tg-0pky" colspan="15" rowspan="2">
                             <div class="container" style="border:2px solid orange; border-radius: 25px; padding: 3%">
-                                <span style="font-weight:bold">FECHA:</span> {{ $booking->date_arrival }}<br><span style="font-weight:bold">HORA: </span>{{  $booking->time_arrival }} <br><span style="text-transform: uppercase; font-weight:bold">AEROLINEA:  </span> <span style="text-transform: uppercase">{{ $booking->airline_arrival }} </span> <span style="text-transform: uppercase;  font-weight:bold">NUMERO DE VUELO:  </span> {{  $booking->flight_number_arrival}}   <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_arrival }}<br><br><span style="font-weight:bold">PICK-UP:</span>
+                                <span style="font-weight:bold">FECHA:</span> {{ $booking->date_arrival }}<br><span style="font-weight:bold">HORA: </span>{{  $booking->time_arrival }} <br><span style="text-transform: uppercase; font-weight:bold">AEROLINEA:  </span> <span style="text-transform: uppercase">{{ $booking->airline_arrival }} </span> <span style="text-transform: uppercase;  font-weight:bold">NUMERO DE VUELO:  </span> {{  $booking->flight_number_arrival}}   <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_arrival }}<br><br>
                             </div>
                         </td>
 
@@ -404,7 +406,7 @@ ul.social li{
                     </tr>
                     <tr>
                         <td class="tg-0pky" colspan="7" rowspan="2">
-                            <span style="font-weight:bold">FECHA: </span>{{ $booking->date_arrival }}<br><span style="font-weight:bold">HORA: </span>{{ $booking->time_arrival }}<br><span style="text-transform: uppercase; font-weight:bold">AEROLINEA: </span> <span style="text-transform: uppercase">{{ $booking->airline_arrival }} </span> <span style="text-transform: uppercase; font-weight:bold">NUMERO DE VUELO:  </span> <span style="text-transform: uppercase"> {{ $booking->flight_number_arrival }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_arrival }}<br><br><span style="font-weight:bold">PICK-UP:</span>
+                            <span style="font-weight:bold">FECHA: </span>{{ $booking->date_arrival }}<br><span style="font-weight:bold">HORA: </span>{{ $booking->time_arrival }}<br><span style="text-transform: uppercase; font-weight:bold">AEROLINEA: </span> <span style="text-transform: uppercase">{{ $booking->airline_arrival }} </span> <span style="text-transform: uppercase; font-weight:bold">NUMERO DE VUELO:  </span> <span style="text-transform: uppercase"> {{ $booking->flight_number_arrival }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_arrival }}<br><br>
                         </td>
                         <td class="tg-0pky" rowspan="2"></td>
                         <td class="tg-0pky" colspan="7" rowspan="2">

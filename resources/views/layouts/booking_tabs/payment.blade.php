@@ -61,9 +61,9 @@
                 <h2 style="color: orange" class="text-center text-uppercase ">Selecciona un metodo de pago</h2>
                     <div class="row">
                         <div class='col text-center'>
-                        <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Efectivo">
+                        <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arrivo">
                         <label for="img1">
-                            <img src="https://cdn-icons-png.flaticon.com/512/438/438526.png" alt="Image 1" class="rounded">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcksclvcirts05OdENj2d5m4Okcw8K37HDQ&usqp=CAU" alt="Image 1" class="rounded">
                             <div class="tick_container">
                                 <div class="tick"><i class="fa fa-check"></i></div>
                             </div>

@@ -20,17 +20,25 @@ Route::group([
     Route::view('privacy', 'pages.privacy')->name('privacy');
     // Route::get('{any}', [App\Http\Controllers\Controller::class, 'index'])->name('index');
     /** PAYMENT */
-    Route::group(['prefix'=>'paypal'], function(){
-        Route::get('pay',[PaymentController::class, 'paypal']);
+    //Route::group(['prefix'=>'paypal'], function(){
+      //  Route::get('pay',[PaymentController::class, 'paypal']);
         //Route::post('/order/create',[\App\Http\Controllers\Front\PaypalPaymentController::class,'create']);
         //Route::post('/order/capture/',[\App\Http\Controllers\Front\PaypalPaymentController::class,'capture']);
-    });
+   // });
     Route::group(['prefix' => 'booking'], function(){
         Route::post('vehicles', [BookingController::class, 'vehicles'])->name('vehicles');
         Route::post('complete', [BookingController::class, 'complete'])->name('complete');
         Route::post('payment', [BookingController::class, 'payment'])->name('payment');
 
+        Route::group(['prefix' => 'pdf'], function() {
+            Route::get('voucher', [BookingController::class, 'voucher'])->name('voucher');
+        });
     });
+
+
+
+
+
     //Route::get('dependent-dropdown', [CountryStateCityController::class, 'index']);
     Route::post('getState', [CountryStateCityController::class, 'getState'])->name('fetchState');
     Route::post('getCity', [CountryStateCityController::class, 'getCity'])->name('fetchCities');

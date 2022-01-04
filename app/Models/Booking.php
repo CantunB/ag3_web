@@ -9,6 +9,10 @@ class Booking extends Model
 {
     use HasFactory;
     protected $table = 'bookings';
+    protected $primaryKey = 'id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+
     protected $fillable = [
         'name',
         'paterno',
