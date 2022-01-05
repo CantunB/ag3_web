@@ -1,14 +1,16 @@
 
-<div class="container" id="contact" style="color: #F1C40F; overflow-x: hidden;">
+<div class="container" id="contact" style="color: #F1310F; overflow-x: hidden;">
     <section class="mb-4">
-        <h2 class="h1-responsive font-weight-bold text-center my-4">{{ __('contactanos') }}</h2>
-        <p class="text-center w-responsive mx-auto mb-5">{{ __('text_contact') }}</p>
+        <h2 class="h1-responsive font-weight-bold text-center my-4 text-dark">{{ __('contactanos') }}</h2>
+        <p class="text-center w-responsive mx-auto mb-5 text-secondary">{{ __('text_contact') }}</p>
         <div class="row">
             <div  class="col-md-2 mb-md-0 mb-5 p-2 text-center">
                 <img style="width: 200px; " src="{{ asset('assets/images/icons/undraw_mail_re_duel.svg') }}">
             </div>
-            <div class="col-md-8 mb-md-0 mb-5">
+            <div class="col-md-8 mb-md-0 mb-5 p-4">
                 <form id="contact_form" name="contact-form" method="POST"  data-parsley-validate>
+                    <input type="hidden" id="contact_url" url="{{  route('contact',app()->getLocale())  }}" />
+
                     @csrf
                     <div class="row">
                         <div class="col-md-4">
@@ -56,15 +58,15 @@
                 <div class="status"></div>
             </div>
 
-            <div class="col-md-2 mb-md-0 mb-5 text-center">
+            <div class="col-md-2 mb-md-0 mb-5 text-center text-dark">
                 <ul class="list-unstyled mb-0">
-                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <li><i style="color: red" class="fas fa-map-marker-alt fa-2x"></i>
                         <p>San Francisco, CA 94126, USA</p>
                     </li>
-                    <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <li><i style="color: dodgerblue" class="fas fa-phone mt-4 fa-2x"></i>
                         <p><a href="tel:9381726488">Call us: +52 9381726488</a> </p>
                     </li>
-                    <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <li><i style="color: gold" class="fas fa-envelope mt-4 fa-2x "></i>
                         <p>contacto@ag3luxurytravel.com</p>
                     </li>
                 </ul>

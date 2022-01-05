@@ -20,6 +20,31 @@
 <!-- flatpickr v4.6.9 -->
 <script src="{{ asset('assets/js/scripts/flatpickr.js') }}"></script>
 
+<!-- ParsleyJS Validation -->
+<script src="{{ asset('assets/js/parsley.min.js') }}"></script>
+<script src="{{ asset('assets/js/i18n/es.js') }}"></script>
+<script src="{{ asset('assets/js/i18n/fr.js') }}"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        //var parsley_lang = navigator.language || navigator.userLanguage;
+        var locale =  "{{ app()->getLocale() }}";
+        if (locale == 'es') {
+            window.ParsleyValidator.setLocale('es');
+        }else if (locale == 'en') {
+            window.ParsleyValidator.setLocale('en');
+        }else if (locale == 'fr') {
+            window.ParsleyValidator.setLocale('fr');
+        }
+    }
+</script>
+
+<!-- SWEETALERT -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Contact Form -->
+<script src="{{ asset('assets/js/contact.js') }}"></script>
+
+
 <script>
     $(".selector").flatpickr({
             minDate: "today",
@@ -82,7 +107,7 @@
             placeholder: "Selecciona un servicio",
             theme: 'bootstrap-5',
         });
-        
+
         // jQuery(".origen_hotel").select2().next().hide();
         // jQuery(".destino_hotel").select2().next().hide();
         jQuery(".origen_hotel").hide();
@@ -154,7 +179,7 @@
                     //     theme: 'bootstrap-5',
 
                     // });
-                    
+
                     // $('.origen_hotel').show();
 
                     $(".destino_airline").show();
@@ -194,7 +219,7 @@
 
                     // });
 
-                    
+
 
                     $(".origen_airline").attr("disabled",true).hide();
                     $(".destino_airline").attr("disabled",true).hide();
