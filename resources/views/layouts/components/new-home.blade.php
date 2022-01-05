@@ -178,7 +178,7 @@
                    <div class="input-group">
                        <span class="input-group-text" id="icon-date_comeback"><i class="fas fa-calendar-alt"></i></span>
                        <input type="hidden" class="form-control selector" aria-describedby="icon-date_comeback"
-                           placeholder="{{ __('Fecha de regreso') }}" name="date_comeback">
+                           placeholder="{{ __('Fecha de regreso') }}" name="date_comeback" style="background: #FFFFFF;">
                    </div>
                </div>
 
@@ -187,7 +187,7 @@
                    <div class="input-group">
                        <span class="input-group-text" id="icon-time_comeback"><i class="fas fa-clock"></i></span>
                        <input type="hidden" class="form-control timer" aria-describedby="icon-time_comeback"
-                           placeholder="{{ __('Hora de regreso') }}" name="time_comeback">
+                           placeholder="{{ __('Hora de regreso') }}" name="time_comeback" style="background: #FFFFFF;">
                    </div>
                </div>
 
