@@ -20,6 +20,9 @@
 <!-- flatpickr v4.6.9 -->
 <script src="{{ asset('assets/js/scripts/flatpickr.js') }}"></script>
 
+{{-- Dark Mode --}}
+<script src="{{ asset('assets/js/scripts/dark-mode.js') }}"></script>
+
 <!-- ParsleyJS Validation -->
 <script src="{{ asset('assets/js/parsley.min.js') }}"></script>
 <script src="{{ asset('assets/js/i18n/es.js') }}"></script>
@@ -43,7 +46,6 @@
 
 <!-- Contact Form -->
 <script src="{{ asset('assets/js/contact.js') }}"></script>
-
 
 <script>
     $(".selector").flatpickr({

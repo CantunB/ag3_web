@@ -1,18 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600;800&display=swap');
-
-body {
-    height: 200vh;
-    background: #FFFFFF;
-    /* font-family: 'Montserrat', sans-serif;
-    font-family: 'Poppins', sans-serif;  */
-}
-
-/* .bg-jumbotron {
-    background-image: url(./img/home1.jpg);
-    background-size: cover;
-    background-position: 60%;
-    height: 90vh;
-} */
 
 .header {
     background: url(../assets/images/home1.jpg) no-repeat center;
@@ -21,6 +6,10 @@ body {
     /* min-height: 40vh; */
     height: 94vh;
 }
+
+body.dark .header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(../assets/images/home1.jpg);
+} 
 
 /* .header .navbar {
     background-color: transparent !important;
@@ -37,8 +26,16 @@ body {
     background: #FBFBFD;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
+    border: 1px solid #FBFBFD;
     /* font-size: 10px; */
+    box-shadow: 0 2px 1px -2px #111;
+}
 
+body.dark .search {
+    background: rgba(32, 32, 32, .8);
+    background: #212529;
+    border: 1px solid #212529;
+    box-shadow: 0 2px 1px -2px #969696;
 }
 
 .search input {
@@ -54,11 +51,21 @@ body {
     background: #FBFBFD;
     border-radius: 10px 10px 0 0;
     font-family: 'Montserrat', sans-serif;
+    border: 1px solid #FBFBFD;
+}
+
+body.dark .search_title {
+    background: #212529;
+    border: 1px solid #212529;
 }
 
 .search_title h5 {
     /* font-size: 20px; */
     font-weight: 600;
+}
+
+body.dark .search_title h5 {
+    color: #FFFFFF;
 }
 
 .search .search_content button.button-search i.fa-search {
