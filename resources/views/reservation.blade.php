@@ -372,7 +372,7 @@
 
                     <!-- service-suburban start  -->
                     <div class="row">
-                        <div class="col mb-4 shadow-sm border service-list">
+                        <div class="col mb-4 service-list">
                             <div class="row mb-4">
                                 <!-- section left -->
                                 <div class="col-md-3 left">
@@ -490,7 +490,7 @@
 
                     <!-- service-van start  -->
                     <div class="row">
-                        <div class="col mb-4 shadow-sm border service-list">
+                        <div class="col mb-4 service-list">
                             <div class="row mb-4">
                                 <!-- section left -->
                                 <div class="col-md-3 left">
@@ -611,7 +611,7 @@
                 <!-- section right start  -->
                 <div class="col-md-12 col-lg-4 mt-4">
                     <div class="row justify-content-end">
-                        <div class="col-md-12 col-lg-11 mb-4 shadow-sm border reservation__summary">
+                        <div class="col-md-12 col-lg-11 mb-4 reservation__summary">
                             <h5 class="title__reservation mt-2">Resumen de reservacion</h5>
                             <p class="title mb-0">Tipo de servicio</p>
                             <p class="description"><i class="fas fa-sync-alt icon-resume"></i> {{ $service }}</p>
@@ -635,22 +635,22 @@
                             @endif
                         </div>
 
-                        <div class="col-md-12 col-lg-11 mb-4 shadow-sm border widget">
+                        <div class="col-md-12 col-lg-11 mb-4 widget">
                             <h5 class="title__widget mt-2">¿Necesitas ayuda con tu reservacion?</h5>
                             <p>Estariamos mas que felices de ayudarte. Nuestro call center esta a su servicio.</p>
                             <hr>
                             <p class="text-phone">Contactanos: +52 (998) 387 02 29</p>
                         </div>
 
-                        <div class="col-md-12 col-lg-11 mb-4 shadow-sm border widget">
+                        <div class="col-md-12 col-lg-11 mb-4 widget">
                             <h5 class="title__widget mt-2">¿Que incluye mi reservacion?</h5>
-                            <p class="widget mb-0"><i class="fas fa-check"></i> Recibimiento en el aeropuerto</p>
-                            <p class="widget mb-0"><i class="fas fa-check"></i> Aire acondicionado</p>
-                            <p class="widget mb-0"><i class="fas fa-check"></i> Seguro de pasajero</p>
-                            <p class="widget mb-0"><i class="fas fa-check"></i> Monitoreo de vuelo</p>
-                            <p class="widget mb-0"><i class="fas fa-check"></i> Servicio de transporte 24 hrs.</p>
-                            <p class="widget mb-0"><i class="fas fa-check"></i> Conductor profesional bilingue</p>
-                            <p class="widget mb-4"><i class="fas fa-check"></i> No hay tarifas por cambios de vuelo</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> Recibimiento en el aeropuerto</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> Aire acondicionado</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> Seguro de pasajero</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> Monitoreo de vuelo</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> Servicio de transporte 24 hrs.</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> Conductor profesional bilingue</p>
+                            <p class="mb-4"><i class="fas fa-check"></i> No hay tarifas por cambios de vuelo</p>
                         </div>
                     </div>
                 </div>

@@ -13,19 +13,19 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="md-form mb-0">
-                                <label style="color: black" for="name" class="mt-2"><h6>{{ __('fullname') }}</h6></label>
+                                <label for="name" class="mt-2"><h6>{{ __('fullname') }}</h6></label>
                                 <input type="text" id="name" name="name" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="md-form mb-0">
-                                <label style="color: black" for="email" class="mt-2"><h6>{{ __('correo') }}</h6></label>
+                                <label for="email" class="mt-2"><h6>{{ __('correo') }}</h6></label>
                                 <input type="email" id="email" name="email" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="md-form mb-0">
-                                <label style="color: black" for="phone" class="mt-2"><h6>{{ __('telefono') }}</h6></label>
+                                <label for="phone" class="mt-2"><h6>{{ __('telefono') }}</h6></label>
                                 <input type="text" data-parsley-type="digits" id="phone" name="phone" class="form-control" required>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="md-form mb-0">
-                                <label style="color: black" for="name" class="mt-2"><h6>{{ __('asunto') }}</h6></label>
+                                <label for="name" class="mt-2"><h6>{{ __('asunto') }}</h6></label>
                                 <input type="text" id="subject" name="subject" class=" form-control" required>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="md-form">
-                                <label style="color: black" for="name" class="mt-2"><h6>{{ __('mensaje') }}</h6></label>
+                                <label for="name" class="mt-2"><h6>{{ __('mensaje') }}</h6></label>
                                 <textarea type="text" id="content" name="content" rows="2" class="form-control md-textarea" required></textarea>
                             </div>
                         </div>

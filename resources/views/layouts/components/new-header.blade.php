@@ -26,8 +26,11 @@
             </ul>
             <!-- section-right-language  -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-moon"></i></a>
+                <li class="nav-item d-flex align-items-center">
+                    <button class="switch">
+                        <span><i class="fas fa-sun"></i></span>
+                        <span><i class="fas fa-moon"></i></span>
+                    </button>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown-language" data-bs-toggle="dropdown"

@@ -1,18 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600;800&display=swap');
 
 body {
-    /* background: #F9F9F9; */
     background: #FFFFFF;
-    /* background: red !important; */
-    /* background: #212529; */
-
     /* tipografia para parrafos y texto en general  */
     font-family: 'Montserrat', sans-serif;
     /* tipografia para titulares y cabeceras */
     /* font-family: 'Poppins', sans-serif;  */
+    transition: .4s ease all;
+}
+
+body.dark {
+    background: #212529;
+}
+
+.switch {
+    background: #343D5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+}
+
+.switch::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    background: #F1F1F1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+}
+
+.switch.active {
+    background: orange;
+    color: #000;
+}
+
+.switch.active::after {
+    right: 0;
+    left: unset;
+}
+
+.switch span {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    display: block;
+    background: none;
+    color: #fff;
 }
 
 /* ----------------------------------------- navbar ------------------------------------- */
+
+body.dark .navbar {
+    box-shadow: 0 2px 1px -2px #969696;
+}
 
 .navbar .navbar-brand__img {
     width: 55px;
@@ -70,10 +119,22 @@ h5.list {
     font-family: 'Poppins', sans-serif;
 }
 
+body.dark h5.list {
+    color: #fff;
+}
+
 .service-list {
     background: #FBFBFD;
     margin-bottom: 0;
     font-size: 15px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+body.dark .service-list {
+    background: rgba(32, 32, 32, .8);
+    border: 0;
+    box-shadow: 0 1px 1px rgba(150, 150, 150, .2);
 }
 
 /* ------ section left ------------ */
@@ -110,6 +171,11 @@ h5.list {
     font-size: 14px;
 }
 
+body.dark .service-list .left li {
+    /* color: #a7a7a7; */
+    color: #FFFFFF;
+}
+
 .service-list .left ul.buttons li.btn-green {
     background: #EDFDF3;
     color: #2F6339;
@@ -119,6 +185,12 @@ h5.list {
     text-transform: uppercase;
 }
 
+body.dark .service-list .left ul.buttons li.btn-green {
+    background: none;
+    border: 1px solid #2F6339;
+    color: #2F6339;
+}
+
 .service-list .left ul.buttons li.btn-blue {
     background: #EDF5FF;
     color: #245AC2;
@@ -126,6 +198,12 @@ h5.list {
     width: 130px;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+body.dark .service-list .left ul.buttons li.btn-blue {
+    background: none;
+    border: 1px solid #245AC2;
+    color: #245AC2;
 }
 
 /* ------ section right ------------ */
@@ -141,14 +219,27 @@ h5.list {
     margin-left: 0;
 }
 
+body.dark .service-list .right li {
+    /* color: #969696; */
+    color: #FFFFFF;
+}
+
 .service-list .right ul.table-row > :nth-child(2) {
     background: rgba(213, 218, 236, .17);
     margin-right: 5px;
 }
 
+body.dark .service-list .right ul.table-row > :nth-child(2) {
+    background: rgba(213, 218, 236, .04);
+}
+
 .service-list .right ul.table-row > :nth-child(3) {
     background: rgba(213, 218, 236, .17);
     margin-left: 5px;
+}
+
+body.dark .service-list .right ul.table-row > :nth-child(3) {
+    background: rgba(213, 218, 236, .04);
 }
 
 .service-list .right .title-eco,
@@ -157,6 +248,11 @@ h5.list {
     font-size: 18px;
     font-family: 'Poppins', sans-serif; 
     font-weight: 600; 
+}
+
+body.dark .service-list .right .title-eco,
+body.dark .service-list .right .title-pre {
+    color: #0582CA;
 }
 
 .service-list .right ul.table-row li i.fa-check {
@@ -182,12 +278,15 @@ h5.list {
     padding: 10px 0;
     text-decoration: none;
     width: 100%;
-    border: 0;
+    /* border: 0; */
+    border: 2px solid #0582CA;
 }
 
 .service-list .right ul.table-row button.button-eco:hover {
-    box-shadow: 0 0 3px #000;
-    color: #000;
+    /* box-shadow: 0 0 3px #000;
+    color: #000; */
+    background: rgba(5, 130, 202, 0.2);
+    color: #0582CA;
 }
 
 .service-list .right ul.table-row li.price-pre {
@@ -204,12 +303,15 @@ h5.list {
     padding: 10px 0;
     text-decoration: none;
     width: 100%;
-    border: 0;
+    /* border: 0; */
+    border: 2px solid #FF8427;
 }
 
 .service-list .right ul.table-row button.button-pre:hover {
-    box-shadow: 0 0 3px #000;
-    color: #000;
+    /* box-shadow: 0 0 3px #000;
+    color: #000; */
+    background: rgba(255, 132, 39, 0.2);
+    color: #FF8427;
 }
 
 
@@ -217,7 +319,19 @@ h5.list {
 
 .steps {
     background: #FBFBFD;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); 
+}
+
+body.dark .steps {
+    background: rgba(32, 32, 32, 0.8);
+    border: 0;
+    box-shadow: 0 1px 1px rgba(150, 150, 150, .2);
+}
+
+body.dark .nav-tabs {
+    border-bottom: 0;
 }
 
 button.nav-link {
@@ -229,6 +343,10 @@ button.nav-link.active {
     font-weight: 600;
     background: #fff;
     border-bottom: 3px solid #0582CA !important;
+}
+
+body.dark button.nav-link.active {
+    background: #e5e5e5;
 }
 
 button.nav-link:hover {
@@ -245,6 +363,14 @@ button.nav-link:hover {
 
 .form-section {
     background: #FBFBFD;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+body.dark .form-section {
+    background: rgba(32, 32, 32, 0.8);
+    border: 0;
+    box-shadow: 0 1px 1px rgba(150, 150, 150, .2);
 }
 
 .form-section h5 {
@@ -252,14 +378,30 @@ button.nav-link:hover {
     font-weight: 600; 
 }
 
+body.dark .form-section h5 {
+    color: #FFFFFF;
+}
+
+body.dark .form-section input {
+    background: #e5e5e5;
+}
+
 .form-section h5.title-arrival {
-    color: #28AFB0;
+    /* color: #28AFB0; */
     color: #FF8427;
     font-size: 18px;
 }
 
+body.dark .form-section h5.title-arrival {
+    color: #FF8427;
+}
+
 .form-section label {
     font-size: 15px;
+}
+
+body.dark .form-section label {
+    color: #e5e5e5;
 }
 
 .form-section span {
@@ -269,6 +411,10 @@ button.nav-link:hover {
 .form-section .number__section {
     color: #D7D7D7;
     font-weight: 700;
+}
+
+body.dark .form-section .number__section {
+    color: rgba(215, 215, 215, .5);
 }
 
 .form-section .input__icon {
@@ -281,12 +427,24 @@ button.nav-link:hover {
     /* padding-left: 0; */
 }
 
+body.dark .terms {
+    color: #e5e5e5;
+}
+
 .total {
     height: 70px;
 }
 
+body.dark .total {
+    color: #e5e5e5;
+}
+
 .total .price {
     /* color: #FFA500; */
+    color: #0582CA;
+}
+
+body.dark .total .price {
     color: #0582CA;
 }
 
@@ -297,6 +455,15 @@ button.nav-link:hover {
     /* background: #fff; */
     background: #FBFBFD;
     font-size: 15px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+
+body.dark .reservation__summary {
+    background: rgba(32, 32, 32, .8);
+    border: 0;
+    box-shadow: 0 1px 1px rgba(150, 150, 150, .2);
 }
 
 .reservation__summary .title__reservation {
@@ -316,6 +483,16 @@ button.nav-link:hover {
     border-bottom: 2px solid #E9ECEF;
 }
 
+body.dark .reservation__summary p.title {
+    color: #a7a7a7;
+}
+
+body.dark .reservation__summary p.description {
+    color: #969696;
+    border: 0;
+    /* border-bottom: 1px solid #000; */
+}
+
 /* .reservation__summary .total {
     background: #FFA500;
     background: #F0C808;
@@ -328,6 +505,14 @@ button.nav-link:hover {
 .widget {
     background: #FBFBFD;
     font-size: 15px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+body.dark .widget {
+    background: rgba(32, 32, 32, 0.8);
+    border: 0;
+    box-shadow: 0 1px 1px rgba(150, 150, 150, .2);
 }
 
 .widget .title__widget {
@@ -341,10 +526,18 @@ button.nav-link:hover {
     color: rgba(0, 0, 0, 0.6);
 }
 
+body.dark .widget p {
+    color: #a7a7a7;
+}
+
 .widget p.text-phone {
     color: #000;
     font-family: 'Poppins', sans-serif; 
     font-weight: 600; 
+}
+
+body.dark .widget p.text-phone {
+    color: #969696;
 }
 
 .widget .fa-check {
@@ -358,6 +551,10 @@ button.nav-link:hover {
     font-family: 'Poppins', sans-serif;
 }
 
+body.dark .tours-section h2 {
+    color: #FFFFFF;
+}
+
 .tours-section .box-container {
     display: flex;
     flex-wrap: wrap;
@@ -369,7 +566,19 @@ button.nav-link:hover {
     border-radius: .5rem;
     overflow: hidden;
     background: #FBFBFD;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1)
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+body.dark .tours-section .box-container .box {
+    /* background: #232323;
+    background: #3e4144; */
+    background: rgba(32, 32, 32, 0.8);
+    box-shadow: 0 1px 1px rgba(150, 150, 150, .2);
+    /* box-shadow: none; */
+}
+
+body.dark .tours-section .box-container .box .content p {
+    color: #a7a7a7;
 }
 
 .tours-section .box-container .box img {
@@ -386,6 +595,10 @@ button.nav-link:hover {
     font-family: 'Poppins', sans-serif;
 }
 
+body.dark .tours-section .box-container .box .content h4 {
+    color: #e5e5e5;
+}
+
 .tours-section .box-container .box .content h4 i {
     color: #538083;
 }
@@ -397,6 +610,10 @@ button.nav-link:hover {
 .tours-section .box-container .box .content .price {
     font-size: 18px;
     font-weight: 600;
+}
+
+body.dark  .box-container .box .content .price {
+    color: #969696;
 }
 
 .tours-section .box-container .box .content .price span {
@@ -417,6 +634,23 @@ button.nav-link:hover {
     color: #0582CA;
 }
 
+/* -------------------------------------------------------contact -------------------------------- */
+
+#contact label {
+    color: #000;
+}
+
+body.dark #contact label {
+    color: #e5e5e5;
+}
+
+body.dark #contact input {
+    background: #e5e5e5;
+}
+
+body.dark #contact textarea {
+    background: #e5e5e5;
+}
 
 /* --------------------------------------- footer ------------------------------------ */
 
@@ -424,6 +658,11 @@ button.nav-link:hover {
     background: #212529;
     color: #fff;
     font-size: 15px;
+}
+
+body.dark .bg-footer {
+    box-shadow: 0 -2px 1px -2px #969696;
+    /* box-shadow: 0px -15px 10px -15px #111;  */
 }
 
 .bg-footer h3 {

@@ -20,6 +20,9 @@
 <!-- flatpickr v4.6.9 -->
 <script src="{{ asset('assets/js/scripts/flatpickr.js') }}"></script>
 
+{{-- Dark Mode --}}
+<script src="{{ asset('assets/js/scripts/dark-mode.js') }}"></script>
+
 <script>
     $(".selector").flatpickr({
             minDate: "today",

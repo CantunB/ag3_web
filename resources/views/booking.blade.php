@@ -71,7 +71,7 @@
 
     <!-- section steps start -->
     <div class="container">
-        <div class="mt-3 steps border shadow-sm">
+        <div class="mt-3 steps">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link disabled" id="home-tab" data-bs-toggle="tab" data-bs-target="#home"
