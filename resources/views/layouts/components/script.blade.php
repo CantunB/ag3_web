@@ -10,24 +10,7 @@
     <script src="{{ asset('assets/plugins/parallax-js-master/parallax.min.js') }}"></script>
 
     <script src="{{ asset('assets/js/custom.js') }}"></script>
-    <script src="{{ asset('assets/js/parsley.min.js') }}"></script>
-    <script src="{{ asset('assets/js/parsley.js') }}"></script>
-    <script src="{{ asset('assets/js/i18n/es.js') }}"></script>
-    <script src="{{ asset('assets/js/i18n/fr.js') }}"></script>
 
-    <script type="text/javascript">
-        window.onload = function () {
-            //var parsley_lang = navigator.language || navigator.userLanguage;
-            var locale =  "{{ app()->getLocale() }}";
-            if (locale == 'es') {
-                window.ParsleyValidator.setLocale('es');
-            }else if (locale == 'en') {
-                window.ParsleyValidator.setLocale('en');
-            }else if (locale == 'fr') {
-                window.ParsleyValidator.setLocale('fr');
-            }
-        }
-     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('assets/js/jquery.spinner.js') }}"></script>
@@ -342,7 +325,6 @@
             jQuery(".destino_hotel").select2().next().hide();
             $(".origen_airline").hide();
             $(".destino_airline").hide();
-
             $('#retorno').prop('checked', false);
 
             $('#form_search select').on('change', function() {
