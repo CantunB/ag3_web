@@ -5,7 +5,7 @@
                 <h2 class="section-title mt-2">Contactanos</h2>
             </div>
         </div>
-        <div class="row contact-content">
+        <div class="row contact-content mb-4">
             <div class="col-lg-6">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238194.00038911213!2d-86.98932253089137!3d21.121285333245872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4c2bf006f7ee49%3A0x1f5d2ee85a46e08e!2sAg3%20Luxury%20Travel!5e0!3m2!1ses!2smx!4v1641503739058!5m2!1ses!2smx"
@@ -43,15 +43,15 @@
 
                 <div class="row mt-4 widget-contact">
                     <div class="col-md-3 text-center">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt ubication"></i>
                         <p>Cancun, MXN</p>
                     </div>
                     <div class="col-md-3 text-center">
-                        <i class="fas fa-phone"></i>
+                        <i class="fas fa-phone cell-phone"></i>
                         <p><a href="tel:9381726488">938-137-8856</a></p>
                     </div>
                     <div class="col-md-6 text-center">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope email"></i>
                         <p>contacto@ag3luxurytravel.com</p>
                     </div>
                 </div>
