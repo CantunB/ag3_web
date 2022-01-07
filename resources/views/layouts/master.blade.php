@@ -11,8 +11,12 @@
 
     {{-- @include('layouts.components.css') --}}
 
+    @include('layouts.components.styles')
+
     <!-- Bootstrap v5.0.2 -->
     <link rel="stylesheet" href="{{ asset('assets/my_styles/bootstrap.min.css') }}">
+    <!-- font-awesome v4.7.0 -->
+   <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
     <!-- Mis estilos -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
@@ -338,8 +342,9 @@
                 </div>
             </div> --}}
 
+            @include('new-contact')
 
-            @include('contact')
+            {{-- @include('contact') --}}
             {{-- @include('layouts.components.footer') --}}
 
             @include('layouts.components.new-footer')
