@@ -581,10 +581,19 @@ body.dark .tours-section .box-container .box .content p {
     color: #a7a7a7;
 }
 
-.tours-section .box-container .box img {
+.tours-section .box-container .box .img-content {
+    overflow: hidden;
+}
+
+.tours-section .box-container .box .img-content img {
     height: 15rem;
     width: 100%;
     object-fit: cover;
+    transition: .3s ease all;
+}
+
+.tours-section .box-container .box:hover img {
+    transform: scale(1.1);    
 }
 
 .tours-section .box-container .box .content {

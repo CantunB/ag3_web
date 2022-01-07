@@ -1,0 +1,68 @@
+section.contact-form {
+    background: #e5e5e5;
+}
+
+body.dark section.contact-form {
+    background: rgba(32, 32, 32, 0.8);
+    box-shadow: 0 -2px 1px -2px #969696;
+}
+
+section.contact-form .section-title {
+    font-family: 'Poppins', sans-serif; 
+}
+
+body.dark section.contact-form .section-title {
+    color: #FFFFFF;
+}
+
+section.contact-form .contact-content .description {
+    font-weight: 600;
+}
+
+body.dark section.contact-form .contact-content .description {
+    color: #a7a7a7;
+}
+
+section.contact-form input,
+section.contact-form textarea {
+    font-family: 'Montserrat', sans-serif, FontAwesome;
+}
+
+body.dark section.contact-form input,
+body.dark section.contact-form textarea {
+    background: #e5e5e5;
+}
+
+section.contact-form .contact-content .btn-contact {
+    background: #0582CA;
+    color: #fff;
+    border: 2px solid #0582CA;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+section.contact-form .contact-content .btn-contact:hover {
+    box-shadow: 0 0 3px #000;
+}
+
+section.contact-form .contact-content .widget-contact i {
+    font-size: 20px;
+    color: #538083;
+}
+
+section.contact-form .contact-content .widget-contact p {
+    font-weight: 600;
+}
+
+body.dark section.contact-form .contact-content .widget-contact p {
+    color: #969696;
+}
+
+section.contact-form .contact-content .widget-contact p a {
+    text-decoration: none;
+    color: #212529;
+}
+
+body.dark section.contact-form .contact-content .widget-contact p a {
+    color: #969696;
+}
