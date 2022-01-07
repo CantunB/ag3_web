@@ -1,6 +1,5 @@
 $(document).ready(function() {
         var contact_url = $('#contact_url').attr('url');
-
         $("#contact_form").on('submit', function(event) {
             $(this).parsley().validate();
             if ($(this).parsley().isValid()) {

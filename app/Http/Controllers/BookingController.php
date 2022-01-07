@@ -27,11 +27,13 @@ class BookingController extends Controller
         }elseif ($request->services == "2") {
             $search_destino = Hotel::where('hotel', $request->origen)
             ->orWhere('hotel', 'like', '%' . $request->origen . '%')->first();
-        }else{
+        }elseif ($request->services == 5){
+            return 'Seleccionaste servicio de traslado';
+        }
+        else{
             $search_destino = Hotel::where('hotel', $request->destino)
             ->orWhere('hotel', 'like', '%' . $request->destino . '%')->first();
         }
-
 
         $list_services = [
             1 => 'Aeropuerto a Hotel',
@@ -47,33 +49,30 @@ class BookingController extends Controller
        // $tariff = DB::table('tariff_hotels')->where('id_zona', $search_destino->zona)->get();
         $tariff = Tariff::with(['type_unit', 'type_trip'])->where('id_zona', $search_destino->zona)->get();
 
-        $service = $service[0];
-        $origen = $request->origen;
-        $destino = $request->destino;
-        $date = $request->date;
-        $pickup = $request->pickup;
-        $passengers = $request->passengers;
-        $retorno = $request->retorno;
-        $date_comeback = $request->date_comeback;
-        $time_comeback = $request->time_comeback;
+
+        $booking = collect([
+            'service' => $service = $service[0],
+            'origen' => $request->origen,
+            'destino' => $request->destino,
+            'date' => $request->date,
+            'pickup' => $request->pickup,
+            'passengers' => $request->passengers,
+            'retorno' => $request->retorno,
+            'date_comeback' => $request->date_comeback,
+            'time_comeback' => $request->time_comeback,
+        ]);
 
         return view('reservation', compact(
-            'service',
-            'origen',
-            'destino',
-            'date',
-            'pickup',
-            'passengers',
-            'retorno',
-            'date_comeback',
-            'time_comeback',
-            'hoteles',
-            'tariff'
+    'booking',
+'hoteles',
+'tariff'
         ));
     }
 
     public function complete(Request $request)
     {
+        return $request->all();
+
         //$unit = TypeUnit::where('id', $request->unit)->get();
         $unit = $request->unit;
         $service = $request->service;

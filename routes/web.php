@@ -35,10 +35,6 @@ Route::group([
         });
     });
 
-
-
-
-
     //Route::get('dependent-dropdown', [CountryStateCityController::class, 'index']);
     Route::post('getState', [CountryStateCityController::class, 'getState'])->name('fetchState');
     Route::post('getCity', [CountryStateCityController::class, 'getCity'])->name('fetchCities');

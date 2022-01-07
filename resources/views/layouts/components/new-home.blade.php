@@ -86,79 +86,87 @@
                id="form_search" autocomplete="off">
                @csrf
                @method('POST')
-
                {{-- selecciona el servicio --}}
-               <div class="col-lg-4 mb-2" id="services-content">
-                   <div class="input-group">
-                       <span class="input-group-text" id="basic-addon1"><i class="fas fa-sync-alt"></i></span>
-                       <select class="form-select" name="services" id="services" required>
-                           <option selected value="null" disabled>Selecciona un servicio</option>
-                           <optgroup label="VIAJE REDONDO">
-                               <option value="4">Aeropuerto a Hotel a Aeropuerto</option>
-                           </optgroup>
-                           <optgroup label="VIAJE SENCILLO">
-                               <option value="1">Aeropuerto a Hotel</option>
-                               <option value="2">Hotel a Aeropuerto</option>
-                               <option value="3">Hotel a Hotel</option>
-                               <option value="5">Traslado</option>
-                           </optgroup>
-                       </select>
-                   </div>
-               </div>
+                <div class="col-lg-4 mb-2" id="services-content">
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-sync-alt"></i></span>
+                        <select class="form-select" name="services" id="services" required>
+                            <option selected value="" disabled>Selecciona un servicio</option>
+                            <optgroup label="VIAJE REDONDO">
+                                <option value="4">Aeropuerto a Hotel a Aeropuerto</option>
+                            </optgroup>
+                            <optgroup label="VIAJE SENCILLO">
+                                <option value="1">Aeropuerto a Hotel</option>
+                                <option value="2">Hotel a Aeropuerto</option>
+                                <option value="3">Hotel a Hotel</option>
+                                <option value="5">Traslado</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                {{-- origen aeropuerto --}}
+                <div class="col-lg-3 mb-2" id="origen_default">
+                    <div class="input-group ">
+                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
+                        <input type="text" readonly="readonly" id="origen_input_default"  class="form-control search_input_hotel" name="origen"
+                            value="Aeropuerto Internacional de Cancun">
+                    </div>
+                </div>
 
-               {{-- origen aeropuerto --}}
-               <input type="hidden" readonly class="search_input_hotel origen_airline" name="origen"
-                   value="Aeropuerto Internacional de Cancun">
 
-               {{-- origen hotel --}}
-               <div class="col-lg-3 mb-2 origen_hotel">
-                   <div class="input-group ">
-                       <span class="input-group-text" id="basic-addon1"><i class="fas fa-hotel"></i></span>
+                {{-- destino aeropuerto --}}
+                <div class="col-lg-3 mb-2" id="destino_default">
+                    <div class="input-group ">
+                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
+                        <input type="text" readonly="readonly" id="destino_input_default" class="form-control search_input_hotel" name="destino"
+                            value="Aeropuerto Internacional de Cancun">
+                    </div>
+                </div>
 
-                       <select class="form-select search_input search_input_hotel origen_hotel_select" name="origen">
-                           <option selected value="null" disabled>Selecciona un origen_hotel</option>
-                           @foreach ($hoteles as $hotel)
-                               <option>{{ $hotel->hotel }}</option>
-                           @endforeach
-                       </select>
-                   </div>
-               </div>
+
+                {{-- origen hotel --}}
+                <div class="col-lg-3 mb-2" id="origen_hotel">
+                    <div class="input-group ">
+                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
+
+                        <select class="form-select search_input search_input_hotel origen_hotel_select" name="origen">
+                            <option selected value="null" disabled>Selecciona un hotel origen</option>
+                            @foreach ($hoteles as $hotel)
+                                <option>{{ $hotel->hotel }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
 
                {{-- destino hotel --}}
-               <div class="col-lg-3 mb-2 destino_hotel">
+               <div class="col-lg-3 mb-2" id="destino_hotel">
                    <div class="input-group ">
-                       <span class="input-group-text dos" id="basic-addon1"><i class="fas fa-hotel"></i></span>
+                       <span class="input-group-text"><i class="fas fa-hotel"></i></span>
 
                        <select class="form-select search_input search_input_hotel destino_hotel_select" name="destino">
-                           <option selected value="null" disabled>Selecciona un destino_hotel</option>
+                           <option selected value="null" disabled>Selecciona un hotel destino</option>
                            @foreach ($hoteles as $hotel)
                                <option>{{ $hotel->hotel }}</option>
                            @endforeach
                        </select>
                    </div>
                </div>
-
-               {{-- destino aeropuerto --}}
-               <input type="hidden" readonly class="search_input_hotel destino_airline" name="destino"
-                   value="Aeropuerto Internacional de Cancun">
-
-
 
                {{-- fecha --}}
                <div class="col-lg-2 mb-2" id="date-content">
                    <div class="input-group">
                        <span class="input-group-text" id="icon-date"><i class="fas fa-calendar-alt"></i></span>
-                       <input type="text" class="form-control search_input_3 selector" aria-describedby="icon-date"
-                           placeholder="{{ __('fecha') }}" name="date" id="date" required>
+                       <input style="background: #FFFFFF;" type="text" class="form-control search_input_3 selector" aria-describedby="icon-date"
+                           placeholder="{{ __('fecha') }}" name="date" id="date_arrival" required>
                    </div>
                </div>
 
                {{-- hora --}}
-               <div class="col-lg-2 mb-2">
+               <div class="col-lg-2 mb-2" id="time-content">
                    <div class="input-group">
                        <span class="input-group-text" id="icon-time"><i class="fas fa-clock"></i></span>
                        <input type="time" class="form-control search_input_3 " aria-describedby="icon-time"
-                           placeholder="{{ __('hora') }}" name="pickup" id="pickup" required>
+                           placeholder="{{ __('hora') }}" name="pickup" id="time_arrival" required>
                    </div>
                </div>
 
@@ -189,13 +197,13 @@
                <div class="col-lg-2 mb-2" id="time_comeback">
                    <div class="input-group">
                        <span class="input-group-text" id="icon-time_comeback"><i class="fas fa-clock"></i></span>
-                       <input type="hidden" class="form-control timer" aria-describedby="icon-time_comeback"
+                       <input type="time" class="form-control" aria-describedby="icon-time_comeback"
                            placeholder="{{ __('Hora de regreso') }}" name="time_comeback" style="background: #FFFFFF;">
                    </div>
                </div>
 
                {{-- buscar --}}
-               <div class="d-grid col-lg-2 mb-2" id="search-content">
+               <div class="d-grid col-lg-2 mb-2" id="button-search">
                    <button type="submit" class="btn button-search"><i class="fas fa-search"></i>
                        {{ __('buscar') }}</button>
                </div>

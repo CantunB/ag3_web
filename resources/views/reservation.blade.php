@@ -360,7 +360,7 @@
             </div>
             @include('layouts.components.footer')
         </div> --}}
-        
+
         @include('layouts.components.new-header')
 
         <!-- section content start -->
@@ -368,8 +368,8 @@
             <div class="row">
                 {{-- section left start --}}
                 <div class="col-lg-8 mt-4">
-                    <h5 class="list">Lista de servicios disponibles para su transporte de llegada a {{ $destino }} para {{ $passengers }} pasajeros. </h5>
-
+                    <h5 class="list">Lista de servicios disponibles para su transporte de llegada a {{ $booking['destino'] }} para {{ $booking['passengers'] }} pasajeros. </h5>
+                    <input type="hidden" id="type_service" value="{{ $booking['service']  }}">
                     <!-- service-suburban start  -->
                     <div class="row">
                         <div class="col mb-4 service-list">
@@ -393,8 +393,8 @@
                                 <div class="col-md-9 right">
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li class="text-center mt-2 title-eco">{{ $tariff[0]->type_trip->type_trip }}</li>
-                                    <li class="text-center mt-2 title-pre">{{ $tariff[1]->type_trip->type_trip }}</li>
+                                    <li class="text-center mt-2 title-eco sub_sen">{{ $tariff[0]->type_trip->type_trip }}</li>
+                                    <li class="text-center mt-2 title-pre sub_red">{{ $tariff[1]->type_trip->type_trip }}</li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Tiempo de espera</li>
@@ -442,19 +442,19 @@
                                         <form id="sub_sencillo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="unit" value="1">
-                                            <input type="hidden" name="service" value="{{ $service }}">
-                                            <input type="hidden" name="origen" value="{{ $origen }}">
-                                            <input type="hidden" name="destino" value="{{ $destino }}">
-                                            <input type="hidden" name="date" value="{{ $date }}">
-                                            <input type="hidden" name="pickup" value="{{ $pickup }}">
-                                            <input type="hidden" name="passengers" value="{{ $passengers }}">
+                                            <input type="hidden" name="service" value="{{ $booking['service'] }}">
+                                            <input type="hidden" name="origen" value="{{ $booking['origen'] }}">
+                                            <input type="hidden" name="destino" value="{{ $booking['destino'] }}">
+                                            <input type="hidden" name="date" value="{{ $booking['date'] }}">
+                                            <input type="hidden" name="pickup" value="{{ $booking['pickup'] }}">
+                                            <input type="hidden" name="passengers" value="{{ $booking['passengers'] }}">
                                             <input type="hidden" name="type_unit" value="{{ $tariff[0]->type_unit->id }}">
                                             <input type="hidden" name="type_trip" value="{{ $tariff[0]->type_trip->id }}">
                                             <input type="hidden" name="price" value="{{ $tariff[0]->MXN }}">
-                                            @if ($retorno == 'si')
-                                            <input type="hidden" name="retorno" value="{{ $retorno }}">
-                                            <input type="hidden" name="date_comeback" value="{{ $date_comeback }}">
-                                            <input type="hidden" name="time_comeback" value="{{ $time_comeback }}">
+                                            @if ($booking['retorno'] == 'si')
+                                            <input type="hidden" name="retorno" value="{{ $booking['retorno'] }}">
+                                            <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
+                                            <input type="hidden" name="time_comeback" value="{{ $booking['time_comeback'] }}">
                                             @endif
                                             <button type="submit" class="button-eco">Reserva ahora</button>
                                         </form>
@@ -463,25 +463,25 @@
                                         <form id="sub_redondo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="unit" value="1">
-                                            <input type="hidden" name="service" value="{{ $service }}">
-                                            <input type="hidden" name="origen" value="{{ $origen }}">
-                                            <input type="hidden" name="destino" value="{{ $destino }}">
-                                            <input type="hidden" name="date" value="{{ $date }}">
-                                            <input type="hidden" name="pickup" value="{{ $pickup }}">
-                                            <input type="hidden" name="passengers" value="{{ $passengers }}">
+                                            <input type="hidden" name="service" value="{{ $booking['service'] }}">
+                                            <input type="hidden" name="origen" value="{{ $booking['origen'] }}">
+                                            <input type="hidden" name="destino" value="{{ $booking['destino'] }}">
+                                            <input type="hidden" name="date" value="{{ $booking['date'] }}">
+                                            <input type="hidden" name="pickup" value="{{ $booking['pickup'] }}">
+                                            <input type="hidden" name="passengers" value="{{ $booking['passengers'] }}">
                                             <input type="hidden" name="type_unit" value="{{ $tariff[1]->type_unit->id }}">
                                             <input type="hidden" name="type_trip" value="{{ $tariff[1]->type_trip->id }}">
                                             <input type="hidden" name="price" value="{{ $tariff[1]->MXN }}">
-                                            @if ($retorno == 'si')
-                                            <input type="hidden" name="retorno" value="{{ $retorno }}">
-                                            <input type="hidden" name="date_comeback" value="{{ $date_comeback }}">
-                                            <input type="hidden" name="time_comeback" value="{{ $time_comeback }}">
+                                            @if ($booking['retorno'] == 'si')
+                                            <input type="hidden" name="retorno" value="{{ $booking['retorno'] }}">
+                                            <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
+                                            <input type="hidden" name="time_comeback" value="{{ $booking['time_comeback'] }}">
                                             @endif
                                             <button type="submit" class="button-pre">Reserva ahora</button>
                                         </form>
                                     </li>
                                 </ul>
-                                </div>  
+                                </div>
 
                             </div>
                         </div>
@@ -560,19 +560,19 @@
                                         <form id="van_sencillo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="unit" value="2">
-                                            <input type="hidden" name="service" value="{{ $service }}">
-                                            <input type="hidden" name="origen" value="{{ $origen }}">
-                                            <input type="hidden" name="destino" value="{{ $destino }}">
-                                            <input type="hidden" name="date" value="{{ $date }}">
-                                            <input type="hidden" name="pickup" value="{{ $pickup }}">
-                                            <input type="hidden" name="passengers" value="{{ $passengers }}">
+                                            <input type="hidden" name="service" value="{{ $booking['service'] }}">
+                                            <input type="hidden" name="origen" value="{{ $booking['origen'] }}">
+                                            <input type="hidden" name="destino" value="{{ $booking['destino'] }}">
+                                            <input type="hidden" name="date" value="{{ $booking['date'] }}">
+                                            <input type="hidden" name="pickup" value="{{ $booking['pickup'] }}">
+                                            <input type="hidden" name="passengers" value="{{ $booking['passengers'] }}">
                                             <input type="hidden" name="type_unit" value="{{ $tariff[2]->type_unit->id }}">
                                             <input type="hidden" name="type_trip" value="{{ $tariff[2]->type_trip->id }}">
                                             <input type="hidden" name="price" value="{{ $tariff[2]->MXN }}">
-                                            @if ($retorno == 'si')
-                                            <input type="hidden" name="retorno" value="{{ $retorno }}">
-                                            <input type="hidden" name="date_comeback" value="{{ $date_comeback }}">
-                                            <input type="hidden" name="time_comeback" value="{{ $time_comeback }}">
+                                            @if ($booking['retorno'] == 'si')
+                                            <input type="hidden" name="retorno" value="{{ $booking['retorno'] }}">
+                                            <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
+                                            <input type="hidden" name="time_comeback" value="{{ $booking['time_comeback'] }}">
                                             @endif
                                             <button type="submit" class="button-eco">Reserva ahora</button>
                                         </form>
@@ -581,32 +581,32 @@
                                         <form id="van_redondo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="unit" value="2">
-                                            <input type="hidden" name="service" value="{{ $service }}">
-                                            <input type="hidden" name="origen" value="{{ $origen }}">
-                                            <input type="hidden" name="destino" value="{{ $destino }}">
-                                            <input type="hidden" name="date" value="{{ $date }}">
-                                            <input type="hidden" name="pickup" value="{{ $pickup }}">
-                                            <input type="hidden" name="passengers" value="{{ $passengers }}">
+                                            <input type="hidden" name="service" value="{{ $booking['service'] }}">
+                                            <input type="hidden" name="origen" value="{{ $booking['origen'] }}">
+                                            <input type="hidden" name="destino" value="{{ $booking['destino'] }}">
+                                            <input type="hidden" name="date" value="{{ $booking['date'] }}">
+                                            <input type="hidden" name="pickup" value="{{ $booking['pickup'] }}">
+                                            <input type="hidden" name="passengers" value="{{ $booking['passengers'] }}">
                                             <input type="hidden" name="type_unit" value="{{ $tariff[3]->type_unit->id }}">
                                             <input type="hidden" name="type_trip" value="{{ $tariff[3]->type_trip->id }}">
                                             <input type="hidden" name="price" value="{{ $tariff[3]->MXN }}">
-                                            @if ($retorno == 'si')
-                                            <input type="hidden" name="retorno" value="{{ $retorno }}">
-                                            <input type="hidden" name="date_comeback" value="{{ $date_comeback }}">
-                                            <input type="hidden" name="time_comeback" value="{{ $time_comeback }}">
+                                            @if ($booking['retorno'] == 'si')
+                                            <input type="hidden" name="retorno" value="{{ $booking['retorno'] }}">
+                                            <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
+                                            <input type="hidden" name="time_comeback" value="{{ $booking['time_comeback'] }}">
                                             @endif
                                             <button type="submit" class="button-pre">Reserva ahora</button>
                                         </form>
                                     </li>
                                 </ul>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- service-van end -->
                 </div>
                 <!-- section left end  -->
-                                    
+
 
                 <!-- section right start  -->
                 <div class="col-md-12 col-lg-4 mt-4">
@@ -614,24 +614,24 @@
                         <div class="col-md-12 col-lg-11 mb-4 reservation__summary">
                             <h5 class="title__reservation mt-2">Resumen de reservacion</h5>
                             <p class="title mb-0">Tipo de servicio</p>
-                            <p class="description"><i class="fas fa-sync-alt icon-resume"></i> {{ $service }}</p>
+                            <p class="description"><i class="fas fa-sync-alt icon-resume"></i> {{ $booking['service'] }}</p>
                             <p class="title mb-0">Desde</p>
-                            <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $origen }}
+                            <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $booking['origen'] }}
                             </p>
                             <p class="title mb-0">Hacia</p>
-                            <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $destino }}
+                            <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $booking['destino'] }}
                             </p>
                             <p class="title mb-0">Fecha</p>
-                            <p class="description"><i class="fas fa-calendar-alt icon-resume"></i> {{ $date }}</p>
+                            <p class="description"><i class="fas fa-calendar-alt icon-resume"></i> {{ $booking['date'] }}</p>
                             <p class="title mb-0">Hora</p>
-                            <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $pickup }}</p>
+                            <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $booking['pickup'] }}</p>
                             <p class="title mb-0">Numero de pasajeros</p>
-                            <p class="description"><i class="fas fa-users icon-resume"></i> {{ $passengers }}</p>
-                            @if ($retorno == 'si')
+                            <p class="description"><i class="fas fa-users icon-resume"></i> {{ $booking['passengers'] }}</p>
+                            @if ($booking['retorno'] == 'si')
                             <p class="title mb-0">Fecha de regreso</p>
-                            <p class="description"><i class="fas fa-calendar-alt icon-resume"></i> {{ $date_comeback }}</p>
-                            <p class="title mb-0">Hora de regreso</p>   
-                            <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $time_comeback }}</p>                             
+                            <p class="description"><i class="fas fa-calendar-alt icon-resume"></i> {{ $booking['date_comeback'] }}</p>
+                            <p class="title mb-0">Hora de regreso</p>
+                            <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $booking['time_comeback'] }}</p>
                             @endif
                         </div>
 
