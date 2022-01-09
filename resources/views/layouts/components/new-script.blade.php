@@ -23,6 +23,9 @@
 {{-- Dark Mode --}}
 <script src="{{ asset('assets/js/scripts/dark-mode.js') }}"></script>
 
+{{-- Gallery --}}
+<script src="{{ asset('assets/js/scripts/gallery.js') }}"></script>
+
 <!-- ParsleyJS Validation -->
 <script src="{{ asset('assets/js/parsley.min.js') }}"></script>
 <script src="{{ asset('assets/js/i18n/es.js') }}"></script>

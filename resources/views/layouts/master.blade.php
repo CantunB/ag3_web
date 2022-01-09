@@ -342,6 +342,8 @@
                 </div>
             </div> --}}
 
+            @include('layouts.components.gallery')
+
             @include('new-contact')
 
             {{-- @include('contact') --}}

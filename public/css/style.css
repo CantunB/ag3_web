@@ -547,11 +547,12 @@ body.dark .widget p.text-phone {
 
 /* --------------------------------------- tours ------------------------------------ */
 
-.tours-section h2 {
+.tours-section .section-title {
     font-family: 'Poppins', sans-serif;
-}
+    /* border-bottom: 2px solid #0582CA; */
+} 
 
-body.dark .tours-section h2 {
+body.dark .tours-section .section-title {
     color: #FFFFFF;
 }
 
