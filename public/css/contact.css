@@ -8,7 +8,8 @@ body.dark section.contact-form {
 }
 
 section.contact-form .section-title {
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
+    /* border-bottom: 2px solid #0582CA;  */
 }
 
 body.dark section.contact-form .section-title {
