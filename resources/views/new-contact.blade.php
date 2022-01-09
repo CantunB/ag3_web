@@ -1,8 +1,8 @@
-<section class="section mt-5 contact-form">
+<section class="section mt-2 contact-form">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="section-title mt-2">Contactanos</h2>
+                <h1 class="section-title text-center mt-2">Contactanos</h1>
             </div>
         </div>
         <div class="row contact-content mb-4">
