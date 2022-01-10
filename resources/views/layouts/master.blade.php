@@ -344,6 +344,8 @@
 
             @include('layouts.components.gallery')
 
+            @include('layouts.components.testimonials')
+
             @include('new-contact')
 
             {{-- @include('contact') --}}
