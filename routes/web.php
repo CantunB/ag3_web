@@ -13,6 +13,8 @@ Route::group([
     'prefix' => '{language}',
     ], function() {
 
+    Route::get('pdf', [BookingController::class, 'createPDF'])->name('pdf');
+
     Route::get('/', [Controller::class, 'index'])->name('index');
     Route::post('contact', [ContactController::class, 'contact'])->name('contact');
     Route::view('testimonials', 'pages.testimonialss')->name('testimonials');

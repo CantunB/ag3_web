@@ -1,7 +1,7 @@
 <section class="section my-4 gallery">
     <div class="container">
         <div class="gallery-title">
-            <h1 class="section-title text-center mb-2">Galeria</h2>
+            <h1 class="section-title text-center mb-4">Galeria</h2>
         </div>
 
         <div class="gallery-content">
