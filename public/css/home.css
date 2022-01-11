@@ -84,6 +84,10 @@ body.dark .search_title h5 {
 
 /* ----------------------------------- navbar -------------------------------- */
 
+body.dark .navbar {
+    box-shadow: none;
+}
+
 .navbar .navbar-brand__img {
     width: 100px;
     filter: drop-shadow(0 0 30px #000);
@@ -180,11 +184,12 @@ body.dark .search_title h5 {
         filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.6));
     }
 
-    /* .header .home h1.title-home {
-        font-size: 35px;
-    } */
+    .title-reduce {
+        font-size: 30px !important;
+    }
+    
+    .title-small {
+        font-size: 20px !important;
+    }
 
-    /* button.navbar-toggler ~ .header .home h1.title-home {
-        color: red;
-    } */
 }
