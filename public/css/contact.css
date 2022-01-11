@@ -16,10 +16,10 @@ body.dark section.contact-form .section-title {
     color: #FFFFFF;
 }
 
-section.contact-form .contact-content {
+/* section.contact-form .contact-content {
     border: 1px solid #dee2e6;
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
-}
+} */
 
 body.dark section.contact-form .contact-content {
     border: 0;

@@ -165,4 +165,8 @@ class BookingController extends Controller
         //return response()->download($voucher_pdf);
 
     }
+
+    public function createPDF() {
+        return $pdf = PDF::loadView('emails.pdf')->stream('archivo.pdf');
+    }
 }

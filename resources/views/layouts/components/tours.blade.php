@@ -1,5 +1,5 @@
 <div class="container mt-4 tours-section">
-    <h1 class="section-title text-center">Tours disponibles</h1>
+    <h1 class="section-title text-center mb-4">Tours disponibles</h1>
 
     <div class="box-container">
         <div class="box">
