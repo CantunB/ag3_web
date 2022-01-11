@@ -71,8 +71,8 @@
        </nav>
 
        <div class="container home">
-           <h1 class="text-center title-home demo">Del Aeropuerto a tu Destino</h1>
-           <h1 class="text-center title-home">Te ofrecemos <span class="typed"></span></h1>
+           <h1 class="text-center title-home one demo">Del Aeropuerto a tu Destino</h1>
+           <h1 class="text-center title-home second">Te ofrecemos <span class="typed"></span></h1>
        </div>
    </header>
 

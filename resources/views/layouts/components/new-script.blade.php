@@ -2,6 +2,9 @@
 <script src="{{ asset('assets/js/scripts/popper.min.js') }}"></script>
 <script src="{{ asset('assets/js/scripts/bootstrap.min.js') }}"></script>
 
+<!-- Home.js -->
+<script src="{{ asset('assets/js/scripts/home.js') }}"></script>
+
 <!-- Typed.js v2.0.12 -->
 <script src="{{ asset('assets/js/scripts/typed.js') }}"></script>
 
