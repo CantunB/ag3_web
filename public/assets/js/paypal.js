@@ -1,3 +1,8 @@
+    const locationHost = window.location.origin;
+    const urlPayment = locationHost + '/es/booking/payment'
+    const urlVoucherPDF = locationHost + '/es/booking/pdf/voucher'
+
+
 var price = $("#price").val();
 paypal.Buttons({
     createOrder: function(data, actions) {
@@ -19,7 +24,7 @@ paypal.Buttons({
         form = $('#booking_form,#payment_form').serialize();
         $.ajax({
             type: "POST",
-            url: "{!! route('payment',app()->getLocale()) !!}",
+            url: urlPayment, //"{!! route('payment',app()->getLocale()) !!}",
             data: form+'&'+$.param({
                 transaction_id : details.id,
                 status_payment: 1
@@ -44,7 +49,7 @@ paypal.Buttons({
                 if (result.isConfirmed) {
                     $.ajax({
                         type: 'GET',
-                        url: "{!! route('voucher', app()->getLocale()) !!}",
+                        url: urlVoucherPDF,//"{!! route('voucher', app()->getLocale()) !!}",
                         data: response.data,
                         xhrFields: {
                             responseType: 'blob'
@@ -103,8 +108,7 @@ paypal.Buttons({
             }
         });
         //window.location = '{!! route('index',app()->getLocale()) !!}';
-
-      });
+        });
     }
   }).render('#paypal-button-container');
   //This function displays payment buttons on your web page.

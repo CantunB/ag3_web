@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\App;
 
 class BookingController extends Controller
 {
@@ -21,20 +22,7 @@ class BookingController extends Controller
     {
         $hoteles = Hotel::all();
 
-        if ($request->services == "1")  {
-            $search_destino = Hotel::where('hotel', $request->destino)
-        ->orWhere('hotel', 'like', '%' . $request->destino . '%')->first();
-        }elseif ($request->services == "2") {
-            $search_destino = Hotel::where('hotel', $request->origen)
-            ->orWhere('hotel', 'like', '%' . $request->origen . '%')->first();
-        }elseif ($request->services == 5){
-            return 'Seleccionaste servicio de traslado';
-        }
-        else{
-            $search_destino = Hotel::where('hotel', $request->destino)
-            ->orWhere('hotel', 'like', '%' . $request->destino . '%')->first();
-        }
-
+        //Lista de servicios que son aceptados al realizar la busqueda
         $list_services = [
             1 => 'Aeropuerto a Hotel',
             2 => 'Hotel a Aeropuerto',
@@ -42,10 +30,38 @@ class BookingController extends Controller
             4 => 'Aeropuerto a Hotel a Aeropuerto',
             5 => 'Traslados'
         ];
-
+        //Se obtiene el nombre del servicio de acuerdo a la opcion enviada y la lista de servicios disponibles
         foreach ($list_services as $list_service) {
             $service = array($list_services[$request->services]);
         }
+        /** Se obtiene las opciones de tarifas de acuerdo al origen   */
+        if ($request->services == "1")  { //Aeropuerto a Hotel (Origen - Destino)
+            $search_destino = Hotel::where('hotel', $request->destino)
+        ->orWhere('hotel', 'like', '%' . $request->destino . '%')->first();
+        }elseif ($request->services == "2") { //Hotel a Aeropuerto (Origen - Destino)
+            $search_destino = Hotel::where('hotel', $request->origen)
+            ->orWhere('hotel', 'like', '%' . $request->origen . '%')->first();
+        }elseif ($request->services == 5){ //Busqueda Manual (Origen - Destino)
+            $booking = collect([
+                'service' => $service = $service[0],
+                'origen' => $request->origen,
+                'destino' => $request->destino,
+                'date' => $request->date,
+                'pickup' => $request->pickup,
+                'passengers' => $request->passengers,
+            ]);
+
+            $data['countries'] = Country::get(["name","id"]);
+
+            return view('quotes',$data,  compact('booking'));
+        }elseif ($request->services == 3){
+
+        }
+        else{
+            $search_destino = Hotel::where('hotel', $request->destino) //Busqueda por defecto
+            ->orWhere('hotel', 'like', '%' . $request->destino . '%')->first();
+        }
+        /** Se obtiene las tarifas disponibles  de acuerdo a la zona obtenia anteriormente con el destino  */
        // $tariff = DB::table('tariff_hotels')->where('id_zona', $search_destino->zona)->get();
         $tariff = Tariff::with(['type_unit', 'type_trip'])->where('id_zona', $search_destino->zona)->get();
 
@@ -71,7 +87,7 @@ class BookingController extends Controller
 
     public function complete(Request $request)
     {
-        return $request->all();
+        //return $request->all();
 
         //$unit = TypeUnit::where('id', $request->unit)->get();
         $unit = $request->unit;
@@ -149,6 +165,9 @@ class BookingController extends Controller
         $booking->status_payment = $request->status_payment;
         $booking->status_booking = $request->status_booking;
         $booking->save();
+
+        /** SECTION Envio de correo electronico */
+        Mail::to($request->email)->send(new BookingMail($booking));
         return response()->json(['data' => $booking], 201);
     }
 
@@ -163,5 +182,15 @@ class BookingController extends Controller
         return $voucher_pdf->download($fileName);
         //return response()->download($voucher_pdf);
 
+    }
+
+    public function quotes(Request $request)
+    {
+        return $request->all();
+    }
+
+
+    public function createPDF() {
+        return  $pdf = PDF::loadView('emails.pdf')->stream('archivo.pdf');
     }
 }

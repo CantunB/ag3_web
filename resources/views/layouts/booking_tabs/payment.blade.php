@@ -63,7 +63,8 @@
                         <div class='col text-center'>
                         <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arrivo">
                         <label for="img1">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcksclvcirts05OdENj2d5m4Okcw8K37HDQ&usqp=CAU" alt="Image 1" class="rounded">
+                            <h3 class="mb-4">ARRIVO</h3>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcksclvcirts05OdENj2d5m4Okcw8K37HDQ&usqp=CAU" alt="ARRIVO" class="rounded">
                             <div class="tick_container">
                                 <div class="tick"><i class="fa fa-check"></i></div>
                             </div>
@@ -72,7 +73,8 @@
                         <div class='col text-center'>
                         <input type="radio" name="type_payment" id="img2" class="d-none imgbgchk" value="Paypal">
                             <label for="img2">
-                            <img src="https://seeklogo.com/images/P/paypal-logo-6ED6A5924E-seeklogo.com.png" alt="Image 2" class="rounded">
+                            <h3 class="mb-4">PAYPAL</h3>
+                            <img src="https://helpmybusinesspos.info/wp-content/uploads/2017/09/Paypal-Logo-Transparent-mybusinesspos.png" alt="PAYPAL" class="rounded">
                             <div class="tick_container">
                                 <div class="tick"><i class="fa fa-check"></i></div>
                             </div>
@@ -81,6 +83,29 @@
                     </div>
                     </div>
             </div>
+        </div>
+        {{--  <div class="row mb-4 ">
+            <div class="col-md-12 text center ">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250 border border-warning ">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="mb-2 text-primary">SERVICIO AEROPUERTO A HOTEL</strong>
+                    <p><strong>NOMBRE:</strong> BERNABE CANTUN DOMINGUEZ</p>
+                    <p><strong>CORREO:</strong> cantunberna@gmail.com</p>
+                    <p><strong>TELEFONO:</strong> 9806723432</p>
+                    <p><strong>AEROLINEA LLEGADA:</strong> AEROJET</p>
+                    <p><strong>No.VUELO:</strong> FR324</p>
+                    <p><strong>FECHA LLEGADA:</strong> Nov 12</p>
+
+                    <p><strong>AEROLINEA SALIDA:</strong> AEROJET</p>
+                    <p><strong>No.VUELO:</strong> FR324</p>
+                    <p><strong>FECHA LLEGADA:</strong> Nov 12</p>
+                </div>
+                    <div class=" bg-dark border border-warning rounded " >
+                        <img class="card-img-right flex-auto d-none d-md-block" src="{{ asset('assets/images/transport-van.png') }}" width="400" height="300" alt="Card image cap">
+                    </div>
+                </div>
+            </div>
+        </div>  --}}
         </div>
         <div class="row">
             <div class="container">

@@ -1,13 +1,18 @@
 $(document).ready(function(){
     service = $("#type_service").val();
     switch(service) {
-        case 1:
-         //execute code block 1
-         break;
-        case 2:
-         //execute code block 2
-         break;
+        case 'Aeropuerto a Hotel a Aeropuerto':
+            $('.sub_sen').hide();
+            $('.van_sen').hide();
+        break;
+        case 'Hotel a Aeropuerto':
+            $('.sub_red').hide();
+            $('.van_red').hide();
+        break;
         default:
-        // code to be executed if n is different from case 1 and 2
-       }
+            $('.sub_sen').show();
+            $('.van_sen').show();
+            $('.sub_red').show();
+            $('.van_red').show();
+        }
 });

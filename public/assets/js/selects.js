@@ -20,4 +20,12 @@ $(document).ready(function(){
         theme: 'bootstrap-5',
     });
 
+    arrival_airline = $("#airline_arrival").select2({
+        theme: 'bootstrap-5',
+
+    })
+    departure_airline = $("#airline_departure").select2({
+        theme: 'bootstrap-5',
+
+    })
 });

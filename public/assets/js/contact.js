@@ -18,6 +18,7 @@ $(document).ready(function() {
                         });
                         console.log(response.data);
                         $("#contact_form").parsley().reset();
+                        $("#map_div").removeClass("col-lg-6").addClass("col-lg-12");
                         $("#contact").hide();
                     },
                     error: function(response){

@@ -398,47 +398,47 @@
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Tiempo de espera</li>
-                                    <li class="text-center">Hasta 30 min.</li>
-                                    <li class="text-center">Minimo</li>
+                                    <li class="text-center sub_sen">Hasta 30 min.</li>
+                                    <li class="text-center sub_red">Minimo</li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Servicio privado</li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center sub_sen"><i class="fas fa-check"></i></li>
+                                    <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Cancelacion gratuita</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Cuponera de descuentos</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Amenidades de bienvenida</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Kit de salud Covid-19</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-4">Paradas de cortesia en tienda de conveniencia</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li class="text-center price-eco">${{ $tariff[0]->MXN }} MXN</li>
-                                    <li class="text-center price-pre">${{ $tariff[1]->MXN }} MXN</li>
+                                    <li class="text-center price-eco sub_sen">${{ $tariff[0]->MXN }} MXN</li>
+                                    <li class="text-center price-pre sub_red">${{ $tariff[1]->MXN }} MXN</li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li>
+                                    <li class="sub_sen">
                                         <form id="sub_sencillo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="unit" value="1">
@@ -459,7 +459,7 @@
                                             <button type="submit" class="button-eco">Reserva ahora</button>
                                         </form>
                                     </li>
-                                    <li>
+                                    <li class="sub_red">
                                         <form id="sub_redondo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="unit" value="1">
@@ -511,52 +511,52 @@
                                 <div class="col-md-9 right">
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li class="text-center mt-2 title-eco">{{ $tariff[2]->type_trip->type_trip }}</li>
-                                    <li class="text-center mt-2 title-pre">{{ $tariff[3]->type_trip->type_trip }}</li>
+                                    <li class="text-center mt-2 title-eco van_sen">{{ $tariff[2]->type_trip->type_trip }}</li>
+                                    <li class="text-center mt-2 title-pre van_red">{{ $tariff[3]->type_trip->type_trip }}</li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Tiempo de espera</li>
-                                    <li class="text-center">Hasta 30 min.</li>
-                                    <li class="text-center">Minimo</li>
+                                    <li class="text-center van_sen">Hasta 30 min.</li>
+                                    <li class="text-center van_red">Minimo</li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Servicio privado</li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center van_sen"><i class="fas fa-check"></i></li>
+                                    <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Cancelacion gratuita</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center van_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Cuponera de descuentos</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center van_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Amenidades de bienvenida</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center van_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">Kit de salud Covid-19</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center van_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-4">Paradas de cortesia en tienda de conveniencia</li>
-                                    <li class="text-center"><i class="fas fa-times"></i></li>
-                                    <li class="text-center"><i class="fas fa-check"></i></li>
+                                    <li class="text-center van_sen"><i class="fas fa-times"></i></li>
+                                    <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li class="text-center price-eco">${{ $tariff[2]->MXN }} MXN</li>
-                                    <li class="text-center price-pre">${{ $tariff[3]->MXN }} MXN</li>
+                                    <li class="text-center price-eco van_sen">${{ $tariff[2]->MXN }} MXN</li>
+                                    <li class="text-center price-pre van_red">${{ $tariff[3]->MXN }} MXN</li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li>
+                                    <li class="van_sen">
                                         <form id="van_sencillo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="unit" value="2">
@@ -577,7 +577,7 @@
                                             <button type="submit" class="button-eco">Reserva ahora</button>
                                         </form>
                                     </li>
-                                    <li>
+                                    <li class="van_red">
                                         <form id="van_redondo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
                                             <input type="hidden" name="unit" value="2">
@@ -661,6 +661,6 @@
         <!-- section content end -->
 
         @include('layouts.components.new-footer')
-        @include('layouts.components.script')
+        @include('layouts.components.scripts')
     </body>
 </html>

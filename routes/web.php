@@ -13,7 +13,12 @@ Route::group([
     'prefix' => '{language}',
     ], function() {
 
+    Route::get('pdf', [BookingController::class, 'createPDF'])->name('pdf');
+
     Route::get('/', [Controller::class, 'index'])->name('index');
+
+
+
     Route::post('contact', [ContactController::class, 'contact'])->name('contact');
     Route::view('testimonials', 'pages.testimonialss')->name('testimonials');
     Route::view('terms', 'pages.terms')->name('terms');
@@ -26,10 +31,10 @@ Route::group([
         //Route::post('/order/capture/',[\App\Http\Controllers\Front\PaypalPaymentController::class,'capture']);
    // });
     Route::group(['prefix' => 'booking'], function(){
+        Route::post('quotes', [BookingController::class, 'quotes'])->name('quotes');
         Route::post('vehicles', [BookingController::class, 'vehicles'])->name('vehicles');
         Route::post('complete', [BookingController::class, 'complete'])->name('complete');
         Route::post('payment', [BookingController::class, 'payment'])->name('payment');
-
         Route::group(['prefix' => 'pdf'], function() {
             Route::get('voucher', [BookingController::class, 'voucher'])->name('voucher');
         });

@@ -23,6 +23,7 @@ class CreateBookingsTable extends Migration
             $table->integer('country_id')->references('zona')->on('countries');
             $table->integer('state_id')->references('zona')->on('states');
             $table->string('type_service');
+            $table->string('type_trip');
             $table->string('origin');
             $table->string('destiny');
             $table->integer('passengers');

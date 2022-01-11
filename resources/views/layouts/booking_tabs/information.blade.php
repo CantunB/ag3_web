@@ -76,7 +76,6 @@
                 </div>
                 <!-- customer information end -->
 
-
                 <!-- travel information start -->
                 @if($service === 'Hotel a Hotel')
 
@@ -119,7 +118,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="date" id="date_arrival" name="d_arrival" class="form-control" aria-describedby="icon-date" value="{{ $date }}">
+                                <input readonly type="text" id="date_arrival" name="d_arrival" class="form-control" aria-describedby="icon-date" value="{{ $date }}">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
@@ -179,7 +178,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="date" class="form-control" id="date_departure" name="d_departure" aria-describedby="icon-date" value="{{ $date }}">
+                                <input readonly type="text" class="form-control" id="date_departure" name="d_departure" aria-describedby="icon-date" value="{{ $date }}">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
@@ -239,7 +238,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="date" class="form-control" id="date_arrival" name="d_arrival" aria-describedby="icon-date" value="{{ $date }}">
+                                <input readonly type="text" class="form-control" id="date_arrival" name="d_arrival" aria-describedby="icon-date" value="{{ $date }}">
 
                             </div>
                         </div>
@@ -295,7 +294,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="date" class="form-control" id="date" name="d_departure" aria-describedby="icon-date" value="{{ $date_comeback }}">
+                                <input readonly type="text" class="form-control" id="date" name="d_departure" aria-describedby="icon-date" value="{{ $date_comeback }}">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
@@ -319,8 +318,6 @@
 
                 @endif
                 <!-- travel information end -->
-
-
 
 
                 <!-- Special request start -->

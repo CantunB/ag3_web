@@ -352,9 +352,7 @@
             {{-- @include('layouts.components.footer') --}}
 
             @include('layouts.components.new-footer')
-            @include('layouts.components.new-script')
-           
+            @include('layouts.components.scripts')
         </div>
-        {{-- @include('layouts.components.script') --}}
     </body>
 </html>
