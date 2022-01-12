@@ -106,6 +106,9 @@
     <script src="{{ asset('assets/js/booking.js') }}"></script>
 
 {{---------------------  TODO --------------------------}}
+    <script src="{{ asset('assets/js/traslados.js') }}"></script>
+
+{{---------------------  TODO --------------------------}}
     <script src="{{ asset('assets/js/method_payment.js') }}"></script>
 
 {{---------------------  TODO --------------------------}}

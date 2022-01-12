@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\BookingMail;
+use App\Mail\ExampleMail;
 use App\Models\Airline;
 use App\Models\Booking;
 use App\Models\Country;
@@ -191,5 +192,9 @@ class BookingController extends Controller
 
     public function createPDF() {
         return  $pdf = PDF::loadView('emails.pdf')->stream('archivo.pdf');
+    }
+
+    public function createEmail() {
+        Mail::to('correo@electronico')->send(new ExampleMail());
     }
 }

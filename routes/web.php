@@ -14,6 +14,7 @@ Route::group([
     ], function() {
 
     Route::get('pdf', [BookingController::class, 'createPDF'])->name('pdf');
+    Route::get('email', [BookingController::class, 'createEmail'])->name('email');
 
     Route::get('/', [Controller::class, 'index'])->name('index');
 
