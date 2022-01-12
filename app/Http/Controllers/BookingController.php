@@ -174,14 +174,15 @@ class BookingController extends Controller
     public function voucher(Request $request)
     {
         $id = $request->id;
-        $booking = Booking::findOrFail($id);
-        $voucher_pdf = PDF::loadView('pdf.voucher', compact('booking'))->setPaper('a4');
+        $booking = Booking::with(['TypeUnit','Country','State'])->findOrFail($id);
+        $voucher_pdf = PDF::loadView('pdf.voucher', compact('booking'));
         $path = public_path('booking');
         $fileName =  $booking->id . '.' . 'pdf' ;
         $voucher_pdf->save($path . '/' . $fileName);
-        return $voucher_pdf->download($fileName);
-        //return response()->download($voucher_pdf);
+        //return $voucher_pdf->download($voucher_pdf);
+        $pdf = public_path('booking/'.$fileName);
 
+        return response()->download($pdf);
     }
 
     public function quotes(Request $request)

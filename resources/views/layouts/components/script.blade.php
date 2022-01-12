@@ -8,6 +8,12 @@
     <script src="{{ asset('assets/plugins/scrollTo/jquery.scrollTo.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/easing/easing.js') }}"></script>
     <script src="{{ asset('assets/plugins/parallax-js-master/parallax.min.js') }}"></script>
+
+
+    <script src="{{ asset('assets/js/parsley.min.js') }}"></script>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('assets/js/jquery.spinner.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

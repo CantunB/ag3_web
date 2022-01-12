@@ -40,6 +40,10 @@
 {{-------------------------------Gallery-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/gallery.js') }}"></script>
 
+{{--  /* -------------------------------------------------------------------------- */  --}}
+    <script src="{{ asset('assets/js/scripts/home.js') }}"></script>
+
+
 {{-------------------------------Testimonials-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/scripts/testimonials.js') }}"></script>

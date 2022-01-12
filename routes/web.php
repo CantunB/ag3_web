@@ -17,8 +17,6 @@ Route::group([
 
     Route::get('/', [Controller::class, 'index'])->name('index');
 
-
-
     Route::post('contact', [ContactController::class, 'contact'])->name('contact');
     Route::view('testimonials', 'pages.testimonialss')->name('testimonials');
     Route::view('terms', 'pages.terms')->name('terms');

@@ -1,0 +1,71 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 8mm 8mm 2mm 8mm;
+}
+
+table.header {
+    width: 100%;
+    background: #212529;
+}
+
+table.header table.header-content {
+    width: 100%;
+}
+
+td.logo img {
+    width: 100%;
+    max-width: 100px;
+}
+
+td.details {
+    color: #fff;
+    text-align: right;
+    padding-right: 10px;
+}
+
+table.information-personal {
+    width: 100%;
+}
+
+table.info-content {
+    table-layout: fixed;
+    width: 100%;
+}
+
+table.info-content td {
+    word-wrap: break-word;
+}
+
+.title-section {
+    background: #FACC01;
+    color: #212529;
+    margin-bottom: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+td.items {
+    border: 2px solid #FACC01;
+    padding: 10px;
+}
+
+span {
+    font-weight: bold;
+}
+
+td.service-img img {
+    width: 100%;
+}
+
+.arrival-info {
+    width: 100%;
+    border: 2px solid #FACC01;
+}
+
+.arrival-info td {
+    padding: 10px;
+}

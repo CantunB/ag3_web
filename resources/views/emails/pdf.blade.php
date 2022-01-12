@@ -1,51 +1,79 @@
-<html>
+<link rel="stylesheet" href="{{ asset('css/pdf.css') }}">
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <style>
-        @page {
-            margin: 0cm 0cm;
-            font-family: Arial;
-        }
-
-        body {
-            margin: 3cm 2cm 2cm;
-        }
-
-        header {
-            position: fixed;
-            top: 0cm;
-            left: 0cm;
-            right: 0cm;
-            height: 2cm;
-            background-color: #2a0927;
-            color: white;
-            text-align: center;
-            line-height: 30px;
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0cm;
-            left: 0cm;
-            right: 0cm;
-            height: 2cm;
-            background-color: #2a0927;
-            color: white;
-            text-align: center;
-            line-height: 35px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ag3 Luxury Travel</title>
 </head>
+
 <body>
-<header>
-    <h1>Styde.net</h1>
-</header>
+    <table cellspacing="0" cellpadding="0" class="header">
+        <tr>
+            <td colspan="2">
+                <table class="header-content">
+                    <tr>
+                        <td class="logo">
+                            <img src="{{ asset('assets/images/logo.png') }}" alt="logo-empresa">
+                        </td>
+                        <td class="details">
+                            <span>No. Servicio:</span> Book-182<br>
+                            <span>Fecha de creacion:</span> 10 Enero, 2022
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
-<main>
-    <h1>Contenido</h1>
-</main>
+    <h2 class="title-section">Informacion Personal</h2>
 
-<footer>
-    <h1>www.styde.net</h1>
-</footer>
+    <table cellspacing="0" cellpadding="0" class="information-personal">
+        <tr>
+            <td colspan="2">
+                <table class="info-content">
+                    <tr>
+                        <td class="items">
+                            <span>NOMBRE:</span> Jose Felix Hernandez Ortiz<br>
+                            <span>CORREO:</span> resywolut@mailinator.com<br>
+                            <span>TELEFONO:</span> +1 (836) 326-7577<br>
+                            <span>PAIS:</span> Mexico<br>
+                            <span>ESTADO:</span> Campeche<br>
+                            <span>SERVICIO:</span> Aeropuerto a Hotel<br>
+                            <span>DESTINO:</span> ALTITUDE BY KRYSTAL GRAND PUNTA CANCUN<br>
+                            <span>VEHICULO SOLICITADO:</span> Suburban<br>
+                            <span>PASAJEROS:</span> 2<br>
+                            <span>EXTRAS:</span> Botella de Agua<br>
+                            <span>TOTAL:</span> $2400 MXN
+                        </td>
+                        <td class="service-img">
+                            <img src="{{ asset('assets/images/transport-suburban-min.png') }}" alt="service-suburban">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <h2 class="title-section">Informacion de llegada</h2>
+
+    <table cellspacing="0" cellpadding="0" class="arrival-info">
+        <tr>
+            <td>
+                <span>FECHA:</span> 2022-01-03<br>
+                <span>HORA:</span> 12:00<br>
+                <span>AEROLINEA:</span> NOVAIR<br>
+                <span>NUMERO DE VUELO:</span> 241<br>
+                <span>COMENTARIOS:</span>
+            </td>
+        </tr>
+    </table>
+
+    <h2 class="title-section"><span>Metodo de pago:</span> Efectivo</h2>
+
 </body>
+
 </html>
