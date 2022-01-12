@@ -38,6 +38,21 @@
                        <li class="nav-item">
                            <a class="nav-link" href="#">Contacto</a>
                        </li>
+                       <li>
+                        <language-switcher
+                            locale ="{{ app()->getLocale() }}"
+                            link-en ="{{ route(Route::currentRouteName(), 'en') }}"
+                            link-fr ="{{ route(Route::currentRouteName(), 'fr') }}"
+                            link-es ="{{ route(Route::currentRouteName(), 'es') }}"
+                            ></language-switcher>
+                        </li>
+                        <li>
+                            <language-switcher
+                                locale ="{{ app()->getLocale() }}"
+                                link-en ="{{ route(Route::currentRouteName(), 'en') }}"
+                                link-fr ="{{ route(Route::currentRouteName(), 'fr') }}"
+                                link-es ="{{ route(Route::currentRouteName(), 'es') }}"
+                            ></language-switcher>
                    </ul>
                    <!-- section-right-language  -->
                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -63,6 +78,8 @@
                                            src="{{ asset('assets/images/flags/4x3/fr.svg') }}" alt="french-flag"
                                            class="flags">
                                        Francés</a></li>
+
+                                    </li>
                            </ul>
                        </li>
                    </ul>

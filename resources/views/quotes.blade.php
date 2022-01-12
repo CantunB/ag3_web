@@ -47,6 +47,6 @@
         <!-- TERMINO DE LISTA DE TABS -->
 
         @include('layouts.components.new-footer')
-        @include('layouts.components.script')
+        @include('layouts.components.scripts')
     </body>
 </html>

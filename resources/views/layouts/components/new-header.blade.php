@@ -23,6 +23,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contacto</a>
                 </li>
+
             </ul>
             <!-- section-right-language  -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -33,21 +34,12 @@
                     </button>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown-language" data-bs-toggle="dropdown"
-                        aria-expanded="false">Cambiar idioma</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown-language">
-                        <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/images/flags/4x3/en.svg') }}" alt="english-flag" class="flags">
-                                Inglés</a></li>
-                        <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/images/flags/4x3/es.svg') }}" alt="spanish-flag" class="flags">
-                                Español</a></li>
-                        <li><a class="dropdown-item" href="#"><img src="{{ asset('assets/images/flags/4x3/fr.svg') }}" alt="french-flag" class="flags">
-                                Francés</a></li>
-                                <language-switcher
-                                locale ="{{ app()->getLocale() }}"
-                                link-en ="{{ route(Route::currentRouteName(), 'en') }}"
-                                link-fr ="{{ route(Route::currentRouteName(), 'fr') }}"
-                                link-es ="{{ route(Route::currentRouteName(), 'es') }}"
-                            ></language-switcher>
+                    <language-switcher
+                    locale ="{{ app()->getLocale() }}"
+                    link-en ="{{ route(Route::currentRouteName(), 'en') }}"
+                    link-fr ="{{ route(Route::currentRouteName(), 'fr') }}"
+                    link-es ="{{ route(Route::currentRouteName(), 'es') }}"
+                ></language-switcher>
                     </ul>
                 </li>
             </ul>

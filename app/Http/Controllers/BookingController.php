@@ -54,8 +54,6 @@ class BookingController extends Controller
             $data['countries'] = Country::get(["name","id"]);
 
             return view('quotes',$data,  compact('booking'));
-        }elseif ($request->services == 3){
-
         }
         else{
             $search_destino = Hotel::where('hotel', $request->destino) //Busqueda por defecto
