@@ -80,12 +80,14 @@ body.dark .gallery .section-title {
     width: 100%;
     top: 0;
     left: 0;
+    bottom: 0;
     transform: translateX(-100%);
     background: rgba(0,0,0,.8);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform .4s ease-in;
+    z-index: 1;
 }
 
 .move {

@@ -15,10 +15,19 @@ const addImage = (srcImage, altImage) => {
     imageContainer.classList.toggle('show');
     // agregar la img al lightbox
     imageContainer.src = srcImage;
+
+    // deshabilitar el desplazamiento vertical cuando se abre el modal
+    $('body').css('overflow-y', 'hidden');
+    // deshabilitar el desplazamiento vertical en moviles
+    $('.lightbox').bind('touchmove', false);
+    
 }
 
 // Funcion para cerrar el lightbox
-closeModal.addEventListener('click', () => {
+containerImage.addEventListener('click', () => {
     containerImage.classList.toggle('move');
     imageContainer.classList.toggle('show');
+    // restablecer el desplazamiento
+    $('body').removeAttr('style');
+    $('.lightbox').bind('touchmove', true);
 });
