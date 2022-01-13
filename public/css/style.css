@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --color-primary: #ffc107;
+    --color-secondary: #424D58;
+}
 
 body {
     background: #FFFFFF;
@@ -35,7 +41,7 @@ body.dark {
     right: unset;
     border-radius: 100px;
     transition: .3s ease all;
-    box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
 }
 
 .switch.active {
@@ -69,7 +75,7 @@ body.dark .navbar {
 
 .navbar .nav-link {
     color: #fff;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
 
@@ -96,7 +102,7 @@ body.dark .navbar {
 
 .navbar .dropdown-menu a {
     color: #fff;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
 
@@ -128,7 +134,7 @@ body.dark h5.list {
     margin-bottom: 0;
     font-size: 15px;
     border: 1px solid #dee2e6;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 body.dark .service-list {
@@ -141,8 +147,8 @@ body.dark .service-list {
 
 .service-list .left h4.title-service {
     line-height: 1;
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 600; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     color: #FF8427;
 }
 
@@ -152,7 +158,8 @@ body.dark .service-list {
     object-fit: cover;
 }
 
-.service-list .left ul, li {
+.service-list .left ul,
+li {
     padding-left: 0;
     margin-left: 0;
     list-style: none;
@@ -214,7 +221,8 @@ body.dark .service-list .left ul.buttons li.btn-blue {
     list-style: none;
 }
 
-.service-list .right ul, li {
+.service-list .right ul,
+li {
     padding-left: 0;
     margin-left: 0;
 }
@@ -224,21 +232,21 @@ body.dark .service-list .right li {
     color: #FFFFFF;
 }
 
-.service-list .right ul.table-row > :nth-child(2) {
+.service-list .right ul.table-row> :nth-child(2) {
     background: rgba(213, 218, 236, .17);
     margin-right: 5px;
 }
 
-body.dark .service-list .right ul.table-row > :nth-child(2) {
+body.dark .service-list .right ul.table-row> :nth-child(2) {
     background: rgba(213, 218, 236, .04);
 }
 
-.service-list .right ul.table-row > :nth-child(3) {
+.service-list .right ul.table-row> :nth-child(3) {
     background: rgba(213, 218, 236, .17);
     margin-left: 5px;
 }
 
-body.dark .service-list .right ul.table-row > :nth-child(3) {
+body.dark .service-list .right ul.table-row> :nth-child(3) {
     background: rgba(213, 218, 236, .04);
 }
 
@@ -246,8 +254,8 @@ body.dark .service-list .right ul.table-row > :nth-child(3) {
 .service-list .right .title-pre {
     color: #0582CA;
     font-size: 18px;
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 600; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 body.dark .service-list .right .title-eco,
@@ -291,7 +299,8 @@ body.dark .service-list .right .title-pre {
 
 .service-list .right ul.table-row li.price-pre {
     /* color: #FFA500; */
-    color: #FF8427;;
+    color: #FF8427;
+    ;
     font-size: 20px;
     font-weight: 700;
     padding-bottom: 20px;
@@ -321,7 +330,7 @@ body.dark .service-list .right .title-pre {
     background: #FBFBFD;
     font-family: 'Poppins', sans-serif;
     border: 1px solid #dee2e6;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); 
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 body.dark .steps {
@@ -364,7 +373,7 @@ button.nav-link:hover {
 .form-section {
     background: #FBFBFD;
     border: 1px solid #dee2e6;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 body.dark .form-section {
@@ -374,8 +383,8 @@ body.dark .form-section {
 }
 
 .form-section h5 {
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 600; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 body.dark .form-section h5 {
@@ -456,7 +465,7 @@ body.dark .total .price {
     background: #FBFBFD;
     font-size: 15px;
     border: 1px solid #dee2e6;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 
@@ -469,8 +478,8 @@ body.dark .reservation__summary {
 .reservation__summary .title__reservation {
     /* color: #FFA500;
     font-weight: 700; */
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 600; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     color: #FF8427;
 }
 
@@ -506,7 +515,7 @@ body.dark .reservation__summary p.description {
     background: #FBFBFD;
     font-size: 15px;
     border: 1px solid #dee2e6;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 body.dark .widget {
@@ -517,8 +526,8 @@ body.dark .widget {
 
 .widget .title__widget {
     /* color: #FFA500; */
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 600; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
     color: #FF8427;
 }
 
@@ -532,8 +541,8 @@ body.dark .widget p {
 
 .widget p.text-phone {
     color: #000;
-    font-family: 'Poppins', sans-serif; 
-    font-weight: 600; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 
 body.dark .widget p.text-phone {
@@ -548,9 +557,26 @@ body.dark .widget p.text-phone {
 /* --------------------------------------- tours ------------------------------------ */
 
 .tours-section .section-title {
-    font-family: 'Poppins', sans-serif;
-    /* border-bottom: 2px solid #0582CA; */
-} 
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    color: #404040;
+    text-transform: uppercase;
+}
+
+.tours-section .section-title span {
+    font-size: 37px;
+    font-weight: 600;
+}
+
+.tours-section .cws_divider {
+    width: 730px;
+    margin-top: 5px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid var(--color-primary);
+}
 
 body.dark .tours-section .section-title {
     color: #FFFFFF;
@@ -564,9 +590,10 @@ body.dark .tours-section .section-title {
 
 .tours-section .box-container .box {
     flex: 1 1 16rem;
-    border-radius: .5rem;
+    /* border-radius: .5rem; */
     overflow: hidden;
-    background: #FBFBFD;
+    /* background: #FBFBFD; */
+    background: #FFFFFF;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
@@ -576,6 +603,13 @@ body.dark .tours-section .box-container .box {
     background: rgba(32, 32, 32, 0.8);
     box-shadow: 0 1px 1px rgba(150, 150, 150, .2);
     /* box-shadow: none; */
+}
+
+.tours-section .box-container .box .content p {
+    font-family: 'Hind Siliguri', sans-serif;
+    color: #B5B5B5;
+    font-size: 15px;
+    letter-spacing: 0.2px;
 }
 
 body.dark .tours-section .box-container .box .content p {
@@ -594,7 +628,7 @@ body.dark .tours-section .box-container .box .content p {
 }
 
 .tours-section .box-container .box:hover img {
-    transform: scale(1.1);    
+    transform: scale(1.1);
 }
 
 .tours-section .box-container .box .content {
@@ -602,7 +636,17 @@ body.dark .tours-section .box-container .box .content p {
 }
 
 .tours-section .box-container .box .content h4 {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Hind Siliguri', sans-serif;
+    text-transform: uppercase;
+    color: #404040;
+    font-weight: 600;
+    font-size: 21px;
+}
+
+.tours-section .box-container .box .content h4:hover {
+    color: var(--color-primary);
+    transition: .4s ease;
 }
 
 body.dark .tours-section .box-container .box .content h4 {
@@ -610,38 +654,55 @@ body.dark .tours-section .box-container .box .content h4 {
 }
 
 .tours-section .box-container .box .content h4 i {
-    color: #538083;
+    /* color: #538083; */
+    color: #424D58;
 }
 
 .tours-section .box-container .box .content .stars i {
-    color: #538083;
+    /* color: #538083; */
+    color: var(--color-primary);
+    font-size: 13px;
 }
 
 .tours-section .box-container .box .content .price {
     font-size: 18px;
     font-weight: 600;
+    color: #424D58;
 }
 
-body.dark  .box-container .box .content .price {
+body.dark .box-container .box .content .price {
     color: #969696;
 }
 
 .tours-section .box-container .box .content .price span {
-    color: #666;
+    /* color: #666; */
+    color: #B5B5B5;
     font-weight: 500;
     font-size: 14px;
     text-decoration: line-through;
 }
 
 .tours-section .box-container .box .content a.btn {
-    background: #0582CA;
+    /* background: #0582CA;
     color: #fff;
-    border: 2px solid #0582CA;
+    border: 2px solid #0582CA; */
+    background: var(--color-primary);
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border: 2px solid var(--color-primary);
+    color: #424D58;
+    border-radius: 0;
 }
 
 .tours-section .box-container .box .content a.btn:hover {
-    background: rgba(5, 130, 202, 0.2);
-    color: #0582CA;
+    /* background: rgba(5, 130, 202, 0.2);
+    color: #0582CA; */
+    background: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-primary);
 }
 
 /* -------------------------------------------------------contact -------------------------------- */
@@ -677,7 +738,7 @@ body.dark .bg-footer {
 
 .bg-footer h3 {
     color: #FACC01;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
 
@@ -703,7 +764,7 @@ body.dark .bg-footer {
     border-top: 1px solid rgba(250, 204, 1, 0.5);
 }
 
-.bg-footer .copyright span, 
+.bg-footer .copyright span,
 .bg-footer .copyright a {
     color: #FACC01;
 }
@@ -711,9 +772,21 @@ body.dark .bg-footer {
 
 /* -------------------------------------- media queries -------------------------------- */
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
     .service-list .right .title-eco,
     .service-list .right .title-pre {
         font-size: 14px;
+    }
+}
+
+@media (max-width : 480px) {
+    .tours-section .cws_divider {
+        width: 110px !important;
+    }
+}
+
+@media only screen and (min-device-width : 481px) and (max-device-width : 992px) {
+    .tours-section .cws_divider {
+        width: 330px !important;
     }
 }
