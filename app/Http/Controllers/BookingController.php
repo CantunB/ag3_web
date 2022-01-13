@@ -195,6 +195,6 @@ class BookingController extends Controller
     }
 
     public function createEmail() {
-        Mail::to('correo@electronico')->send(new ExampleMail());
+        Mail::to('jessarturo97@gmail.com')->send(new ExampleMail());
     }
 }
