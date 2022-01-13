@@ -1,5 +1,6 @@
 <div class="container mt-4 tours-section">
-    <h1 class="section-title text-center mb-4">Tours disponibles</h1>
+    <h1 class="section-title mb-0"><span>Tours</span> disponibles</h1>
+    <div class="cws_divider"></div>
 
     <div class="box-container">
         <div class="box">
@@ -81,7 +82,6 @@
                 </div>
                 <div class="price text-center">$1950.00 <span>$2199.00</span></div>
                 <div class="button-card d-flex justify-content-center">
-                    <a href="#" class="mt-2 btn">Reserva ahora</a>
                     <a href="{{url(app()->getLocale().'/booking/tours'.'/4')}}" class="mt-2 btn">Reserva ahora</a>
                 </div>
             </div>
