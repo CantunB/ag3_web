@@ -7,11 +7,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="AG3 Landing page">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+
     {{-- @include('layouts.components.css') --}}
 
     {{-- Bootstrap 5 --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.2.0/dist/select2-bootstrap-5-theme.min.css" />
+        <link rel="stylesheet" href="{{ asset('css/whatsapp.css') }}">
+
     {{-- Mis estilos  --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
@@ -368,7 +374,7 @@
             <div class="row">
                 {{-- section left start --}}
                 <div class="col-lg-8 mt-4">
-                    <h5 class="list">Lista de servicios disponibles para su transporte de llegada a {{ $booking['destino'] }} para {{ $booking['passengers'] }} pasajeros. </h5>
+                    <h5 class="list">Lista de servicios disponibles para su transporte de llegada a <span class="text-primary">{{ $booking['destino'] }}</span> para <span class="text-primary">{{ $booking['passengers'] }}</span> pasajeros. </h5>
                     <input type="hidden" id="type_service" value="{{ $booking['service']  }}">
                     <!-- service-suburban start  -->
                     <div class="row">
@@ -441,7 +447,6 @@
                                     <li class="sub_sen">
                                         <form id="sub_sencillo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="unit" value="1">
                                             <input type="hidden" name="service" value="{{ $booking['service'] }}">
                                             <input type="hidden" name="origen" value="{{ $booking['origen'] }}">
                                             <input type="hidden" name="destino" value="{{ $booking['destino'] }}">
@@ -462,7 +467,6 @@
                                     <li class="sub_red">
                                         <form id="sub_redondo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="unit" value="1">
                                             <input type="hidden" name="service" value="{{ $booking['service'] }}">
                                             <input type="hidden" name="origen" value="{{ $booking['origen'] }}">
                                             <input type="hidden" name="destino" value="{{ $booking['destino'] }}">
@@ -559,7 +563,6 @@
                                     <li class="van_sen">
                                         <form id="van_sencillo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="unit" value="2">
                                             <input type="hidden" name="service" value="{{ $booking['service'] }}">
                                             <input type="hidden" name="origen" value="{{ $booking['origen'] }}">
                                             <input type="hidden" name="destino" value="{{ $booking['destino'] }}">
@@ -580,7 +583,6 @@
                                     <li class="van_red">
                                         <form id="van_redondo" action="{{ route('complete', app()->getLocale()) }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="unit" value="2">
                                             <input type="hidden" name="service" value="{{ $booking['service'] }}">
                                             <input type="hidden" name="origen" value="{{ $booking['origen'] }}">
                                             <input type="hidden" name="destino" value="{{ $booking['destino'] }}">
@@ -659,6 +661,7 @@
             </div>
         </div>
         <!-- section content end -->
+        <a href="https://wa.me/5219381726488?text=Me%20gustaría%20informacion%20acerca%20de%20los%20servicios" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
         @include('layouts.components.new-footer')
         @include('layouts.components.scripts')

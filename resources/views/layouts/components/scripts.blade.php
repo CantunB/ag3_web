@@ -43,7 +43,6 @@
 {{--  /* -------------------------------------------------------------------------- */  --}}
     <script src="{{ asset('assets/js/scripts/home.js') }}"></script>
 
-
 {{-------------------------------Testimonials-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/scripts/testimonials.js') }}"></script>
@@ -108,11 +107,11 @@
 {{---------------------  TODO --------------------------}}
     <script src="{{ asset('assets/js/traslados.js') }}"></script>
 
-{{---------------------  TODO --------------------------}}
+{{---------------------  SECTION[metodos pago] RadioButton para seleccionar el metodo de pago --------------------------}}
     <script src="{{ asset('assets/js/method_payment.js') }}"></script>
 
-{{---------------------  TODO --------------------------}}
+{{---------------------  SECTION[metodo de pago arrivo] Envio de formulario por ajax--------------------------}}
     <script src="{{ asset('assets/js/arrivo.js') }}"></script>
 
-{{---------------------  TODO --------------------------}}
+{{---------------------  SECTION[metodo de pago por paypal] Envio de formulario por ajax --------------------------}}
     <script src="{{ asset('assets/js/paypal.js') }}"></script>

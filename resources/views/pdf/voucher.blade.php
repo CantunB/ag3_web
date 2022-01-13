@@ -143,7 +143,7 @@
     @elseif ( $booking->type_service == "Hotel a Aeropuerto")
         <h2 class="title-section">Informacion de Salida</h2>
 
-        <table cellspacing="0" cellpadding="0" class="departure-info">
+        <table cellspacing="0" cellpadding="0" class="arrival-info">
             <tr>
                 <td>
                     <span>FECHA:</span> {{ $booking->date_departure }}<br>
@@ -172,7 +172,7 @@
         </table>
         <h2 class="title-section">Informacion de Salida</h2>
 
-        <table cellspacing="0" cellpadding="0" class="departure-info">
+        <table cellspacing="0" cellpadding="0" class="arrival-info">
             <tr>
                 <td>
                     <span>FECHA:</span> {{ $booking->date_departure }}<br>

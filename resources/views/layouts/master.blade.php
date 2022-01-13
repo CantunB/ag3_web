@@ -19,6 +19,8 @@
    <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
     <!-- Mis estilos -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/whatsapp.css') }}">
+
 </head>
     <body>
         <div id="app" class="super_container">
@@ -347,6 +349,8 @@
             @include('layouts.components.testimonials')
 
             @include('new-contact')
+
+            <a href="https://wa.me/5219381726488?text=Me%20gustaría%20informacion%20acerca%20de%20los%20servicios" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
             {{-- @include('contact') --}}
             {{-- @include('layouts.components.footer') --}}

@@ -55,7 +55,7 @@
                         <div class="input-group">
                             <label for="icon-globe" class="input-group-text"><i
                                     class="fas fa-globe-americas input__icon"></i></label>
-                            <select required id="countries" name="country_id" class="form-select">
+                            <select required id="countries" name="country_id" class="form-select countries">
                                 <option selected value="null" disabled>Selecciona un pais...</option>
                                 @foreach ($countries as $country)
                                     <option value="{{ $country->id }}">{{ $country->name }}</option>
@@ -67,7 +67,7 @@
                         <label for="states" class="form-label">Estado</label>
                         <div class="input-group">
                             <label for="icon-state" class="input-group-text"><i class="fas fa-location-arrow input__icon"></i></label>
-                            <select required id="states" name="state_id" class="form-select">
+                            <select required id="states" name="state_id" class="form-select states">
                                 <option selected value="null" disabled>Selecciona un estado...</option>
                             </select>
                         </div>

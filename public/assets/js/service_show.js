@@ -9,6 +9,11 @@ $(document).ready(function(){
             $('.sub_red').hide();
             $('.van_red').hide();
         break;
+        case 'Tours':
+            $('.sub_sen').hide();
+            $('.sub_red').hide();
+            $('.van_sen').hide();
+        break
         default:
             $('.sub_sen').show();
             $('.van_sen').show();

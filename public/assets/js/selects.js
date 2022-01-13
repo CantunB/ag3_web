@@ -12,11 +12,11 @@ $(document).ready(function(){
         theme: 'bootstrap-5'
     });
 
-    countries = $('#countries').select2({
+    countries = $('.countries').select2({
         theme: 'bootstrap-5',
     });
 
-    states = $('#states').select2({
+    states = $('.states').select2({
         theme: 'bootstrap-5',
     });
 

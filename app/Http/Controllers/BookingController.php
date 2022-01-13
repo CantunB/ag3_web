@@ -9,12 +9,14 @@ use App\Models\Booking;
 use App\Models\Country;
 use App\Models\Hotel;
 use App\Models\Tariff;
+use App\Models\TypeTrip;
 use App\Models\TypeUnit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
 
 class BookingController extends Controller
@@ -89,7 +91,6 @@ class BookingController extends Controller
         //return $request->all();
 
         //$unit = TypeUnit::where('id', $request->unit)->get();
-        $unit = $request->unit;
         $service = $request->service;
         $origen = $request->origen;
         $destino = $request->destino;
@@ -99,8 +100,8 @@ class BookingController extends Controller
         $retorno = $request->retorno;
         $date_comeback = $request->date_comeback;
         $time_comeback = $request->time_comeback;
-        $type_unit = $request->type_unit;
-        $type_trip = $request->type_trip;
+        $type_unit = TypeUnit::findOrFail($request->type_unit);
+        $type_trip = TypeTrip::findOrFail($request->type_trip);
         $price = $request->price;
 
         $data['countries'] = Country::get(["name","id"]);
@@ -109,7 +110,6 @@ class BookingController extends Controller
 
 
         return view('booking', $data, compact(
-                'unit',
             'service',
             'origen',
             'destino',
@@ -129,8 +129,7 @@ class BookingController extends Controller
 
     public function payment(Request $request)
     {
-        //return $request->all();
-
+        // return $request->all();
         $id = IdGenerator::generate(['table' => 'bookings', 'length' => 8, 'prefix' =>'BOOK-']);
 
         $booking = new Booking();
@@ -195,6 +194,26 @@ class BookingController extends Controller
     }
 
     public function createEmail() {
-        Mail::to('jessarturo97@gmail.com')->send(new ExampleMail());
+        Mail::to('cantunberna@gmail.com')->send(new ExampleMail());
+    }
+
+    public function tours($locale, $tour) {
+        $list_tours = [
+            1 => ['tour' =>  'Laguna de Siete Colores - Bacalar', 'price' => '1650'],
+            2 => ['tour' => 'Chichen Itza, Yucatan', 'price' => '1200'],
+            3 => ['tour' => 'Palenque, Chiapas', 'price' => '2650'],
+            4 => ['tour' => 'Calakmul, Campeche', 'price' => '1950'],
+            5 => ['tour' => 'Ek Balam - Las Colorado', 'price' => '1650'],
+            6 => ['tour' => 'Coba - 3 Cenotes', 'price' => '1150']
+        ];
+
+        foreach ($list_tours as $tours) {
+            $tours = array($list_tours[$tour]);
+            $tours = Arr::flatten($tours);
+        }
+        return $tours;
+        $data['countries'] = Country::get(["name","id"]);
+
+        return view('booking_tours', $data, compact('tours'));
     }
 }

@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    $('#countries').on('change', function () {
+    $('.countries').on('change', function () {
         var idCountry = this.value;
         $("#states").html('');
         const location = window.location.origin;
@@ -17,9 +17,9 @@ $(document).ready(function () {
             dataType: 'json',
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success: function (result) {
-                $('#states').html('<option value="">Select State</option>');
+                $('.states').html('<option value="">Select State</option>');
                 $.each(result.states, function (key, value) {
-                    $("#states").append('<option value="' + value
+                    $(".states").append('<option value="' + value
                         .id + '">' + value.name + '</option>');
                 });
             }

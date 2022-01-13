@@ -56,7 +56,7 @@
                         <div class="input-group">
                             <label for="icon-globe" class="input-group-text"><i
                                     class="fas fa-globe-americas input__icon"></i></label>
-                            <select required id="countries" name="country_id" class="form-select">
+                            <select required id="countries" name="country_id" class="form-select countries">
                                 <option selected value="null" disabled>Selecciona un pais...</option>
                                 @foreach ($countries as $country)
                                     <option value="{{ $country->id }}">{{ $country->name }}</option>
@@ -68,7 +68,7 @@
                         <label for="states" class="form-label">Estado</label>
                         <div class="input-group">
                             <label for="icon-state" class="input-group-text"><i class="fas fa-location-arrow input__icon"></i></label>
-                            <select required id="states" name="state_id" class="form-select">
+                            <select required id="states" name="state_id" class="form-select states">
                                 <option selected value="null" disabled>Selecciona un estado...</option>
                             </select>
                         </div>
@@ -118,7 +118,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="text" id="date_arrival" name="d_arrival" class="form-control" aria-describedby="icon-date" value="{{ $date }}">
+                                <input readonly type="date" id="date_arrival" name="d_arrival" class="form-control" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date)->format('Y-m-d') }}">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
@@ -178,7 +178,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="date_departure" name="d_departure" aria-describedby="icon-date" value="{{ $date }}">
+                                <input readonly type="date" class="form-control" id="date_departure" name="d_departure" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date)->format('Y-m-d') }}">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
@@ -238,7 +238,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="date_arrival" name="d_arrival" aria-describedby="icon-date" value="{{ $date }}">
+                                <input readonly type="date" class="form-control" id="date_arrival" name="d_arrival" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date)->format('Y-m-d') }}">
 
                             </div>
                         </div>
@@ -294,7 +294,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="date" name="d_departure" aria-describedby="icon-date" value="{{ $date_comeback }}">
+                                <input readonly type="date" class="form-control" id="date" name="d_departure" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date_comeback)->format('Y-m-d') }}">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
@@ -361,11 +361,13 @@
                 <div class="row form-section d-flex align-items-center mb-4 total">
                     <h6 class="col">Total a pagar</h6>
                     <input readonly type="hidden" class="form-control" name="price" id="price" aria-describedby="icon-hour" value="{{ $price }}">
-                    <input readonly type="hidden" class="form-control" name="request_unit" aria-describedby="icon-hour" value="{{ $type_unit }}">
+                    <input readonly type="hidden" class="form-control" name="request_unit" aria-describedby="icon-hour" value="{{ $type_unit->id }}">
+
                     <input readonly type="hidden" class="form-control" name="origin" aria-describedby="icon-hour" value="{{ $origen }}">
                     <input readonly type="hidden" class="form-control" name="destiny" aria-describedby="icon-hour" value="{{ $destino }}">
                     <input readonly type="hidden" class="form-control" name="passengers" aria-describedby="icon-hour" value="{{ $passengers }}">
                     <input readonly type="hidden" class="form-control" name="type_service" aria-describedby="icon-hour" value="{{ $service }}">
+                    <input readonly type="hidden" class="form-control" name="retorno" aria-describedby="icon-hour" value="{{ $retorno }}">
 
 
                     <h5 class="col text-end price">${{ $price }} MXN</h5>
@@ -407,7 +409,7 @@
                     <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $time_comeback }}</p>
                     @endif
                     <p class="title mb-0">Servicio</p>
-                    <p class="description"><i class="fas fa-shuttle-van icon-resume"></i> Suburban Redondo</p>
+                    <p class="description"><i class="fas fa-shuttle-van icon-resume"></i> {{ $type_unit->type_units }} {{$type_trip->type_trip}}</p>
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">
