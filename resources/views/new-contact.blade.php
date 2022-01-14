@@ -15,25 +15,42 @@
                 <p class="description mt-2">¿Tiene usted alguna pregunta? No dude en contactarnos directamente. Nuestro
                     equipo se pondra en contacto contigo en cuestion de horas para ayudarte.</p>
                 <form class="row" id="contact_form" name="contact-form" method="POST" data-parsley-validate>
-                    <input type="hidden" id="contact_url" url="{{ route('contact',app()->getLocale()) }}"/>
+                    <input type="hidden" id="contact_url" url="{{ route('contact', app()->getLocale()) }}" />
                     @csrf
                     <div class="col-md-12 mb-2">
-                        <input type="text" class="form-control" id="name" name="name"
-                            placeholder="&#xf007; Nombre Completo" required>
+                        <input type="text" class="form-control is-invalid" aria-describedby="validationName" id="name"
+                            name="name" placeholder="&#xf007; Nombre Completo" required>
+                        <div id="validationName" class="invalid-feedback">
+                            El nombre completo es requerido.
+                        </div>
                     </div>
                     <div class="col-md-6 mb-2">
-                        <input type="email" class="form-control" id="email" name="email"
-                            placeholder="&#xf0e0; Correo Electronico" required>
+                        <input type="email" class="form-control is-invalid" aria-describedby="validationEmail"
+                            id="email" name="email" placeholder="&#xf0e0; Correo Electronico" required>
+                        <div id="validationEmail" class="invalid-feedback">
+                            El correo electronico es requerido.
+                        </div>
                     </div>
                     <div class="col-md-6 mb-2">
-                        <input type="text" class="form-control" data-parsley-type="digits" id="phone" name="phone" placeholder="&#xf879; Telefono" required>
+                        <input type="text" class="form-control is-invalid" aria-describedby="validationPhone" data-parsley-type="digits" id="phone" name="phone"
+                            placeholder="&#xf879; Telefono" required>
+                            <div id="validationPhone" class="invalid-feedback">
+                                El telefono es requerido.
+                            </div>
                     </div>
                     <div class="col-md-12 mb-2">
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="&#xf08d; Asunto" required>
+                        <input type="text" class="form-control is-invalid" aria-describedby="validationSubject" id="subject" name="subject"
+                            placeholder="&#xf08d; Asunto" required>
+                            <div id="validationSubject" class="invalid-feedback">
+                                El asunto es requerido.
+                            </div>
                     </div>
                     <div class="col-md-12 mb-2">
-                        <textarea class="form-control" id="content" name="content" rows="3"
+                        <textarea class="form-control is-invalid" aria-describedby="validationContent" id="content" name="content" rows="3"
                             placeholder="Escribe aqui tu mensaje..." required></textarea>
+                            <div id="validationContent" class="invalid-feedback">
+                                El mensaje es requerido.
+                            </div>
                     </div>
                     <div class="col-md-12">
                         <button type="submit" class="btn-contact"><i class="fas fa-paper-plane"></i> Enviar
