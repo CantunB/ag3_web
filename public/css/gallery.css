@@ -1,9 +1,24 @@
 .gallery .section-title {
-    font-family: 'Poppins', sans-serif;
-    /* border-bottom: 2px solid #0582CA; */
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    color: #404040;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.gallery .section-title span {
+    font-size: 37px;
+    font-weight: 600;
 }
 
 body.dark .gallery .section-title {
+    color: rgba(255,255,255,.8);
+}
+
+body.dark .gallery .section-title span {
     color: #FFFFFF;
 }
 

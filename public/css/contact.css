@@ -8,8 +8,19 @@
 } */
 
 section.contact-form .section-title {
-    font-family: 'Poppins', sans-serif;
-    /* border-bottom: 2px solid #0582CA;  */
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    color: #404040;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+section.contact-form .section-title span {
+    font-size: 37px;
+    font-weight: 600;
 }
 
 body.dark section.contact-form .section-title {
@@ -26,7 +37,10 @@ body.dark section.contact-form .contact-content {
 }
 
 section.contact-form .contact-content .description {
-    font-weight: 600;
+    font-weight: 500;
+    color: #404040;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 18px;
 }
 
 body.dark section.contact-form .contact-content .description {
@@ -35,7 +49,7 @@ body.dark section.contact-form .contact-content .description {
 
 section.contact-form input,
 section.contact-form textarea {
-    font-family: 'Montserrat', sans-serif, FontAwesome;
+    font-family: 'Hind Siliguri', sans-serif, FontAwesome;
 }
 
 body.dark section.contact-form input,
@@ -44,15 +58,28 @@ body.dark section.contact-form textarea {
 }
 
 section.contact-form .contact-content .btn-contact {
-    background: #0582CA;
+    /* background: #0582CA;
     color: #fff;
     border: 2px solid #0582CA;
     padding: 6px;
+    border-radius: 5px; */
+    background: var(--color-primary);
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border: 2px solid var(--color-primary);
+    color: #424D58;
     border-radius: 5px;
+    /* border-radius: 0; */
 }
 
 section.contact-form .contact-content .btn-contact:hover {
-    box-shadow: 0 0 3px #000;
+    /* box-shadow: 0 0 3px #000; */
+    background: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-primary);
 }
 
 section.contact-form .contact-content .widget-contact i {
@@ -73,7 +100,10 @@ section.contact-form .contact-content .widget-contact i.email {
 }
 
 section.contact-form .contact-content .widget-contact p {
+    /* font-weight: 600; */
     font-weight: 600;
+    font-size: 18px;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 body.dark section.contact-form .contact-content .widget-contact p {

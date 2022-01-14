@@ -7,7 +7,8 @@
 }
 
 body {
-    background: #FFFFFF;
+    /* background: #FFFFFF; */
+    background: #FAFAFA;
     /* tipografia para parrafos y texto en general  */
     font-family: 'Montserrat', sans-serif;
     /* tipografia para titulares y cabeceras */
@@ -15,6 +16,10 @@ body {
     transition: .4s ease all;
 }
 
+/* ::-webkit-scrollbar {
+    display: none;
+    } */
+    
 body.dark {
     background: #212529;
 }
@@ -564,6 +569,7 @@ body.dark .widget p.text-phone {
     letter-spacing: .2px;
     color: #404040;
     text-transform: uppercase;
+    border-bottom: 3px solid var(--color-primary);
 }
 
 .tours-section .section-title span {
@@ -571,14 +577,18 @@ body.dark .widget p.text-phone {
     font-weight: 600;
 }
 
-.tours-section .cws_divider {
+/* .tours-section .cws_divider {
     width: 730px;
     margin-top: 5px;
     margin-bottom: 35px;
     border-bottom: 2px solid var(--color-primary);
-}
+} */
 
 body.dark .tours-section .section-title {
+    color: rgba(255,255,255,.8);
+}
+
+body.dark .tours-section .section-title span {
     color: #FFFFFF;
 }
 
@@ -590,7 +600,7 @@ body.dark .tours-section .section-title {
 
 .tours-section .box-container .box {
     flex: 1 1 16rem;
-    /* border-radius: .5rem; */
+    border-radius: .5rem;
     overflow: hidden;
     /* background: #FBFBFD; */
     background: #FFFFFF;
@@ -601,7 +611,10 @@ body.dark .tours-section .box-container .box {
     /* background: #232323;
     background: #3e4144; */
     background: rgba(32, 32, 32, 0.8);
-    box-shadow: 0 1px 1px rgba(150, 150, 150, .2);
+    background: rgb(21, 21, 21);
+    border: 1px solid rgb(36, 36, 36);
+    box-shadow: none;
+    /* box-shadow: 0 1px 1px rgba(150, 150, 150, .2); */
     /* box-shadow: none; */
 }
 
@@ -649,8 +662,19 @@ body.dark .tours-section .box-container .box .content p {
     transition: .4s ease;
 }
 
+.tours-section .box-container .box .content h4:hover i {
+    color: var(--color-primary);
+    transition: .4s ease;
+}
+
 body.dark .tours-section .box-container .box .content h4 {
-    color: #e5e5e5;
+    /* color: #e5e5e5; */
+    color: #FFFFFF;
+}
+
+body.dark .tours-section .box-container .box .content h4:hover {
+    color: var(--color-primary);
+    transition: .4s ease;
 }
 
 .tours-section .box-container .box .content h4 i {
@@ -694,7 +718,7 @@ body.dark .box-container .box .content .price {
     text-transform: uppercase;
     border: 2px solid var(--color-primary);
     color: #424D58;
-    border-radius: 0;
+    /* border-radius: 0; */
 }
 
 .tours-section .box-container .box .content a.btn:hover {
@@ -779,7 +803,7 @@ body.dark .bg-footer {
     }
 }
 
-@media (max-width : 480px) {
+/* @media (max-width : 480px) {
     .tours-section .cws_divider {
         width: 110px !important;
     }
@@ -789,4 +813,4 @@ body.dark .bg-footer {
     .tours-section .cws_divider {
         width: 330px !important;
     }
-}
+} */
