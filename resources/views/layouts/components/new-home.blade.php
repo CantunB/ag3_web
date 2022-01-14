@@ -11,6 +11,10 @@
    <!-- Flatpickr  -->
    <link rel="stylesheet" href="{{ asset('assets/my_styles/flatpickr.min.css') }}">
 
+   <!-- Spiner input -->
+   <link rel="stylesheet" href="{{ asset('css/spiner.css') }}">
+
+
    <header class="header">
        <nav class="navbar navbar-expand-lg bg-dark" aria-label="navbar-ag3">
            <div class="container">
@@ -191,8 +195,15 @@
                <div class="col-lg-2 mb-2" id="passengers-content">
                    <div class="input-group">
                        <span class="input-group-text" id="icon-passenger"><i class="fas fa-users"></i></span>
-                       <input type="text" class="form-control" aria-describedby="icon-passenger"
-                           placeholder="{{ __('pasajeros') }}" name="passengers" required>
+                       {{-- <input type="text" class="form-control" aria-describedby="icon-passenger"
+                           placeholder="{{ __('pasajeros') }}" name="passengers" required> --}}
+                        <div class="num-block skin-5">
+                            <div class="num-in">
+                                <span class="minus dis">-</span>
+                                <input type="text" class="in-num" value="1" aria-describedby="icon-passenger" required placeholder="{{ __('pasajeros') }}" name="passengers" readonly="">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
                    </div>
                </div>
 

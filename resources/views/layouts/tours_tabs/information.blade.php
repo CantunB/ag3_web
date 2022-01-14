@@ -79,63 +79,46 @@
                 <!-- customer information end -->
 
                 <div class="row form-section mb-4">
-                    <h5 class="mt-2"><small class="number__section">02</small> Informacion del viaje</h5>
-                        <h5 class="title-arrival mb-0">Informacion de llegada</h5>
+                    <h5 class="mt-2"><small class="number__section">02</small> Informacion para tu reserva</h5>
                         <div class="col-sm-6 col-md-12 mb-1">
-                            <label for="arrival" class="form-label">Aerolinea de llegada</label>
+                            <label for="arrival" class="form-label">Ubicacion de abordaje</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-map-marked-alt input__icon"></i></span>
-                                        <input  type="text" class="form-control" id="origen" name="origin" placeholder="Ingresa tu origen" aria-describedby="icon-date">
+                                        <input required type="text" class="form-control" id="origen" name="origin" placeholder="Ingresa tu origen" aria-describedby="icon-date">
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 mb-1">
-                            <label for="arrival" class="form-label">Pasajeros (adultos)</label>
+                        <div class="col-sm-6 col-md-3 mb-1">
+                            <label for="arrival" class="form-label">Pasajeros</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-restroom input__icon"></i></span>
                                         {{-- <input  type="text" class="form-control" id="origen" name="origin" aria-describedby="icon-date"> --}}
                                         <!-- skin 5 -->
                                         <div class="num-block skin-5">
-                                        <div class="num-in">
-                                            <span class="minus dis">-</span>
-                                            <input type="text" class="in-num" value="1" readonly="">
-                                            <span class="plus">+</span>
-                                        </div>
-                                        </div>
-                                        <!-- / skin 5 -->
-                            </div>
-                        </div><div class="col-sm-6 col-md-6 mb-1">
-                            <label for="arrival" class="form-label">Pasajeros (niños)</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="icon-plane"><i
-                                        class="fas fa-baby input__icon"></i></span>
-                                        {{-- <input  type="text" class="form-control" id="origen" name="origin" aria-describedby="icon-date"> --}}
-                                        <!-- skin 5 -->
-                                        <div class="num-block skin-5">
-                                        <div class="num-in">
-                                            <span class="minus dis">-</span>
-                                            <input type="text" class="in-num" value="1" readonly="">
-                                            <span class="plus">+</span>
-                                        </div>
+                                            <div class="num-in">
+                                                <span class="minus dis">-</span>
+                                                <input required type="text" class="in-num" value="1" readonly="" name="passengers">
+                                                <span class="plus">+</span>
+                                            </div>
                                         </div>
                                         <!-- / skin 5 -->
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6">
+                        <div class="col-sm-6 col-md-4">
                             <label for="date" class="form-label">Fecha de servicio</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input style="background: #FFFFFF;"  type="date" class="form-control selector" id="date_arrival" name="d_arrival" aria-describedby="icon-date" >
+                                <input required style="background: #FFFFFF;"  type="date" class="form-control selector" id="date_departure" name="d_departure" aria-describedby="icon-date" placeholder="Selecciona una fecha" >
                             </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 mb-1">
+                        <div class="col-sm-6 col-md-4 mb-1">
                             <label for="hour" class="form-label">Hora de servicio</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
-                                <input type="time" class="form-control" id="hour" name="t_arrival" aria-describedby="icon-hour" value="">
+                                <input required type="time" class="form-control" id="hour" name="t_departure" aria-describedby="icon-hour" value="">
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
@@ -143,7 +126,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
-                                <input type="text" class="form-control" id="c_arrival" name="c_arrival" aria-describedby="icon-comments">
+                                <input type="text" class="form-control" id="c_arrival" name="c_departure" aria-describedby="icon-comments">
                             </div>
                         </div>
                 </div>
@@ -152,10 +135,11 @@
                 <div class="row form-section d-flex align-items-center mb-4 total">
                     <h6 class="col">Total a pagar</h6>
                     <input readonly type="hidden" class="form-control" name="price" id="price" aria-describedby="icon-hour" value="">
-                    <input readonly type="hidden" class="form-control" name="request_unit" aria-describedby="icon-hour" value="1">
+                    <input readonly type="hidden" class="form-control" name="request_unit" aria-describedby="icon-hour" value="2">
                     <input readonly type="hidden" class="form-control" name="destiny" aria-describedby="icon-hour" value="PALENQUE, CHIAPAS">
-                    <input readonly type="hidden" class="form-control" name="type_service" aria-describedby="icon-hour" value="2">
+                    <input readonly type="hidden" class="form-control" name="type_service" aria-describedby="icon-hour" value="Tours">
                     <input readonly type="hidden" class="form-control" name="retorno" aria-describedby="icon-hour" value="si">
+                    <input readonly type="hidden" class="form-control" name="price" aria-describedby="icon-hour" value="{{$tours[1]}}">
 
 
                     <h5 class="col text-end price">$ {{ $tours[1] }} MXN</h5>

@@ -5,33 +5,6 @@
     let states = $('.states').select2({
         theme: 'bootstrap-5',
     });
-$(document).ready(function () {
-    $('.countries').on('change', function () {
-        var idCountry = this.value;
-        $("#states").html('');
-        const location = window.location.origin;
-        const getCity = location + '/es/getState'
-        //Mostramos los valores en consola:
-        //var userLanguage = window.navigator.userLanguage || window.navigator.language;
-        $.ajax({
-            url: getCity,               //"{{route('fetchState', app()->getLocale())}}",
-            type: "POST",
-            data: {
-                country_id: idCountry,
-                _token: '{{csrf_token()}}'
-            },
-            dataType: 'json',
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            success: function (result) {
-                $('.states').html('<option value="">Select State</option>');
-                $.each(result.states, function (key, value) {
-                    $(".states").append('<option value="' + value
-                        .id + '">' + value.name + '</option>');
-                });
-            }
-        });
-    });
-});
 
 $(document).ready(function() {
     $(".btnComplete").on('click', function(e){
@@ -43,6 +16,7 @@ $(document).ready(function() {
         //Obtencion de tipo de  unidad por concatenacion de btn id
         var _type_trip = '#'+id+"_type_trip";
         var type_tripId = $(_type_trip).val();
+        
         $('#information-tab').tab('show')
         $('.nav-item > .active').next('li').find('a').trigger('click');
 

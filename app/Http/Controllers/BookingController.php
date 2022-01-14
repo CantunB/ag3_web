@@ -8,6 +8,7 @@ use App\Models\Airline;
 use App\Models\Booking;
 use App\Models\Country;
 use App\Models\Hotel;
+use App\Models\Quote;
 use App\Models\Tariff;
 use App\Models\TypeTrip;
 use App\Models\TypeUnit;
@@ -129,7 +130,7 @@ class BookingController extends Controller
 
     public function payment(Request $request)
     {
-        // return $request->all();
+         //return $request->all();
         $id = IdGenerator::generate(['table' => 'bookings', 'length' => 8, 'prefix' =>'BOOK-']);
 
         $booking = new Booking();
@@ -164,6 +165,7 @@ class BookingController extends Controller
         $booking->status_booking = $request->status_booking;
         $booking->save();
 
+       // return $booking;
         /** SECTION Envio de correo electronico */
         Mail::to($request->email)->send(new BookingMail($booking));
         return response()->json(['data' => $booking], 201);
@@ -185,7 +187,10 @@ class BookingController extends Controller
 
     public function quotes(Request $request)
     {
-        return $request->all();
+        // return $request->all();
+        $cotizacion = Quote::create($request->all());
+
+        return redirect()->route('index');
     }
 
 
@@ -211,7 +216,7 @@ class BookingController extends Controller
             $tours = array($list_tours[$tour]);
             $tours = Arr::flatten($tours);
         }
-        return $tours;
+        //return $tours;
         $data['countries'] = Country::get(["name","id"]);
 
         return view('booking_tours', $data, compact('tours'));

@@ -116,7 +116,6 @@
                             <span>DESTINO:</span> {{ $booking->destiny }}<br>
                             <span>VEHICULO SOLICITADO:</span> {{ $booking->TypeUnit->type_units}}<br>
                             <span>PASAJEROS:</span>{{ $booking->passengers}} <br>
-                            <span>EXTRAS:</span> Botella de Agua<br>
                             <span>TOTAL:</span> {{$booking->price}} MXN
                         </td>
                         <td class="service-img">
@@ -140,7 +139,7 @@
                 </td>
             </tr>
         </table>
-    @elseif ( $booking->type_service == "Hotel a Aeropuerto")
+    @elseif ( $booking->type_service == "Hotel a Aeropuerto" )
         <h2 class="title-section">Informacion de Salida</h2>
 
         <table cellspacing="0" cellpadding="0" class="arrival-info">
@@ -150,6 +149,20 @@
                     <span>HORA:</span> {{ $booking->time_departure }}<br>
                     <span>AEROLINEA:</span> {{ $booking->airline_departure}}<br>
                     <span>NUMERO DE VUELO:</span>  {{$booking->flight_number_departure}}<br>
+                    <span>COMENTARIOS: {{ $booking->comments_departure}}</span>
+                    <span>PICK-UP:</span>
+
+                </td>
+            </tr>
+        </table>
+    @elseif ( $booking->type_service == "Tours")
+        <h2 class="title-section">Informacion de Salida</h2>
+
+        <table cellspacing="0" cellpadding="0" class="arrival-info">
+            <tr>
+                <td>
+                    <span>FECHA:</span> {{ $booking->date_departure }}<br>
+                    <span>HORA:</span> {{ $booking->time_departure }}<br>
                     <span>COMENTARIOS: {{ $booking->comments_departure}}</span>
                     <span>PICK-UP:</span>
 
@@ -185,6 +198,7 @@
                 </td>
             </tr>
         </table>
+        
     @endif
 
 

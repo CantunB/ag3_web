@@ -16,61 +16,8 @@
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/whatsapp.css') }}">
-    <style>
+    <link rel="stylesheet" href="{{ asset('css/spiner.css') }}">
 
-/* skin 5 */
-
-.num-block.skin-5 {
-}
-
-.skin-5 .num-in {
-  width: 88px;
-  float: left;
-	vertical-align: middle;
-	position: relative;
-	border: 1px solid #EEEFF1;
-	border-radius: 3px;
-}
-
-.skin-5 .num-in:hover {
-	border: 1px solid #4687FF;
-	-webkit-box-shadow: 0px 0px 7px 0px rgba(70, 135, 255, 0.75);
-	-moz-box-shadow:    0px 0px 7px 0px rgba(70, 135, 255, 0.75);
-	box-shadow:         0px 0px 7px 0px rgba(70, 135, 255, 0.75);
-}
-
-.skin-5 .num-in span {
-	font-size: 16px;
-	width: 20px;
-	display: block;
-	line-height: 41px;
-}
-
-.skin-5 .num-in span.minus {
-	float: left;
-	text-align: right;
-}
-
-.skin-5 .num-in input {
-  border: none;
-	height: 41px;
-	width: 46px;
-	float: left;
-	text-align: center;
-	font-size: 16px;
-	font-weight: bold;
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
-	box-shadow: none !important;
-}
-
-.skin-5 .num-in span.plus {
-	float: right;
-	text-align: left;
-}
-
-/* / skin 5 */
-    </style>
 </head>
     <body>
         @include('layouts.components.new-header')
@@ -114,36 +61,6 @@
 
         @include('layouts.components.new-footer')
         @include('layouts.components.scripts')
-        <script>
-        /////////////////// product +/-
-        $(document).ready(function() {
-            $('.num-in span').click(function () {
-                var $input = $(this).parents('.num-block').find('input.in-num');
-            if($(this).hasClass('minus')) {
-                var count = parseFloat($input.val()) - 1;
-                count = count < 1 ? 1 : count;
-                if (count < 2) {
-                $(this).addClass('dis');
-                }
-                else {
-                $(this).removeClass('dis');
-                }
-                $input.val(count);
-            }
-            else {
-                var count = parseFloat($input.val()) + 1
-                $input.val(count);
-                if (count > 1) {
-                $(this).parents('.num-block').find(('.minus')).removeClass('dis');
-                }
-            }
 
-            $input.change();
-            return false;
-            });
-
-        });
-        // product +/-
-        </script>
     </body>
 </html>

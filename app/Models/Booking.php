@@ -33,6 +33,8 @@ class Booking extends Model
         'request_unit',
         'price',
         'type_payment',
+        'transaction_id',
+        'paypal_id',
         'status_payment',
         'status_booking'
     ];

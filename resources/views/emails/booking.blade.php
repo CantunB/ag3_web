@@ -1,436 +1,438 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="x-apple-disable-message-reformatting">
-    <title>AG3 Luxury Travel</title>
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700" rel="stylesheet">
-    <!-- CSS Reset : BEGIN -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ag3 Luxury Travel</title>
     <style>
-        html,
-body {
-    margin: 0 auto !important;
-    padding: 0 !important;
-    height: 100% !important;
-    width: 100% !important;
-    background: #f1f1f1;
-}
+        html {
+            margin: 0;
+            padding: 0;
+        }
 
-/* What it does: Stops email clients resizing small text. */
-* {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #FFFFFF;
+            margin: 0;
+        }
 
-/* What it does: Centers email on Android 4.4 */
-div[style*="margin: 16px 0"] {
-    margin: 0 !important;
-}
+        /* Evita que los clientes de correo electrónico cambien el tamaño del texto pequeño. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
 
-/* What it does: Stops Outlook from adding extra spacing to tables. */
-table,
-td {
-    mso-table-lspace: 0pt !important;
-    mso-table-rspace: 0pt !important;
-}
+        /* Evita que Outlook agregue espacio adicional a las tablas */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
 
-/* What it does: Fixes webkit padding issue. */
-table {
-    border-spacing: 0 !important;
-    border-collapse: collapse !important;
-    table-layout: fixed !important;
-    margin: 0 auto !important;
-}
+        /* Soluciona el problema de relleno de webkit. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            /* table-layout: fixed !important; */
+            /* margin: 0 auto !important; */
+        }
 
-/* What it does: Uses a better rendering method when resizing images in IE. */
-img {
-    -ms-interpolation-mode:bicubic;
-}
+        /* Utiliza un mejor método de representación al cambiar el tamaño de las imágenes en IE. */
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
 
-/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
-a {
-    text-decoration: none;
-}
-
-/* What it does: A work-around for email clients meddling in triggered links. */
-*[x-apple-data-detectors],  /* iOS */
-.unstyle-auto-detected-links *,
-.aBn {
-    border-bottom: 0 !important;
-    cursor: default !important;
-    color: inherit !important;
-    text-decoration: none !important;
-    font-size: inherit !important;
-    font-family: inherit !important;
-    font-weight: inherit !important;
-    line-height: inherit !important;
-}
-
-/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
-.a6S {
-    display: none !important;
-    opacity: 0.01 !important;
-}
-
-/* What it does: Prevents Gmail from changing the text color in conversation threads. */
-.im {
-    color: inherit !important;
-}
-
-/* If the above doesn't work, add a .g-img class to any image in question. */
-img.g-img + div {
-    display: none !important;
-}
-
-/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-/* Create one of these media queries for each additional viewport size you'd like to fix */
-
-/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
-@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
-    u ~ div .email-container {
-        min-width: 320px !important;
-    }
-}
-/* iPhone 6, 6S, 7, 8, and X */
-@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
-    u ~ div .email-container {
-        min-width: 375px !important;
-    }
-}
-/* iPhone 6+, 7+, and 8+ */
-@media only screen and (min-device-width: 414px) {
-    u ~ div .email-container {
-        min-width: 414px !important;
-    }
-}
-    </style>
-
-    <!-- CSS Reset : END -->
-
-    <!-- Progressive Enhancements : BEGIN -->
-    <style>
-
-.primary{
-	background: #17bebb;
-}
-.bg_white{
-	background: #ffffff;
-}
-.bg_light{
-	background: #f7fafa;
-}
-.bg_black{
-	background: #000000;
-}
-.bg_dark{
-	background: rgb(0, 0, 0);
-}
-.email-section{
-	padding:2.5em;
-}
-
-/*BUTTON*/
-.btn{
-	padding: 10px 15px;
-	display: inline-block;
-}
-.btn.btn-primary{
-	border-radius: 5px;
-	background: #EED54A;
-	color: #ffffff;
-}
-.btn.btn-white{
-	border-radius: 5px;
-	background: #ffffff;
-	color: #000000;
-}
-.btn.btn-white-outline{
-	border-radius: 5px;
-	background: transparent;
-	border: 1px solid #fff;
-	color: #fff;
-}
-.btn.btn-black-outline{
-	border-radius: 0px;
-	background: transparent;
-	border: 2px solid #000;
-	color: #000;
-	font-weight: 700;
-}
-.btn-custom{
-	color: rgba(0,0,0,.3);
-	text-decoration: underline;
-}
-
-h1,h2,h3,h4,h5,h6{
-	font-family: 'Work Sans', sans-serif;
-	color: #000000;
-	margin-top: 0;
-	font-weight: 400;
-}
-
-body{
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 400;
-	font-size: 15px;
-	line-height: 1.8;
-	color: rgba(0,0,0,.4);
-}
-
-a{
-	color: #17bebb;
-}
-
-table{
-}
-/*LOGO*/
-
-.logo h1{
-	margin: 0;
-}
-.logo h1 a{
-	color: #EED54A;
-	font-size: 24px;
-	font-weight: 700;
-	font-family: 'Work Sans', sans-serif;
-}
-
-/*HERO*/
-.hero{
-	position: relative;
-	z-index: 0;
-}
-
-.hero .text{
-	color: rgba(0,0,0,.3);
-}
-.hero .text h2{
-	color: #000;
-	font-size: 34px;
-	margin-bottom: 15px;
-	font-weight: 300;
-	line-height: 1.2;
-}
-.hero .text h3{
-	font-size: 24px;
-	font-weight: 200;
-}
-.hero .text h2 span{
-	font-weight: 600;
-	color: #000;
-}
+        /* Evita que Windows 10 Mail subraye enlaces a pesar de CSS en línea. Los estilos de los enlaces subrayados deben estar en línea. */
+        a {
+            text-decoration: none;
+        }
 
 
-/*PRODUCT*/
-.product-entry{
-	display: block;
-	position: relative;
-	float: left;
-	padding-top: 20px;
-}
-.product-entry .text{
-	width: calc(100% - 125px);
-	padding-left: 20px;
-}
-.product-entry .text h3{
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-.product-entry .text p{
-	margin-top: 0;
-}
-.product-entry img, .product-entry .text{
-	float: left;
-}
+        /* --- header --- */
 
-ul.social{
-	padding: 0;
-}
-ul.social li{
-	display: inline-block;
-	margin-right: 10px;
-}
+        .header {
+            width: 100%;
+            background: #212529;
+        }
 
-/*FOOTER*/
+        .header-content {
+            width: 100%;
+            font-size: 16px;
+        }
 
-.footer{
-	border-top: 1px solid rgba(0,0,0,.05);
-	color: rgba(0,0,0,.5);
-}
-.footer .heading{
-	color: #000;
-	font-size: 20px;
-}
-.footer ul{
-	margin: 0;
-	padding: 0;
-}
-.footer ul li{
-	list-style: none;
-	margin-bottom: 10px;
-}
-.footer ul li a{
-	color: rgba(0,0,0,1);
-}
+        .logo img {
+            width: 100%;
+            max-width: 100px;
+            padding-left: 10px;
+        }
 
+        td.details {
+            color: #fff;
+            text-align: right;
+            padding-right: 10px;
+        }
 
-@media screen and (max-width: 500px) {
+        .details h2 {
+            margin-bottom: 0;
+        }
 
+        .details h3 {
+            margin-top: 0;
+        }
 
-}
+        /* --- content --- */
 
+        .email-content {
+            width: 90%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .title-email {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+
+        .title-section {
+            background: #FACC01;
+            color: #212529;
+            padding: 5px 10px 5px 10px;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        table.info-content {
+            table-layout: fixed;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        table.info-content td {
+            word-wrap: break-word;
+        }
+
+        td.items {
+            border: 2px solid #FACC01;
+            padding: 10px;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        td.service-img img {
+            width: 100%;
+        }
+
+        table.arrival-info {
+            width: 100%;
+            border: 2px solid #FACC01;
+            font-size: 16px;
+        }
+
+        .arrival-info td {
+            padding: 10px;
+        }
+
+        /* --- footer --- */
+
+        table.footer {
+            width: 100%;
+            background: #212529;
+            color: #fff;
+        }
+
+        table.footer h2 {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .social {
+            table-layout: fixed;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .social img {
+          padding-right: 10px;
+        }
+
+        .social span {
+          font-size: 16px;
+        }
+
+        .social td {
+            word-wrap: break-word;
+        }
+
+        /* --- media queries --- */
+
+        @media only screen and (max-width: 600px) {
+            .header-content {
+                font-size: 12px !important;
+            }
+
+            td.details h3 {
+                font-weight: 500 !important;
+            }
+
+            .title-email {
+                font-size: 22px !important;
+            }
+
+            .title-section {
+                font-size: 18px !important;
+            }
+
+            table.info-content {
+              font-size: 13px !important;
+            }
+
+            td.service-img {
+              display: none !important;
+            }
+
+            table.arrival-info {
+              font-size: 13px !important;
+            }
+
+            table.footer h2 {
+                font-size: 20px !important;
+            }
+
+            .social img {
+              padding-right: 5px !important;
+            }
+
+            .social span {
+              font-size: 12px !important;
+              font-weight: normal !important;
+            }
+        }
 
     </style>
-    <style type="text/css">
-    .tg  {border-collapse:collapse;border-spacing:0;}
-    .tg td{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;
-        padding:10px 5px;word-break:normal;}
-    .tg th{border-style:solid;border-width:0px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;
-        overflow:hidden;padding:10px 5px;word-break:normal;}
-    .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-    .tg .tg-vvf4{border-color:inherit;color:#00CE7C;font-size:20px;font-weight:bold;text-align:center;vertical-align:top}
-    .tg .tg-qz2x{background-color:#ffcb2f;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
-    .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-    .tg .tg-4qqe{border-color:inherit;font-size:22px;font-weight:bold;text-align:center;vertical-align:top}
-    .tg .tg-958c{background-color:#ffcc67;border-color:inherit;text-align:center;vertical-align:top}
-    .tg .tg-nlhk{background-color:#000000;border-color:inherit;color:#ffffff;font-weight:bold;text-align:center;vertical-align:top}
-    </style>
-
 </head>
 
-<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #f1f1f1;">
-	<center style="width: 100%; background-color: #f1f1f1;">
-    <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-    </div>
-    <div style="max-width: 800px; margin: 0 auto;" class="email-container">
+<body>
 
-            <table class="tg bg_light" style="undefined;table-layout: fixed; width: 915px">
-            <colgroup>
-            <col style="width: 41px">
-            <col style="width: 42px">
-            <col style="width: 66px">
-            <col style="width: 54px">
-            <col style="width: 41px">
-            <col style="width: 90px">
-            <col style="width: 91px">
-            <col style="width: 54px">
-            <col style="width: 89px">
-            <col style="width: 89px">
-            <col style="width: 44px">
-            <col style="width: 44px">
-            <col style="width: 44px">
-            <col style="width: 44px">
-            <col style="width: 44px">
-            </colgroup>
-            <thead>
-              <tr>
-                <th class="tg-nlhk" colspan="15" rowspan="2">
-                    <img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="AG3" width="120" height="100">
-                </th>
-              </tr>
-              <tr>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="text-transform: uppercase" class="tg-vvf4" colspan="15">Del aeropuerto a tu destino,  tu transportación VIP LUXURY como te lo mereces </td>
-              </tr>
-              <tr>
-                <td class="tg-qz2x" colspan="11">DETALLES </td>
-                <td class="tg-qz2x" colspan="4">PRECIO</td>
-              </tr>
-              <tr>
-                <td class="tg-c3ow"></td>
-                <td class="tg-0pky"></td>
-                <td class="tg-0pky"></td>
-                <td class="tg-0pky"></td>
-                <td style=" padding:25px;" class="tg-0pky" colspan="7" rowspan="4">
-                    <div class="container" style="border:2px solid orange; border-radius: 25px; padding: 4%">
-                        <span style="font-weight: bold">No.SERVICIO:</span> <span style="text-transform: uppercase">{{ $booking->id }}</span> <br><br><span style="font-weight:bold">NOMBRE: </span><span style="text-transform: uppercase; ">{{ $booking->fullname }}</span><br><span style="font-weight:bold">CORREO:</span> {{ $booking->email }}<br><span style="font-weight:bold">TELEFONO:</span> {{ $booking->phone }}<br><span style="font-weight:bold">PAIS:</span> {{ 'MEXICO'  }} <span style="font-weight:bold"> ESTADO:</span> {{ 'CAMPECHE' }} <br><br><br><span style="text-transform: uppercase; font-weight:bold">{{ $booking->type_service }}:</span><br><span style="text-transform: uppercase;">{{ $booking->origin }}</span> - <span style="text-transform: uppercase;">{{ $booking->destiny }}</span><br><br><br><span style="font-weight:bold">VEHICULO SOLICITADO:</span><br> @if ( $booking->request_unit == 1) SUBURBAN PARA {{ $booking->passengers }} PASAJEROS @else  SUBURBAN PARA {{ $booking->passengers }} PASAJEROS @endif <br>
-                    </div>
-                </td>
-                <td class="tg-4qqe" colspan="4" rowspan="4"><br><br><br><br><br><span style="font-weight:bold">${{ $booking->price }}MX</span><br></td>
-              </tr>
-              <tr>
-                <td class="tg-0pky"></td>
-                <td class="tg-c3ow" colspan="2" rowspan="2">
-                    @if ($booking->request_unit == 1)
-                        <img src="http://ag3.stigmacode.com/assets/images/transport-suburban.png" width="250" height="250">
-                    @else
-                        <img src="http://ag3.stigmacode.com/assets/images/transport-van.png" width="250" height="250">
-                    @endif
-                </td>
-                <td class="tg-0pky"></td>
-              </tr>
-              <tr>
-                <td class="tg-0pky"></td>
-                <td class="tg-0pky"></td>
-              </tr>
-              <tr>
-                <td class="tg-0pky"></td>
-                <td class="tg-0pky"></td>
-                <td class="tg-0pky"></td>
-                <td class="tg-0pky"></td>
-              </tr>
-                @if ( $booking->type_service == 'Aeropuerto a Hotel')
+    <table cellspacing="0" cellpadding="0" class="header" style="width: 100%; background: #212529;">
+        <tr>
+            <td>
+                <table class="header-content" style="width: 100%; font-size: 16px;">
                     <tr>
-                        <td style="padding: 2" class="tg-qz2x" colspan="15">INFORMACION DE LLEGADA</td>
-                    </tr>
-                    <tr>
-                        <td style=" padding:25px;" class="tg-0pky" colspan="15" rowspan="2">
-                            <div class="container" style="border:2px solid orange; border-radius: 25px; padding: 3%">
-                                <span style="font-weight:bold">FECHA:</span> {{ $booking->date_arrival }}<br><span style="font-weight:bold">HORA: </span>{{  $booking->time_arrival }} <br><span style="text-transform: uppercase; font-weight:bold">AEROLINEA:  </span> <span style="text-transform: uppercase">{{ $booking->airline_arrival }} </span> <span style="text-transform: uppercase;  font-weight:bold">NUMERO DE VUELO:  </span> {{  $booking->flight_number_arrival}}   <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_arrival }}<br><br>
-                            </div>
+                        <td class="logo">
+                            <img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="logo-empresa" style="width: 100%; max-width: 100px; padding-left: 10px;">
                         </td>
+                        <td class="details" style="color: #fff; text-align: right; padding-right: 10px;">
+                            <h2 style="margin-bottom: 0;">Del Aeropuerto A Tu Destino</h2>
+                            <h3 style="margin-top: 0;">Tu Transportacion VIP Luxury, Como Te Lo Mereces</h3>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
-                    </tr>
-                @elseif( $booking->type_service == 'Hotel a Aeropuerto')
+    <center>
+        <table cellspacing="0" cellpadding="0" class="email-content" style="width: 90%; margin-top: 20px; margin-bottom: 20px;">
+            <tr>
+                <td>
+                    <h2 class="title-email" style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 26px;">Confirmacion de reservacion AG3 Luxury Travel</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion personal</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellspacing="0" cellpadding="0" class="info-content" style="table-layout: fixed; width: 100%; font-size: 16px;">
+                        <tr>
+                            <td class="items" style="word-wrap: break-word; border: 2px solid #FACC01; padding: 10px;">
+                                <span style="font-weight: bold;">NOMBRE:</span> {{$booking->FullName}}<br>
+                                <span style="font-weight: bold;">CORREO:</span> {{$booking->email}} <br>
+                                <span style="font-weight: bold;">TELEFONO:</span> {{$booking->phone}} <br>
+                                <span style="font-weight: bold;">PAIS:</span> {{$booking->Country->name}}<br>
+                                <span style="font-weight: bold;">ESTADO:</span> {{$booking->State->name}}<br>
+                                <span style="font-weight: bold;">SERVICIO:</span> {{ $booking->type_service }}<br>
+                                <span style="font-weight: bold;">ORIGEN:</span> {{$booking->origin}} <br>
+                                <span style="font-weight: bold;">DESTINO:</span> {{$booking->destiny}} <br>
+                                <span style="font-weight: bold;">VEHICULO SOLICITADO:</span> {{$booking->TypeUnit->type_units}}<br>
+                                <span style="font-weight: bold;">PASAJEROS:</span> {{$booking->passengers}} <br>
+                                <span style="font-weight: bold;">TOTAL:</span> ${{$booking->price}} MXN
+                            </td>
+                            <td class="service-img" style="word-wrap: break-word;">
+                               @if($booking->request_unit == 1)
+                                <img src="http://ag3.stigmacode.com/assets/images/transport-suburban.png"
+                                alt="service-suburban" style="width: 100%;">
+                               @else
+                               <img src="http://ag3.stigmacode.com/assets/images/transport-van.png"
+                               alt="service-suburban" style="width: 100%;">
+                               @endif
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            @if($booking->type_service == 'Aeropuerto a Hotel')
+                <tr>
+                    <td>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de llegada</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
+                            <tr>
+                                <td style="padding: 10px;">
+                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_arrival}}<br>
+                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_arrival}} <br>
+                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_arrival}}<br>
+                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_arrival}}<br>
+                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_arrival}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            @elseif($booking->type_service == 'Hotel a Aeropuerto' )
+                <tr>
+                    <td>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de salida</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
+                            <tr>
+                                <td style="padding: 10px;">
+                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_departure}}<br>
+                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_departure}} <br>
+                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_departure}}<br>
+                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_departure}}<br>
+                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                @elseif($booking->type_service == 'Tours')
+                <tr>
+                    <td>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de salida</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
+                            <tr>
+                                <td style="padding: 10px;">
+                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_departure}}<br>
+                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_departure}} <br>
+                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                @elseif($booking->type_service == 'Aeropuerto a Hotel a Aeropuerto')
+                <tr>
+                    <td>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de llegada</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
+                            <tr>
+                                <td style="padding: 10px;">
+                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_arrival}}<br>
+                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_arrival}} <br>
+                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_arrival}}<br>
+                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_arrival}}<br>
+                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_arrival}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de salida</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
+                            <tr>
+                                <td style="padding: 10px;">
+                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_departure}}<br>
+                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_departure}} <br>
+                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_departure}}<br>
+                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_departure}}<br>
+                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            @endif
+            <tr>
+                <td>
+                    <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Metodo de pago: {{$booking->type_payment}}</h2>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <table cellspacing="0" cellpadding="0" class="footer" style="width: 100%; background: #212529; color: #fff;">
+        <tr>
+            <td>
+                <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 24px;">Siguenos en nuestras redes sociales</h2>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" class="social" style="table-layout: fixed; width: 100%; margin-bottom: 10px;">
                     <tr>
-                        <td class="tg-qz2x" colspan="15">INFORMACION DE SALIDAD</td>
-                    </tr>
-                    <tr>
-                        <td style=" padding:25px;" class="tg-0pky" colspan="15" rowspan="2">
-                            <div class="container" style="border:2px solid orange; border-radius: 25px; padding: 3%">
-                            <span style="font-weight:bold">FECHA: </span>{{ $booking->date_departure }}<br><span style="font-weight:bold">HORA: </span>{{ $booking->time_departure }}<br><span style="text-transform: uppercase;  font-weight:bold">AEROLINEA:  </span> <span style="text-transform: uppercase">{{ $booking->airline_departure }}<span>   <span style="text-transform: uppercase;  font-weight:bold">NUMERO DE VUELO: </span> <span style="text-transform: uppercase">{{  $booking->flight_number_departure }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_departure }}<br><br><span style="font-weight:bold">PICK-UP: </span>
-                            </div>
+                        <td align="center" valign="middle" style="word-wrap: break-word;">
+                            <a href="https://www.facebook.com/transfercancun/"
+                                style="text-decoration: none; color: #fff;">
+                                <img src="{{ asset('assets/images/icons/facebook.svg') }}" alt="facebook-icon"
+                                    width="30" height="30"
+                                    style="display: inline-block; vertical-align: middle; width: auto; padding-right: 10px; text-decoration: none;"><span style="font-weight: bold; font-size: 16px;">Facebook</span>
+                            </a>
+                        </td>
+                        <td align="center" valign="middle" style="word-wrap: break-word;">
+                            <a href="https://www.instagram.com/ag3_luxurytravel/"
+                                style="text-decoration: none; color: #fff;">
+                                <img src="{{ asset('assets/images/icons/instagram.svg') }}" alt="instagram-icon"
+                                    width="30" height="30"
+                                    style="display: inline-block; vertical-align: middle; width: auto; padding-right: 10px; text-decoration: none;"><span style="font-weight: bold; font-size: 16px;">Instagram</span>
+                            </a>
+                        </td>
+                        <td align="center" valign="middle" style="word-wrap: break-word;">
+                            <a href="https://twitter.com/eulloagle/" style="text-decoration: none; color: #fff;">
+                                <img src="{{ asset('assets/images/icons/twitter.svg') }}" alt="twitter-icon"
+                                    width="30" height="30"
+                                    style="display: inline-block; vertical-align: middle; width: auto; padding-right: 10px; text-decoration: none;"><span style="font-weight: bold; font-size: 16px;">Twitter</span>
+                            </a>
                         </td>
                     </tr>
-                @else
-                    <tr>
-                        <td class="tg-qz2x" colspan="7">INFORMACION DE LLEGADA</td>
-                        <td class="tg-qz2x"></td>
-                        <td class="tg-qz2x" colspan="7">INFORMACION DE SALIDAD</td>
-                    </tr>
-                    <tr>
-                        <td class="tg-0pky" colspan="7" rowspan="2">
-                            <span style="font-weight:bold">FECHA: </span>{{ $booking->date_arrival }}<br><span style="font-weight:bold">HORA: </span>{{ $booking->time_arrival }}<br><span style="text-transform: uppercase; font-weight:bold">AEROLINEA: </span> <span style="text-transform: uppercase">{{ $booking->airline_arrival }} </span> <span style="text-transform: uppercase; font-weight:bold">NUMERO DE VUELO:  </span> <span style="text-transform: uppercase"> {{ $booking->flight_number_arrival }}</span>    <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_arrival }}<br><br>
-                        </td>
-                        <td class="tg-0pky" rowspan="2"></td>
-                        <td class="tg-0pky" colspan="7" rowspan="2">
-                            <span style="font-weight:bold">FECHA: </span>{{ $booking->date_departure }}<br><span style="font-weight:bold">HORA: </span>{{ $booking->time_departure }}<br><span style=" text-transform: uppercase; font-weight:bold">AEROLINEA:  </span> <span style="text-transform: uppercase">{{ $booking->airline_departure }} </span>  <span style="text-transform: uppercase; font-weight:bold">NUMERO DE VUELO: </span><span style="text-transform: uppercase">{{ $booking->flight_number_departure }}</span>     <br><br><span style="font-weight:bold">COMENTARIOS: </span>{{ $booking->comments_departure }}<br><br><span style="font-weight:bold">PICK-UP: </span>
-                        </td>
-                    </tr>
-                @endif
-              <tr>
-              </tr>
-              <tr>
-                <td class="tg-qz2x" colspan="15"><strong style="text-transform: uppercase; font-weight:bold">METODO DE PAGO SELECCIONADO: {{ $booking->type_payment }}</strong>    </td>
-              </tr>
-              <tr>
-                <td class="tg-nlhk" colspan="5" rowspan="3">ACERCA DE AG3 <br><br><br>AG3 VIP Luxury es una empresa lider en el transporte de lujo, con vehiculos equipados para cada ocasion o la necesidad que tengas</td>
-                <td class="tg-nlhk" colspan="5" rowspan="3">SERVICIOS<br><br><br>SERVICIOS DE TRANSPORTE LUXURY</td>
-                <td class="tg-nlhk" colspan="5" rowspan="3">REDES SOCIALES<br><br><br>FACEBOOK<br>TWITTER<br>WHATSAPP<br>INSTAGRAM</td>
-              </tr>
-              <tr>
-              </tr>
-              <tr>
-              </tr>
-            </tbody>
-            </table>
-    </div>
-  </center>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
 </body>
+
 </html>

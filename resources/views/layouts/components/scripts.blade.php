@@ -78,7 +78,8 @@
     <script>
         $(".selector").flatpickr({
                 minDate: "today",
-                dateFormat: "d-m-Y",
+                dateFormat: "Y-m-d",
+
             });
         $(".timer").flatpickr({
             enableTime: true,
@@ -89,8 +90,6 @@
 {{--------------------------  TODO[paypal]PAYPAL  -----------------------------------------}}
     {{----------------  SECTION[sandbox] Actualmente se opera con sandbox  ------------}}
     <script src="https://www.paypal.com/sdk/js?client-id=AYh6SsC21DLPKSQlkxE4XEPxcTq6-UDo_S6xtbD0Q3l2FH1EUEoTkvPbx0YC0NWktEm1NqjhR2FhxHCT&components=buttons&currency=MXN&locale=es_MX"></script>
-
-
 
 {{---------------------  TODO TARIFAS PRESENTADAS DEPENDIENDO EL TIPO DE SERVICIO ELEGIDO  --------------------------}}
     <script src="{{ asset('assets/js/service_show.js') }}"></script>
@@ -115,3 +114,36 @@
 
 {{---------------------  SECTION[metodo de pago por paypal] Envio de formulario por ajax --------------------------}}
     <script src="{{ asset('assets/js/paypal.js') }}"></script>
+
+{{-- /* ------------------------------INPUT SPINNER-------------------------------------------- */ --}}
+    <script>
+        /////////////////// product +/-
+        $(document).ready(function() {
+            $('.num-in span').click(function () {
+                var $input = $(this).parents('.num-block').find('input.in-num');
+            if($(this).hasClass('minus')) {
+                var count = parseFloat($input.val()) - 1;
+                count = count < 1 ? 1 : count;
+                if (count < 2) {
+                $(this).addClass('dis');
+                }
+                else {
+                $(this).removeClass('dis');
+                }
+                $input.val(count);
+            }
+            else {
+                var count = parseFloat($input.val()) + 1
+                $input.val(count);
+                if (count > 1) {
+                $(this).parents('.num-block').find(('.minus')).removeClass('dis');
+                }
+            }
+
+            $input.change();
+            return false;
+            });
+
+        });
+        // product +/-
+    </script>
