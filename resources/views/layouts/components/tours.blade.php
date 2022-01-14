@@ -1,6 +1,5 @@
 <div class="container mt-4 tours-section">
-    <h1 class="section-title mb-0"><span>Tours</span> disponibles</h1>
-    <div class="cws_divider"></div>
+    <h1 class="section-title text-center mb-4"><span>Tours</span> disponibles</h1>
 
     <div class="box-container">
         <div class="box">

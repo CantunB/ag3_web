@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="section-title text-center mb-4">Contactanos</h1>
+                <h1 class="section-title text-center mb-4"><span>Contactanos</span></h1>
             </div>
         </div>
         <div class="row contact-content mb-4">
