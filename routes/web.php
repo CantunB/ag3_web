@@ -1,12 +1,11 @@
 <?php
 
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\BookingController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\CountryStateCityController;
-use App\Http\Controllers\PaymentController;
-use App\Models\Booking;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ToursController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\BookingController;
 
 Route::redirect('/', 'es')->name('main');
 
@@ -41,7 +40,7 @@ Route::group([
         });
         // SECTION[tours} Grupo de rutas para los tours
         //Route::group(['prefix' => 'tours'], function() {
-        Route::get('/tours/{tours_id}', [BookingController::class, 'tours'])->name('tours');
+        Route::resource('tours',  ToursController::class);
         //});
     });
 

@@ -203,22 +203,6 @@ class BookingController extends Controller
     }
 
     public function tours($locale, $tour) {
-        $list_tours = [
-            1 => ['tour' =>  'Laguna de Siete Colores - Bacalar', 'price' => '1650'],
-            2 => ['tour' => 'Chichen Itza, Yucatan', 'price' => '1200'],
-            3 => ['tour' => 'Palenque, Chiapas', 'price' => '2650'],
-            4 => ['tour' => 'Calakmul, Campeche', 'price' => '1950'],
-            5 => ['tour' => 'Ek Balam - Las Colorado', 'price' => '1650'],
-            6 => ['tour' => 'Coba - 3 Cenotes', 'price' => '1150']
-        ];
 
-        foreach ($list_tours as $tours) {
-            $tours = array($list_tours[$tour]);
-            $tours = Arr::flatten($tours);
-        }
-        //return $tours;
-        $data['countries'] = Country::get(["name","id"]);
-
-        return view('booking_tours', $data, compact('tours'));
     }
 }
