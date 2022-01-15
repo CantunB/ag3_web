@@ -40,6 +40,9 @@
 {{-------------------------------Gallery-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/gallery.js') }}"></script>
 
+{{-------------------------------Tours-show-------------------------------------------}}
+    <script src="{{ asset('assets/js/scripts/tours-show.js') }}"></script>
+
 {{--  /* -------------------------------------------------------------------------- */  --}}
     <script src="{{ asset('assets/js/scripts/home.js') }}"></script>
 

@@ -1,0 +1,120 @@
+.tours-show {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* .tours-show .container {
+    background: #FFFFFF;
+} */
+
+.tours-show .title-tour {
+    font-size: 37px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    color: #404040;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+body.dark .tours-show .title-tour {
+    color: #FFFFFF;
+}
+
+.tours-show p {
+    color: #404040;
+}
+
+body.dark .tours-show p {
+    color: #a7a7a7;
+}
+
+.tours-show a.btn {
+    background: var(--color-primary);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border: 2px solid var(--color-primary);
+    /* color: #424D58; */
+    color: #000;
+    border-radius: 0;
+}
+
+.tours-show a.btn:hover {
+    background: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-primary);
+}
+
+figure {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    border: 5px solid #404040;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumb_img_list {
+    text-align: center;
+}
+
+.thumb_img_list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.thumb_img_list ul li {
+    display: inline-block;
+    /* border: 5px solid var(--color-primary); */
+    border: 3px solid #404040;
+    width: 100px;
+    height: 80px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.thumb_img_list ul li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.tours-show  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    color: #404040;
+    text-transform: uppercase;
+}
+
+body.dark .tours-show h2 {
+    color: #FFFFFF;
+}
+
+.details-icon {
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding: 10px;
+}
+
+/* body.dark .detalles {
+    background: red;
+    background: rgb(21, 21, 21);
+} */
+
+body.dark .details-icon {
+    filter: drop-shadow(0 0 2px #a7a7a7);
+}
+
+@media only screen and (min-device-width : 992px) and (max-device-width : 1200px) {
+    .details-icon {
+        margin-bottom: 30px;
+    }
+} 
