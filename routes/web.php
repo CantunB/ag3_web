@@ -39,9 +39,12 @@ Route::group([
             Route::get('voucher', [BookingController::class, 'voucher'])->name('voucher');
         });
         // SECTION[tours} Grupo de rutas para los tours
-        //Route::group(['prefix' => 'tours'], function() {
-        Route::resource('tours',  ToursController::class);
-        //});
+        Route::group(['prefix' => 'tours'], function() {
+            Route::get('/{tours}', [ToursController::class, 'show'])->name('show');
+            Route::get('/{tours}/purchase', [ToursController::class, 'purchase'])->name('purchase');
+
+        //Route::resource('tours',  ToursController::class);
+        });
     });
 
     // SECTION[Country_States] Dropdown Paises Estados

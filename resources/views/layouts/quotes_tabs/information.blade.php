@@ -72,14 +72,14 @@
                             </select>
                         </div>
                     </div>
-                    <input type="hidden" name="type_service" value="{{ $booking['service'] }}">
-                    <input type="hidden" name="origin" value="{{ $booking['origen'] }}">
-                    <input type="hidden" name="destiny" value="{{ $booking['destino'] }}">
-                    <input type="hidden" name="date_service" value="{{ $booking['date'] }}">
-                    <input type="hidden" name="time_service" value="{{ $booking['pickup'] }}">
-                    <input type="hidden" name="passengers" value="{{ $booking['passengers'] }}">
-                    <input type="hidden" id="request_unit" name="request_unit">
-                    <input type="hidden" id="type_trip" name="type_trip">
+                    <input type="hidden" readonly name="type_service" value="{{ $booking['service'] }}">
+                    <input type="hidden" readonly name="origin" value="{{ $booking['origen'] }}">
+                    <input type="hidden" readonly name="destiny" value="{{ $booking['destino'] }}">
+                    <input type="hidden" readonly name="date_service" value="{{ $booking['date'] }}">
+                    <input type="hidden" readonly name="time_service" value="{{ $booking['pickup'] }}">
+                    <input type="hidden" readonly name="passengers" value="{{ $booking['passengers'] }}">
+                    <input type="hidden" readonly id="request_unit" name="request_unit">
+                    <input type="hidden" readonly id="type_trip" name="type_trip">
 
                 </div>
                 <div class="row mb-4">

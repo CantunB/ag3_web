@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\BookingMail;
 use App\Mail\ExampleMail;
+use App\Mail\QuoteMail;
 use App\Models\Airline;
 use App\Models\Booking;
 use App\Models\Country;
@@ -45,6 +46,19 @@ class BookingController extends Controller
         }elseif ($request->services == "2") { //Hotel a Aeropuerto (Origen - Destino)
             $search_destino = Hotel::where('hotel', $request->origen)
             ->orWhere('hotel', 'like', '%' . $request->origen . '%')->first();
+        }elseif ($request->services == 3) {
+            $booking = collect([
+                'service' => $service = $service[0],
+                'origen' => $request->origen,
+                'destino' => $request->destino,
+                'date' => $request->date,
+                'pickup' => $request->pickup,
+                'passengers' => $request->passengers,
+            ]);
+
+            $data['countries'] = Country::get(["name","id"]);
+
+            return view('quotes',$data,  compact('booking'));
         }elseif ($request->services == 5){ //Busqueda Manual (Origen - Destino)
             $booking = collect([
                 'service' => $service = $service[0],
@@ -81,9 +95,9 @@ class BookingController extends Controller
         ]);
 
         return view('reservation', compact(
-    'booking',
-'hoteles',
-'tariff'
+                'booking',
+                'hoteles',
+                'tariff'
         ));
     }
 
@@ -167,7 +181,7 @@ class BookingController extends Controller
 
        // return $booking;
         /** SECTION Envio de correo electronico */
-        Mail::to($request->email)->send(new BookingMail($booking));
+        Mail::to($request->email)->queue(new BookingMail($booking));
         return response()->json(['data' => $booking], 201);
     }
 
@@ -187,10 +201,11 @@ class BookingController extends Controller
 
     public function quotes(Request $request)
     {
-        // return $request->all();
-        $cotizacion = Quote::create($request->all());
-
-        return redirect()->route('index');
+        // $request->all();
+        $quotes = Quote::create($request->all());
+        //return $quotes;
+        Mail::to('cantunberna@gmail.com')->send(new QuoteMail($quotes));
+        return redirect()->route('index', App::getLocale());
     }
 
 
@@ -202,7 +217,4 @@ class BookingController extends Controller
         Mail::to('cantunberna@gmail.com')->send(new ExampleMail());
     }
 
-    public function tours($locale, $tour) {
-
-    }
 }

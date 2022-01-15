@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Country;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class ToursController extends Controller
 {
@@ -35,9 +36,23 @@ class ToursController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($locale, $id)
     {
-        return view('layouts.tours.show');
+        if ($id == 1) {
+            return view('layouts.tours.pages.tour_one');
+        }elseif ($id == 2) {
+            return view('layouts.tours.pages.tour_two');
+        }elseif ($id == 3) {
+            return view('layouts.tours.pages.tour_three');
+        }elseif ($id == 4) {
+            return view('layouts.tours.pages.tour_four');
+        }elseif ($id == 5) {
+            return view('layouts.tours.pages.tour_five');
+        }elseif ($id == 6) {
+            return view('layouts.tours.pages.tour_six');
+        }else{
+             abort(404);  //404 page
+        }
     }
 
     /**
@@ -46,7 +61,7 @@ class ToursController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function purchase($locale,$id)
     {
         $list_tours = [
             1 => ['tour' =>  'Laguna de Siete Colores - Bacalar', 'price' => '1650'],

@@ -2,24 +2,26 @@
 
 namespace App\Mail;
 
+use App\Models\Quote;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class MessageReceived extends Mailable
+class QuoteMail extends Mailable
 {
     use Queueable, SerializesModels;
+    public $quotes;
 
-    public $msg;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($msg)
+    public function __construct(Quote $quotes)
     {
-        $this->msg = $msg;
+        $this->quotes = $quotes;
+
     }
 
     /**
@@ -29,7 +31,7 @@ class MessageReceived extends Mailable
      */
     public function build()
     {
-        return $this->subject('Solicitud de Contacto AG3 Luxury Travel')
-                    ->view('emails.message_received');
+        return $this->subject('Cotizacion de Tour AG3 Luxury Travel')
+        ->view('emails.quote');
     }
 }
