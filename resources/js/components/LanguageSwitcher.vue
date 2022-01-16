@@ -22,7 +22,7 @@
           <a
             :href="linkEn"
             ref="account"
-            class="flex items-center px-3 py-3 hover:bg-gray-200"
+            class="flex items-center px-3 py-3 hover:bg-dark-100"
             @keydown.up.exact.prevent=""
             @keydown.tab.exact="focusNext(false)"
             @keydown.down.exact.prevent="focusNext(true)"
@@ -136,7 +136,7 @@ export default {
       padding: 0;
       border: none;
       font: inherit;
-      color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
       background-color: transparent;
       cursor: pointer;
     }

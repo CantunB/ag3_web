@@ -87,10 +87,11 @@
                 <table class="header-content">
                     <tr>
                         <td class="logo">
+                            <img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="logo-empresa">
                         </td>
                         <td class="details">
                             <span>No. Servicio:</span> {{ $booking->id }}<br>
-                            <span>Fecha de creacion:</span> {{ $booking->created_at }}
+                            <span>Fecha de creacion:</span> {{ \Carbon\Carbon::now()->toDateString() }}
                         </td>
                     </tr>
                 </table>
@@ -119,6 +120,12 @@
                             <span>TOTAL:</span> {{$booking->price}} MXN
                         </td>
                         <td class="service-img">
+                            @if ($booking->request_unit == 1)
+                                <img src="http://ag3.stigmacode.com/assets/images/transport-suburban-min.png" alt="service-suburban">
+                            @else
+                                <img src="http://ag3.stigmacode.com/assets/images/transport-van-min.png" alt="service-van">
+                            @endif
+
                         </td>
                     </tr>
                 </table>
@@ -198,7 +205,7 @@
                 </td>
             </tr>
         </table>
-        
+
     @endif
 
 
