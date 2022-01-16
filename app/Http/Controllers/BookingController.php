@@ -180,6 +180,12 @@ class BookingController extends Controller
         $booking->save();
 
        // return $booking;
+        /* -------------------------- SECTION[pdf] Se crea el pdf ----------------------------------------------- */
+        $voucher_pdf = PDF::loadView('pdf.voucher', compact('booking'));
+        $path = public_path('booking');
+        $fileName =  $booking->id . '.' . 'pdf' ;
+        $voucher_pdf->save($path . '/' . $fileName);
+
         /** SECTION Envio de correo electronico */
         Mail::to($request->email)->queue(new BookingMail($booking));
         return response()->json(['data' => $booking], 201);
@@ -189,10 +195,10 @@ class BookingController extends Controller
     {
         $id = $request->id;
         $booking = Booking::with(['TypeUnit','Country','State'])->findOrFail($id);
-        $voucher_pdf = PDF::loadView('pdf.voucher', compact('booking'));
-        $path = public_path('booking');
+        //$voucher_pdf = PDF::loadView('pdf.voucher', compact('booking'));
+        //$path = public_path('booking');
         $fileName =  $booking->id . '.' . 'pdf' ;
-        $voucher_pdf->save($path . '/' . $fileName);
+        //$voucher_pdf->save($path . '/' . $fileName);
         //return $voucher_pdf->download($voucher_pdf);
         $pdf = public_path('booking/'.$fileName);
 
