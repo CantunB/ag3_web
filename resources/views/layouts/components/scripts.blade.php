@@ -36,6 +36,9 @@
 
 {{------------------------------Flatpickr v4.6.9--------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/flatpickr.js') }}"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+
 
 {{------------------------------ Dark Mode --------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/dark-mode.js') }}"></script>
@@ -82,10 +85,12 @@
     <script src="{{ asset('assets/js/search.js') }}"></script>
 {{------------------------  TODO INPUTS DE TIEMPO Y FECHA (FLATPICKR)  -------------------------------}}
     <script>
+        var locale =  "{{ app()->getLocale() }}";
+
         $(".selector").flatpickr({
                 minDate: "today",
                 dateFormat: "Y-m-d",
-
+                locale: locale
             });
         $(".timer").flatpickr({
             enableTime: true,
@@ -152,4 +157,53 @@
 
         });
         // product +/-
+    </script>
+
+ /* -----------------------------API DIVISAS--------------------------------------------- */
+    <script>
+        var value = 12500
+
+    const formatterPeso = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0
+    })
+    //console.log(formatterPeso.format(value))
+    // → $ 12.500
+
+    const formatterDolar = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+    })
+    //console.log(formatterDolar.format(value))
+    // → $12,500.00
+
+    const formatterEuro = new Intl.NumberFormat('de-DE', {
+        style: 'currency',
+        currency: 'EUR'
+    })
+    //console.log(formatterEuro.format(value))
+    // → 12.500,00 €
+
+    // el yen japonés no tiene ninguna subdivisión
+    const formatterYenes = new Intl.NumberFormat("ja-JP", {
+        style: 'currency',
+        currency: 'JPY'
+    })
+    //console.log(formatterYenes.format(value))
+    // → ￥12,500
+
+
+    var peso=1;
+    var dolar = 0.049;
+    var euro = 0.043;
+
+    var resultado= peso * dolar;
+    var resultado1 = Math.round(dolar/peso * 100) / 100;
+
+
+    console.log(resultado1.toFixed(3));
+    console.log(formatterDolar.format(resultado1.toFixed(3)));
+    //console.log(dolar+ " dolares son " + resultado + " " +nombreDivisaExtranjera + ".");
+
     </script>

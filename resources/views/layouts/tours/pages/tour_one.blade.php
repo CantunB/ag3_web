@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/tours-show.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/whatsapp.css') }}">
+
 </head>
 
 <body>
@@ -98,6 +100,7 @@
             </div>
         </section>
 
+        <a href="https://wa.me/5219381726488?text=Me%20gustaría%20informacion%20acerca%20de%20los%20servicios" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
         @include('layouts.components.new-footer')
         @include('layouts.components.scripts')

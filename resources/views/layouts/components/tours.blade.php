@@ -1,5 +1,5 @@
 <div class="container mt-4 tours-section">
-    <h1 class="section-title text-center mb-4"><span>Tours</span> disponibles</h1>
+    <h1 class="section-title text-center mb-4"><span>{{__('Tours disponibles')}}</span></h1>
 
     <div class="box-container">
         <div class="box">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="price text-center">$1650.00 <span>$1899.00</span></div>
                 <div class="button-card d-flex justify-content-center">
-                    <a href="{{url(app()->getLocale().'/booking/tours'.'/1')}}" class="mt-2 btn">Reserva ahora</a>
+                    <a href="{{url(app()->getLocale().'/booking/tours'.'/1')}}" class="mt-2 btn">{{__('Reserva ahora')}}</a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="price text-center">$1200.00 <span>$1399.00</span></div>
                 <div class="button-card d-flex justify-content-center">
-                    <a href="{{url(app()->getLocale().'/booking/tours'.'/2')}}" class="mt-2 btn">Reserva ahora</a>
+                    <a href="{{url(app()->getLocale().'/booking/tours'.'/2')}}" class="mt-2 btn">{{__('Reserva ahora')}}</a>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="price text-center">$2650.00 <span>$2899.00</span></div>
                 <div class="button-card d-flex justify-content-center">
-                    <a href="{{url(app()->getLocale().'/booking/tours'.'/3')}}" class="mt-2 btn">Reserva ahora</a>
+                    <a href="{{url(app()->getLocale().'/booking/tours'.'/3')}}" class="mt-2 btn">{{__('Reserva ahora')}}</a>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="price text-center">$1950.00 <span>$2199.00</span></div>
                 <div class="button-card d-flex justify-content-center">
-                    <a href="{{url(app()->getLocale().'/booking/tours'.'/4')}}" class="mt-2 btn">Reserva ahora</a>
+                    <a href="{{url(app()->getLocale().'/booking/tours'.'/4')}}" class="mt-2 btn">{{__('Reserva ahora')}}</a>
                 </div>
             </div>
         </div>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="price text-center">$1650.00 <span>$1899.00</span></div>
                 <div class="button-card d-flex justify-content-center">
-                    <a href="{{url(app()->getLocale().'/booking/tours'.'/5')}}" class="mt-2 btn">Reserva ahora</a>
+                    <a href="{{url(app()->getLocale().'/booking/tours'.'/5')}}" class="mt-2 btn">{{__('Reserva ahora')}}</a>
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
                 </div>
                 <div class="price text-center">$1150.00 <span>$1399.00</span></div>
                 <div class="button-card d-flex justify-content-center">
-                    <a href="{{url(app()->getLocale().'/booking/tours'.'/6')}}" class="mt-2 btn">Reserva ahora</a>
+                    <a href="{{url(app()->getLocale().'/booking/tours'.'/6')}}" class="mt-2 btn">{{__('Reserva ahora')}}</a>
                 </div>
             </div>
         </div>

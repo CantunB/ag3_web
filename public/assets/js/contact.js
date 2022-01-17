@@ -22,7 +22,7 @@ $(document).ready(function() {
                         $("#contact").hide();
                     },
                     error: function(response){
-                        console.log(response);
+                        // console.log(response);
                         var errors = response.responseJSON;
                         errorsHtml = '<ul>';
                         $.each(errors.errors,function (k,v) {

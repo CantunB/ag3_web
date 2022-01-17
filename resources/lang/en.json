@@ -1,10 +1,11 @@
 {
     "inicio": "Home",
     "contacto": "Contact",
+    "iniciar_busqueda": "Start Search",
     "reservacion": "Reservation",
     "servicios": "Services",
     "acerca": "About us",
-    "title_home" : "Let us take you away",
+    "title_home" : "From the airport to your destination",
     "buscar" : "Search",
     "hoteles" : "Hotels",
     "aerolineas" : "Airlines",
@@ -20,5 +21,18 @@
     "serv_sal" : "Departure Service",
     "serv_lleg" : "Arrivals Service",
     "serv_tou" : "Tour Service",
-    "serv_abi" : "Open Service"
+    "serv_abi" : "Open Service",
+    "Selecciona un servicio" : "Select a service",
+    "Viaje redondo": "ROUND TRIP",
+    "Viaje sencillo": "ONE WAY TRIP",
+    "Tours disponibles": "AVAILABLE TOURS",
+    "Aeropuerto a Hotel a Aeropuerto": "Airport-Hotel-Airport",
+    "Aeropuerto a Hotel" : "Airport-Hotel",
+    "Hotel a Aeropuerto" : "Hotel-Airport",
+    "Hotel a Hotel" : "Hotel-Hotel",
+    "Traslado" : "Transfers",
+    "Hotel origen": "Origin Hotel",
+    "Hotel destino": "Destination Hotel",
+    "Reserva ahora": "Book now"
+
 }

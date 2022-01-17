@@ -12,10 +12,10 @@
         <div class="collapse navbar-collapse" id="contenido-nav">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="{{ route('index',app()->getLocale()) }}">Inicio</a>
+                    <a class="nav-link" aria-current="page" href="{{ route('index',app()->getLocale()) }}">{{__('inicio')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca de nosotros</a>
+                    <a class="nav-link" href="#">{{__('acerca')}}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Servicios</a>

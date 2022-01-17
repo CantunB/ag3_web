@@ -1,6 +1,5 @@
 $(document).ready(function(){
     services = $('#services').select2({
-        placeholder: "Selecciona un servicio",
         theme: 'bootstrap-5',
     });
 

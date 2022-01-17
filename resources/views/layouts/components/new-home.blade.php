@@ -31,16 +31,16 @@
                <div class="collapse navbar-collapse" id="contenido-nav">
                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                        <li class="nav-item">
-                           <a class="nav-link" aria-current="page" href="{{ route('index',app()->getLocale()) }}">Inicio</a>
+                           <a class="nav-link" aria-current="page" href="{{ route('index',app()->getLocale()) }}">{{__('inicio')}}</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">Acerca de nosotros</a>
+                           <a class="nav-link" href="#">{{__('acerca')}}</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">Servicios</a>
+                           <a class="nav-link" href="#">{{__('servicios')}}</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">Contacto</a>
+                           <a class="nav-link" href="#">{{__('contacto')}}</a>
                        </li>
                    </ul>
                    <!-- section-right-language  -->
@@ -67,13 +67,13 @@
        </nav>
 
        <div class="container home">
-           <h1 class="text-center title-home one demo">Del Aeropuerto a tu Destino</h1>
+           <h1 class="text-center title-home one demo">{{__('title_home')}}</h1>
            <h1 class="text-center title-home second">Te ofrecemos <span class="typed"></span></h1>
        </div>
    </header>
 
    <div class="container col-md-4 offset-md-4 mb-0 search_title">
-       <h5 class="text-center">Empieza la busqueda</h5>
+       <h5 class="text-center">{{__('iniciar_busqueda')}}</h5>
    </div>
 
    <div class="container search">
@@ -87,15 +87,15 @@
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon1"><i class="fas fa-sync-alt"></i></span>
                         <select class="form-select" name="services" id="services" required>
-                            <option selected value="" disabled>Selecciona un servicio</option>
-                            <optgroup label="VIAJE REDONDO">
-                                <option value="4">Aeropuerto a Hotel a Aeropuerto</option>
+                            <option selected value="" disabled>{{__('Selecciona un servicio')}}</option>
+                            <optgroup label="{{__('Viaje redondo')}}">
+                                <option value="4">{{__('Aeropuerto a Hotel a Aeropuerto')}}</option>
                             </optgroup>
-                            <optgroup label="VIAJE SENCILLO">
-                                <option value="1">Aeropuerto a Hotel</option>
-                                <option value="2">Hotel a Aeropuerto</option>
-                                <option value="3">Hotel a Hotel</option>
-                                <option value="5">Traslado</option>
+                            <optgroup label="{{__('Viaje sencillo')}}">
+                                <option value="1">{{__('Aeropuerto a Hotel')}}</option>
+                                <option value="2">{{__('Hotel a Aeropuerto')}}</option>
+                                <option value="3">{{__('Hotel a Hotel')}}</option>
+                                <option value="5">{{__('Traslado')}}</option>
                             </optgroup>
                         </select>
                     </div>
@@ -126,7 +126,7 @@
                         <span class="input-group-text"><i class="fas fa-hotel"></i></span>
 
                         <select class="form-select search_input search_input_hotel origen_hotel_select" name="origen">
-                            <option selected value="null" disabled>Selecciona un hotel origen</option>
+                            <option selected value="null" disabled> {{__('Hotel origen')}} </option>
                             @foreach ($hoteles as $hotel)
                                 <option>{{ $hotel->hotel }}</option>
                             @endforeach
@@ -140,7 +140,7 @@
                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
 
                        <select class="form-select search_input search_input_hotel destino_hotel_select" name="destino">
-                           <option selected value="null" disabled>Selecciona un hotel destino</option>
+                           <option selected value="null" disabled>{{__('Hotel destino')}}</option>
                            @foreach ($hoteles as $hotel)
                                <option>{{ $hotel->hotel }}</option>
                            @endforeach
