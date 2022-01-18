@@ -31,7 +31,7 @@
                     <div class="col-lg-6">
 
                         <div class="title">
-                            <h1 class="title-tour">Chichen Itza</h1>
+                            <h1 class="title-tour">coba - 3 cenotes</h1>
                             {{-- <a href="#">Reserva ahora</a> --}}
                         </div>
 

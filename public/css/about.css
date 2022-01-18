@@ -1,0 +1,48 @@
+.about .section-title {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    color: #404040;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.about .section-title span {
+    font-weight: 600;
+}
+
+body.dark .about .section-title span {
+    color: #FFFFFF;
+}
+
+body.dark .about .section-title {
+    color: rgba(255,255,255,.8);
+}
+
+.about p {
+    font-family: 'Hind Siliguri', sans-serif;
+    text-align: justify;
+    color: #404040;
+    margin-bottom: 10px;
+}
+
+body.dark .about p {
+    color: #a7a7a7;
+}
+
+.about .image-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .image-about img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+body.dark .about .image-about img {
+    filter: drop-shadow(2px 2px 5px #a7a7a7);
+}
