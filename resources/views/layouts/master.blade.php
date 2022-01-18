@@ -40,6 +40,10 @@
                 @include('layouts.components.new-home')
             </div>
 
+            @include('layouts.components.about')
+
+            @include('layouts.components.services')
+
             @include('layouts.components.tours')
 
             {{-- <!-- Intro -->
