@@ -19,7 +19,7 @@
                 </div>
                 {{-- <div class="price text-center">$1650.00 <span>$1899.00</span></div> --}}
                 <div class="button-card d-flex justify-content-center">
-                    <a href="{{url(app()->getLocale().'/booking/tours'.'/1')}}" class="mt-2 btn">{{__('Reserva ahora')}}</a>
+                    <a href="{{route('show',[app()->getLocale(), 'tours'=> 1] )}}" class="mt-2 btn">{{__('Reserva ahora')}}</a>
                 </div>
             </div>
         </div>

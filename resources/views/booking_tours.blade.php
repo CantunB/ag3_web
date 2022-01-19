@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/whatsapp.css') }}">
     <link rel="stylesheet" href="{{ asset('css/spiner.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/styles/personal_parsley.css') }}">
 
 </head>
     <body>

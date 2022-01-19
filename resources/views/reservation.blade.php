@@ -25,7 +25,7 @@
         @include('layouts.components.new-header')
 
         <!-- section content start -->
-        <div class="container">
+        <div  class="container">
             <div class="row">
                 {{-- section left start --}}
                 <div class="col-lg-8 mt-4 ">

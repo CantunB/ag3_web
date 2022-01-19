@@ -1,8 +1,7 @@
 const buttonMenu = document.querySelector('.navbar-toggler');
 const titleHomeOne = document.querySelector('.title-home.one');
 const titleHomeSecond = document.querySelector('.title-home.second');
-// const dropDownLanguage = document.querySelector('.dropdown-toggle'); 
-// const dropDownLanguage = document.querySelector('.heroicon-ui'); 
+const dropDownLanguage = document.querySelector('.dropdown-toggle');
 
 buttonMenu.addEventListener('click', () => {
     titleHomeOne.classList.toggle('title-reduce');

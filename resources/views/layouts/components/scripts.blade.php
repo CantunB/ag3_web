@@ -12,12 +12,12 @@
     * LINK
     * STUB
 --}}
-{{-- /* -------------------------------LARAVEL MIX VUE JS------------------------------------------- */ --}}
-    <script src="{{ mix('/js/app.js') }}"></script>
 
 {{---------------------------------Bootstrap v5.0.2---------------------------------------------}}
-    {{-- <script type="application/javascript" src="{{ asset('assets/js/scripts/popper.min.js') }}"></script>
-    <script src="{{ asset('assets/js/scripts/bootstrap.min.js') }}"></script> --}}
+    <script type="application/javascript" src="{{ asset('assets/js/scripts/popper.min.js') }}"></script>
+
+{{--  /* -------------------------------------------------------------------------- */  --}}
+    <script src="{{ asset('assets/js/scripts/home.js') }}"></script>
 
 {{---------------------------------Typed.js v2.0.12 -----------------------------------------}}
     <script src="{{ asset('assets/js/scripts/typed.js') }}"></script>
@@ -49,12 +49,12 @@
 {{-------------------------------Tours-show-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/tours-show.js') }}"></script>
 
-{{--  /* -------------------------------------------------------------------------- */  --}}
-    <script src="{{ asset('assets/js/scripts/home.js') }}"></script>
-
 {{-------------------------------Testimonials-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/scripts/testimonials.js') }}"></script>
+
+{{-- /* -------------------------------LARAVEL MIX VUE JS------------------------------------------- */ --}}
+    <script src="{{ mix('/js/app.js') }}"></script>
 
 {{--  /* ----------------------------------Maquetar imagenes ---------------------------------------- */  --}}
     <script src="{{ asset('assets/js/holder.js')}}"></script>

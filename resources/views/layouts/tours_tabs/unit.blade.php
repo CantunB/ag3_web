@@ -107,8 +107,11 @@
                             <div class="img-content">
                                 <img class="transport-img" src="{{ asset('assets/images/transport-suburban.png') }}" alt="transport-suburban">
                             </div>
-                            
+
                             <div class="button-vehicule d-flex justify-content-center">
+                                <input type="hidden" name="unit" id="opt2_unit"  value="1">
+                                <input type="hidden" name="type_trip" id="opt2_type_trip" value="2">
+
                                 <button type="button" class="button-pre btnComplete" id="opt2">Seleccionar vehiculo</button>
                             </div>
                         </div>
@@ -123,8 +126,10 @@
                             <div class="img-content">
                                 <img class="transport-img" src="{{ asset('assets/images/transport-van2.png') }}" alt="transport-van">
                             </div>
-                          
+
                             <div class="button-vehicule d-flex justify-content-center">
+                                <input type="hidden" name="unit" id="opt4_unit" value="2">
+                                <input type="hidden" name="type_trip"  id="opt4_type_trip"  value="2">
                                 <button type="button" class="button-pre btnComplete" id="opt4">seleccionar vehiculo</button>
                             </div>
                         </div>
