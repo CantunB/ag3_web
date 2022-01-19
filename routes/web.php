@@ -42,7 +42,6 @@ Route::group([
         Route::group(['prefix' => 'tours'], function() {
             Route::get('/{tours}', [ToursController::class, 'show'])->name('show');
             Route::get('/{tours}/purchase', [ToursController::class, 'purchase'])->name('purchase');
-
         //Route::resource('tours',  ToursController::class);
         });
     });
@@ -50,4 +49,7 @@ Route::group([
     // SECTION[Country_States] Dropdown Paises Estados
     Route::post('getState', [CountryStateCityController::class, 'getState'])->name('fetchState');
     Route::post('getCity', [CountryStateCityController::class, 'getCity'])->name('fetchCities');
+    // SECTION[IATA_AIRLINE] Dropdown IATA CODE
+    Route::post('getCodeIATA', [Controller::class, 'getCodeIATA'])->name('fetchIata');
+
 });

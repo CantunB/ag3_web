@@ -9,7 +9,7 @@ class Airline extends Model
 {
     use HasFactory;
     protected $table = 'airlines';
-    protected $fillable = [ 'terminal','airport', 'airline','destiny','code' ];
+    protected $fillable = [ 'terminal','airport', 'airline', 'iata_code', 'destiny','code' ];
 
 
 }

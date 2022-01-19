@@ -32,6 +32,14 @@ class Controller extends BaseController
         // }
         // return abort(404);
     }
+
+    public function getCodeIATA(Request $request)
+    {
+        $data['code'] = Airline::select("iata_code")->where("airline",$request->airline)
+                            ->orWhere('airline', 'like', '%' . $request->airline . '%')
+                            ->first();
+        return response()->json($data);
+    }
 }
 
 

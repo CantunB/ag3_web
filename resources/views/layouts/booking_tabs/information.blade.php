@@ -88,7 +88,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-arrival input__icon"></i></span>
-                                <select required id="airline_arrival" name="a_arrival"  class="form-select" aria-describedby="icon-plane">
+                                <select required id="airline_arrival" name="a_arrival"  class="form-select airlines_arrival" aria-describedby="icon-plane">
                                     <option selected value="null" disabled>Selecciona una aerolinea...</option>
                                     @foreach ($airlines as $airline)
                                         <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
@@ -101,7 +101,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
-                                <input required type="text" class="form-control" id="flight-number" name="fn_arrival"
+                                <input required type="text" class="form-control flight-number_arrival" id="flight-number" name="fn_arrival"
                                     aria-describedby="icon-hashtag">
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-passenger"><i
                                         class="fas fa-user input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="passenger_arrival" aria-describedby="icon-passenger">
+                                <input readonly type="text" class="form-control fullname_passenger" id="passenger_arrival" aria-describedby="icon-passenger">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
@@ -148,7 +148,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-departure input__icon"></i></span>
-                                        <select required id="airline_departure" name="a_departure" class="form-select" aria-describedby="icon-plane">
+                                        <select required id="airline_departure" name="a_departure" class="form-select airlines_departure" aria-describedby="icon-plane">
                                             <option selected value="null" disabled>Selecciona una aerolinea...</option>
                                             @foreach ($airlines as $airline)
                                                 <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
@@ -161,7 +161,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
-                                <input required type="text" class="form-control" id="flight-number" name="fn_departure"
+                                <input required type="text" class="form-control flight-number_departure" id="flight-number" name="fn_departure"
                                     aria-describedby="icon-hashtag">
                             </div>
                         </div>
@@ -170,7 +170,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-passenger"><i
                                         class="fas fa-user input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="passenger_arrival" aria-describedby="icon-passenger">
+                                <input readonly type="text" class="form-control fullname_passenger" id="passenger_arrival" aria-describedby="icon-passenger">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
@@ -208,7 +208,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-arrival input__icon"></i></span>
-                                        <select required id="airline_arrival" name="a_arrival" class="form-select" aria-describedby="icon-plane">
+                                        <select required id="airline_arrival" name="a_arrival" class="form-select airlines_arrival" aria-describedby="icon-plane">
                                             <option selected value="null" disabled>Selecciona una aerolinea...</option>
                                             @foreach ($airlines as $airline)
                                                 <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
@@ -221,7 +221,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
-                                <input type="text" class="form-control" id="flight-number" name="fn_arrival"
+                                <input type="text" class="form-control flight-number_arrival" id="flight-number" name="fn_arrival"
                                     aria-describedby="icon-hashtag">
                             </div>
                         </div>
@@ -230,7 +230,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-passenger"><i
                                         class="fas fa-user input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="passenger_arrival" aria-describedby="icon-passenger">
+                                <input readonly type="text" class="form-control fullname_passenger" id="passenger_arrival" aria-describedby="icon-passenger">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
@@ -264,7 +264,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-departure input__icon"></i></span>
-                                    <select required id="airline_departure" name="a_departure" class="form-select" aria-describedby="icon-plane">
+                                    <select required id="airline_departure" name="a_departure" class="form-select airlines_departure" aria-describedby="icon-plane">
                                         <option selected value="null" disabled>Selecciona una aerolinea...</option>
                                         @foreach ($airlines as $airline)
                                             <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
@@ -277,7 +277,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
-                                <input type="text" class="form-control" id="flight-number" name="fn_departure"
+                                <input type="text" class="form-control flight-number_departure" id="flight-number" name="fn_departure"
                                     aria-describedby="icon-hashtag">
                             </div>
                         </div>
@@ -286,7 +286,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-passenger"><i
                                         class="fas fa-user input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="passenger_departure" aria-describedby="icon-passenger">
+                                <input readonly type="text" class="form-control fullname_passenger" id="passenger_departure" aria-describedby="icon-passenger">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">

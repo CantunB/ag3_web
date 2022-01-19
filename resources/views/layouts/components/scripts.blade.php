@@ -97,17 +97,6 @@
             dateFormat: "h:i K",
         });
     </script>
-    window.onload = function () {
-        //var parsley_lang = navigator.language || navigator.userLanguage;
-        var locale =  "{{ app()->getLocale() }}";
-        if (locale == 'es') {
-            lang_paypal = 'es-MX';
-        }else if (locale == 'en') {
-            lang_paypal = 'es-Es';
-        }else if (locale == 'fr') {
-            lang_paypal = 'es-Es';
-        }
-    }
 {{--------------------------  TODO[paypal]PAYPAL  -----------------------------------------}}
     {{----------------  SECTION[sandbox] Actualmente se opera con sandbox  ------------}}
     <script src="https://www.paypal.com/sdk/js?client-id=AYh6SsC21DLPKSQlkxE4XEPxcTq6-UDo_S6xtbD0Q3l2FH1EUEoTkvPbx0YC0NWktEm1NqjhR2FhxHCT"></script>
@@ -124,6 +113,9 @@
 
 {{---------------------  TODO COUNTRY STATE DROPDOWN DEPENDENT--------------------------}}
     <script src="{{ asset('assets/js/country_state.js') }}"></script>
+
+{{-- /* -------------------TODO IATA CODE DROPDOWN DEPENDENT AIRLINTE------------------------------------------------------- */ --}}
+    <script src="{{ asset('assets/js/airlines_iata.js') }}"></script>
 
 {{---------------------  TODO --------------------------}}
     <script src="{{ asset('assets/js/booking.js') }}"></script>
@@ -173,7 +165,7 @@
         // product +/-
     </script>
 
- /* -----------------------------API DIVISAS--------------------------------------------- */
+ {{-- /* -----------------------------API DIVISAS--------------------------------------------- */ --}}
     <script>
         var value = 12500
 
