@@ -16,8 +16,8 @@
     <script src="{{ mix('/js/app.js') }}"></script>
 
 {{---------------------------------Bootstrap v5.0.2---------------------------------------------}}
-    <script type="application/javascript" src="{{ asset('assets/js/scripts/popper.min.js') }}"></script>
-    <script src="{{ asset('assets/js/scripts/bootstrap.min.js') }}"></script>
+    {{-- <script type="application/javascript" src="{{ asset('assets/js/scripts/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/scripts/bootstrap.min.js') }}"></script> --}}
 
 {{---------------------------------Typed.js v2.0.12 -----------------------------------------}}
     <script src="{{ asset('assets/js/scripts/typed.js') }}"></script>

@@ -93,6 +93,10 @@ figure img {
     text-transform: uppercase;
 }
 
+span {
+    font-weight: 800;
+}
+
 body.dark .tours-show h2 {
     color: #FFFFFF;
 }

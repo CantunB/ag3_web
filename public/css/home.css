@@ -225,11 +225,14 @@ body.dark .navbar {
     }
 
     .title-reduce {
-        font-size: 30px !important;
+        /* margin-top: 0 !important; */
+        /* font-size: 28px !important; */
+        display: none;
+        transition: 3s ease;
     }
     
-    .title-small {
-        font-size: 20px !important;
-    }
+    /* .title-small {
+        font-size: 10px !important;
+    } */
 
 }

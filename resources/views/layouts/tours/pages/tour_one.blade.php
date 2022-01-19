@@ -38,9 +38,9 @@
                         </div>
 
                         <div class="description">
-                            <p>(Chi-ch’en Itzá) significa al borde del pozo de los Itzáes. Chichén Itzá fue una de las ciudades-estado más importantes de la América prehispánica y es uno de los sitios arqueológicos más visitados de México en la actualidad.</p>
-                            <p>Chichén Itzá es hermoso y magnífico tal como ya habrás escuchado y tiene muchas ruinas mayas para visitar y conocer su historia.</p>
-                            <p>Chichén Itzá se divide en Chichén Antiguo y Chichén Itzá, donde puedes encontrar 6 Ruinas Mayas en la sección de Chichén Antiguo y unas 20 Ruinas Mayas en el Nuevo Chichén o Chichén Itzá, lo que hace un total de 26 Ruinas Mayas para ver en el Sitio Maya.</p>
+                            <p>Bacalar es un hermoso pueblo mágico de Quintana Roo que esta situado justo al lado de una increíble laguna de siete tonos de azul que ofrece todo lo necesario para nadar, bucear o practicar snorkel.</p>
+                            <p>Su nombre viene del maya Bakhalal que significa “cerca o rodeado de carrizos”. De forma circular, la laguna es poco profunda lo que permite nadar cómodamente.</p>
+                            <p>El fuerte de San Felipe es uno de los lugares de Bacalar en donde se obtiene una de las mejores vistas de este espacio natural lleno de belleza, los templos, plazas y la architectura del pueblo le dan ese toque de pueblo mágico a Bacalar.</p>
                         </div>
 
                         <a href="{{url(app()->getLocale().'/booking/tours'.'/1/purchase')}}" class="btn mb-4">Reserva ahora</a>
@@ -48,14 +48,14 @@
 
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{ asset('assets/images/tours/chichen-itza/picture1.jpg') }}" alt="picture1" id="mainImg">
+                            <img src="{{ asset('assets/images/tours/bacalar/bacalar_1.jpg') }}" alt="bacalar1" id="mainImg">
                         </figure>
                         <div class="thumb_img_list">
                             <ul>
-                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture1.jpg') }}" alt="picture1" id="thumb1"></li>
-                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture2.jpg') }}" alt="picture2" id="thumb2"></li>
-                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture3.jpg') }}" alt="picture3" id="thumb3"></li>
-                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture4.jpg') }}" alt="picture4" id="thumb4"></li>
+                                <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_1.jpg') }}" alt="bacalar1" id="thumb1"></li>
+                                <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_2.jpg') }}" alt="bacalar2" id="thumb2"></li>
+                                <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_3.jpg') }}" alt="bacalar3" id="thumb3"></li>
+                                <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_4.jpg') }}" alt="bacalar4" id="thumb4"></li>
                             </ul>
                         </div>
                     </div>
@@ -70,11 +70,11 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <img src="{{ asset('assets/images/icons/pickup.svg') }}" alt="pickup-icon" class="details-icon">
-                                <p>Traslado de hotel a Chichen Itza - 3 horas de camino.</p>
+                                <p>Traslado de hotel a bacalar - 5 horas de camino.</p>
                             </div>
                             <div class="col-md-6">
-                                <img src="{{ asset('assets/images/icons/pyramids.svg') }}" alt="pyramids-icon" class="details-icon">
-                                <p>Estancia en el sitio arqueologico con visita guiada en el idioma natal del cliente - 3 horas.</p>
+                                <img src="{{ asset('assets/images/icons/swimming.svg') }}" alt="pyramids-icon" class="details-icon">
+                                <p>Estancia en la laguna de siete colores con visita guiada en el idioma natal del cliente - 3 horas.</p>
                             </div>
                             <div class="col-md-6">
                                 <img src="{{ asset('assets/images/icons/drink-bottle.svg') }}" alt="drink-bottle-icon" class="details-icon">
@@ -82,11 +82,11 @@
                             </div>
                             <div class="col-md-6">
                                 <img src="{{ asset('assets/images/icons/map.svg') }}" alt="map-icon" class="details-icon">
-                                <p>Visita opcional sin cargo extra a la ciudad de Valladolid pueblo mágico - Estancia 1 hora.</p>
+                                <p>Visita opcional sin cargo extra al cenote azul - Estancia 1 hora.</p>
                             </div>
                             <div class="col-md-12">
                                 <h2 class="text-center">Recomendaciones</h2>
-                                <p>Te recomendamos traer tu traje de baño y un cambio de ropa, para que puedas viajar seco y cómodo para las siguientes actividades, así como un bloqueador y repelente de insectos, de preferencia biodegradables. Tiempo libre para comer - 1 hora.</p>
+                                <p>Te recomendamos traer tu traje de baño y un cambio de ropa, para que puedas viajar seco y cómodo para las siguientes actividades, así como un bloqueador, repelente de insectos y zapatos para agua.</p>
                             </div>
                         </div>
 
@@ -94,7 +94,9 @@
                     <div class="col-lg-5">
                         <h2 class="text-center">Ubicacion</h2>
 
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.7736294932242!2d-88.57066558594205!3d20.678786655011294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5138b9a098f833%3A0xf70a67530750d45!2zQ2hpY2jDqW4gSXR6w6EsIFl1Yy4!5e0!3m2!1ses-419!2smx!4v1642194530515!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.7736294932242!2d-88.57066558594205!3d20.678786655011294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5138b9a098f833%3A0xf70a67530750d45!2zQ2hpY2jDqW4gSXR6w6EsIFl1Yy4!5e0!3m2!1ses-419!2smx!4v1642194530515!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> --}}
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241899.60345025317!2d-88.53247028359372!3d18.6782919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5bb1ffe04a7cc9%3A0x4936cf3e5108df91!2sLaguna%20de%20los%207%20colores!5e0!3m2!1ses!2smx!4v1642612337191!5m2!1ses!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
