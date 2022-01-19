@@ -1,0 +1,59 @@
+.content-unit {
+    border: 1px solid #dee2e6;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    background: #FFFFFF;
+}
+
+body.dark .content-unit {
+    background: rgb(21, 21, 21);
+    border: 1px solid rgb(36, 36, 36);
+    box-shadow: none;
+}
+
+.title-unit {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 600;
+    letter-spacing: .2px;
+    color: #404040;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+body.dark .title-unit {
+    color: #FFFFFF;
+}
+
+.content-unit:hover img {
+    transform: scale(1.1);
+}
+
+.img-content {
+    overflow: hidden;
+}
+
+.transport-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: .3s ease all;
+}
+
+.button-vehicule button {
+    font-family: 'Hind Siliguri', sans-serif;
+    background: var(--color-primary);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 2px solid var(--color-primary);
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.button-vehicule button:hover {
+    background: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-primary);
+}

@@ -1,10 +1,13 @@
+<link rel="stylesheet" href="{{ asset('css/tours-unit.css') }}">
+
 <div class="container">
     <div class="row">
         {{-- section left start --}}
         <div class="col-lg-8 mt-4">
             <input type="hidden" id="type_service" value="Tours">
 
-            <div class="row">
+            <!-- service-suburban start -->
+            {{-- <div class="row">
                 <div class="col mb-4 service-list">
                     <div class="row mb-4">
                         <!-- section left -->
@@ -17,7 +20,7 @@
                                 <li class="specifications"><i class="fas fa-car-side icons-specifications"></i> Precio por vehiculo</li>
                             </ul>
                             <ul class="buttons">
-                                <li class="btn-green p-2 mb-2"><i class="fas fa-coins"></i> Impuestos incluidos</li>
+                                <li class="btn-green p-2 mb-2"><i class="fas fa-coins"></i> Impuestos incluidos22</li>
                                 <li class="btn-blue p-2"><i class="fas fa-shield-alt"></i> Seguro de viaje</li>
                             </ul>
                         </div>
@@ -92,10 +95,47 @@
 
                     </div>
                 </div>
-            </div>
-            <!-- service-
-            <!-- service-van start  -->
+            </div> --}}
+            <!-- service-suburban end -->
+
             <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="row">
+                        <div class="col-md-11 content-unit">
+                            <h4 class="title-unit">Transporte suburban</h4>
+
+                            <div class="img-content">
+                                <img class="transport-img" src="{{ asset('assets/images/transport-suburban.png') }}" alt="transport-suburban">
+                            </div>
+                            
+                            <div class="button-vehicule d-flex justify-content-center">
+                                <button type="button" class="button-pre btnComplete" id="opt2">Seleccionar vehiculo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row justify-content-end">
+                        <div class="col-md-11 content-unit">
+                            <h4 class="title-unit">Transporte van</h4>
+
+                            <div class="img-content">
+                                <img class="transport-img" src="{{ asset('assets/images/transport-van2.png') }}" alt="transport-van">
+                            </div>
+                          
+                            <div class="button-vehicule d-flex justify-content-center">
+                                <button type="button" class="button-pre btnComplete" id="opt4">seleccionar vehiculo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- service-van start  -->
+            {{-- <div class="row">
                 <div class="col mb-4 service-list">
                     <div class="row mb-2">
                         <!-- section left -->
@@ -182,8 +222,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- service-van end -->
+
         </div>
         <!-- section left end  -->
 
@@ -196,7 +237,7 @@
                     <p class="title mb-0 text-left">Tipo de servicio</p>
                     <p class="description text-left"><i class="fas fa-sync-alt icon-resume"></i> Tours</p>
                     <p class="title mb-0">Hacia</p>
-                    <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i>{{ $tours[0] }}</p>
+                    <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $tours[0] }}</p>
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">
