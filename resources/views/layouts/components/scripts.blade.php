@@ -13,8 +13,8 @@
     * STUB
 --}}
 
-{{---------------------------------Bootstrap v5.0.2---------------------------------------------}}
-    <script type="application/javascript" src="{{ asset('assets/js/scripts/popper.min.js') }}"></script>
+{{-- /* -------------------------------LARAVEL MIX VUE JS------------------------------------------- */ --}}
+    <script src="{{ mix('/js/app.js') }}"></script>
 
 {{--  /* -------------------------------------------------------------------------- */  --}}
     <script src="{{ asset('assets/js/scripts/home.js') }}"></script>
@@ -52,9 +52,6 @@
 {{-------------------------------Testimonials-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/scripts/testimonials.js') }}"></script>
-
-{{-- /* -------------------------------LARAVEL MIX VUE JS------------------------------------------- */ --}}
-    <script src="{{ mix('/js/app.js') }}"></script>
 
 {{--  /* ----------------------------------Maquetar imagenes ---------------------------------------- */  --}}
     <script src="{{ asset('assets/js/holder.js')}}"></script>
