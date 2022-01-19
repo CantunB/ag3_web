@@ -135,8 +135,11 @@ export default {
     button {
       padding: 0;
       border: none;
-      font: inherit;
-      color: rgb(0, 0, 0);
+      /* font: inherit; */
+      font-weight: 600;
+      /* color: rgb(0, 0, 0); */
+      color: #FFFFFF;
+      filter: drop-shadow(2px 1px 1px #000);
       background-color: transparent;
       cursor: pointer;
     }
@@ -147,6 +150,7 @@ export default {
     img {
         width: 1.5rem;
         height: 1.5rem;
+        margin-right: 5px;
     }
     ul {
         list-style-type: none;
@@ -154,8 +158,22 @@ export default {
         position: absolute;
         z-index: 30;
         right: 0;
-
+        border: 0 !important;
     }
+
+    a {
+      text-decoration: none;
+      color: #FFFFFF;
+      filter: drop-shadow(2px 1px 1px #000);
+      font-weight: 600;
+      /* filter: drop-shadow(0 0 2px #fff); */
+    }
+
+    a:hover {
+      color: #FACC01;
+      filter: drop-shadow(0 0 2px #000);
+    }
+
     .relative {
         position: relative;
     }

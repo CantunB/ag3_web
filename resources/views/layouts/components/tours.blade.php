@@ -1,4 +1,4 @@
-<div class="container mt-4 tours-section">
+<div class="container mt-4 tours-section" id="tours">
     <h1 class="section-title text-center mb-4"><span>{{__('Tours disponibles')}}</span></h1>
 
     <div class="box-container">
