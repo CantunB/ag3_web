@@ -11,7 +11,6 @@ $(document).ready(function(){
         break;
         case 'Tours':
             $('.sub_sen').hide();
-            $('.sub_red').hide();
             $('.van_sen').hide();
         break
         default:

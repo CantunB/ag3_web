@@ -86,7 +86,6 @@
 {{------------------------  TODO INPUTS DE TIEMPO Y FECHA (FLATPICKR)  -------------------------------}}
     <script>
         var locale =  "{{ app()->getLocale() }}";
-
         $(".selector").flatpickr({
                 minDate: "today",
                 dateFormat: "Y-m-d",
@@ -98,9 +97,24 @@
             dateFormat: "h:i K",
         });
     </script>
+    window.onload = function () {
+        //var parsley_lang = navigator.language || navigator.userLanguage;
+        var locale =  "{{ app()->getLocale() }}";
+        if (locale == 'es') {
+            lang_paypal = 'es-MX';
+        }else if (locale == 'en') {
+            lang_paypal = 'es-Es';
+        }else if (locale == 'fr') {
+            lang_paypal = 'es-Es';
+        }
+    }
 {{--------------------------  TODO[paypal]PAYPAL  -----------------------------------------}}
     {{----------------  SECTION[sandbox] Actualmente se opera con sandbox  ------------}}
-    <script src="https://www.paypal.com/sdk/js?client-id=AYh6SsC21DLPKSQlkxE4XEPxcTq6-UDo_S6xtbD0Q3l2FH1EUEoTkvPbx0YC0NWktEm1NqjhR2FhxHCT&components=buttons&currency=MXN&locale=es_MX"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AYh6SsC21DLPKSQlkxE4XEPxcTq6-UDo_S6xtbD0Q3l2FH1EUEoTkvPbx0YC0NWktEm1NqjhR2FhxHCT"></script>
+    {{-- <script src="https://www.paypal.com/sdk/js?client-id=AU2DbQtBBLLeQqilw6ryutLRofQ0pL_Qq_9NeLX4V4Nq6O15NTklI5uzRk4yu8mg8U0wo6PBdpt2y1Xc&components=buttons&currency=MXN&locale=es_MX"></script> --}}
+    {{-- <script src="https://www.paypal.com/sdk/js?client-id=AU2DbQtBBLLeQqilw6ryutLRofQ0pL_Qq_9NeLX4V4Nq6O15NTklI5uzRk4yu8mg8U0wo6PBdpt2y1Xc"></script> --}}
+    {{-- <script src="https://www.paypal.com/sdk/js?client-id=AeDTv5lusxz7nOGDqGN1HWA2_EAI-1LsObWGD48reqPNRieFy80rF4JHCTfFl8664nd1HYY3mVMmfkeR&currency=USD&locale=es_MX"></script> --}}
+    {{-- laguna1959 --}}
 
 {{---------------------  TODO TARIFAS PRESENTADAS DEPENDIENDO EL TIPO DE SERVICIO ELEGIDO  --------------------------}}
     <script src="{{ asset('assets/js/service_show.js') }}"></script>
@@ -202,8 +216,12 @@
     var resultado1 = Math.round(dolar/peso * 100) / 100;
 
 
-    console.log(resultado1.toFixed(3));
-    console.log(formatterDolar.format(resultado1.toFixed(3)));
-    //console.log(dolar+ " dolares son " + resultado + " " +nombreDivisaExtranjera + ".");
 
+    //console.log(dolar+ " dolares son " + resultado + " " +nombreDivisaExtranjera + ".");
+        {{-- console.log("Consultando...");
+        fetch("http://api.exchangeratesapi.io/v1/latest?access_key=fdfd1c673832210ffa6b8413e7004ddf")
+        .then(respuesta => respuesta.json())
+        .then(respuestaDecodificada => {
+            console.log(respuestaDecodificada);
+        }); --}}
     </script>

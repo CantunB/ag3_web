@@ -2,8 +2,6 @@
     <div class="row">
         <!-- section left start -->
         <div class="col-md-12 col-lg-8 mt-4">
-            <h5 class="list p-2">Lista de servicios disponibles para su tour hacia <span class="text-primary text-uppercase">{{ $tours[0] }}</span>. </h5>
-
             <div class="row">
             <a class="mb-2 back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
             </div>
@@ -139,6 +137,8 @@
                     <input readonly type="hidden" class="form-control" name="destiny" aria-describedby="icon-hour" value="PALENQUE, CHIAPAS">
                     <input readonly type="hidden" class="form-control" name="type_service" aria-describedby="icon-hour" value="Tours">
                     <input readonly type="hidden" class="form-control" name="retorno" aria-describedby="icon-hour" value="si">
+                    <input type="hidden" readonly id="request_unit" name="request_unit">
+                    <input type="hidden" readonly id="type_trip" name="type_trip">
                     <input readonly type="hidden" class="form-control" name="price" aria-describedby="icon-hour" value="{{$tours[1]}}">
 
 
@@ -165,8 +165,7 @@
                     <p class="title mb-0">Hacia</p>
                     <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i>{{ $tours[0] }}</p>
                     <p class="title mb-0">Servicio</p>
-                    <p class="description"><i class="fas fa-shuttle-van icon-resume"></i>VAN REDONDO</p>
-                    <img class="service-img m-4" src="{{ asset('assets/images/transport-van.png') }}" alt="transport-van" width="250px" height="250px">
+                    <p class="description" id="select_service"><i class="fas fa-shuttle-van icon-resume"></i></p>
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">

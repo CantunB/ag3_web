@@ -11,7 +11,7 @@ paypal.Buttons({
         purchase_units: [{
             label: 'Reserva AG3 Luxury Travel',
             amount: {
-            value: price
+            value:price
             }
         }]
         });

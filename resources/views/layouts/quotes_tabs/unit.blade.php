@@ -2,7 +2,6 @@
     <div class="row">
         {{-- section left start --}}
         <div class="col-lg-8 mt-4">
-            <h5 class="list p-2">Lista de servicios disponibles para su transporte de llegada a <span class="text-primary text-uppercase">{{ $booking['destino'] }}</span> para <span class="text-primary">{{ $booking['passengers'] }}</span> pasajeros. </h5>
             <input type="hidden" id="type_service" value="{{ $booking['service']  }}">
             <!-- service-suburban start  -->
             <div class="row">

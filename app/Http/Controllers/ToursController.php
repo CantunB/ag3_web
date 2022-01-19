@@ -68,7 +68,7 @@ class ToursController extends Controller
             2 => ['tour' => 'Chichen Itza, Yucatan', 'price' => '1200'],
             3 => ['tour' => 'Palenque, Chiapas', 'price' => '2650'],
             4 => ['tour' => 'Calakmul, Campeche', 'price' => '1950'],
-            5 => ['tour' => 'Ek Balam - Las Colorado', 'price' => '1650'],
+            5 => ['tour' => 'Ek Balam - Las Coloradas', 'price' => '1650'],
             6 => ['tour' => 'Coba - 3 Cenotes', 'price' => '1150']
         ];
 
