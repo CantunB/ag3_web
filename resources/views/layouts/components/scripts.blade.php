@@ -43,6 +43,9 @@
 {{------------------------------ Dark Mode --------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/dark-mode.js') }}"></script>
 
+{{------------------------------ Boton ir arriba --------------------------------------------}}
+    <script src="{{ asset('assets/js/scripts/gotop.js') }}"></script>
+
 {{-------------------------------Gallery-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/gallery.js') }}"></script>
 
