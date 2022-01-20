@@ -1,0 +1,69 @@
+.go-top-container {
+    position: fixed;
+    bottom: 50px;
+    right: -20px;
+    width: 60px;
+    height: 60px;
+    z-index: -1;
+}
+
+.go-top-button {
+    width: 0px;
+    height: 0px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.go-top-button:hover {
+    background: var(--color-primary);
+}
+
+.go-top-button:hover i {
+    color: #000;
+}
+
+.go-top-button i {
+    position: absolute;
+    font-size: 25px;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    transition: .2s;
+}
+
+.show {
+    z-index: 10;
+}
+
+.show .go-top-button {
+    animation: popup .6s ease;
+    width: 60px;
+    height: 60px;
+    z-index: 11;
+}
+
+.show .go-top-button i {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes popup {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    50% {
+        width: 70px;
+        height: 70px;
+    }
+    100% {
+        width: 60px;
+        height: 60px;
+    }
+}

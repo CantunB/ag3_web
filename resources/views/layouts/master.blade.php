@@ -40,6 +40,13 @@
                 @include('layouts.components.new-home')
             </div>
 
+            {{-- Boton de ir arriba --}}
+            <div class="go-top-container">
+                <div class="go-top-button">
+                    <i class="fas fa-chevron-up"></i>
+                </div>
+            </div>
+
             @include('layouts.components.about')
 
             @include('layouts.components.services')
