@@ -43,6 +43,9 @@
 {{------------------------------ Dark Mode --------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/dark-mode.js') }}"></script>
 
+{{------------------------------ Boton ir arriba --------------------------------------------}}
+    <script src="{{ asset('assets/js/scripts/gotop.js') }}"></script>
+
 {{-------------------------------Gallery-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/gallery.js') }}"></script>
 
@@ -164,57 +167,88 @@
 
  {{-- /* -----------------------------API DIVISAS--------------------------------------------- */ --}}
     <script>
+        const formatterPeso = new Intl.NumberFormat('es-ES', {
+            style: 'currency',
+            currency: 'MXN',
+            minimumFractionDigits: 0
+        })
+        //console.log(formatterPeso.format(value))
+        // → $ 12.500
+
+        const formatterDolar = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        })
+        //console.log(formatterDolar.format(value))
+        // → $12,500.00
+
+        const formatterEuro = new Intl.NumberFormat('de-DE', {
+            style: 'currency',
+            currency: 'EUR'
+        })
+        //console.log(formatterEuro.format(value))
+        // → 12.500,00 €
+
+        // el yen japonés no tiene ninguna subdivisión
+        const formatterYenes = new Intl.NumberFormat("ja-JP", {
+            style: 'currency',
+            currency: 'JPY'
+        })
+        //console.log(formatterYenes.format(value))
+        // → ￥12,500
+
+        /**
+        *DECLARACION DE LAS MONEDAS
+        */
+        //var value = 1250;
+        var peso = 1;  // Valor de divisa Peso
+        var dolar = 20.50; //Valor de divisa Dollar
+        var euro = 23.25; //Valor de divisa Euro
+
+
+
         window.addEventListener('load', function(){
+            var array = new Array();
             //alert("Hola, soy una alerta que sólo aparecerá 1 vez.");
             const elements = document.querySelectorAll('.tarifas');
             //console.log(elements);
             //var prices = document.getElementsByClassName("prices")[0].innerHTML;
             Array.from(elements).forEach((element, index) => {
                 //console.log(element.innerHTML);
-                precio = parseFloat(element.defaultValue);
-                console.log(precio);
+                array.push(parseFloat(element.defaultValue));
+                //console.log(precio);
             });
 
-            console.log(precio);
+            //console.log(array);
+            {{-- /* -----------------------------REVIEW[TEST] VALIDACION PARA EL TIPO DE MONEDA --------------------------------------------- */ --}}
+            var laravel_locale =  "{{ app()->getLocale() }}";
+            var locale = navigator.language || navigator.userLanguage;
+
+            if (laravel_locale == 'es') {
+                /*Aqui ira el script cuando mi idioma detectado es español */
+                {{-- const divisa = peso * value;
+                console.log(formatterDolar.format(divisa)) --}}
+            }else if (laravel_locale == 'en') {
+                /*Aqui ira el script cuando mi idioma detectado es ingles */
+                //  const divisa = value/dolar;
+                {{-- divisa = Math.round(value/dolar * 100) / 100;
+                console.log(formatterDolar.format(divisa)) --}}
+            }else if (laravel_locale == 'fr') {
+                /*Aqui ira el script cuando mi idioma detectado es frances*/
+
+                Array.from(array).forEach((element, index) => {
+                    divisa = Math.round(index/euro * 100) / 100;
+                    console.log(formatterEuro.format(divisa));
+                });
+
+            }
 
 
         }, false);
 
 
-        var value = 1250;
-        var peso = 1;  // Valor de divisa Peso
-        var dolar = 20.50; //Valor de divisa Dollar
-        var euro = 23.25; //Valor de divisa Euro
 
-    const formatterPeso = new Intl.NumberFormat('es-ES', {
-        style: 'currency',
-        currency: 'MXN',
-        minimumFractionDigits: 0
-    })
-    //console.log(formatterPeso.format(value))
-    // → $ 12.500
 
-    const formatterDolar = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD'
-    })
-    //console.log(formatterDolar.format(value))
-    // → $12,500.00
-
-    const formatterEuro = new Intl.NumberFormat('de-DE', {
-        style: 'currency',
-        currency: 'EUR'
-    })
-    //console.log(formatterEuro.format(value))
-    // → 12.500,00 €
-
-    // el yen japonés no tiene ninguna subdivisión
-    const formatterYenes = new Intl.NumberFormat("ja-JP", {
-        style: 'currency',
-        currency: 'JPY'
-    })
-    //console.log(formatterYenes.format(value))
-    // → ￥12,500
 
     /*
     console.log("Consultando...");
@@ -225,23 +259,5 @@
         });
     */
 
-{{-- /* -----------------------------REVIEW[TEST] VALIDACION PARA EL TIPO DE MONEDA --------------------------------------------- */ --}}
-    var laravel_locale =  "{{ app()->getLocale() }}";
-    var locale = navigator.language || navigator.userLanguage;
-
-            if (laravel_locale == 'es') {
-                /*Aqui ira el script cuando mi idioma detectado es español */
-                const divisa = peso * value;
-                console.log(formatterDolar.format(divisa))
-            }else if (laravel_locale == 'en') {
-                /*Aqui ira el script cuando mi idioma detectado es ingles */
-                //  const divisa = value/dolar;
-                divisa = Math.round(value/dolar * 100) / 100;
-                console.log(formatterDolar.format(divisa))
-            }else if (laravel_locale == 'fr') {
-                /*Aqui ira el script cuando mi idioma detectado es frances*/
-                divisa = Math.round(value/euro * 100) / 100;
-                console.log(formatterEuro.format(divisa));
-            }
 
     </script>
