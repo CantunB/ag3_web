@@ -185,7 +185,7 @@
                     <p class="title mb-0 text-left">Tipo de servicio</p>
                     <p class="description text-left"><i class="fas fa-sync-alt icon-resume"></i> Tours</p>
                     <p class="title mb-0">Hacia</p>
-                    <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i>{{ $tours[0] }}</p>
+                    <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $tours[0] }}</p>
                     <p class="title mb-0">Servicio</p>
                     <p class="description" id="select_service"><i class="fas fa-shuttle-van icon-resume"></i></p>
                 </div>
