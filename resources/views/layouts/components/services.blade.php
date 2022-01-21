@@ -9,7 +9,7 @@
                     <h4 class="text-center">Transportacion desde/hacia el aeropuerto</h4>
                     <p>Servicio de transportacion privada desde/hacia el aeropuerto.</p>
                     <div class="btn">
-                        <a href="#">Ver servicio</a>
+                        {{-- <a href="#">Ver servicio</a> --}}
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex flex-column justify-content-between">
@@ -17,7 +17,7 @@
                     <h4 class="text-center">Transportacion de hotel a hotel</h4>
                     <p>Servicio de transportacion privada de hotel a hotel.</p>
                     <div class="btn">
-                        <a href="#">Ver servicio</a>
+                        {{-- <a href="#">Ver servicio</a> --}}
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex flex-column justify-content-between">
@@ -25,7 +25,7 @@
                     <h4 class="text-center">Transportacion abierta</h4>
                     <p>Viaje a su propio ritmo con nuestra transportacion abierta.</p>
                     <div class="btn">
-                        <a href="#">Ver servicio</a>
+                        {{-- <a href="#">Ver servicio</a> --}}
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 d-flex flex-column justify-content-between">
@@ -33,7 +33,7 @@
                     <h4 class="text-center">Transportacion de traslado</h4>
                     <p>Servicio de transportacion a su medida con descuentos especiales.</p>
                     <div class="btn">
-                        <a href="#">Ver servicio</a>
+                        {{-- <a href="#">Ver servicio</a> --}}
                     </div>
                 </div>
             </div>

@@ -82,7 +82,7 @@
             <source src='{{ asset('assets/images/home3.mp4') }}' type='video/mp4'>
         </video>
         </div>
-    
+
    </header>
 
    <div class="container col-md-4 offset-md-4 mb-0 search_title">
