@@ -40,11 +40,11 @@
                 @include('layouts.components.new-home')
             </div>
 
-            @include('layouts.components.about')
 
-            @include('layouts.components.services')
 
             @include('layouts.components.tours')
+
+            @include('layouts.components.services')
 
             {{-- <!-- Intro -->
             <div class="intro">
@@ -354,6 +354,8 @@
             @include('layouts.components.testimonials')
 
             @include('new-contact')
+            @include('layouts.components.about')
+
 
             <a href="https://wa.me/5219381726488?text=Me%20gustaría%20informacion%20acerca%20de%20los%20servicios" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 

@@ -164,19 +164,39 @@
 
  {{-- /* -----------------------------API DIVISAS--------------------------------------------- */ --}}
     <script>
-        var value = 12500
+        window.addEventListener('load', function(){
+            //alert("Hola, soy una alerta que sólo aparecerá 1 vez.");
+            const elements = document.querySelectorAll('.tarifas');
+            //console.log(elements);
+            //var prices = document.getElementsByClassName("prices")[0].innerHTML;
+            Array.from(elements).forEach((element, index) => {
+                //console.log(element.innerHTML);
+                precio = parseFloat(element.defaultValue);
+                console.log(precio);
+            });
 
-    const formatterPeso = new Intl.NumberFormat('es-CO', {
-    style: 'currency',
-    currency: 'COP',
-    minimumFractionDigits: 0
+            console.log(precio);
+
+
+        }, false);
+
+
+        var value = 1250;
+        var peso = 1;  // Valor de divisa Peso
+        var dolar = 20.50; //Valor de divisa Dollar
+        var euro = 23.25; //Valor de divisa Euro
+
+    const formatterPeso = new Intl.NumberFormat('es-ES', {
+        style: 'currency',
+        currency: 'MXN',
+        minimumFractionDigits: 0
     })
     //console.log(formatterPeso.format(value))
     // → $ 12.500
 
     const formatterDolar = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD'
+        style: 'currency',
+        currency: 'USD'
     })
     //console.log(formatterDolar.format(value))
     // → $12,500.00
@@ -196,21 +216,32 @@
     //console.log(formatterYenes.format(value))
     // → ￥12,500
 
-
-    var peso=1;
-    var dolar = 0.049;
-    var euro = 0.043;
-
-    var resultado= peso * dolar;
-    var resultado1 = Math.round(dolar/peso * 100) / 100;
-
-
-
-    //console.log(dolar+ " dolares son " + resultado + " " +nombreDivisaExtranjera + ".");
-        {{-- console.log("Consultando...");
+    /*
+    console.log("Consultando...");
         fetch("http://api.exchangeratesapi.io/v1/latest?access_key=fdfd1c673832210ffa6b8413e7004ddf")
         .then(respuesta => respuesta.json())
         .then(respuestaDecodificada => {
             console.log(respuestaDecodificada);
-        }); --}}
+        });
+    */
+
+{{-- /* -----------------------------REVIEW[TEST] VALIDACION PARA EL TIPO DE MONEDA --------------------------------------------- */ --}}
+    var laravel_locale =  "{{ app()->getLocale() }}";
+    var locale = navigator.language || navigator.userLanguage;
+
+            if (laravel_locale == 'es') {
+                /*Aqui ira el script cuando mi idioma detectado es español */
+                const divisa = peso * value;
+                console.log(formatterDolar.format(divisa))
+            }else if (laravel_locale == 'en') {
+                /*Aqui ira el script cuando mi idioma detectado es ingles */
+                //  const divisa = value/dolar;
+                divisa = Math.round(value/dolar * 100) / 100;
+                console.log(formatterDolar.format(divisa))
+            }else if (laravel_locale == 'fr') {
+                /*Aqui ira el script cuando mi idioma detectado es frances*/
+                divisa = Math.round(value/euro * 100) / 100;
+                console.log(formatterEuro.format(divisa));
+            }
+
     </script>

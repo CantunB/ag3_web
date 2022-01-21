@@ -370,7 +370,7 @@
                     <input readonly type="hidden" class="form-control" name="retorno" aria-describedby="icon-hour" value="{{ $retorno }}">
 
 
-                    <h5 class="col text-end price">${{ $price }} MXN</h5>
+                    <h5 class="col text-end prices">${{ $price }} MXN</h5>
                 </div>
                 <!-- section total end -->
 

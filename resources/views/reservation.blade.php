@@ -30,6 +30,11 @@
                 {{-- section left start --}}
                 <div class="col-lg-8 mt-4 ">
                     <input type="hidden" id="type_service" value="{{ $booking['service']  }}">
+                    <input type="hidden" class="tarifas" value="{{ $tariff[0]->MXN }}">
+                    <input type="hidden" class="tarifas" value="{{ $tariff[1]->MXN }}">
+                    <input type="hidden" class="tarifas" value="{{ $tariff[2]->MXN }}">
+                    <input type="hidden" class="tarifas" value="{{ $tariff[3]->MXN }}">
+
                     <!-- service-suburban start  -->
                     <div class="row">
                         <div class="col mb-4 service-list">
@@ -93,8 +98,8 @@
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li class="text-center price-eco sub_sen">${{ $tariff[0]->MXN }} MXN</li>
-                                    <li class="text-center price-pre sub_red">${{ $tariff[1]->MXN }} MXN</li>
+                                    <li class="text-center price-eco sub_sen"><p class="prices"></p></li>
+                                    <li class="text-center price-pre sub_red"><p class="prices"></p></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li></li>
@@ -209,8 +214,8 @@
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li class="text-center price-eco van_sen">${{ $tariff[2]->MXN }} MXN</li>
-                                    <li class="text-center price-pre van_red">${{ $tariff[3]->MXN }} MXN</li>
+                                    <li class="text-center price-eco van_sen"><p class="prices"></p></li>
+                                    <li class="text-center price-pre van_red"><p class="prices"></p></li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li></li>
