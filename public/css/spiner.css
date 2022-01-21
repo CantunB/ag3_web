@@ -7,4 +7,9 @@
 
 span.minus, span.plus {
 	font-weight: 600;
+	background: rgba(169, 181, 193, .1) !important;
+}
+
+body.dark span.minus, body.dark span.plus {
+	background: rgba(255,255,255,.9) !important;
 }
