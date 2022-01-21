@@ -1,26 +1,36 @@
 
 .header {
     /* background: url(../assets/images/home1.jpg) no-repeat center; */
-    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(../assets/images/home03-min.jpg) no-repeat;
+    /* background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(../assets/images/home03-min.jpg) no-repeat; */
     /* background: url(../assets/images/home03-min.jpg) no-repeat; */
+    /* background: url(../assets/images/home.mp4); */
     
-    background-size: cover;
+    /* background-size: cover; */
     /* background-position: 60%; */
     /* min-height: 40vh; */
     height: 94vh;
 }
 
-body.dark .header {
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(../assets/images/home1.jpg); */
+.video-container {
+    z-index: -100;
+    width: 100%;
+    height: 94vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#myVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* body.dark .header {
     background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(../assets/images/home03-min.jpg) no-repeat;
     background-size: cover;
-} 
-
-/* .header .navbar {
-    background-color: transparent !important;
-} */
-
-
+}  */
 
 .header .home h1.demo {
     margin-top: 50px;

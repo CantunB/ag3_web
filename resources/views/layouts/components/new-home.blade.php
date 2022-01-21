@@ -74,6 +74,15 @@
            <h1 class="text-center title-home one demo">{{ __('title_home') }}</h1>
            <h1 class="text-center title-home second">Te ofrecemos <span class="typed"></span></h1>
        </div>
+
+       <div class="video-container">
+        <video autoplay loop muted id="myVideo">
+            {{-- <source src='{{ asset('assets/images/home.mp4') }}' type='video/mp4'> --}}
+            {{-- <source src='{{ asset('assets/images/home2.mp4') }}' type='video/mp4'> --}}
+            <source src='{{ asset('assets/images/home3.mp4') }}' type='video/mp4'>
+        </video>
+        </div>
+    
    </header>
 
    <div class="container col-md-4 offset-md-4 mb-0 search_title">
