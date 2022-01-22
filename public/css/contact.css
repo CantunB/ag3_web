@@ -70,7 +70,8 @@ section.contact-form .contact-content .btn-contact {
     padding: 10px 30px;
     text-transform: uppercase;
     border: 2px solid var(--color-primary);
-    color: #424D58;
+    /* color: #424D58; */
+    color: #000;
     border-radius: 5px;
     /* border-radius: 0; */
 }

@@ -38,7 +38,7 @@
                            <a class="nav-link" href="#about">{{ __('acerca') }}</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">{{ __('servicios') }}</a>
+                           <a class="nav-link" href="#servicios">{{ __('servicios') }}</a>
                        </li>
                        <li class="nav-item">
                            <a class="nav-link" href="#tours">{{ __('tours') }}</a>

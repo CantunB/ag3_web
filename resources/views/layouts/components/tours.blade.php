@@ -15,7 +15,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
                 {{-- <div class="price text-center">$1650.00 <span>$1899.00</span></div> --}}
                 <div class="button-card d-flex justify-content-center">
@@ -36,7 +36,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
                 {{-- <div class="price text-center">$1200.00 <span>$1399.00</span></div> --}}
                 <div class="button-card d-flex justify-content-center">
@@ -57,7 +57,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
                 {{-- <div class="price text-center">$2650.00 <span>$2899.00</span></div> --}}
                 <div class="button-card d-flex justify-content-center">
@@ -78,7 +78,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
                 {{-- <div class="price text-center">$1950.00 <span>$2199.00</span></div> --}}
                 <div class="button-card d-flex justify-content-center">
@@ -99,7 +99,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
                 {{-- <div class="price text-center">$1650.00 <span>$1899.00</span></div> --}}
                 <div class="button-card d-flex justify-content-center">
@@ -120,7 +120,7 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
                 {{-- <div class="price text-center">$1150.00 <span>$1399.00</span></div> --}}
                 <div class="button-card d-flex justify-content-center">
