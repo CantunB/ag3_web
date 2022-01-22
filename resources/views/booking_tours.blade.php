@@ -1,3 +1,4 @@
+{{-- @dd($tours) --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>

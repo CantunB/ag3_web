@@ -20,6 +20,7 @@ use Haruncpi\LaravelIdGenerator\IdGenerator;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
+use Carbon\Carbon;
 
 class BookingController extends Controller
 {
@@ -103,8 +104,6 @@ class BookingController extends Controller
 
     public function complete(Request $request)
     {
-        //return $request->all();
-
         //$unit = TypeUnit::where('id', $request->unit)->get();
         $service = $request->service;
         $origen = $request->origen;
@@ -118,7 +117,8 @@ class BookingController extends Controller
         $type_unit = TypeUnit::findOrFail($request->type_unit);
         $type_trip = TypeTrip::findOrFail($request->type_trip);
         $price = $request->price;
-
+        $price_mx = $request->price_mx;
+        $divisa = $request->divisa;
         $data['countries'] = Country::get(["name","id"]);
 
         $airlines = Airline::groupBy('airline')->get();
@@ -136,7 +136,9 @@ class BookingController extends Controller
             'time_comeback',
             'type_trip',
             'type_unit',
+            'price_mx',
             'price',
+            'divisa',
             'data',
             'airlines'
         ));
@@ -144,7 +146,7 @@ class BookingController extends Controller
 
     public function payment(Request $request)
     {
-         //return $request->all();
+        //return $request->all();
         $id = IdGenerator::generate(['table' => 'bookings', 'length' => 8, 'prefix' =>'BOOK-']);
 
         $booking = new Booking();
@@ -173,14 +175,35 @@ class BookingController extends Controller
         $booking->comments_departure = $request->c_departure;
         $booking->request_unit = $request->request_unit;
         $booking->price = $request->price;
+        $booking->divisa = $request->divisa;
         $booking->type_payment = $request->type_payment;
         $booking->transaction_id = $request->transaction_id;
         $booking->status_payment = $request->status_payment;
         $booking->status_booking = $request->status_booking;
         $booking->save();
 
-        /* -------------------------- SECTION[pdf] Se crea el pdf ----------------------------------------------- */
-        $voucher_pdf = PDF::loadView('pdf.voucher', compact('booking'));
+        /* NOTE En caso de requerir pickup por zona es necesario realizar la busqueda del destino */
+        // if ($request->type_service == "Hotel a Aeropuerto")  { //Aeropuerto a Hotel (Origen - Destino)
+        //     $obtain_zone = Hotel::where('hotel', $request->origin)
+        // ->orWhere('hotel', 'like', '%' . $request->origin . '%')->first();
+        // }
+        // return $obtain_zone->zona;
+
+        /*
+        * REVIEW Obtenida la hora del servicio se hacen los calculos para obtener el pickup
+        * NOTE Los calculos se realizan dependiendo el servicio
+        */
+        $pickup_formateado = '';
+        if ($request->type_service == "Hotel a Aeropuerto" || $request->type_service == 'Aeropuerto a Hotel a Aeropuerto'){
+            // $time_departure = Carbon::parse($request->t_departure);
+            // $time_parse = $time_departure->isoFormat('h:mm:ss a');
+            $tiempo_Formateado =  Carbon::parse($request->t_departure);
+            $subtraction = $tiempo_Formateado->subHours(3);
+            $pickup_formateado = $subtraction->isoFormat('h:mm');
+        }
+
+        /*  SECTION[pdf] Se crea el pdf  */
+        $voucher_pdf = PDF::loadView('pdf.voucher', compact('booking','pickup_formateado'));
         $path = public_path('booking');
         $fileName =  $booking->id . '.' . 'pdf' ;
         $voucher_pdf->save($path . '/' . $fileName);

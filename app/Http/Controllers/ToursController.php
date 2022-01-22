@@ -64,12 +64,74 @@ class ToursController extends Controller
     public function purchase($locale,$id)
     {
         $list_tours = [
-            1 => ['tour' =>  'Laguna de Siete Colores - Bacalar', 'price' => '1650'],
-            2 => ['tour' => 'Chichen Itza, Yucatan', 'price' => '1200'],
-            3 => ['tour' => 'Palenque, Chiapas', 'price' => '2650'],
-            4 => ['tour' => 'Calakmul, Campeche', 'price' => '1950'],
-            5 => ['tour' => 'Ek Balam - Las Coloradas', 'price' => '1650'],
-            6 => ['tour' => 'Coba - 3 Cenotes', 'price' => '1150']
+            1 => [
+                    'tour' =>  'Laguna de Siete Colores - Bacalar',
+                    'price' => [
+                        'suburban'=>[
+                            'MXN' => '21450',
+                            'USD' => '1100'
+                        ],
+                        'van'=>[
+                            'MXN' => '16087.50',
+                            'USD' => '825'
+                        ],
+                    ],
+            ],
+            2 => ['tour' => 'Chichen Itza, Yucatan', 'price' => [
+                    'suburban'=>[
+                        'MXN' => '20475',
+                        'USD' => '1050'
+                    ],
+                    'van'=>[
+                        'MXN' => '21450',
+                        'USD' => '862'
+                    ],
+                ]
+            ],
+            3 => ['tour' => 'Palenque, Chiapas','price' => [
+                    'suburban'=>[
+                        'MXN' => '19987.50',
+                        'USD' => '1025'
+                    ],
+                    'van'=>[
+                        'MXN' => '15346.50',
+                        'USD' => '787'
+                    ],
+                ]
+            ],
+            4 => ['tour' => 'Calakmul, Campeche','price' => [
+                    'suburban'=>[
+                        'MXN' => '21450',
+                        'USD' => '1100'
+                    ],
+                    'van'=>[
+                        'MXN' => '21450',
+                        'USD' => '1100'
+                    ],
+                ]
+            ],
+            5 => ['tour' => 'Ek Balam - Las Coloradas', 'price' => [
+                    'suburban'=>[
+                        'MXN' => '19987.50',
+                        'USD' => '1025'
+                    ],
+                    'van'=>[
+                        'MXN' => '15346.50',
+                        'USD' => '787'
+                    ],
+                ]
+            ],
+            6 => ['tour' => 'Coba - 3 Cenotes', 'price' => [
+                    'suburban'=>[
+                        'MXN' => '14625',
+                        'USD' => '750'
+                    ],
+                    'van'=>[
+                        'MXN' => '11407.50',
+                        'USD' => '585'
+                    ],
+                ]
+            ]
         ];
 
         foreach ($list_tours as $tours) {

@@ -114,7 +114,10 @@
                                             <input type="hidden" name="passengers" value="{{ $booking['passengers'] }}">
                                             <input type="hidden" name="type_unit" value="{{ $tariff[0]->type_unit->id }}">
                                             <input type="hidden" name="type_trip" value="{{ $tariff[0]->type_trip->id }}">
-                                            <input type="hidden" name="price" value="{{ $tariff[0]->MXN }}">
+                                            {{-- <input type="hidden" name="price" value="{{ $tariff[0]->MXN }}"> --}}
+                                            <input type="hidden"  name="price" class="prices_inputs" value="">
+                                            <input type="hidden"  name="price_mx" class="prices_inputs_mx" value="">
+                                            <input type="hidden"  name="divisa" class="divisas_inputs" value="">
                                             @if ($booking['retorno'] == 'si')
                                             <input type="hidden" name="retorno" value="{{ $booking['retorno'] }}">
                                             <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
@@ -134,7 +137,9 @@
                                             <input type="hidden" name="passengers" value="{{ $booking['passengers'] }}">
                                             <input type="hidden" name="type_unit" value="{{ $tariff[1]->type_unit->id }}">
                                             <input type="hidden" name="type_trip" value="{{ $tariff[1]->type_trip->id }}">
-                                            <input type="hidden" name="price" value="{{ $tariff[1]->MXN }}">
+                                            <input type="hidden"  name="price" class="prices_inputs" value="">
+                                            <input type="hidden"  name="price_mx" class="prices_inputs_mx" value="">
+                                            <input type="hidden"  name="divisa" class="divisas_inputs" value="">
                                             @if ($booking['retorno'] == 'si')
                                             <input type="hidden" name="retorno" value="{{ $booking['retorno'] }}">
                                             <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
@@ -230,9 +235,10 @@
                                             <input type="hidden" name="passengers" value="{{ $booking['passengers'] }}">
                                             <input type="hidden" name="type_unit" value="{{ $tariff[2]->type_unit->id }}">
                                             <input type="hidden" name="type_trip" value="{{ $tariff[2]->type_trip->id }}">
-                                            <input type="hidden" name="price" value="{{ $tariff[2]->MXN }}">
+                                            <input type="hidden"  name="price" class="prices_inputs" value="">
+                                            <input type="hidden"  name="price_mx" class="prices_inputs_mx" value="">
+                                            <input type="hidden"  name="divisa" class="divisas_inputs" value="">
                                             @if ($booking['retorno'] == 'si')
-                                            <input type="hidden" name="retorno" value="{{ $booking['retorno'] }}">
                                             <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
                                             <input type="hidden" name="time_comeback" value="{{ $booking['time_comeback'] }}">
                                             @endif
@@ -250,7 +256,9 @@
                                             <input type="hidden" name="passengers" value="{{ $booking['passengers'] }}">
                                             <input type="hidden" name="type_unit" value="{{ $tariff[3]->type_unit->id }}">
                                             <input type="hidden" name="type_trip" value="{{ $tariff[3]->type_trip->id }}">
-                                            <input type="hidden" name="price" value="{{ $tariff[3]->MXN }}">
+                                            <input type="hidden"  name="price" class="prices_inputs" value="">
+                                            <input type="hidden"  name="price_mx" class="prices_inputs_mx" value="">
+                                            <input type="hidden"  name="divisa" class="divisas_inputs" value="">
                                             @if ($booking['retorno'] == 'si')
                                             <input type="hidden" name="retorno" value="{{ $booking['retorno'] }}">
                                             <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">

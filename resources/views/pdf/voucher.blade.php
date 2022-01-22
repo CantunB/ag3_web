@@ -117,7 +117,7 @@
                             <span>DESTINO:</span> {{ $booking->destiny }}<br>
                             <span>VEHICULO SOLICITADO:</span> {{ $booking->TypeUnit->type_units}}<br>
                             <span>PASAJEROS:</span>{{ $booking->passengers}} <br>
-                            <span>TOTAL:</span> {{$booking->price}} MXN
+                            <span>TOTAL:</span> {{$booking->price}} {{$booking->divisa}}
                         </td>
                         <td class="service-img">
                             @if ($booking->request_unit == 1)
@@ -142,7 +142,7 @@
                     <span>HORA:</span> {{ $booking->time_arrival }}<br>
                     <span>AEROLINEA:</span> {{ $booking->airline_arrival}}<br>
                     <span>NUMERO DE VUELO:</span> {{$booking->flight_number_arrival}}<br>
-                    <span>COMENTARIOS: {{ $booking->comments_arrival}}</span>
+                    <span>COMENTARIOS:</span> {{ $booking->comments_arrival}}
                 </td>
             </tr>
         </table>
@@ -156,8 +156,8 @@
                     <span>HORA:</span> {{ $booking->time_departure }}<br>
                     <span>AEROLINEA:</span> {{ $booking->airline_departure}}<br>
                     <span>NUMERO DE VUELO:</span>  {{$booking->flight_number_departure}}<br>
-                    <span>COMENTARIOS: {{ $booking->comments_departure}}</span>
-                    <span>PICK-UP:</span>
+                    <span>COMENTARIOS:</span> {{ $booking->comments_departure}} <br>
+                    <span>PICK-UP:</span> {{$pickup_formateado}}
 
                 </td>
             </tr>
@@ -170,8 +170,8 @@
                 <td>
                     <span>FECHA:</span> {{ $booking->date_departure }}<br>
                     <span>HORA:</span> {{ $booking->time_departure }}<br>
-                    <span>COMENTARIOS: {{ $booking->comments_departure}}</span>
-                    <span>PICK-UP:</span>
+                    <span>COMENTARIOS:</span> {{ $booking->comments_departure}}
+                    {{-- <span>PICK-UP:</span> --}}
 
                 </td>
             </tr>
@@ -186,7 +186,7 @@
                     <span>HORA:</span> {{ $booking->time_arrival }}<br>
                     <span>AEROLINEA:</span> {{ $booking->airline_arrival}}<br>
                     <span>NUMERO DE VUELO:</span> {{$booking->flight_number_arrival}}<br>
-                    <span>COMENTARIOS: {{ $booking->comments_arrival}}</span>
+                    <span>COMENTARIOS: </span>{{ $booking->comments_arrival}}
                 </td>
             </tr>
         </table>
@@ -199,8 +199,8 @@
                     <span>HORA:</span> {{ $booking->time_departure }}<br>
                     <span>AEROLINEA:</span> {{ $booking->airline_departure}}<br>
                     <span>NUMERO DE VUELO:</span>  {{$booking->flight_number_departure}}<br>
-                    <span>COMENTARIOS: {{ $booking->comments_departure}}</span>
-                    <span>PICK-UP:</span>
+                    <span>COMENTARIOS: </span>{{ $booking->comments_departure}}<br>
+                    <span>PICK-UP: </span>{{ $pickup_formateado }}
 
                 </td>
             </tr>
@@ -208,6 +208,19 @@
 
     @endif
 
+    <h2 class="title-section">Preparate para tu viaje</h2>
+
+    <table cellspacing="0" cellpadding="0" class="arrival-info">
+        <tr>
+            <td>
+                <img src="{{asset('assets/images/three-hours.png')}}" alt="3-horas">
+
+            </td>
+            <td>
+                <img src="{{asset('assets/images/two-hours.png')}}" alt="3-horas">
+            </td>
+        </tr>
+    </table>
 
     <h2 class="title-section"><span>Metodo de pago:</span> {{$booking->type_payment}}</h2>
 

@@ -164,6 +164,8 @@
 
 
                     <h5 class="col text-end price">$ {{ $tours[1] }} MXN</h5>
+                    <h5 class="col text-end price">$ {{ $tours[3] }} MXN</h5>
+
                 </div>
                 <!-- section total end -->
 

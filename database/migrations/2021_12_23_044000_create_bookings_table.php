@@ -40,6 +40,7 @@ class CreateBookingsTable extends Migration
             $table->string('comments_departure')->nullable();
             $table->foreignId('request_unit')->constrained('type_units');
             $table->float('price')->nullable();
+            $table->string('divisa')->nullable();
             $table->string('type_payment')->nullable();
             $table->string('transaction_id')->nullable();
             $table->string('paypal_id')->nullable();

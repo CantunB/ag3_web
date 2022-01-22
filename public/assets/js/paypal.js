@@ -3,7 +3,8 @@
     const urlVoucherPDF = locationHost + '/es/booking/pdf/voucher'
 
 
-var price = $("#price").val();
+var price = $("#price_mx").val();
+// var divisa = $("#divisa").val();
 paypal.Buttons({
     createOrder: function(data, actions) {
       // This function sets up the details of the transaction, including the amount and line item details.
@@ -11,8 +12,9 @@ paypal.Buttons({
         purchase_units: [{
             label: 'Reserva AG3 Luxury Travel',
             amount: {
-            value:price
-            }
+            value:price,
+            // currency_code: divisa,
+            },
         }]
         });
     },

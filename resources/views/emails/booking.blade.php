@@ -267,7 +267,7 @@
                                 <span style="font-weight: bold;">DESTINO:</span> {{$booking->destiny}} <br>
                                 <span style="font-weight: bold;">VEHICULO SOLICITADO:</span> {{$booking->TypeUnit->type_units}}<br>
                                 <span style="font-weight: bold;">PASAJEROS:</span> {{$booking->passengers}} <br>
-                                <span style="font-weight: bold;">TOTAL:</span> ${{$booking->price}} MXN
+                                <span style="font-weight: bold;">TOTAL:</span> {{$booking->price}} {{$booking->divisa}}
                             </td>
                             <td class="service-img" style="word-wrap: break-word;">
                                @if($booking->request_unit == 1)

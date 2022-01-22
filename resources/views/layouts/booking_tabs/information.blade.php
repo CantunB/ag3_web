@@ -360,7 +360,9 @@
                 <!-- section total start -->
                 <div class="row form-section d-flex align-items-center mb-4 total">
                     <h6 class="col">Total a pagar</h6>
+                    <input readonly type="hidden" class="form-control" id="price_mx" aria-describedby="icon-hour" value="{{ $price_mx }}">
                     <input readonly type="hidden" class="form-control" name="price" id="price" aria-describedby="icon-hour" value="{{ $price }}">
+                    <input readonly type="hidden" class="form-control" name="divisa" id="divisa" aria-describedby="icon-hour" value="{{ $divisa }}">
                     <input readonly type="hidden" class="form-control" name="request_unit" aria-describedby="icon-hour" value="{{ $type_unit->id }}">
 
                     <input readonly type="hidden" class="form-control" name="origin" aria-describedby="icon-hour" value="{{ $origen }}">
@@ -370,13 +372,13 @@
                     <input readonly type="hidden" class="form-control" name="retorno" aria-describedby="icon-hour" value="{{ $retorno }}">
 
 
-                    <h5 class="col text-end prices">${{ $price }} MXN</h5>
+                    <h5 class="col text-end prices">${{ $price }} {{$divisa}}</h5>
                 </div>
                 <!-- section total end -->
 
                 <div class="row mb-4">
                     <button class="btn btn-success nexttab btnPayment" id="btnPayment" >Continuar</button>
-                    <p class="terms mt-2">Al hacer clic en el boton estas aceptando los <a href="#">terminos y condiciones</a>.</p>
+                    <p class="terms mt-2">Al hacer clic en el boton estas aceptando los <a href="{{route('terms', app()->getLocale())}}">terminos y condiciones</a>.</p>
                 </div>
 
             </form>

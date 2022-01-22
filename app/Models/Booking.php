@@ -32,6 +32,7 @@ class Booking extends Model
         'time_departure',
         'request_unit',
         'price',
+        'divisa',
         'type_payment',
         'transaction_id',
         'paypal_id',
