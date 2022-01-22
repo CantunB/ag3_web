@@ -1,4 +1,4 @@
-<section class="section my-4 gallery" id="gallery">
+<section class="section mt-4 gallery" id="gallery">
     <div class="container">
         <div class="gallery-title">
             <h1 class="section-title text-center mb-4"><span>Galeria</span> de fotos</h2>

@@ -1,4 +1,4 @@
-<section class="section mt-4 mb-5 about" id="about">
+<section class="section my-4 about" id="about">
     <div class="container">
         <h1 class="section-title text-center mb-4"><span>Quienes</span> somos</h1>
 

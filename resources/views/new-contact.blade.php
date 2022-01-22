@@ -1,4 +1,4 @@
-<section class="section mt-2 contact-form" id="contact">
+<section class="section mt-5 contact-form" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
