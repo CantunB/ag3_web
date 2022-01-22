@@ -216,6 +216,9 @@
               font-weight: normal !important;
             }
         }
+        .centerText{
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -275,6 +278,7 @@
                                 alt="service-suburban" style="width: 100%;">
                                @else
                                <img src="http://ag3.stigmacode.com/assets/images/transport-van.png"
+
                                alt="service-suburban" style="width: 100%;">
                                @endif
                             </td>
@@ -318,7 +322,9 @@
                                     <span style="font-weight: bold;">HORA:</span> {{$booking->time_departure}} <br>
                                     <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_departure}}<br>
                                     <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_departure}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}
+                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}<br>
+                                    <span style="font-weight: bold;">PICKUP:</span> {{ $pickup}}<br>
+
                                 </td>
                             </tr>
                         </table>
@@ -378,13 +384,35 @@
                                     <span style="font-weight: bold;">HORA:</span> {{$booking->time_departure}} <br>
                                     <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_departure}}<br>
                                     <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_departure}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}
+                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}<br>
+                                    <span style="font-weight: bold;">PICKUP:</span> {{ $pickup}}<br>
                                 </td>
                             </tr>
                         </table>
                     </td>
                 </tr>
             @endif
+
+            <h2 class="title-section">Preparate para tu viaje</h2>
+
+            <table cellspacing="0" cellpadding="0" class="arrival-info">
+                <tr>
+                    <td class="centerText">
+                        <br>
+                        <img src="http://ag3.stigmacode.com/assets/images/three-hours.png"   width="100" height="100"alt="3-horas"> <br>
+                        <span>VUELO INTERNACIONAL</span><br>
+                        Deberas presentarte en el aeropuerto 3 horas antes
+                    </td>
+                    <td class="centerText">
+                        <br>
+                        <img src="http://ag3.stigmacode.com/assets/images/two-hours.png"   width="100" height="100" alt="2-horas"> <br>
+                        <span>VUELO NACIONAL</span><br>
+                        Deberas presentarte en el aeropuerto 3 horas antes
+                    </td>
+                </tr>
+            </table>
+
+
             <tr>
                 <td>
                     <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Metodo de pago: {{$booking->type_payment}}</h2>

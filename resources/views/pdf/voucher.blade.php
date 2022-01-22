@@ -79,6 +79,10 @@
     .arrival-info td {
         padding: 10px;
     }
+    .centerText{
+        text-align: center;
+    }
+
 </style>
 <body>
     <table cellspacing="0" cellpadding="0" class="header">
@@ -123,7 +127,7 @@
                             @if ($booking->request_unit == 1)
                                 <img src="http://ag3.stigmacode.com/assets/images/transport-suburban-min.png" alt="service-suburban">
                             @else
-                                <img src="http://ag3.stigmacode.com/assets/images/transport-van-min.png" alt="service-van">
+                                <img src="http://ag3.stigmacode.com/assets/images/transport-van.png" alt="service-van">
                             @endif
 
                         </td>
@@ -208,22 +212,39 @@
 
     @endif
 
+    @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
+
     <h2 class="title-section">Preparate para tu viaje</h2>
 
     <table cellspacing="0" cellpadding="0" class="arrival-info">
         <tr>
-            <td>
-                <img src="{{asset('assets/images/three-hours.png')}}" alt="3-horas">
-
+            <td class="centerText">
+                <br>
+                <img src="http://ag3.stigmacode.com/assets/images/three-hours.png"   width="75" height="75"alt="3-horas"> <br>
+                <span>VUELO INTERNACIONAL</span><br>
+                Deberas presentarte en el aeropuerto 3 horas antes
             </td>
-            <td>
-                <img src="{{asset('assets/images/two-hours.png')}}" alt="3-horas">
+            <td class="centerText">
+                <br>
+                <img src="http://ag3.stigmacode.com/assets/images/two-hours.png"   width="75" height="75" alt="2-horas"> <br>
+                <span>VUELO NACIONAL</span><br>
+                Deberas presentarte en el aeropuerto 3 horas antes
             </td>
         </tr>
     </table>
 
-    <h2 class="title-section"><span>Metodo de pago:</span> {{$booking->type_payment}}</h2>
+    @endif
 
+    <h2 class="title-section"><span>Metodo de pago:</span> {{$booking->type_payment}}</h2>
+    @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
+    <table cellspacing="0" cellpadding="0" class="arrival-info">
+        <tr>
+            <td class="centerText">
+                <span>* NOTA: SI DESEA MODIFICAR SU PICK-UP PARA SU RETORNO AL AEROPUERTO CONTACTANOS*</span>
+            </td>
+        </tr>
+    </table>
+    @endif
 </body>
 
 </html>

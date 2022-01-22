@@ -199,7 +199,7 @@ class BookingController extends Controller
             // $time_parse = $time_departure->isoFormat('h:mm:ss a');
             $tiempo_Formateado =  Carbon::parse($request->t_departure);
             $subtraction = $tiempo_Formateado->subHours(3);
-            $pickup_formateado = $subtraction->isoFormat('h:mm');
+            $pickup_formateado = $subtraction->format('H:i:s');
         }
 
         /*  SECTION[pdf] Se crea el pdf  */
@@ -211,7 +211,7 @@ class BookingController extends Controller
         /** SECTION Envio de correo electronico */
         Mail::to($request->email)
             ->cc('cantunberna@gmail.com')
-            ->queue(new BookingMail($booking));
+            ->queue(new BookingMail($booking, $pickup_formateado));
 
 
         return response()->json(['data' => $booking], 201);

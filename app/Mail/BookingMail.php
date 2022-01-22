@@ -13,15 +13,16 @@ class BookingMail extends Mailable
     use Queueable, SerializesModels;
 
     public $booking;
-
+    public $pickup;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Booking $booking)
+    public function __construct(Booking $booking, $pickup)
     {
         $this->booking = $booking;
+        $this->pickup = $pickup;
     }
 
     /**
