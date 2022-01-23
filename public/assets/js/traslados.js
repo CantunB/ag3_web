@@ -1,10 +1,10 @@
-    let countries = $('.countries').select2({
-        theme: 'bootstrap-5',
-    });
+    // let countries = $('.countries').select2({
+    //     theme: 'bootstrap-5',
+    // });
 
-    let states = $('.states').select2({
-        theme: 'bootstrap-5',
-    });
+    // let states = $('.states').select2({
+    //     theme: 'bootstrap-5',
+    // });
 
 $(document).ready(function() {
     $(".btnComplete").on('click', function(e){
@@ -16,24 +16,22 @@ $(document).ready(function() {
         //Obtencion de tipo de  unidad por concatenacion de btn id
         var _type_trip = '#'+id+"_type_trip";
         var type_tripId = $(_type_trip).val();
-        
+
         $('#information-tab').tab('show')
         $('.nav-item > .active').next('li').find('a').trigger('click');
 
-        $("#request_unit").val(unitId);
+        var r = $("#request_unit").val(unitId);
         $("#type_trip").val(type_tripId);
 
         if (unitId == 1) {
             textUnit = "Suburban";
+            $('.divisa_van').remove();
         }else{
             textUnit = "Van";
+            $('.divisa_sub').remove();
+
         }
-        if (type_tripId == 1) {
-            textTrip = "Sencillo";
-        }else{
-            textTrip = "Redondo";
-        }
-        $("#select_service").html(textUnit + ' ' + textTrip);
+        $("#select_service").html(textUnit);
         $("#btnBooking").click(function(){
             $("#quotes_form").parsley();
             $("#quotes_form").parsley().validate();

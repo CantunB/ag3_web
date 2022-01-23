@@ -77,9 +77,7 @@
                 <!-- customer information end -->
 
                 <!-- travel information start -->
-                @if($service === 'Hotel a Hotel')
-
-                @elseif($service === 'Aeropuerto a Hotel')
+                @if($service === 'Aeropuerto a Hotel')
                 <div class="row form-section mb-4">
                     <h5 class="mt-2"><small class="number__section">02</small> Informacion del viaje</h5>
                         <h5 class="title-arrival mb-0">Informacion de llegada</h5>
@@ -101,8 +99,9 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
-                                <input required type="text" class="form-control flight-number_arrival" id="flight-number" name="fn_arrival"
-                                    aria-describedby="icon-hashtag">
+                                        <span class="input-group-text iata" id="iata_arrival"></span>
+                                <input oninput="iata_code_arrival()" required type="text" class="form-control " id="flight_number_arrival" aria-describedby="icon-hashtag">
+                                <input  type="hidden" id="iata_airline_arrival" name="fn_arrival">
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
@@ -161,8 +160,10 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
-                                <input required type="text" class="form-control flight-number_departure" id="flight-number" name="fn_departure"
-                                    aria-describedby="icon-hashtag">
+                                <span class="input-group-text iata" id="iata_departure"></span>
+                                <input oninput="iata_code_departure()" required type="text" class="form-control " id="flight_number_departure" aria-describedby="icon-hashtag">
+                                <input  type="hidden" id="iata_airline_departure" name="fn_departure">
+
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
@@ -221,8 +222,9 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
-                                <input type="text" class="form-control flight-number_arrival" id="flight-number" name="fn_arrival"
-                                    aria-describedby="icon-hashtag">
+                                        <span class="input-group-text iata" id="iata_arrival"></span>
+                                        <input oninput="iata_code_arrival()" required type="text" class="form-control " id="flight_number_arrival" aria-describedby="icon-hashtag">
+                                        <input  type="hidden" id="iata_airline_arrival" name="fn_arrival">
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
@@ -277,8 +279,9 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
-                                <input type="text" class="form-control flight-number_departure" id="flight-number" name="fn_departure"
-                                    aria-describedby="icon-hashtag">
+                                <span class="input-group-text iata" id="iata_departure"></span>
+                                <input oninput="iata_code_departure()" required type="text" class="form-control " id="flight_number_departure" aria-describedby="icon-hashtag">
+                                <input  type="hidden" id="iata_airline_departure" name="fn_departure">
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">

@@ -64,6 +64,7 @@ class ToursController extends Controller
     public function purchase($locale,$id)
     {
         $list_tours = [
+            /*
             1 => [
                     'tour' =>  'Laguna de Siete Colores - Bacalar',
                     'price' => [
@@ -77,59 +78,41 @@ class ToursController extends Controller
                         ],
                     ],
             ],
-            2 => ['tour' => 'Chichen Itza, Yucatan', 'price' => [
-                    'suburban'=>[
-                        'MXN' => '20475',
-                        'USD' => '1050'
+             */
+            1 => [
+                    'tour' =>  'Laguna de Siete Colores - Bacalar',
+                    'price' => [
+                        'suburban' => '21450.00',
+                        'van'=> '16087.50',
                     ],
-                    'van'=>[
-                        'MXN' => '21450',
-                        'USD' => '862'
+            ],
+            2 => ['tour' => 'Chichen Itza, Yucatan',
+                    'price' => [
+                        'suburban'=> '20475',
+                        'van'=>  '16809.00',
                     ],
+            ],
+            3 => ['tour' => 'Palenque, Chiapas',
+                    'price' => [
+                        'suburban'=> '19987.50',
+                        'van'=>'15346.50',
+                    ]
+            ],
+            4 => ['tour' => 'Calakmul, Campeche',
+                    'price' => [
+                        'suburban'=> '',
+                        'van'=> '',
                 ]
             ],
-            3 => ['tour' => 'Palenque, Chiapas','price' => [
-                    'suburban'=>[
-                        'MXN' => '19987.50',
-                        'USD' => '1025'
-                    ],
-                    'van'=>[
-                        'MXN' => '15346.50',
-                        'USD' => '787'
-                    ],
-                ]
-            ],
-            4 => ['tour' => 'Calakmul, Campeche','price' => [
-                    'suburban'=>[
-                        'MXN' => '21450',
-                        'USD' => '1100'
-                    ],
-                    'van'=>[
-                        'MXN' => '21450',
-                        'USD' => '1100'
-                    ],
-                ]
-            ],
-            5 => ['tour' => 'Ek Balam - Las Coloradas', 'price' => [
-                    'suburban'=>[
-                        'MXN' => '19987.50',
-                        'USD' => '1025'
-                    ],
-                    'van'=>[
-                        'MXN' => '15346.50',
-                        'USD' => '787'
-                    ],
+            5 => ['tour' => 'Ek Balam - Las Coloradas',
+                    'price' => [
+                        'suburban'=>'19987.50',
+                        'van'=> '15346.50',
                 ]
             ],
             6 => ['tour' => 'Coba - 3 Cenotes', 'price' => [
-                    'suburban'=>[
-                        'MXN' => '14625',
-                        'USD' => '750'
-                    ],
-                    'van'=>[
-                        'MXN' => '11407.50',
-                        'USD' => '585'
-                    ],
+                    'suburban'=> '14625',
+                    'van'=>'11407.50',
                 ]
             ]
         ];

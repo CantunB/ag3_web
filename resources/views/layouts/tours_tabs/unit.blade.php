@@ -111,7 +111,6 @@
                             <div class="button-vehicule d-flex justify-content-center">
                                 <input type="hidden" name="unit" id="opt2_unit"  value="1">
                                 <input type="hidden" name="type_trip" id="opt2_type_trip" value="2">
-
                                 <button type="button" class="button-pre btnComplete" id="opt2">Seleccionar vehiculo</button>
                             </div>
                         </div>

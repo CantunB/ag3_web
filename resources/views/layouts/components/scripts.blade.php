@@ -256,6 +256,7 @@
                     array_etiqutas[index].innerHTML = new_divisa
                     array_inputs[index].value = divisa
                     //document.getElementByClassName("mytext").value = "My value";
+                    array_inputs_mx[index].value = element;
                     array_divisas_inputs[index].value = "MXN"
                 });
             }else if (laravel_locale == 'en') {

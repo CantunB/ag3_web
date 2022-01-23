@@ -5,6 +5,10 @@
             <div class="row">
                 <a class="mb-2 back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
             </div>
+                    {{-- <input type="text" class="tarifas" value="@dd($tours)"> --}}
+                    <input type="hidden" class="tarifas" value="{{ $tours[1] }}">
+                    <input type="hidden" class="tarifas" value="{{ $tours[2] }}">
+
             <form id="booking_form" method="POST">
                 @csrf
 
@@ -147,10 +151,6 @@
                 <!-- section total start -->
                 <div class="row form-section d-flex align-items-center mb-4 total">
                     <h6 class="col">Total a pagar</h6>
-                    <input readonly type="hidden" class="form-control" name="price" id="price"
-                        aria-describedby="icon-hour" value="">
-                    <input readonly type="hidden" class="form-control" name="request_unit"
-                        aria-describedby="icon-hour" value="2">
                     <input readonly type="hidden" class="form-control" name="destiny" aria-describedby="icon-hour"
                         value="PALENQUE, CHIAPAS">
                     <input readonly type="hidden" class="form-control" name="type_service"
@@ -159,19 +159,23 @@
                         value="si">
                     <input type="hidden" readonly id="request_unit" name="request_unit">
                     <input type="hidden" readonly id="type_trip" name="type_trip">
-                    <input readonly type="hidden" class="form-control" name="price" aria-describedby="icon-hour"
-                        value="{{ $tours[1] }}">
 
+                    <input readonly type="hidden"  name="price" class="prices_inputs divisa_sub" value="">
+                    <input readonly type="hidden" id="price_mx" name="price_mx" class="prices_inputs_mx divisa_sub" value="{{ $tours[1] }}">
+                    <input  readonly type="hidden" name="divisa" class="divisas_inputs divisa_sub" value="">
 
-                    <h5 class="col text-end price">$ {{ $tours[1] }} MXN</h5>
-                    <h5 class="col text-end price">$ {{ $tours[3] }} MXN</h5>
+                    <input readonly type="hidden"  name="price" class="prices_inputs divisa_van" value="">
+                    <input readonly type="hidden" id="price_mx"  name="price_mx" class="prices_inputs_mx divisa_van" value="{{ $tours[2] }}">
+                    <input  readonly type="hidden"  name="divisa" class="divisas_inputs divisa_van" value="">
+                    <h5 class="col text-end price divisa_sub"><p class="prices divisa_sub"></p></h5>
+                    <h5 class="col text-end price divisa_van"><p  class="prices divisa_van"></p></h5>
 
                 </div>
                 <!-- section total end -->
 
                 <div class="row mb-4">
                     <button class="btn btn-success nexttab btnPayment" id="btnPayment">Continuar</button>
-                    <p class="terms mt-2">Al hacer clic en el boton estas aceptando los <a href="#">terminos y
+                    <p class="terms mt-2">Al hacer clic en el boton estas aceptando los <a href="{{route('terms', app()->getLocale())}}">terminos y
                             condiciones</a>.</p>
                 </div>
 

@@ -392,6 +392,7 @@
                     </td>
                 </tr>
             @endif
+            @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
 
             <h2 class="title-section">Preparate para tu viaje</h2>
 
@@ -411,8 +412,7 @@
                     </td>
                 </tr>
             </table>
-
-
+            @endif
             <tr>
                 <td>
                     <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Metodo de pago: {{$booking->type_payment}}</h2>
