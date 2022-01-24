@@ -4,7 +4,7 @@
 <section class="section mt-5 testimonials">
     <div class="container">
         <div class="testimony-title">
-            <h1 class="section-title text-center mb-4">Nuestros <span>Testimonios</span></h1>
+            <h1 class="section-title text-center mb-4"><span>{{__('testimonios')}}</span></h1>
         </div>
 
         <div class="testimony-content mb-4">

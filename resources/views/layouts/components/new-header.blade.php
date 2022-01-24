@@ -16,13 +16,13 @@
                     <a class="nav-link" aria-current="page" href="{{ route('index',app()->getLocale()) }}">{{__('inicio')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">{{__('Acerca de nosotros')}}</a>
+                    <a class="nav-link" href="#">{{__('acerca')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
+                    <a class="nav-link" href="#">{{__('servicios')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#">{{__('contacto')}}</a>
                 </li>
 
             </ul>

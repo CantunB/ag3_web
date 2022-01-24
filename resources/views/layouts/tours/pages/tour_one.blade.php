@@ -38,12 +38,12 @@
                         </div>
 
                         <div class="description">
-                            <p>Bacalar es un hermoso pueblo mágico de Quintana Roo que esta situado justo al lado de una increíble laguna de siete tonos de azul que ofrece todo lo necesario para nadar, bucear o practicar snorkel.</p>
-                            <p>Su nombre viene del maya Bakhalal que significa “cerca o rodeado de carrizos”. De forma circular, la laguna es poco profunda lo que permite nadar cómodamente.</p>
-                            <p>El fuerte de San Felipe es uno de los lugares de Bacalar en donde se obtiene una de las mejores vistas de este espacio natural lleno de belleza, los templos, plazas y la architectura del pueblo le dan ese toque de pueblo mágico a Bacalar.</p>
+                            <p> {{__('tours.Bacalar primera descripcion')}} </p>
+                            <p> {{__('tours.Bacalar segunda descripcion')}} </p>
+                            <p> {{__('tours.Bacalara tercer descripcion')}} </p>
                         </div>
 
-                        <a href="{{url(app()->getLocale().'/booking/tours'.'/1/purchase')}}" class="btn mb-4">Reserva ahora</a>
+                        <a href="{{url(app()->getLocale().'/booking/tours'.'/1/purchase')}}" class="btn mb-4">{{__('Reserva ahora')}}</a>
                     </div>
 
                     <div class="col-lg-6">
@@ -64,7 +64,7 @@
                 <div class="row mt-4">
                     <div class="col-lg-7">
                         <div class="details-title">
-                            <h2 class="text-center">¿Que incluye el tour?</h2>
+                            <h2 class="text-center"> {{__('tours.¿Que incluye el tour?')}} </h2>
                         </div>
 
                         <div class="row">
@@ -85,14 +85,14 @@
                                 <p>Visita opcional sin cargo extra al cenote azul - Estancia 1 hora.</p>
                             </div>
                             <div class="col-md-12">
-                                <h2 class="text-center">Recomendaciones</h2>
-                                <p>Te recomendamos traer tu traje de baño y un cambio de ropa, para que puedas viajar seco y cómodo para las siguientes actividades, así como un bloqueador, repelente de insectos y zapatos para agua.</p>
+                                <h2 class="text-center"> {{__('tours.Recomendaciones')}} </h2>
+                                <p> {{__('Tours.Bacalar recomendaciones')}} </p>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-lg-5">
-                        <h2 class="text-center">Ubicacion</h2>
+                        <h2 class="text-center"> {{ __('tours.Ubicacion')}} </h2>
 
                         {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.7736294932242!2d-88.57066558594205!3d20.678786655011294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5138b9a098f833%3A0xf70a67530750d45!2zQ2hpY2jDqW4gSXR6w6EsIFl1Yy4!5e0!3m2!1ses-419!2smx!4v1642194530515!5m2!1ses-419!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> --}}
 

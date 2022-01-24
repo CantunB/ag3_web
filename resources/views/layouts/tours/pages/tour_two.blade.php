@@ -36,12 +36,12 @@
                         </div>
 
                         <div class="description">
-                            <p>(Chi-ch’en Itzá) significa al borde del pozo de los Itzáes. Chichén Itzá fue una de las ciudades-estado más importantes de la América prehispánica y es uno de los sitios arqueológicos más visitados de México en la actualidad.</p>
-                            <p>Chichén Itzá es hermoso y magnífico tal como ya habrás escuchado y tiene muchas ruinas mayas para visitar y conocer su historia.</p>
-                            <p>Chichén Itzá se divide en Chichén Antiguo y Chichén Itzá, donde puedes encontrar 6 Ruinas Mayas en la sección de Chichén Antiguo y unas 20 Ruinas Mayas en el Nuevo Chichén o Chichén Itzá, lo que hace un total de 26 Ruinas Mayas para ver en el Sitio Maya.</p>
+                            <p> {{__('tours.Chichen primera descripcion')}} </p>
+                            <p> {{__('tours.Chichen segunda descripcion')}} </p>
+                            <p> {{__('tours.Chichen tercera descripcion')}} </p>
                         </div>
 
-                        <a href="{{url(app()->getLocale().'/booking/tours'.'/2/purchase')}}" class="btn mb-4">Reserva ahora</a>
+                        <a href="{{url(app()->getLocale().'/booking/tours'.'/2/purchase')}}" class="btn mb-4">{{__('Reserva ahora')}}</a>
                     </div>
 
                     <div class="col-lg-6">
@@ -62,7 +62,7 @@
                 <div class="row mt-4">
                     <div class="col-lg-7">
                         <div class="details-title">
-                            <h2 class="text-center">¿Que incluye el tour?</h2>
+                            <h2 class="text-center"> {{__('tours.¿Que incluye el tour?')}} </h2>
                         </div>
 
                         <div class="row">
@@ -83,15 +83,15 @@
                                 <p>Visita opcional sin cargo extra a la ciudad de Valladolid pueblo mágico - Estancia 1 hora.</p>
                             </div>
                             <div class="col-md-12">
-                                <h2 class="text-center">Recomendaciones</h2>
+                                <h2 class="text-center"> {{__('tours.Recomendaciones')}} </h2>
                                 <p>Te recomendamos traer tu traje de baño y un cambio de ropa, para que puedas viajar seco y cómodo para las siguientes actividades, así como un bloqueador y repelente de insectos, de preferencia biodegradables. Tiempo libre para comer - 1 hora.</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-lg-5">
-                        <h2 class="text-center">Ubicacion</h2>
-                        
+                        <h2 class="text-center">{{ __('tours.Ubicacion')}}</h2>
+
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.6384093379843!2d-88.56997128507315!3d20.684284886185957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5138c6e391c0e7%3A0x7c1ea0a168994d9a!2zQ2hpY2jDqW4gSXR6w6E!5e0!3m2!1ses!2smx!4v1642622599115!5m2!1ses!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>

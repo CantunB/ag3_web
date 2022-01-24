@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="section-title text-center mb-4"><span>Contactanos</span></h1>
+                <h1 class="section-title text-center mb-4"><span>{{__('contactanos')}}</span></h1>
             </div>
         </div>
         <div class="row contact-content mb-4">
@@ -12,37 +12,35 @@
                     width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <div class="col-lg-6" id="contact">
-                <p class="description mt-2">¿Tiene usted alguna pregunta? No dude en contactarnos directamente. Nuestro
-                    equipo se pondra en contacto contigo en cuestion de horas para ayudarte.</p>
+                <p class="description mt-2"> {{__('text_contact')}} </p>
                 <form class="row" id="contact_form" name="contact-form" method="POST" data-parsley-validate>
                     <input type="hidden" id="contact_url" url="{{ route('contact', app()->getLocale()) }}" />
                     @csrf
                     <div class="col-md-12 mb-2">
                         <input type="text" class="form-control" aria-describedby="validationName" id="name"
-                            name="name" placeholder="&#xf007; Nombre Completo" required>
+                            name="name" placeholder="&#xf007; {{__('nombre_completo')}}" required>
                         {{--is-invalid <div id="validationName" class="invalid-feedback">
                             El nombre completo es requerido.
                         </div> --}}
                     </div>
                     <div class="col-md-6 mb-2">
                         <input type="email" class="form-control" aria-describedby="validationEmail"
-                            id="email" name="email" placeholder="&#xf0e0; Correo Electronico" required>
+                            id="email" name="email" placeholder="&#xf0e0; {{__('correo electronico')}}" required>
                     </div>
                     <div class="col-md-6 mb-2">
                         <input type="text" class="form-control" aria-describedby="validationPhone" data-parsley-type="digits" id="phone" name="phone"
-                            placeholder="&#xf879; Telefono" required>
+                            placeholder="&#xf879; {{__('telefono')}}" required>
                     </div>
                     <div class="col-md-12 mb-2">
                         <input type="text" class="form-control" aria-describedby="validationSubject" id="subject" name="subject"
-                            placeholder="&#xf08d; Asunto" required>
+                            placeholder="&#xf08d; {{__('asunto')}}" required>
                     </div>
                     <div class="col-md-12 mb-2">
                         <textarea class="form-control" aria-describedby="validationContent" id="content" name="content" rows="3"
-                            placeholder="Escribe aqui tu mensaje..." required></textarea>
+                            placeholder="{{__('mensaje')}}" required></textarea>
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn-contact"><i class="fas fa-paper-plane"></i> Enviar
-                            mensaje</button>
+                        <button type="submit" class="btn-contact"><i class="fas fa-paper-plane"></i> {{__('enviar')}} </button>
                     </div>
                 </form>
 

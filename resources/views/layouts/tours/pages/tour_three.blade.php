@@ -36,12 +36,12 @@
                         </div>
 
                         <div class="description">
-                            <p>En castellano, Palenque significa “lugar cercado de una valla de madera o estacas”. La ciudad prehispánica data del siglo III, fue una de las ciudades más notables del mundo maya; también actuó como centro ceremonial, gracias a los patronos mayas interesados en demostrar su poder.</p>
-                            <p>La zona arqueológica de Palenque se considera como un tesoro nacional. Descubre los impresionantes templos y palacios mayas. Contempla las esculturas que datan de alrededor de los años 500 a 800 d. C.</p>
-                            <p>Entre las artesanías de la región destacan prendas exquisitamente bordadas, cerámica y joyería trabajada en ámbar.</p>
+                            <p> {{__('tours.Palenque primera descripcion')}} </p>
+                            <p> {{__('tours.Palenque segunda descripcion')}} </p>
+                            <p> {{__('tours.Palenque tercera descripcion')}} </p>
                         </div>
 
-                        <a href="{{url(app()->getLocale().'/booking/tours'.'/3/purchase')}}" class="btn mb-4">Reserva ahora</a>
+                        <a href="{{url(app()->getLocale().'/booking/tours'.'/3/purchase')}}" class="btn mb-4">{{__('Reserva ahora')}}</a>
                     </div>
 
                     <div class="col-lg-6">
@@ -62,7 +62,7 @@
                 <div class="row mt-4">
                     <div class="col-lg-7">
                         <div class="details-title">
-                            <h2 class="text-center">¿Que incluye el tour?</h2>
+                            <h2 class="text-center"> {{__('tours.¿Que incluye el tour?')}} </h2>
                         </div>
 
                         <div class="row">
@@ -83,14 +83,14 @@
                                 <p>Visita opcional sin cargo extra a salto de agua - Estancia 1 hora.</p>
                             </div>
                             <div class="col-md-12">
-                                <h2 class="text-center">Recomendaciones</h2>
+                                <h2 class="text-center"> {{__('tours.Recomendaciones')}} </h2>
                                 <p>Te recomendamos traer tu traje de baño y un cambio de ropa, para que puedas viajar seco y cómodo para las siguientes actividades, así como un bloqueador y repelente de insectos, de preferencia biodegradables. Tiempo libre para comer - 1 hora.</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-lg-5">
-                        <h2 class="text-center">Ubicacion</h2>
+                        <h2 class="text-center"> {{__('tours.Ubicacion')}} </h2>
 
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.4760405403063!2d-92.04808358599584!3d17.48477480459319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85f244c777bddbdd%3A0x6ebbea71995ddcf1!2sZona%20Arqueol%C3%B3gica%20Palenque!5e0!3m2!1ses!2smx!4v1642622715558!5m2!1ses!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
