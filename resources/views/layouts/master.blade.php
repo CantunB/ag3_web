@@ -20,14 +20,14 @@
     <link rel="stylesheet" href="{{ asset('css/whatsapp.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/personal_parsley.css') }}">
     {{--------------------------------Global site tag (gtag.js) - Google Analytics--------------------------------------------}}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HYPQCZ3Q9F"></script>
+        {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-HYPQCZ3Q9F"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-HYPQCZ3Q9F');
-        </script>
+        </script> --}}
 </head>
     <body>
         <div id="app" class="super_container">
