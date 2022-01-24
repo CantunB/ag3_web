@@ -29,11 +29,11 @@
             <!-- section-right-language  -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown m-2">
-                        <language-switcher
+                        {{-- <language-switcher
                         locale ="{{ app()->getLocale() }}"
                         link-en ="{{ route(Route::currentRouteName(), ['en', request()->route()->tours]) }}"
                         link-fr ="{{ route(Route::currentRouteName(), ['fr', request()->route()->tours]) }}"
-                        link-es ="{{ route(Route::currentRouteName(), ['es', request()->route()->tours]) }}"
+                        link-es ="{{ route(Route::currentRouteName(), ['es', request()->route()->tours]) }}" --}}
                     ></language-switcher>
                    </li>
 
