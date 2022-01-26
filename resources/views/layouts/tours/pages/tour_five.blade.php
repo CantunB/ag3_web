@@ -112,9 +112,9 @@
                         </div>
 
                         <div class="description">
-                            <p>Ek Balam es un nombre en lengua maya yucateca, formado por los vocablos ek’, con el que se denomina al color negro y que también significa “lucero” o “estrella”; y balam, que quiere decir “jaguar”. Puede traducirse entonces como “jaguar-oscuro-o negro”. Sin embargo, algunos hablantes de maya en la región también lo traducen como “lucero-jaguar”.</p>
-                            <p>Las Coloradas es un pequeño puerto pesquero ubicado en un estero en el litoral norte de la Península de Yucatán. No puedes perderte de las montañas de sal y su imponente color blanco que de seguro desearás fotografiar.</p>
-                            <p>Las Coloradas también es un excelente sitio para el avistamiento de flamencos, los cuales puedes observar entre los meses de abril,mayo y junio.</p>
+                            <p> {{__('tours.Balam primera descripcion')}} </p>
+                            <p> {{__('tours.Balam segunda descripcion')}} </p>
+                            <p> {{__('tours.Balam tercera descripcion')}} </p>
                         </div>
 
                         <a href="{{url(app()->getLocale().'/booking/tours'.'/5/purchase')}}" class="btn_tour btn mb-4">Reserva ahora</a>
@@ -138,7 +138,7 @@
                 <div class="row mt-4">
                     <div class="col-lg-7">
                         <div class="details-title">
-                            <h2 class="text-center">¿Que incluye el tour?</h2>
+                            <h2 class="text-center"> {{__('tours.¿Que incluye el tour?')}} </h2>
                         </div>
 
                         <div class="row">
@@ -159,14 +159,14 @@
                                 <p>Visita al pueblo pesquero de las coloradas - Estancia 1 hora.</p>
                             </div>
                             <div class="col-md-12">
-                                <h2 class="text-center">Recomendaciones</h2>
-                                <p>Ten a la mano un buen bloqueador solar, de preferencia que sea biodegradable. Las aguas color rosa no son para bañarse debido a la gran cantidad de cristales de sal que posee y puede dañar la piel. Además, las formaciones cristalinas que se forman a la orilla de éste tarde en formarse mucho tiempo, por lo que pisarlas producirá un daño a éste.</p>
+                                <h2 class="text-center"> {{__('tours.Recomendaciones')}} </h2>
+                                <p> {{__('tours.Balam recomendaciones')}} </p>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-lg-5">
-                        <h2 class="text-center">Ubicacion</h2>
+                        <h2 class="text-center"> {{__('tours.Ubicacion')}} </h2>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.4975351427356!2d-88.13812268506966!3d20.892293486072383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f519d2cfd290dcf%3A0x2c8918d639ce5df9!2sZona%20Arqueol%C3%B3gica%20de%20Ek%20Balam!5e0!3m2!1ses!2smx!4v1642621487315!5m2!1ses!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
                     </div>

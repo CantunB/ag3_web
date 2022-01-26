@@ -228,7 +228,7 @@
                 <table class="header-content" style="width: 100%; font-size: 16px;">
                     <tr>
                         <td class="logo">
-                            <img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="logo-empresa" style="width: 100%; max-width: 100px; padding-left: 10px;">
+                            <img src="http://ag3luxury.com/assets/images/logo.png" alt="logo-empresa" style="width: 100%; max-width: 100px; padding-left: 10px;">
                         </td>
                         <td class="details" style="color: #fff; text-align: right; padding-right: 10px;">
                             <h2 style="margin-bottom: 0;">Del Aeropuerto A Tu Destino</h2>
@@ -293,7 +293,7 @@
                         <td align="center" valign="middle" style="word-wrap: break-word;">
                             <a href="https://www.facebook.com/transfercancun/"
                                 style="text-decoration: none; color: #fff;">
-                                <img src="{{ asset('assets/images/icons/facebook.svg') }}" alt="facebook-icon"
+                                <img src="http://ag3luxury.com/assets/images/icons/facebook.svg" alt="facebook-icon"
                                     width="30" height="30"
                                     style="display: inline-block; vertical-align: middle; width: auto; padding-right: 10px; text-decoration: none;"><span style="font-weight: bold; font-size: 16px;">Facebook</span>
                             </a>
@@ -301,14 +301,14 @@
                         <td align="center" valign="middle" style="word-wrap: break-word;">
                             <a href="https://www.instagram.com/ag3_luxurytravel/"
                                 style="text-decoration: none; color: #fff;">
-                                <img src="{{ asset('assets/images/icons/instagram.svg') }}" alt="instagram-icon"
+                                <img src="http://ag3luxury.com/assets/images/icons/instagram.svg" alt="instagram-icon"
                                     width="30" height="30"
                                     style="display: inline-block; vertical-align: middle; width: auto; padding-right: 10px; text-decoration: none;"><span style="font-weight: bold; font-size: 16px;">Instagram</span>
                             </a>
                         </td>
                         <td align="center" valign="middle" style="word-wrap: break-word;">
                             <a href="https://twitter.com/eulloagle/" style="text-decoration: none; color: #fff;">
-                                <img src="{{ asset('assets/images/icons/twitter.svg') }}" alt="twitter-icon"
+                                <img src="http://ag3luxury.com/assets/images/icons/twitter.svg" alt="twitter-icon"
                                     width="30" height="30"
                                     style="display: inline-block; vertical-align: middle; width: auto; padding-right: 10px; text-decoration: none;"><span style="font-weight: bold; font-size: 16px;">Twitter</span>
                             </a>

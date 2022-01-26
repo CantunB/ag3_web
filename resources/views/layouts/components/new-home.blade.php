@@ -75,14 +75,14 @@
            <h1 class="text-center title-home second">Te ofrecemos <span class="typed"></span></h1>
        </div>
 
-       {{-- <div class="video-container"> --}}
-        {{-- <video autoplay loop muted id="myVideo"> --}}
-            {{-- <source src='{{ asset('assets/images/home.mp4') }}' type='video/mp4'> --}}
-            {{-- <source src='{{ asset('assets/images/home2.mp4') }}' type='video/mp4'> --}}
-            {{-- <source src='{{ asset('assets/images/home3.mp4') }}' type='video/mp4'>
-        </video> --}}
+       {{-- <div class="video-container">
+        <video autoplay loop muted id="myVideo">
+            <source src='{{ asset('assets/images/home.mp4') }}' type='video/mp4'>
+            <source src='{{ asset('assets/images/home2.mp4') }}' type='video/mp4'>
+            <source src='{{ asset('assets/images/home3.mp4') }}' type='video/mp4'>
+        </video>
 
-        {{-- <img src="{{ asset('assets/images/a3.png') }}" alt="inicio">
+        <img src="{{ asset('assets/images/a3.png') }}" alt="inicio">
         </div> --}}
 
    </header>

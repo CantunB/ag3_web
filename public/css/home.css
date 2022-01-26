@@ -3,8 +3,9 @@
     /* background: url(../assets/images/home1.jpg) no-repeat center; */
     /* background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(../assets/images/home03-min.jpg) no-repeat; */
     /* background: url(../assets/images/home03-min.jpg) no-repeat; */
+
     background: url(../assets/images/home2-min.png) no-repeat center;
-    
+
     background-size: cover;
     /* background-position: 60%; */
     /* min-height: 40vh; */
@@ -50,7 +51,7 @@
     filter: drop-shadow(2px 3px 1px #000);
     font-size: 50px;
     font-weight: 800;
-} 
+}
 
 .search {
     /* margin-top: -85px; */
@@ -172,7 +173,7 @@ body.dark .navbar {
     color: #000;
     /* color: #fff; */
     /* font-family: 'Poppins', sans-serif; */
-    font-family: 'Hind Siliguri', sans-serif; 
+    font-family: 'Hind Siliguri', sans-serif;
     /* text-transform: uppercase; */
     /* font-family: 'Montserrat', sans-serif; */
     font-weight: 600;
@@ -209,7 +210,7 @@ body.dark .navbar {
 
 .navbar .dropdown-menu a {
     color: #000;
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
@@ -246,7 +247,7 @@ body.dark .navbar {
         display: none;
         transition: 3s ease;
     }
-    
+
     /* .title-small {
         font-size: 10px !important;
     } */

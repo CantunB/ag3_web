@@ -91,7 +91,7 @@
                 <table class="header-content">
                     <tr>
                         <td class="logo">
-                            <img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="logo-empresa">
+                            <img src="http://ag3luxury.com/assets/images/logo.png" alt="logo-empresa">
                         </td>
                         <td class="details">
                             <span>No. Servicio:</span> {{ $booking->id }}<br>
@@ -125,9 +125,9 @@
                         </td>
                         <td class="service-img">
                             @if ($booking->request_unit == 1)
-                                <img src="http://ag3.stigmacode.com/assets/images/transport-suburban-min.png" alt="service-suburban">
+                                <img src="http://ag3luxury.com/assets/images/transport-suburban-min.png" alt="service-suburban">
                             @else
-                                <img src="http://ag3.stigmacode.com/assets/images/transport-van.png" alt="service-van">
+                                <img src="http://ag3luxury.com/assets/images/transport-van.png" alt="service-van">
                             @endif
 
                         </td>
@@ -229,13 +229,13 @@
         <tr>
             <td class="centerText">
                 <br>
-                <img src="http://ag3.stigmacode.com/assets/images/three-hours.png"   width="75" height="75"alt="3-horas"> <br>
+                <img src="http://ag3luxury.com/assets/images/three-hours.png"   width="75" height="75"alt="3-horas"> <br>
                 <span>VUELO INTERNACIONAL</span><br>
                 Deberas presentarte en el aeropuerto 3 horas antes
             </td>
             <td class="centerText">
                 <br>
-                <img src="http://ag3.stigmacode.com/assets/images/two-hours.png"   width="75" height="75" alt="2-horas"> <br>
+                <img src="http://ag3luxury.com/assets/images/two-hours.png"   width="75" height="75" alt="2-horas"> <br>
                 <span>VUELO NACIONAL</span><br>
                 Deberas presentarte en el aeropuerto 3 horas antes
             </td>

@@ -100,9 +100,8 @@
 {{--------------------------  TODO[paypal]PAYPAL  -----------------------------------------}}
     {{----------------  SECTION[sandbox] Actualmente se opera con sandbox  ------------}}
     {{-- <script src="https://www.paypal.com/sdk/js?client-id=AYh6SsC21DLPKSQlkxE4XEPxcTq6-UDo_S6xtbD0Q3l2FH1EUEoTkvPbx0YC0NWktEm1NqjhR2FhxHCT&currency=MXN&locale=es_MX"></script> --}}
-    {{-- <script src="https://www.paypal.com/sdk/js?client-id=AU2DbQtBBLLeQqilw6ryutLRofQ0pL_Qq_9NeLX4V4Nq6O15NTklI5uzRk4yu8mg8U0wo6PBdpt2y1Xc"></script> --}}
     {{----------------  SECTION[Live] Operara en modo produccion  ------------}}
-    <script src="https://www.paypal.com/sdk/js?client-id=AeDTv5lusxz7nOGDqGN1HWA2_EAI-1LsObWGD48reqPNRieFy80rF4JHCTfFl8664nd1HYY3mVMmfkeR&currency=MXN&locale=es_MX"></script>
+    {{-- <script src="https://www.paypal.com/sdk/js?client-id=AeDTv5lusxz7nOGDqGN1HWA2_EAI-1LsObWGD48reqPNRieFy80rF4JHCTfFl8664nd1HYY3mVMmfkeR&currency=MXN&locale=es_MX"></script> --}}
 
 {{---------------------  TODO TARIFAS PRESENTADAS DEPENDIENDO EL TIPO DE SERVICIO ELEGIDO  --------------------------}}
     <script src="{{ asset('assets/js/service_show.js') }}"></script>

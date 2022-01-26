@@ -35,9 +35,9 @@
                         </div>
 
                         <div class="description">
-                            <p>La Zona Arqueológica de Cobá es una de las de mayor relevancia en el estado por su historia preponderante dentro de la cultura maya, por sus dimensiones geográficas, así como por la belleza de sus estructuras prehispánicas conservadas en la actualidad.</p>
-                            <p>Existen 3 cenotes en la jungla de Akumal que son muy visitados por su majestuosidad.</p>
-                            <p><span>Cenote Xibalbá</span> Es un cenote ubicado en una cueva que resulta ideal para ver las grandes formaciones de los cenotes. <span>Cenote Los Aluxes</span> Un territorio muy místico que alberga un cenote muy especial, no te lo puedes perder.<span>Cenote Nohoch</span> Es un cenote que todos los turistas disfrutan de sus aguas claras y su precioso paisaje que permite el buceo.</p>
+                            <p>{{__('tours.Coba primera descripcion')}} </p>
+                            <p>{{__('tours.Coba segunda descripcion')}} </p>
+                            <p><span>Cenote Xibalbá</span>  {{__('tours.Coba tercera descripcion p_3.1')}}  <span>Cenote Los Aluxes</span>  {{__('tours.Coba tercera descripcion p_3.2')}} <span>Cenote Nohoch</span> {{__('tours.Coba tercera descripcion p_3.3')}} </p>
                         </div>
 
                         <a href="{{url(app()->getLocale().'/booking/tours'.'/6/purchase')}}" class="btn mb-4">Reserva ahora</a>

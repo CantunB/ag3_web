@@ -60,7 +60,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm p-2 bg-light border p-2 col-lg-4 text-center align-items-center">
-                        <img class="mr-3" src="http://ag3.stigmacode.com/assets/images/transport-suburban.png" alt="Generic placeholder image" width="250" height="250">
+                        <img class="mr-3" src="http://ag3luxury.com/assets/images/transport-suburban.png" alt="Generic placeholder image" width="250" height="250">
                     </div>
                     <div class="col-sm p-2 bg-light border p-2 col-lg-4">
                         <div class="container">
@@ -153,7 +153,7 @@
 </main>
 
 <footer>
-    <a href="http://ag3.stigmacode.com/"><img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="AG3" width="120" height="100"></a>
+    <a href="http://ag3luxury.com/"><img src="http://ag3luxury.com/assets/images/logo.png" alt="AG3" width="120" height="100"></a>
 </footer>
 </body>
 </html>

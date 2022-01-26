@@ -36,12 +36,12 @@
                         </div>
 
                         <div class="description">
-                            <p>Calakmul significa en maya “Dos Montículos Adyacentes” (Ca dos, Lak adyacentes, Mul montículo artificial o pirámide), nombre que hace referencia a las dos grandes estructuras que dominan la selva.</p>
-                            <p>Abarca 723 hectáreas de manglar y es la mayor reserva de selva tropical en México, para que te formes una idea, es aún más grande que la selva Lacandona. Hogar de 350 especies de aves, 500 de mariposas, 96 de mamíferos, 1,600 de plantas y, sobre todo, casa del jaguar, el auténtico rey de la selva.</p>
-                            <p>Según la creencia maya, toda esta tierra está custodiada por aluxes, una especie de duendes mágicos que harán de todo con tal de que nadie perturbe esta zona.</p>
+                            <p> {{__('tours.Calakmul primera descripcion')}} </p>
+                            <p> {{__('tours.Calakmul segunda descripcion')}} </p>
+                            <p> {{__('tours.Calakmul tercera descripcion')}} </p>
                         </div>
 
-                        <a href="{{url(app()->getLocale().'/booking/tours'.'/4/purchase')}}" class="btn mb-4">Reserva ahora</a>
+                        <a href="{{url(app()->getLocale().'/booking/tours'.'/4/purchase')}}" class="btn mb-4"> {{__('Reserva ahora')}} </a>
                     </div>
 
                     <div class="col-lg-6">
@@ -62,7 +62,7 @@
                 <div class="row mt-4">
                     <div class="col-lg-7">
                         <div class="details-title">
-                            <h2 class="text-center">¿Que incluye el tour?</h2>
+                            <h2 class="text-center"> {{__('tours.¿Que incluye el tour?')}} </h2>
                         </div>
 
                         <div class="row">
@@ -83,14 +83,14 @@
                                 <p>Visita opcional sin cargo extra a la zona arqueologica de balamku - Estancia 1 hora.</p>
                             </div>
                             <div class="col-md-12">
-                                <h2 class="text-center">Recomendaciones</h2>
+                                <h2 class="text-center"> {{__('tours.Recomendaciones')}} </h2>
                                 <p>Llevar ropa ligera. En los meses de junio, julio y agosto usar repelente para insectos. No llevar mascotas. Llevar agua ya que en el sitio no hay venta de bebidas y alimentos.</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-lg-5">
-                        <h2 class="text-center">Ubicacion</h2>
+                        <h2 class="text-center"> {{__('tours.Ubicacion')}} </h2>
 
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d485385.0466845735!2d-90.08869566718752!3d18.114527100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f58b3adad070df9%3A0xc608a18078233cc1!2sCalakmul!5e0!3m2!1ses!2smx!4v1642622840405!5m2!1ses!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>

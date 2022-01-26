@@ -231,7 +231,7 @@
                 <table class="header-content" style="width: 100%; font-size: 16px;">
                     <tr>
                         <td class="logo">
-                            <img src="http://ag3.stigmacode.com/assets/images/logo.png" alt="logo-empresa" style="width: 100%; max-width: 100px; padding-left: 10px;">
+                            <img src="http://ag3luxury.com/assets/images/logo.png" alt="logo-empresa" style="width: 100%; max-width: 100px; padding-left: 10px;">
                         </td>
                         <td class="details" style="color: #fff; text-align: right; padding-right: 10px;">
                             <h2 style="margin-bottom: 0;">Del Aeropuerto A Tu Destino</h2>
@@ -274,10 +274,10 @@
                             </td>
                             <td class="service-img" style="word-wrap: break-word;">
                                @if($booking->request_unit == 1)
-                                <img src="http://ag3.stigmacode.com/assets/images/transport-suburban.png"
+                                <img src="http://ag3luxury.com/assets/images/transport-suburban.png"
                                 alt="service-suburban" style="width: 100%;">
                                @else
-                               <img src="http://ag3.stigmacode.com/assets/images/transport-van.png"
+                               <img src="http://ag3luxury.com/assets/images/transport-van.png"
 
                                alt="service-suburban" style="width: 100%;">
                                @endif
@@ -400,13 +400,13 @@
                 <tr>
                     <td class="centerText">
                         <br>
-                        <img src="http://ag3.stigmacode.com/assets/images/three-hours.png"   width="100" height="100"alt="3-horas"> <br>
+                        <img src="http://ag3luxury.com/assets/images/three-hours.png"   width="100" height="100"alt="3-horas"> <br>
                         <span>VUELO INTERNACIONAL</span><br>
                         Deberas presentarte en el aeropuerto 3 horas antes
                     </td>
                     <td class="centerText">
                         <br>
-                        <img src="http://ag3.stigmacode.com/assets/images/two-hours.png"   width="100" height="100" alt="2-horas"> <br>
+                        <img src="http://ag3luxury.com/assets/images/two-hours.png"   width="100" height="100" alt="2-horas"> <br>
                         <span>VUELO NACIONAL</span><br>
                         Deberas presentarte en el aeropuerto 3 horas antes
                     </td>
@@ -434,7 +434,7 @@
                         <td align="center" valign="middle" style="word-wrap: break-word;">
                             <a href="https://www.facebook.com/transfercancun/"
                                 style="text-decoration: none; color: #fff;">
-                                <img src="http://ag3.stigmacode.com/assets/images/icons/facebook.png" alt="facebook-icon"
+                                <img src="http://ag3luxury.com/assets/images/icons/facebook.png" alt="facebook-icon"
                                     width="30" height="30"
                                     style="display: inline-block; vertical-align: middle; width: auto; padding-right: 10px; text-decoration: none;"><span style="font-weight: bold; font-size: 16px;">Facebook</span>
                             </a>
@@ -442,14 +442,14 @@
                         <td align="center" valign="middle" style="word-wrap: break-word;">
                             <a href="https://www.instagram.com/ag3_luxurytravel/"
                                 style="text-decoration: none; color: #fff;">
-                                <img src="http://ag3.stigmacode.com/assets/images/icons/instagram.png" alt="instagram-icon"
+                                <img src="http://ag3luxury.com/assets/images/icons/instagram.png" alt="instagram-icon"
                                     width="30" height="30"
                                     style="display: inline-block; vertical-align: middle; width: auto; padding-right: 10px; text-decoration: none;"><span style="font-weight: bold; font-size: 16px;">Instagram</span>
                             </a>
                         </td>
                         <td align="center" valign="middle" style="word-wrap: break-word;">
                             <a href="https://twitter.com/eulloagle/" style="text-decoration: none; color: #fff;">
-                                <img src="http://ag3.stigmacode.com/assets/images/icons/twitter.png" alt="twitter-icon"
+                                <img src="http://ag3luxury.com/assets/images/icons/twitter.png" alt="twitter-icon"
                                     width="30" height="30"
                                     style="display: inline-block; vertical-align: middle; width: auto; padding-right: 10px; text-decoration: none;"><span style="font-weight: bold; font-size: 16px;">Twitter</span>
                             </a>

@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <link rel="shortcut icon" href="{{ asset('assets/images/icons/logo.ico') }}" />
-	<title> {{ config('app.name', 'Laravel') }}</title>
+	<title>AG3 Servicio de transportacion SUV´S - VAN</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="AG3 Landing page">
+	<meta name="description" content="">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="stigmacode.com">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
