@@ -192,7 +192,7 @@ body.dark .service-list .left li {
     background: #EDFDF3;
     color: #2F6339;
     font-size: 10px;
-    width: 160px;
+    /* width: 160px; */
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -207,7 +207,7 @@ body.dark .service-list .left ul.buttons li.btn-green {
     background: #EDF5FF;
     color: #245AC2;
     font-size: 10px;
-    width: 130px;
+    /* width: 130px; */
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -288,6 +288,8 @@ body.dark .service-list .right .title-pre {
     /* background: #00CE7C; */
     background: #0582CA;
     color: #fff;
+    font-weight: bolder;
+    letter-spacing: .2px;
     padding: 10px 0;
     text-decoration: none;
     width: 100%;
@@ -314,6 +316,8 @@ body.dark .service-list .right .title-pre {
 .service-list .right ul.table-row button.button-pre {
     background: #FF8427;
     color: #fff;
+    font-weight: bolder;
+    letter-spacing: .2px;
     padding: 10px 0;
     text-decoration: none;
     width: 100%;
@@ -801,18 +805,34 @@ body.dark .bg-footer {
 @media (max-width: 450px) {
     .service-list .right .title-eco,
     .service-list .right .title-pre {
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .service-list .right ul.table-row {
+        display: grid;
+        grid-template-columns: 150px 1fr 1fr;
+        list-style: none;
+    }
+
+    .service-list .right ul.table-row button.button-eco,
+    .service-list .right ul.table-row button.button-pre {
+        font-size: 13px;
+    }
+
+    .service-list .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
-/* @media (max-width : 480px) {
-    .tours-section .cws_divider {
-        width: 110px !important;
-    }
-}
 
-@media only screen and (min-device-width : 481px) and (max-device-width : 992px) {
-    .tours-section .cws_divider {
-        width: 330px !important;
+@media only screen and (min-device-width : 451px) and (max-device-width : 767px) {
+    .service-list .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-} */
+} 
