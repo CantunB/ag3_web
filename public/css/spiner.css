@@ -7,6 +7,7 @@
 
 span.minus, span.plus {
 	font-weight: 600;
+	cursor: pointer;
 	background: rgba(169, 181, 193, .1) !important;
 }
 

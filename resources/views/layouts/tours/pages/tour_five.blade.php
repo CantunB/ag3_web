@@ -117,7 +117,7 @@
                             <p> {{__('tours.Balam tercera descripcion')}} </p>
                         </div>
 
-                        <a href="{{url(app()->getLocale().'/booking/tours'.'/5/purchase')}}" class="btn_tour btn mb-4">Reserva ahora</a>
+                        <a href="{{url(app()->getLocale().'/booking/tours'.'/5/purchase')}}" class="btn_tour btn mb-4">{{__('Reserva ahora')}}</a>
                     </div>
 
                     <div class="col-lg-6">
