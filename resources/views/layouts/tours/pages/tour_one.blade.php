@@ -40,7 +40,7 @@
                         <div class="description">
                             <p> {{__('tours.Bacalar primera descripcion')}} </p>
                             <p> {{__('tours.Bacalar segunda descripcion')}} </p>
-                            <p> {{__('tours.Bacalara tercer descripcion')}} </p>
+                            <p> {{__('tours.Bacalar tercera descripcion')}} </p>
                         </div>
 
                         <a href="{{url(app()->getLocale().'/booking/tours'.'/1/purchase')}}" class="btn mb-4">{{__('Reserva ahora')}}</a>

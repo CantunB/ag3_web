@@ -40,7 +40,7 @@
                             <p><span>Cenote Xibalbá</span>  {{__('tours.Coba tercera descripcion p_3.1')}}  <span>Cenote Los Aluxes</span>  {{__('tours.Coba tercera descripcion p_3.2')}} <span>Cenote Nohoch</span> {{__('tours.Coba tercera descripcion p_3.3')}} </p>
                         </div>
 
-                        <a href="{{url(app()->getLocale().'/booking/tours'.'/6/purchase')}}" class="btn mb-4">Reserva ahora</a>
+                        <a href="{{url(app()->getLocale().'/booking/tours'.'/6/purchase')}}" class="btn mb-4">{{__('Reserva ahora')}}</a>
                     </div>
 
                     <div class="col-lg-6">
@@ -61,7 +61,7 @@
                 <div class="row mt-4">
                     <div class="col-lg-7">
                         <div class="details-title">
-                            <h2 class="text-center">¿Que incluye el tour?</h2>
+                            <h2 class="text-center">{{__('tours.¿Que incluye el tour?')}}</h2>
                         </div>
 
                         <div class="row">
@@ -82,14 +82,14 @@
                                 <p>Visita a los cenotes Xibalbá, Los Aluxes y Nohoch - Estancia 2 horas.</p>
                             </div>
                             <div class="col-md-12">
-                                <h2 class="text-center">Recomendaciones</h2>
+                                <h2 class="text-center">{{__('tours.Recomendaciones')}}</h2>
                                 <p>Te recomendamos traer tu traje de baño y un cambio de ropa, para que puedas viajar seco y cómodo para las siguientes actividades, así como un bloqueador y repelente de insectos, de preferencia biodegradables. Tiempo libre para comer - 1 hora.</p>
                             </div>
                         </div>
 
                     </div>
                     <div class="col-lg-5">
-                        <h2 class="text-center">Ubicacion</h2>
+                        <h2 class="text-center">{{ __('tours.Ubicacion')}}</h2>
 
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3737.365816845341!2d-87.7348665850763!3d20.49122478629198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f51cf546e480153%3A0xc67bf794d06103de!2sZona%20arqueol%C3%B3gica%20de%20Coba!5e0!3m2!1ses!2smx!4v1642625017514!5m2!1ses!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
