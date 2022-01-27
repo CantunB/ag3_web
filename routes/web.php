@@ -53,3 +53,4 @@ Route::group([
     Route::post('getCodeIATA', [Controller::class, 'getCodeIATA'])->name('fetchIata');
 
 });
+
