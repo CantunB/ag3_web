@@ -41,16 +41,16 @@
                             <div class="row mb-4">
                                 <!-- section left -->
                                 <div class="col-md-3 left">
-                                    <h4 class="mt-2 title-service">TRANSPORTE {{ $tariff[0]->type_unit->type_units }}</h4>
+                                    <h4 class="mt-2 title-service">{{ __('transporte') }} {{ $tariff[0]->type_unit->type_units }}</h4>
                                     <img class="service-img" src="{{ asset('assets/images/transport-suburban.png') }}" alt="transport-suburban">
                                     <ul>
-                                        <li class="specifications"><i class="fas fa-users icons-specifications"></i> Max. 8 pax.</li>
-                                        <li class="specifications"> <i class="fas fa-suitcase icons-specifications icon-second"></i>  Max. 7 maletas</li>
-                                        <li class="specifications"><i class="fas fa-car-side icons-specifications"></i> Precio por vehiculo</li>
+                                        <li class="specifications"><i class="fas fa-users icons-specifications"></i> Max. 6 pax.</li>
+                                        <li class="specifications"> <i class="fas fa-suitcase icons-specifications icon-second"></i>  Max. 6 {{ __('maletas') }}</li>
+                                        <li class="specifications"><i class="fas fa-car-side icons-specifications"></i> {{ __('precio_vehiculo') }}</li>
                                     </ul>
                                     <ul class="buttons">
-                                        <li class="btn-green p-2 mb-2"><i class="fas fa-coins"></i> Impuestos incluidos</li>
-                                        <li class="btn-blue p-2"><i class="fas fa-shield-alt"></i> Seguro de viaje</li>
+                                        <li class="btn-green p-2 mb-2"><i class="fas fa-coins"></i> {{ __('impuestos') }}</li>
+                                        <li class="btn-blue p-2"><i class="fas fa-shield-alt"></i> {{ __('seguro') }}</li>
                                     </ul>
                                 </div>
 
@@ -62,37 +62,37 @@
                                     <li class="text-center mt-2 title-pre sub_red">{{ $tariff[1]->type_trip->type_trip }}</li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Tiempo de espera</li>
-                                    <li class="text-center sub_sen">Hasta 30 min.</li>
-                                    <li class="text-center sub_red">Minimo</li>
+                                    <li class="mb-2">{{ __('serv_txt_uno') }}</li>
+                                    <li class="text-center sub_sen">{{ __('tiempo_espera') }}</li>
+                                    <li class="text-center sub_red">{{ __('tiempo_espera') }}</li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Servicio privado</li>
+                                    <li class="mb-2">{{ __('serv_txt_dos') }}</li>
                                     <li class="text-center sub_sen"><i class="fas fa-check"></i></li>
                                     <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Cancelacion gratuita</li>
+                                    <li class="mb-2">{{ __('serv_txt_tres') }}</li>
                                     <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Cuponera de descuentos</li>
+                                    <li class="mb-2">{{ __('serv_txt_cuatro') }}</li>
                                     <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Amenidades de bienvenida</li>
+                                    <li class="mb-2">{{ __('serv_txt_cinco') }}</li>
                                     <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Kit de salud Covid-19</li>
-                                    <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
+                                    <li class="mb-2">{{ __('serv_txt_seis') }}</li>
+                                    <li class="text-center sub_sen"><i class="fas fa-check"></i></li>
                                     <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-4">Paradas de cortesia en tienda de conveniencia</li>
+                                    <li class="mb-4">{{ __('serv_txt_siete') }}</li>
                                     <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
@@ -123,7 +123,7 @@
                                             <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
                                             <input type="hidden" name="time_comeback" value="{{ $booking['time_comeback'] }}">
                                             @endif
-                                            <button type="submit" class="button-eco">Reserva ahora</button>
+                                            <button type="submit" class="button-eco">{{ __('Reserva ahora') }}</button>
                                         </form>
                                     </li>
                                     <li class="sub_red">
@@ -145,7 +145,7 @@
                                             <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
                                             <input type="hidden" name="time_comeback" value="{{ $booking['time_comeback'] }}">
                                             @endif
-                                            <button type="submit" class="button-pre">Reserva ahora</button>
+                                            <button type="submit" class="button-pre">{{ __('Reserva ahora') }}</button>
                                         </form>
                                     </li>
                                 </ul>
@@ -162,16 +162,16 @@
                             <div class="row mb-4">
                                 <!-- section left -->
                                 <div class="col-md-3 left">
-                                    <h4 class="mt-2 title-service">TRANSPORTE {{ $tariff[2]->type_unit->type_units }}</h4>
+                                    <h4 class="mt-2 title-service">{{ __('transporte') }} {{ $tariff[2]->type_unit->type_units }}</h4>
                                     <img class="service-img" src="{{ asset('assets/images/transport-van.png') }}" alt="transport-van">
                                     <ul>
-                                        <li class="specifications"><i class="fas fa-users icons-specifications"></i> Max. 8 pax.</li>
-                                        <li class="specifications"><i class="fas fa-suitcase icons-specifications icon-second"></i> Max. 7 maletas</li>
-                                        <li class="specifications"><i class="fas fa-car-side icons-specifications"></i> Precio por vehiculo</li>
+                                        <li class="specifications"><i class="fas fa-users icons-specifications"></i> Max. 7 pax.</li>
+                                        <li class="specifications"><i class="fas fa-suitcase icons-specifications icon-second"></i> Max. 10 {{ __('maletas') }}</li>
+                                        <li class="specifications"><i class="fas fa-car-side icons-specifications"></i> {{ __('precio_vehiculo') }}</li>
                                     </ul>
                                     <ul class="buttons">
-                                        <li class="btn-green p-2 mb-2"><i class="fas fa-coins"></i> Impuestos incluidos</li>
-                                        <li class="btn-blue p-2"><i class="fas fa-shield-alt"></i> Seguro de viaje</li>
+                                        <li class="btn-green p-2 mb-2"><i class="fas fa-coins"></i> {{ __('impuestos') }}</li>
+                                        <li class="btn-blue p-2"><i class="fas fa-shield-alt"></i> {{ __('seguro') }}</li>
                                     </ul>
                                 </div>
 
@@ -183,37 +183,37 @@
                                     <li class="text-center mt-2 title-pre van_red">{{ $tariff[3]->type_trip->type_trip }}</li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Tiempo de espera</li>
-                                    <li class="text-center van_sen">Hasta 30 min.</li>
-                                    <li class="text-center van_red">Minimo</li>
+                                    <li class="mb-2">{{ __('serv_txt_uno') }}</li>
+                                    <li class="text-center van_sen">{{ __('tiempo_espera') }}</li>
+                                    <li class="text-center van_red">{{ __('tiempo_espera') }}</li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Servicio privado</li>
+                                    <li class="mb-2">{{ __('serv_txt_dos') }}</li>
                                     <li class="text-center van_sen"><i class="fas fa-check"></i></li>
                                     <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Cancelacion gratuita</li>
+                                    <li class="mb-2">{{ __('serv_txt_tres') }}</li>
                                     <li class="text-center van_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Cuponera de descuentos</li>
+                                    <li class="mb-2">{{ __('serv_txt_cuatro') }}</li>
                                     <li class="text-center van_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Amenidades de bienvenida</li>
+                                    <li class="mb-2">{{ __('serv_txt_cinco') }}</li>
                                     <li class="text-center van_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-2">Kit de salud Covid-19</li>
-                                    <li class="text-center van_sen"><i class="fas fa-times"></i></li>
+                                    <li class="mb-2">{{ __('serv_txt_seis') }}</li>
+                                    <li class="text-center van_sen"><i class="fas fa-check"></i></li>
                                     <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
                                 <ul class="table-row mb-0">
-                                    <li class="mb-4">Paradas de cortesia en tienda de conveniencia</li>
+                                    <li class="mb-4">{{ __('serv_txt_siete') }}</li>
                                     <li class="text-center van_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
@@ -242,7 +242,7 @@
                                             <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
                                             <input type="hidden" name="time_comeback" value="{{ $booking['time_comeback'] }}">
                                             @endif
-                                            <button type="submit" class="button-eco">Reserva ahora</button>
+                                            <button type="submit" class="button-eco">{{ __('Reserva ahora') }}</button>
                                         </form>
                                     </li>
                                     <li class="van_red">
@@ -264,7 +264,7 @@
                                             <input type="hidden" name="date_comeback" value="{{ $booking['date_comeback'] }}">
                                             <input type="hidden" name="time_comeback" value="{{ $booking['time_comeback'] }}">
                                             @endif
-                                            <button type="submit" class="button-pre">Reserva ahora</button>
+                                            <button type="submit" class="button-pre">{{ __('Reserva ahora') }}</button>
                                         </form>
                                     </li>
                                 </ul>
@@ -281,45 +281,45 @@
                 <div class="col-md-12 col-lg-4 mt-4">
                     <div class="row justify-content-end">
                         <div class="col-md-12 col-lg-11 mb-4 reservation__summary">
-                            <h5 class="title__reservation mt-2">Resumen de reservacion</h5>
-                            <p class="title mb-0">Tipo de servicio</p>
+                            <h5 class="title__reservation mt-2">{{ __('resumen') }}</h5>
+                            <p class="title mb-0">{{ __('tipo_servicio') }}</p>
                             <p class="description"><i class="fas fa-sync-alt icon-resume"></i> {{ $booking['service'] }}</p>
-                            <p class="title mb-0">Desde</p>
+                            <p class="title mb-0">{{ __('desde') }}</p>
                             <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $booking['origen'] }}
                             </p>
-                            <p class="title mb-0">Hacia</p>
+                            <p class="title mb-0">{{ __('hacia') }}</p>
                             <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $booking['destino'] }}
                             </p>
-                            <p class="title mb-0">Fecha</p>
+                            <p class="title mb-0">{{ __('fecha') }}</p>
                             <p class="description"><i class="fas fa-calendar-alt icon-resume"></i> {{ $booking['date'] }}</p>
-                            <p class="title mb-0">Hora</p>
+                            <p class="title mb-0">{{ __('hora') }}</p>
                             <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $booking['pickup'] }}</p>
-                            <p class="title mb-0">Numero de pasajeros</p>
+                            <p class="title mb-0">{{ __('num_pasajeros') }}</p>
                             <p class="description"><i class="fas fa-users icon-resume"></i> {{ $booking['passengers'] }}</p>
                             @if ($booking['retorno'] == 'si')
-                            <p class="title mb-0">Fecha de regreso</p>
+                            <p class="title mb-0">{{ __('fecha_regreso') }}</p>
                             <p class="description"><i class="fas fa-calendar-alt icon-resume"></i> {{ $booking['date_comeback'] }}</p>
-                            <p class="title mb-0">Hora de regreso</p>
+                            <p class="title mb-0">{{ __('hora_regreso') }}</p>
                             <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $booking['time_comeback'] }}</p>
                             @endif
                         </div>
 
                         <div class="col-md-12 col-lg-11 mb-4 widget">
-                            <h5 class="title__widget mt-2">¿Necesitas ayuda con tu reservacion?</h5>
-                            <p>Estariamos mas que felices de ayudarte. Nuestro call center esta a su servicio.</p>
+                            <h5 class="title__widget mt-2">{{ __('widget_uno') }}</h5>
+                            <p>{{ __('widget_text') }}</p>
                             <hr>
-                            <p class="text-phone">Contactanos: +52 (998) 387 02 29</p>
+                            <p class="text-phone">{{ __('widget_cont') }}: +52 (938) 172 6488</p>
                         </div>
 
                         <div class="col-md-12 col-lg-11 mb-4 widget">
-                            <h5 class="title__widget mt-2">¿Que incluye mi reservacion?</h5>
-                            <p class="mb-0"><i class="fas fa-check"></i> Recibimiento en el aeropuerto</p>
-                            <p class="mb-0"><i class="fas fa-check"></i> Aire acondicionado</p>
-                            <p class="mb-0"><i class="fas fa-check"></i> Seguro de pasajero</p>
-                            <p class="mb-0"><i class="fas fa-check"></i> Monitoreo de vuelo</p>
-                            <p class="mb-0"><i class="fas fa-check"></i> Servicio de transporte 24 hrs.</p>
-                            <p class="mb-0"><i class="fas fa-check"></i> Conductor profesional bilingue</p>
-                            <p class="mb-4"><i class="fas fa-check"></i> No hay tarifas por cambios de vuelo</p>
+                            <h5 class="title__widget mt-2">{{ __('widget_dos') }}</h5>
+                            <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_uno') }}</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_dos') }}</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_tres') }}</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_cuatro') }}</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_cinco') }}</p>
+                            <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_seis') }}</p>
+                            <p class="mb-4"><i class="fas fa-check"></i> {{ __('wdos_txt_siete') }}</p>
                         </div>
                     </div>
                 </div>
