@@ -245,7 +245,7 @@
     @endif
 
     <h2 class="title-section"><span>Metodo de pago:</span> {{$booking->type_payment}}</h2>
-    @if ( $booking->type_service == "Aeropuerto a Hotel" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
+    @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
     <table cellspacing="0" cellpadding="0" class="arrival-info">
         <tr>
             <td class="centerText">
