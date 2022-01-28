@@ -63,6 +63,7 @@
 
             @include('layouts.components.new-footer')
             @include('layouts.components.scripts')
+            <script src="{{ asset('assets/js/scripts/gotop.js') }}"></script>
         </div>
     </body>
 </html>

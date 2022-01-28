@@ -19,17 +19,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.2.0/dist/select2-bootstrap-5-theme.min.css" />
     <link rel="stylesheet" href="{{ asset('css/whatsapp.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/personal_parsley.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/gotop.css') }}">
 </head>
 
 <body>
     @include('layouts.components.new-header')
     <!-- section steps start -->
     <div class="container">
+
+        {{-- boton de ir arriba  --}}
         <div class="go-top-container">
             <div class="go-top-button">
                 <i class="fas fa-chevron-up"></i>
             </div>
         </div>
+
         <div class="mt-3 steps">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                 {{-- <li class="nav-item" role="presentation">
@@ -64,6 +68,7 @@
     <!-- section content end  -->
     <a href="https://wa.me/5219381726488?text=Me%20gustaría%20informacion%20acerca%20de%20los%20servicios" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
+    <script src="{{ asset('assets/js/scripts/gotop.js') }}"></script>
     @include('layouts.components.new-footer')
     @include('layouts.components.scripts')
 </body>

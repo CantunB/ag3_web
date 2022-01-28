@@ -29,5 +29,9 @@ return [
     'vuelo_nac' => 'VOL NATIONAL',
     'descripcion_nac' => 'Vous devez vous présenter à l’aéroport 2 heures avant',
     'metodo_pago' => 'Mode de paiement',
-    'nota' => 'REMARQUE: SI VOUS SOUHAITEZ MODIFIER VOTRE PRISE EN CHARGE POUR VOTRE RETOUR À L’AÉROPORT, CONTACTEZ-NOUS'
+    'nota' => 'REMARQUE: SI VOUS SOUHAITEZ MODIFIER VOTRE PRISE EN CHARGE POUR VOTRE RETOUR À L’AÉROPORT, CONTACTEZ-NOUS',
+    "titulo_uno" => 'De l’aéroport à votre destination',
+    "titulo_dos" => 'Votre transport de luxe VIP, comme vous le méritez',
+    "titulo_tres" => 'Confirmation de réservation - AG3 Luxury Travel',
+    "titulo_cuatro" => 'Suivez-nous sur nos réseaux sociaux'
 ];
