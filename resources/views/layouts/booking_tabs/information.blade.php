@@ -392,25 +392,25 @@
         <div class="col-md-12 col-lg-4 mt-4">
             <div class="row justify-content-end">
                 <div class="col-md-12 col-lg-11 mb-4 reservation__summary">
-                    <h5 class="title__reservation mt-2">Resumen de reservacion</h5>
-                    <p class="title mb-0">Tipo de servicio</p>
+                    <h5 class="title__reservation mt-2">{{__('resumen de reservacion')}}</h5>
+                    <p class="title mb-0">{{__('tipo de servicio')}}</p>
                     <p class="description"><i class="fas fa-sync-alt icon-resume"></i> {{ $service }}</p>
-                    <p class="title mb-0">Desde</p>
+                    <p class="title mb-0">{{__('desde')}}</p>
                     <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $origen }}
                     </p>
-                    <p class="title mb-0">Hacia</p>
+                    <p class="title mb-0">{{__('hacia')}}</p>
                     <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $destino }}
                     </p>
-                    <p class="title mb-0">Fecha</p>
+                    <p class="title mb-0">{{__('fecha')}}</p>
                     <p class="description"><i class="fas fa-calendar-alt icon-resume"></i> {{ $date }}</p>
-                    <p class="title mb-0">Hora</p>
+                    <p class="title mb-0"> {{__('hora')}} </p>
                     <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $pickup }}</p>
-                    <p class="title mb-0">Numero de pasajeros</p>
+                    <p class="title mb-0"> {{__('num_pasajeros')}} </p>
                     <p class="description"><i class="fas fa-users icon-resume"></i> {{ $passengers }}</p>
                     @if ($retorno == 'si')
-                    <p class="title mb-0">Fecha de regreso</p>
+                    <p class="title mb-0"> {{__('fecha_regreso')}} </p>
                     <p class="description"><i class="fas fa-calendar-alt icon-resume"></i> {{ $date_comeback }}</p>
-                    <p class="title mb-0">Hora de regreso</p>
+                    <p class="title mb-0"> {{__('hora_regreso')}} </p>
                     <p class="description"><i class="fas fa-clock icon-resume"></i> {{ $time_comeback }}</p>
                     @endif
                     <p class="title mb-0">Servicio</p>
@@ -418,21 +418,21 @@
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">
-                    <h5 class="title__widget mt-2">¿Necesitas ayuda con tu reservacion?</h5>
-                    <p>Estariamos mas que felices de ayudarte. Nuestro call center esta a su servicio.</p>
+                    <h5 class="title__widget mt-2">{{__('widget_uno')}}</h5>
+                    <p>{{__('widget_text')}}</p>
                     <hr>
-                    <p class="text-phone">Contactanos: +52 (998) 387 02 29</p>
+                    <p class="text-phone">{{__('widget_cont')}}: +52 (998) 387 02 29</p>
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">
-                    <h5 class="title__widget mt-2">¿Que incluye mi reservacion?</h5>
-                    <p class="mb-0"><i class="fas fa-check"></i> Recibimiento en el aeropuerto</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Aire acondicionado</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Seguro de pasajero</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Monitoreo de vuelo</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Servicio de transporte 24 hrs.</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Conductor profesional bilingue</p>
-                    <p class="mb-4"><i class="fas fa-check"></i> No hay tarifas por cambios de vuelo</p>
+                    <h5 class="title__widget mt-2">{{__('widget_dos')}}</h5>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{__('wdos_txt_uno')}}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{__('wdos_txt_dos')}} </p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{__('wdos_txt_tres')}} </p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{__('wdos_txt_cuatro')}} </p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{__('wdos_txt_cinco')}} </p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{__('wdos_txt_seis')}} </p>
+                    <p class="mb-4"><i class="fas fa-check"></i> {{__('wdos_txt_siete')}} </p>
                 </div>
             </div>
         </div>

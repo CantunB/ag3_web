@@ -63,7 +63,7 @@
                         <div class='col text-center'>
                         <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arribo">
                         <label for="img1">
-                            <h3 class="mb-4">ARRIVO</h3>
+                            <h3 class="mb-4">{{__('arribo')}}</h3>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcksclvcirts05OdENj2d5m4Okcw8K37HDQ&usqp=CAU" alt="ARRIVO" class="rounded">
                             <div class="tick_container">
                                 <div class="tick"><i class="fa fa-check"></i></div>
