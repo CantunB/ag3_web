@@ -94,8 +94,8 @@
                             <img src="http://ag3luxury.com/assets/images/logo.png" alt="logo-empresa">
                         </td>
                         <td class="details">
-                            <span>No. Servicio:</span> {{ $booking->id }}<br>
-                            <span>Fecha de creacion:</span> {{ \Carbon\Carbon::now()->toDateString() }}
+                            <span>{{ __('booking.no_servicio') }}:</span> {{ $booking->id }}<br>
+                            <span>{{ __('booking.fecha_creacion') }}:</span> {{ \Carbon\Carbon::now()->toDateString() }}
                         </td>
                     </tr>
                 </table>
@@ -103,7 +103,7 @@
         </tr>
     </table>
 
-    <h2 class="title-section">Informacion Personal</h2>
+    <h2 class="title-section">{{ __('booking.info_personal') }}</h2>
 
     <table cellspacing="0" cellpadding="0" class="information-personal">
         <tr>
@@ -111,17 +111,17 @@
                 <table class="info-content">
                     <tr>
                         <td class="items">
-                            <span>{{__('booking.name')}}:</span> {{$booking->FullName}}<br>
-                            <span>CORREO:</span> {{$booking->email}}<br>
-                            <span>TELEFONO:</span> {{ $booking->phone }}<br>
-                            <span>PAIS:</span>  {{ $booking->Country->name}}<br>
-                            <span>ESTADO:</span>  {{ $booking->State->name}}<br>
-                            <span>SERVICIO:</span> {{ $booking->type_service }}<br>
-                            <span>ORIGEN:</span> {{$booking->origin}}<br>
-                            <span>DESTINO:</span> {{ $booking->destiny }}<br>
-                            <span>VEHICULO SOLICITADO:</span> {{ $booking->TypeUnit->type_units}}<br>
-                            <span>PASAJEROS:</span>{{ $booking->passengers}} <br>
-                            <span>TOTAL:</span> {{$booking->price}} {{$booking->divisa}}
+                            <span>{{ __('booking.nombre') }}:</span> {{$booking->FullName}}<br>
+                            <span>{{ __('booking.correo') }}:</span> {{$booking->email}}<br>
+                            <span>{{ __('booking.telefono') }}:</span> {{ $booking->phone }}<br>
+                            <span>{{ __('booking.pais') }}:</span>  {{ $booking->Country->name}}<br>
+                            <span>{{ __('booking.estado') }}:</span>  {{ $booking->State->name}}<br>
+                            <span>{{ __('booking.servicio') }}:</span> {{ $booking->type_service }}<br>
+                            <span>{{ __('booking.origen') }}:</span> {{$booking->origin}}<br>
+                            <span>{{ __('booking.destino') }}:</span> {{ $booking->destiny }}<br>
+                            <span>{{ __('booking.vehiculo') }}:</span> {{ $booking->TypeUnit->type_units}}<br>
+                            <span>{{ __('booking.pasajeros') }}:</span>{{ $booking->passengers}} <br>
+                            <span>{{ __('booking.total') }}:</span> {{$booking->price}} {{$booking->divisa}}
                         </td>
                         <td class="service-img">
                             @if ($booking->request_unit == 1)
@@ -137,46 +137,45 @@
         </tr>
     </table>
     @if ( $booking->type_service == "Aeropuerto a Hotel")
-        <h2 class="title-section">Informacion de llegada</h2>
+        <h2 class="title-section">{{ __('booking.info_llegada') }}</h2>
 
         <table cellspacing="0" cellpadding="0" class="arrival-info">
             <tr>
                 <td>
-                    <span>FECHA:</span> {{ $booking->date_arrival }}<br>
-                    <span>HORA:</span> {{ $booking->time_arrival }}<br>
-                    <span>AEROLINEA:</span> {{ $booking->airline_arrival}}<br>
-                    <span>NUMERO DE VUELO:</span> {{$booking->flight_number_arrival}}<br>
-                    <span>COMENTARIOS:</span> {{ $booking->comments_arrival}}
+                    <span>{{ __('booking.fecha') }}:</span> {{ $booking->date_arrival }}<br>
+                    <span>{{ __('booking.hora') }}:</span> {{ $booking->time_arrival }}<br>
+                    <span>{{ __('booking.aerolinea') }}:</span> {{ $booking->airline_arrival}}<br>
+                    <span>{{ __('booking.num_vuelo') }}:</span> {{$booking->flight_number_arrival}}<br>
+                    <span>{{ __('booking.comentarios') }}:</span> {{ $booking->comments_arrival}}
                 </td>
             </tr>
         </table>
     @elseif ( $booking->type_service == "Hotel a Aeropuerto" )
-        <h2 class="title-section">Informacion de Salida</h2>
+        <h2 class="title-section">{{ __('booking.info_salida') }}</h2>
 
         <table cellspacing="0" cellpadding="0" class="arrival-info">
             <tr>
                 <td>
-                    <span>FECHA:</span> {{ $booking->date_departure }}<br>
-                    <span>HORA:</span> {{ $booking->time_departure }}<br>
-                    <span>AEROLINEA:</span> {{ $booking->airline_departure}}<br>
-                    <span>NUMERO DE VUELO:</span>  {{$booking->flight_number_departure}}<br>
-                    <span>COMENTARIOS:</span> {{ $booking->comments_departure}} <br>
-                    <span>PICK-UP:</span> {{$pickup_formateado}}
+                    <span>{{ __('booking.fecha') }}:</span> {{ $booking->date_departure }}<br>
+                    <span>{{ __('booking.hora') }}:</span> {{ $booking->time_departure }}<br>
+                    <span>{{ __('booking.aerolinea') }}:</span> {{ $booking->airline_departure}}<br>
+                    <span>{{ __('booking.num_vuelo') }}:</span>  {{$booking->flight_number_departure}}<br>
+                    <span>{{ __('booking.comentarios') }}:</span> {{ $booking->comments_departure}} <br>
+                    <span>{{ __('booking.pickup') }}:</span> {{$pickup_formateado}}
 
                 </td>
             </tr>
         </table>
     @elseif ( $booking->type_service == "Tours")
-        <h2 class="title-section">Informacion de Salida</h2>
+        <h2 class="title-section">{{ __('booking.info_salida') }}</h2>
 
         <table cellspacing="0" cellpadding="0" class="arrival-info">
             <tr>
                 <td>
-                    <span>FECHA:</span> {{ $booking->date_departure }}<br>
-                    <span>HORA:</span> {{ $booking->time_departure }}<br>
-                    <span>COMENTARIOS:</span> {{ $booking->comments_departure}}
+                    <span>{{ __('booking.fecha') }}:</span> {{ $booking->date_departure }}<br>
+                    <span>{{ __('booking.hora') }}:</span> {{ $booking->time_departure }}<br>
+                    <span>{{ __('booking.comentarios') }}:</span> {{ $booking->comments_departure}}
                     {{-- <span>PICK-UP:</span> --}}
-
                 </td>
             </tr>
         </table>
@@ -184,33 +183,33 @@
     <table cellspacing="0" cellpadding="0">
         <tr>
             <td>
-                <h2 class="title-section">Informacion de Llegada</h2>
+                <h2 class="title-section">{{ __('booking.info_llegada') }}</h2>
 
                 <table cellspacing="0" cellpadding="0" class="arrival-info">
                     <tr>
                         <td>
-                            <span>FECHA:</span> {{ $booking->date_arrival }}<br>
-                            <span>HORA:</span> {{ $booking->time_arrival }}<br>
-                            <span>AEROLINEA:</span> {{ $booking->airline_arrival}}<br>
-                            <span>NUMERO DE VUELO:</span> {{$booking->flight_number_arrival}}<br>
-                            <span>COMENTARIOS: </span>{{ $booking->comments_arrival}}<br>
+                            <span>{{ __('booking.fecha') }}:</span> {{ $booking->date_arrival }}<br>
+                            <span>{{ __('booking.hora') }}:</span> {{ $booking->time_arrival }}<br>
+                            <span>{{ __('booking.aerolinea') }}:</span> {{ $booking->airline_arrival}}<br>
+                            <span>{{ __('booking.num_vuelo') }}:</span> {{$booking->flight_number_arrival}}<br>
+                            <span>{{ __('booking.comentarios') }}: </span>{{ $booking->comments_arrival}}<br>
                             <span>&nbsp;</span>
                         </td>
                     </tr>
                 </table>
             </td>
             <td>
-                <h2 class="title-section">Informacion de Salida</h2>
+                <h2 class="title-section">{{ __('booking.info_salida') }}</h2>
 
                 <table cellspacing="0" cellpadding="0" class="arrival-info">
                     <tr>
                         <td>
-                            <span>FECHA:</span> {{ $booking->date_departure }}<br>
-                            <span>HORA:</span> {{ $booking->time_departure }}<br>
-                            <span>AEROLINEA:</span> {{ $booking->airline_departure}}<br>
-                            <span>NUMERO DE VUELO:</span>  {{$booking->flight_number_departure}}<br>
-                            <span>COMENTARIOS: </span>{{ $booking->comments_departure}}<br>
-                            <span>PICK-UP: </span>{{ $pickup_formateado }}
+                            <span>{{ __('booking.fecha') }}:</span> {{ $booking->date_departure }}<br>
+                            <span>{{ __('booking.hora') }}:</span> {{ $booking->time_departure }}<br>
+                            <span>{{ __('booking.aerolinea') }}:</span> {{ $booking->airline_departure}}<br>
+                            <span>{{ __('booking.num_vuelo') }}:</span>  {{$booking->flight_number_departure}}<br>
+                            <span>{{ __('booking.comentarios') }}: </span>{{ $booking->comments_departure}}<br>
+                            <span>{{ __('booking.pickup') }}: </span>{{ $pickup_formateado }}
 
                         </td>
                     </tr>
@@ -223,33 +222,33 @@
 
     @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
 
-    <h2 class="title-section">Preparate para tu viaje</h2>
+    <h2 class="title-section">{{ __('booking.preparate') }}</h2>
 
     <table cellspacing="0" cellpadding="0" class="arrival-info">
         <tr>
             <td class="centerText">
                 <br>
                 <img src="http://ag3luxury.com/assets/images/three-hours.png"   width="75" height="75"alt="3-horas"> <br>
-                <span>VUELO INTERNACIONAL</span><br>
-                Deberas presentarte en el aeropuerto 3 horas antes
+                <span>{{ __('booking.vuelo_inter') }}</span><br>
+                {{ __('booking.descripcion_inter') }}
             </td>
             <td class="centerText">
                 <br>
                 <img src="http://ag3luxury.com/assets/images/two-hours.png"   width="75" height="75" alt="2-horas"> <br>
-                <span>VUELO NACIONAL</span><br>
-                Deberas presentarte en el aeropuerto 3 horas antes
+                <span>{{ __('booking.vuelo_nac') }}</span><br>
+                {{ __('booking.descripcion_nac') }}
             </td>
         </tr>
     </table>
 
     @endif
 
-    <h2 class="title-section"><span>Metodo de pago:</span> {{$booking->type_payment}}</h2>
+    <h2 class="title-section"><span>{{ __('booking.metodo_pago') }}:</span> {{$booking->type_payment}}</h2>
     @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
     <table cellspacing="0" cellpadding="0" class="arrival-info">
         <tr>
             <td class="centerText">
-                <span>* NOTA: SI DESEA MODIFICAR SU PICK-UP PARA SU RETORNO AL AEROPUERTO CONTACTANOS*</span>
+                <span>*{{ __('booking.nota') }}*</span>
             </td>
         </tr>
     </table>
