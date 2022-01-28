@@ -32,29 +32,28 @@
         </div>
         <div class="mt-3 steps">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
+                {{-- <li class="nav-item" role="presentation">
                     <button class="nav-link disabled" id="unit-tab" data-bs-toggle="tab" data-bs-target="#unit"
                         type="button" role="tab" aria-controls="home" aria-selected="false">Seleccionar
                         traslado</button>
-                </li>
+                </li> --}}
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="complete-tab" data-bs-toggle="tab" data-bs-target="#complete"
-                        type="button" role="tab" aria-controls="profile" aria-selected="true">Completar
-                        informacion</button>
+                        type="button" role="tab" aria-controls="profile" aria-selected="true"> {{__('completar_info')}} </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link disabled" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment"
-                        type="button" role="tab" aria-controls="contact" aria-selected="false">Forma de pago</button>
+                        type="button" role="tab" aria-controls="contact" aria-selected="false">{{__('forma de pago')}}</button>
                 </li>
             </ul>
         </div>
     </div>
     <div class="tab-content" id="myTabConteant">
-        <div class="tab-pane fade" id="unit" role="tabpanel" aria-labelledby="home-tab">
+        {{-- <div class="tab-pane fade" id="unit" role="tabpanel" aria-labelledby="home-tab">
             <div class="container" style="height: 50vh">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit odit, sunt nam cumque quis alias dolor harum, distinctio impedit repellendus voluptatum doloribus veniam facere aliquid dolore et, quas quo tempora?
             </div>
-        </div>
+        </div> --}}
         <div class="tab-pane fade show active" id="complete" role="tabpanel" aria-labelledby="profile-tab">
             @include('layouts.booking_tabs.information')
         </div>

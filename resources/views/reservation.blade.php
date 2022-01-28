@@ -58,8 +58,10 @@
                                 <div class="col-md-9 right">
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li class="text-center mt-2 title-eco sub_sen">{{ $tariff[0]->type_trip->type_trip }}</li>
-                                    <li class="text-center mt-2 title-pre sub_red">{{ $tariff[1]->type_trip->type_trip }}</li>
+                                    {{-- <li class="text-center mt-2 title-eco sub_sen">{{ $tariff[0]->type_trip->type_trip }}</li> --}}
+                                    {{-- <li class="text-center mt-2 title-pre sub_red">{{ $tariff[1]->type_trip->type_trip }}</li> --}}
+                                    <li class="text-center mt-2 title-eco sub_sen">{{ __('sencillo') }}</li>
+                                    <li class="text-center mt-2 title-pre sub_red">{{ __('redondo') }}</li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">{{ __('serv_txt_uno') }}</li>
@@ -179,8 +181,10 @@
                                 <div class="col-md-9 right">
                                 <ul class="table-row mb-0">
                                     <li></li>
-                                    <li class="text-center mt-2 title-eco van_sen">{{ $tariff[2]->type_trip->type_trip }}</li>
-                                    <li class="text-center mt-2 title-pre van_red">{{ $tariff[3]->type_trip->type_trip }}</li>
+                                    {{-- <li class="text-center mt-2 title-eco van_sen">{{ $tariff[2]->type_trip->type_trip }}</li> --}}
+                                    {{-- <li class="text-center mt-2 title-pre van_red">{{ $tariff[3]->type_trip->type_trip }}</li> --}}
+                                    <li class="text-center mt-2 title-eco van_sen">{{ __('sencillo') }}</li>
+                                    <li class="text-center mt-2 title-pre van_red">{{ __('redondo') }}</li>
                                 </ul>
                                 <ul class="table-row mb-0">
                                     <li class="mb-2">{{ __('serv_txt_uno') }}</li>

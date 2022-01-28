@@ -111,7 +111,7 @@
                 <table class="info-content">
                     <tr>
                         <td class="items">
-                            <span>NOMBRE:</span> {{$booking->FullName}}<br>
+                            <span>{{__('booking.name')}}:</span> {{$booking->FullName}}<br>
                             <span>CORREO:</span> {{$booking->email}}<br>
                             <span>TELEFONO:</span> {{ $booking->phone }}<br>
                             <span>PAIS:</span>  {{ $booking->Country->name}}<br>

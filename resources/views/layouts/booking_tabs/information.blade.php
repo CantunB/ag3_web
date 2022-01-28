@@ -10,9 +10,9 @@
 
                 <!-- customer information start  -->
                 <div class="row form-section mb-4">
-                    <h5 class="mt-2"><small class="number__section">01</small> Informacion del cliente</h5>
+                    <h5 class="mt-2"><small class="number__section">01</small> {{__('informacion cliente')}} </h5>
                     <div class="col-sm-4 col-md-4 mb-1">
-                        <label for="name" class="form-label">Nombre</label>
+                        <label for="name" class="form-label">{{ __('nombre') }}</label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-user"><i
                                     class="fas fa-user input__icon"></i></span>
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <label for="paterno" class="form-label">Apellido Paterno</label>
+                        <label for="paterno" class="form-label"> {{__('apellido paterno')}} </label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-user"><i
                                     class="fas fa-user input__icon"></i></span>
@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <label for="materno" class="form-label">Apellido Materno</label>
+                        <label for="materno" class="form-label"> {{__('apellido materno')}} </label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-user"><i
                                     class="fas fa-user input__icon"></i></span>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 mb-1">
-                        <label for="phone-number" class="form-label">Numero Telefonico</label>
+                        <label for="phone-number" class="form-label">{{__('telefono')}} </label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-phone"><i
                                     class="fas fa-phone input__icon"></i></span>
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
-                        <label for="email" class="form-label">Correo Electronico</label>
+                        <label for="email" class="form-label"> {{__('correo')}} </label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-email"><i
                                     class="fas fa-envelope input__icon"></i></span>
@@ -52,12 +52,12 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
-                        <label for="countries" class="form-label">País</label>
+                        <label for="countries" class="form-label">{{__('pais')}}</label>
                         <div class="input-group">
                             <label for="icon-globe" class="input-group-text"><i
                                     class="fas fa-globe-americas input__icon"></i></label>
                             <select required id="countries" name="country_id" class="form-select countries">
-                                <option selected value="null" disabled>Selecciona un pais...</option>
+                                <option selected value="null" disabled> {{__('selecciona un pais')}} </option>
                                 @foreach ($countries as $country)
                                     <option value="{{ $country->id }}">{{ $country->name }}</option>
                                 @endforeach
@@ -65,11 +65,11 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 mb-4">
-                        <label for="states" class="form-label">Estado</label>
+                        <label for="states" class="form-label">{{__('estado')}}</label>
                         <div class="input-group">
                             <label for="icon-state" class="input-group-text"><i class="fas fa-location-arrow input__icon"></i></label>
                             <select required id="states" name="state_id" class="form-select states">
-                                <option selected value="null" disabled>Selecciona un estado...</option>
+                                <option selected value="null" disabled>{{__('selecciona un estado')}}</option>
                             </select>
                         </div>
                     </div>
@@ -79,15 +79,15 @@
                 <!-- travel information start -->
                 @if($service === 'Aeropuerto a Hotel')
                 <div class="row form-section mb-4">
-                    <h5 class="mt-2"><small class="number__section">02</small> Informacion del viaje</h5>
-                        <h5 class="title-arrival mb-0">Informacion de llegada</h5>
+                    <h5 class="mt-2"><small class="number__section">02</small> {{__('informacion del viaje')}} </h5>
+                        <h5 class="title-arrival mb-0">{{__('informacion llegada')}}</h5>
                         <div class="col-sm-6 col-md-6 mb-1">
-                            <label for="arrival" class="form-label">Aerolinea de llegada</label>
+                            <label for="arrival" class="form-label">{{__('aerolinea llegada')}}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-arrival input__icon"></i></span>
                                 <select required id="airline_arrival" name="a_arrival"  class="form-select airlines_arrival" aria-describedby="icon-plane">
-                                    <option selected value="null" disabled>Selecciona una aerolinea...</option>
+                                    <option selected value="null" disabled> {{__('selecciona una aerolinea')}} </option>
                                     @foreach ($airlines as $airline)
                                         <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
                                     @endforeach
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
-                            <label for="flight-number" class="form-label">Numero de vuelo</label>
+                            <label for="flight-number" class="form-label">{{__('numero de vuelo')}}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
@@ -105,7 +105,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
-                            <label for="passenger_arrival" class="form-label">Nombre del pasajero</label>
+                            <label for="passenger_arrival" class="form-label">{{__('nombre del pasajero')}}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-passenger"><i
                                         class="fas fa-user input__icon"></i></span>
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
-                            <label for="date" class="form-label">Fecha de llegada</label>
+                            <label for="date" class="form-label">{{__('fecha de llegada')}}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
@@ -121,7 +121,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
-                            <label for="hour" class="form-label">Hora de llegada</label>
+                            <label for="hour" class="form-label">{{__('hora de llegada')}}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
@@ -129,7 +129,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
-                            <label for="c_arrival" class="form-label">Comentarios</label>
+                            <label for="c_arrival" class="form-label">{{__('comentarios')}}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
@@ -140,15 +140,15 @@
 
                 @elseif($service === 'Hotel a Aeropuerto')
                 <div class="row form-section mb-4">
-                    <h5 class="mt-2"><small class="number__section">02</small> Informacion del viaje</h5>
-                    <h5 class="title-arrival mb-0">Informacion de Salida</h5>
+                    <h5 class="mt-2"><small class="number__section">02</small>{{__('informacion del viaje')}}</h5>
+                    <h5 class="title-arrival mb-0">{{__('informacion salida')}}</h5>
                         <div class="col-sm-6 col-md-6 mb-1">
-                            <label for="arrival" class="form-label">Aerolinea de Salida</label>
+                            <label for="arrival" class="form-label">{{__('aerolinea salida')}}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-departure input__icon"></i></span>
                                         <select required id="airline_departure" name="a_departure" class="form-select airlines_departure" aria-describedby="icon-plane">
-                                            <option selected value="null" disabled>Selecciona una aerolinea...</option>
+                                            <option selected value="null" disabled> {{__('selecciona una aerolinea')}} </option>
                                             @foreach ($airlines as $airline)
                                                 <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
                                             @endforeach
@@ -156,7 +156,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
-                            <label for="flight-number" class="form-label">Numero de vuelo</label>
+                            <label for="flight-number" class="form-label"> {{__('numero de vuelo')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
@@ -167,7 +167,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
-                            <label for="passenger_arrival" class="form-label">Nombre del pasajero</label>
+                            <label for="passenger_arrival" class="form-label"> {{__('nombre del pasajero')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-passenger"><i
                                         class="fas fa-user input__icon"></i></span>
@@ -175,7 +175,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
-                            <label for="date" class="form-label">Fecha de salida</label>
+                            <label for="date" class="form-label"> {{__('fecha de salida')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
-                            <label for="hour" class="form-label">Hora de salida</label>
+                            <label for="hour" class="form-label"> {{__('hora de salida')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
@@ -191,7 +191,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
-                            <label for="c_departure" class="form-label">Comentarios</label>
+                            <label for="c_departure" class="form-label"> {{__('comentarios')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
@@ -202,15 +202,15 @@
 
                 @elseif($service === 'Aeropuerto a Hotel a Aeropuerto')
                 <div class="row form-section mb-4">
-                    <h5 class="mt-2"><small class="number__section">02</small> Informacion del viaje</h5>
-                        <h5 class="title-arrival mb-0">Informacion de llegada</h5>
+                    <h5 class="mt-2"><small class="number__section">02</small> {{__('informacion del viaje')}}</h5>
+                        <h5 class="title-arrival mb-0">{{__('informacion llegada')}}</h5>
                         <div class="col-sm-6 col-md-6 mb-1">
-                            <label for="arrival" class="form-label">Aerolinea de llegada</label>
+                            <label for="arrival" class="form-label">{{__('aerolinea llegada')}}</label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-arrival input__icon"></i></span>
                                         <select required id="airline_arrival" name="a_arrival" class="form-select airlines_arrival" aria-describedby="icon-plane">
-                                            <option selected value="null" disabled>Selecciona una aerolinea...</option>
+                                            <option selected value="null" disabled>{{__('selecciona una aerolinea')}}</option>
                                             @foreach ($airlines as $airline)
                                                 <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
                                             @endforeach
@@ -218,7 +218,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
-                            <label for="flight-number" class="form-label">Numero de vuelo</label>
+                            <label for="flight-number" class="form-label">{{__('numero de vuelo')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
@@ -228,7 +228,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
-                            <label for="passenger_arrival" class="form-label">Nombre del pasajero</label>
+                            <label for="passenger_arrival" class="form-label"> {{__('nombre nombre del pasajero')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-passenger"><i
                                         class="fas fa-user input__icon"></i></span>
@@ -236,7 +236,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
-                            <label for="date" class="form-label">Fecha de llegada</label>
+                            <label for="date" class="form-label"> {{__('fecha de llegada')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
@@ -245,7 +245,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
-                            <label for="hour" class="form-label">Hora de llegada</label>
+                            <label for="hour" class="form-label"> {{__('hora de llegada')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
@@ -253,21 +253,21 @@
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
-                            <label for="c_arrival" class="form-label">Comentarios</label>
+                            <label for="c_arrival" class="form-label"> {{__('comentarios')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
                                 <input type="text" class="form-control" id="c_arrival" name="c_arrival" aria-describedby="icon-comments">
                             </div>
                         </div>
-                        <h5 class="title-arrival mb-0">Informacion de salida</h5>
+                        <h5 class="title-arrival mb-0"> {{__('informacion salida')}} </h5>
                         <div class="col-sm-6 col-md-6 mb-1">
-                            <label for="arrival" class="form-label">Aerolinea de salida</label>
+                            <label for="arrival" class="form-label"> {{__('aerolinea salida')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-departure input__icon"></i></span>
                                     <select required id="airline_departure" name="a_departure" class="form-select airlines_departure" aria-describedby="icon-plane">
-                                        <option selected value="null" disabled>Selecciona una aerolinea...</option>
+                                        <option selected value="null" disabled> {{__('selecciona una aerolinea')}} </option>
                                         @foreach ($airlines as $airline)
                                             <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
                                         @endforeach
@@ -275,7 +275,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
-                            <label for="flight-number" class="form-label">Numero de vuelo</label>
+                            <label for="flight-number" class="form-label"> {{__('numero de vuelo')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hashtag"><i
                                         class="fas fa-hashtag input__icon"></i></span>
@@ -285,7 +285,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
-                            <label for="passenger_arrival" class="form-label">Nombre del pasajero</label>
+                            <label for="passenger_arrival" class="form-label">{{__('nombre del pasajero')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-passenger"><i
                                         class="fas fa-user input__icon"></i></span>
@@ -293,7 +293,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6">
-                            <label for="date" class="form-label">Fecha de salida</label>
+                            <label for="date" class="form-label"> {{__('fecha de salida')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
@@ -301,7 +301,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
-                            <label for="hour" class="form-label">Hora de salida</label>
+                            <label for="hour" class="form-label"> {{__('hora de salida')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
@@ -310,7 +310,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
-                            <label for="c_departure" class="form-label">Comentarios</label>
+                            <label for="c_departure" class="form-label"> {{__('comentarios')}} </label>
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
@@ -362,7 +362,7 @@
 
                 <!-- section total start -->
                 <div class="row form-section d-flex align-items-center mb-4 total">
-                    <h6 class="col">Total a pagar</h6>
+                    <h6 class="col">{{__('total a pagar')}}</h6>
                     <input readonly type="hidden" class="form-control" id="price_mx" aria-describedby="icon-hour" value="{{ $price_mx }}">
                     <input readonly type="hidden" class="form-control" name="price" id="price" aria-describedby="icon-hour" value="{{ $price }}">
                     <input readonly type="hidden" class="form-control" name="divisa" id="divisa" aria-describedby="icon-hour" value="{{ $divisa }}">
@@ -380,8 +380,8 @@
                 <!-- section total end -->
 
                 <div class="row mb-4">
-                    <button class="btn btn-success nexttab btnPayment" id="btnPayment" >Continuar</button>
-                    <p class="terms mt-2">Al hacer clic en el boton estas aceptando los <a href="{{route('terms', app()->getLocale())}}">terminos y condiciones</a>.</p>
+                    <button class="btn btn-success nexttab btnPayment" id="btnPayment" >{{__('continuar')}}</button>
+                    <p class="terms mt-2"> {{ __('Al hacer clic en el boton estas aceptando los')}} <a href="{{route('terms', app()->getLocale())}}"> {{__('terminos y condiciones')}} </a>.</p>
                 </div>
 
             </form>

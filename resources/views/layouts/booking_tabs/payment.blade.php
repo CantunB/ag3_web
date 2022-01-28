@@ -61,7 +61,7 @@
                 <h2 style="color: orange" class="text-center text-uppercase ">Selecciona un metodo de pago</h2>
                     <div class="row">
                         <div class='col text-center'>
-                        <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arrivo">
+                        <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arribo">
                         <label for="img1">
                             <h3 class="mb-4">ARRIVO</h3>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcksclvcirts05OdENj2d5m4Okcw8K37HDQ&usqp=CAU" alt="ARRIVO" class="rounded">
