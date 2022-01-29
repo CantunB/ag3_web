@@ -33,7 +33,7 @@
 } */
 
 body.dark .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(../assets/images/home3.jpg) no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(../assets/images/home4.jpg) no-repeat center;
     background-size: cover;
 } 
 
