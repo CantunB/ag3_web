@@ -29,6 +29,13 @@
             <div class="row">
                 {{-- section left start --}}
                 <div class="col-lg-8 mt-4 ">
+
+                    <div class="row">
+                        <div class="col-lg-4 mb-3">
+                            <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                        </div>
+                    </div>
+
                     <input type="hidden" id="type_service" value="{{ $booking['service']  }}">
                     <input type="hidden" class="tarifas" value="{{ $tariff[0]->MXN }}">
                     <input type="hidden" class="tarifas" value="{{ $tariff[1]->MXN }}">

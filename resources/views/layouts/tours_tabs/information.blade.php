@@ -3,7 +3,9 @@
         <!-- section left start -->
         <div class="col-md-12 col-lg-8 mt-4">
             <div class="row">
-                <a class="mb-2 back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                <div class="col-lg-4 mb-3">
+                    <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                </div>
             </div>
                     {{-- <input type="text" class="tarifas" value="@dd($tours)"> --}}
                     <input type="hidden" class="tarifas" value="{{ $tours[1] }}">

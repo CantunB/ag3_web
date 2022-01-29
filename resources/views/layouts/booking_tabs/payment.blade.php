@@ -55,15 +55,18 @@
             <!-- section left start -->
             <div class="col-md-12 col-lg-12 mt-4">
                 <div class="row">
-                <a class="mb-2 back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                    <div class="col-lg-4 mb-4">
+                        <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                    </div>
                 </div>
+
                 <div class="container parent">
                 <h2 style="color: orange" class="text-center text-uppercase ">Selecciona un metodo de pago</h2>
                     <div class="row">
                         <div class='col text-center'>
                         <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arribo">
                         <label for="img1">
-                            <h3 class="mb-4">{{__('arribo')}}</h3>
+                            <h3 class="mb-4 option-payment">{{__('arribo')}}</h3>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcksclvcirts05OdENj2d5m4Okcw8K37HDQ&usqp=CAU" alt="ARRIVO" class="rounded">
                             <div class="tick_container">
                                 <div class="tick"><i class="fa fa-check"></i></div>
@@ -73,7 +76,7 @@
                         <div class='col text-center'>
                         <input type="radio" name="type_payment" id="img2" class="d-none imgbgchk" value="Paypal">
                             <label for="img2">
-                            <h3 class="mb-4">PAYPAL</h3>
+                            <h3 class="mb-4 option-payment">PAYPAL</h3>
                             <img src="https://helpmybusinesspos.info/wp-content/uploads/2017/09/Paypal-Logo-Transparent-mybusinesspos.png" alt="PAYPAL" class="rounded">
                             <div class="tick_container">
                                 <div class="tick"><i class="fa fa-check"></i></div>
@@ -107,7 +110,7 @@
             </div>
         </div>  --}}
         </div>
-        <div class="row">
+        {{-- <div class="row"> --}}
             <div class="container">
                 <div class="container" id="cash_opt">
                     <div class="container">
@@ -131,7 +134,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        {{-- </div> --}}
     </form>
 </div>
 
