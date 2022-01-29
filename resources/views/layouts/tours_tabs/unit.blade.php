@@ -99,6 +99,13 @@
             <!-- service-suburban end -->
 
             <div class="row">
+
+                <div class="row">
+                    <div class="col-lg-4 mb-3">
+                        <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                    </div>
+                </div>
+
                 <div class="col-md-6 mb-4">
                     <div class="row">
                         <div class="col-md-11 content-unit">

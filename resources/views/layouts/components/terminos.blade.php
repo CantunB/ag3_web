@@ -27,6 +27,13 @@
 
         <section class="section my-4 terms">
             <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                    </div>
+                </div>
+
                 <h1 class="text-center mb-2">Término y condiciones de las políticas de Reembolso y Cancelación de los Servicios</h1>
 
                 <h2>POLITICAS DE RESERVA</h2>

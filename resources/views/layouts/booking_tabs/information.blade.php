@@ -2,9 +2,13 @@
     <div class="row">
         <!-- section left start -->
         <div class="col-md-12 col-lg-8 mt-4">
+
             <div class="row">
-            <a class="mb-2 back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                <div class="col-lg-4 mb-3">
+                    <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                </div>
             </div>
+
             <form id="booking_form" method="POST">
                 @csrf
 

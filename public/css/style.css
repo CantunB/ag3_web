@@ -376,7 +376,29 @@ button.nav-link:hover {
 
 .back {
     text-decoration: none;
-    color: #0582CA;
+    background: #0582CA;
+    font-family: 'Poppins', sans-serif;
+    padding: 4px;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: 2px solid #0582CA;
+    font-size: 14px;
+    letter-spacing: .2px;
+}
+
+.back:hover {
+    background: #0575B6;
+    color: #fff;
+    border: 2px solid #0575B6;
+}
+
+.option-payment {
+    color: #000;
+}
+
+body.dark .option-payment {
+    color: #fff;
 }
 
 .form-section {
