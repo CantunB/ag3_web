@@ -14,12 +14,49 @@
 --}}
 
 {{-- /* -------------------------------LARAVEL MIX VUE JS------------------------------------------- */ --}}
-     <script src="{{ mix('/js/app.js') }}"></script>
+    <script src="{{ mix('/js/app.js') }}"></script>
+
+{{-- /* --------------------------LENGUAJE------------------------------------------------ */ --}}
+    <script>
+        function lenguaje() {
+            {{-- //return n1 + n2; // devolvemos el valor de la suma --}}
+            var idioma =  "{{ app()->getLocale() }}";
+            return idioma;
+        }
+    </script>
+
+    <script>
+        function lang_main(){
+            var locale =  lenguaje();
+            if (locale == 'es') {
+                return [
+                    'Transporte Seguro',
+                    'Servicio Privado',
+                    'Puntualidad',
+                    'Comodidad'
+                ];
+            }else if (locale == 'en') {
+                return  [
+                    'Safe transportation',
+                    'Private service',
+                    'Puntuality',
+                    'Comfort'
+                ];
+            }else if (locale == 'fr') {
+                return [
+                    'Transport sécurisé',
+                    'Service privé',
+                    'Ponctualité',
+                    'Confort'
+                ];
+            }
+        }
+    </script>
 
 {{--  /* -------------------------------------------------------------------------- */  --}}
     <script src="{{ asset('assets/js/scripts/home.js') }}"></script>
 
-{{---------------------------------Typed.js v2.0.12 -----------------------------------------}}
+{{-- -------------------------------Typed.js v2.0.12 --------------------------------------- --}}
     <script src="{{ asset('assets/js/scripts/typed.js') }}"></script>
 
 {{----------------------------Main.js---------------------------------------------}}
@@ -61,8 +98,8 @@
     <script src="{{ asset('assets/js/i18n/fr.js') }}"></script>
     <script type="text/javascript">
         window.onload = function () {
-            //var parsley_lang = navigator.language || navigator.userLanguage;
-            var locale =  "{{ app()->getLocale() }}";
+            {{-- //var parsley_lang = navigator.language || navigator.userLanguage; --}}
+            var locale =  lenguaje();
             if (locale == 'es') {
                 window.Parsley.setLocale('es');
             }else if (locale == 'en') {
@@ -82,11 +119,10 @@
     <script src="{{ asset('assets/js/search.js') }}"></script>
 {{------------------------  TODO INPUTS DE TIEMPO Y FECHA (FLATPICKR)  -------------------------------}}
     <script>
-        var locale =  "{{ app()->getLocale() }}";
         $(".selector").flatpickr({
                 minDate: "today",
                 dateFormat: "Y-m-d",
-                locale: locale
+                locale: lenguaje()
             });
         $(".timer").flatpickr({
             enableTime: true,

@@ -9,6 +9,7 @@
     "compañia" : "Company",
     "siguenos" : "Follow us",
     "Creado por" : "Created by ",
+    "Te ofrecemos" : "We offer you",
     "derechos reservados" : "All rights reserved",
     "texto footer" : " AG3 Luxury Travel is a leading company in luxury transportation, with vehicles equipped for every occasion or need you have.",
     "texto acerca uno" : "AG3 Luxury Travel is a leading luxury tourist transportation company in Cancun and the entire Riviera Maya.",
@@ -130,6 +131,7 @@
     "terminos y condiciones" : "Terms and Conditions",
     "resumen de reservacion" : "Reservation summary",
     "tipo de servicio" : "Type of service",
-    "arribo" : "Arrival",
-    "cotizar" : "Quote"
+    "arribo" : "ARRIVAL",
+    "cotizar" : "Quote",
+    "booking_mail": "Booking Confirmation AG3 Luxury Travel"
 }

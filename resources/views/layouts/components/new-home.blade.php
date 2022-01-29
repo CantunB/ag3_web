@@ -72,7 +72,7 @@
 
        <div class="container home">
            <h1 class="text-center title-home one demo">{{ __('title_home') }}</h1>
-           <h1 class="text-center title-home second">Te ofrecemos <span class="typed"></span></h1>
+           <h1 class="text-center title-home second">{{__('Te ofrecemos')}} <span class="typed"></span></h1>
        </div>
 
        {{-- <div class="video-container">

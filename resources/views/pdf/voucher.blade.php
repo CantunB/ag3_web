@@ -243,7 +243,11 @@
 
     @endif
 
-    <h2 class="title-section"><span>{{ __('booking.metodo_pago') }}:</span> {{$booking->type_payment}}</h2>
+    <h2 class="title-section"><span>{{ __('booking.metodo_pago') }}:</span>
+        @if ($booking->type_payment == 'Arribo')
+        {{__('arribo')}}
+        @endif
+    </h2>
     @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
     <table cellspacing="0" cellpadding="0" class="arrival-info">
         <tr>

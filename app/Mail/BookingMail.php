@@ -32,12 +32,12 @@ class BookingMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Booking Confirmation AG3 Luxury Travel')
+        return $this->subject(__('booking_mail'))
                     ->view('emails.booking')
                     ->attach(
                         public_path('booking/'.$this->booking->id.'.pdf'),
                     [
-                        'as' => 'ReservacionAg3.pdf',
+                        'as' =>  __('booking_mail').'.pdf',
                         'mime' => 'application/pdf',
                     ]);
                     //->attachFromStorage( public_path('booking/').$this->booking->id.'.pdf', 'ReservacionAg3.pdf', [

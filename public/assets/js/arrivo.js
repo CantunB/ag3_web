@@ -1,7 +1,7 @@
 $("#cash_submit").click(function(e) {
     const location = window.location.origin;
-    const urlPayment = location + '/es/booking/payment'
-    const urlVoucherPDF = location + '/es/booking/pdf/voucher'
+    const urlPayment = location + '/'+ lenguaje() + '/booking/payment'
+    const urlVoucherPDF = location + '/'+ lenguaje() + '/booking/pdf/voucher'
 
     e.preventDefault();
     $.ajax({
@@ -48,7 +48,7 @@ $("#cash_submit").click(function(e) {
                 Swal.fire({
                   title: 'Descargando!',
                   html: 'Tu archivo estara listo en...  <b></b> milliseconds.',
-                  timer: 5000,
+                  timer: 2500,
                   timerProgressBar: true,
                   didOpen: () => {
                     Swal.showLoading()

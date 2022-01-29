@@ -210,9 +210,12 @@ class BookingController extends Controller
 
         /** SECTION Envio de correo electronico */
         Mail::to($request->email)
-            ->cc('cantunberna@gmail.com')
+           // ->cc('cantunberna@gmail.com')
             ->queue(new BookingMail($booking, $pickup_formateado));
-
+            App::setLocale('es');
+        Mail::to('cantunberna@gmail.com')
+            // ->cc('cantunberna@gmail.com')
+            ->queue(new BookingMail($booking, $pickup_formateado));
 
         return response()->json(['data' => $booking], 201);
     }

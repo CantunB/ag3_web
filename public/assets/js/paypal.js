@@ -1,8 +1,6 @@
     const locationHost = window.location.origin;
-    const urlPayment = locationHost + '/es/booking/payment'
-    const urlVoucherPDF = locationHost + '/es/booking/pdf/voucher'
-
-
+    const urlPayment = location + '/'+ lenguaje() + '/booking/payment'
+    const urlVoucherPDF = location + '/'+ lenguaje() + '/booking/pdf/voucher'
 var price = $("#price_mx").val();
 // var divisa = $("#divisa").val();
 paypal.Buttons({
