@@ -234,8 +234,8 @@
                             <img src="http://ag3luxury.com/assets/images/logo.png" alt="logo-empresa" style="width: 100%; max-width: 100px; padding-left: 10px;">
                         </td>
                         <td class="details" style="color: #fff; text-align: right; padding-right: 10px;">
-                            <h2 style="margin-bottom: 0;">Del Aeropuerto A Tu Destino</h2>
-                            <h3 style="margin-top: 0;">Tu Transportacion VIP Luxury, Como Te Lo Mereces</h3>
+                            <h2 style="margin-bottom: 0;">{{ __('booking.titulo_uno') }}</h2>
+                            <h3 style="margin-top: 0;">{{ __('booking.titulo_dos') }}</h3>
                         </td>
                     </tr>
                 </table>
@@ -247,12 +247,12 @@
         <table cellspacing="0" cellpadding="0" class="email-content" style="width: 90%; margin-top: 20px; margin-bottom: 20px;">
             <tr>
                 <td>
-                    <h2 class="title-email" style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 26px;">Confirmacion de reservacion AG3 Luxury Travel</h2>
+                    <h2 class="title-email" style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 26px;">{{ __('booking.titulo_tres') }}</h2>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion personal</h2>
+                    <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">{{ __('booking.info_personal') }}</h2>
                 </td>
             </tr>
             <tr>
@@ -260,17 +260,17 @@
                     <table cellspacing="0" cellpadding="0" class="info-content" style="table-layout: fixed; width: 100%; font-size: 16px;">
                         <tr>
                             <td class="items" style="word-wrap: break-word; border: 2px solid #FACC01; padding: 10px;">
-                                <span style="font-weight: bold;">NOMBRE:</span> {{$booking->FullName}}<br>
-                                <span style="font-weight: bold;">CORREO:</span> {{$booking->email}} <br>
-                                <span style="font-weight: bold;">TELEFONO:</span> {{$booking->phone}} <br>
-                                <span style="font-weight: bold;">PAIS:</span> {{$booking->Country->name}}<br>
-                                <span style="font-weight: bold;">ESTADO:</span> {{$booking->State->name}}<br>
-                                <span style="font-weight: bold;">SERVICIO:</span> {{ $booking->type_service }}<br>
-                                <span style="font-weight: bold;">ORIGEN:</span> {{$booking->origin}} <br>
-                                <span style="font-weight: bold;">DESTINO:</span> {{$booking->destiny}} <br>
-                                <span style="font-weight: bold;">VEHICULO SOLICITADO:</span> {{$booking->TypeUnit->type_units}}<br>
-                                <span style="font-weight: bold;">PASAJEROS:</span> {{$booking->passengers}} <br>
-                                <span style="font-weight: bold;">TOTAL:</span> {{$booking->price}} {{$booking->divisa}}
+                                <span style="font-weight: bold;">{{ __('booking.nombre') }}:</span> {{$booking->FullName}}<br>
+                                <span style="font-weight: bold;">{{ __('booking.correo') }}:</span> {{$booking->email}} <br>
+                                <span style="font-weight: bold;">{{ __('booking.telefono') }}:</span> {{$booking->phone}} <br>
+                                <span style="font-weight: bold;">{{ __('booking.pais') }}:</span> {{$booking->Country->name}}<br>
+                                <span style="font-weight: bold;">{{ __('booking.estado') }}:</span> {{$booking->State->name}}<br>
+                                <span style="font-weight: bold;">{{ __('booking.servicio') }}:</span> {{ $booking->type_service }}<br>
+                                <span style="font-weight: bold;">{{ __('booking.origen') }}:</span> {{$booking->origin}} <br>
+                                <span style="font-weight: bold;">{{ __('booking.destino') }}:</span> {{$booking->destiny}} <br>
+                                <span style="font-weight: bold;">{{ __('booking.vehiculo') }}:</span> {{$booking->TypeUnit->type_units}}<br>
+                                <span style="font-weight: bold;">{{ __('booking.pasajeros') }}:</span> {{$booking->passengers}} <br>
+                                <span style="font-weight: bold;">{{ __('booking.total') }}:</span> {{$booking->price}} {{$booking->divisa}}
                             </td>
                             <td class="service-img" style="word-wrap: break-word;">
                                @if($booking->request_unit == 1)
@@ -289,7 +289,7 @@
             @if($booking->type_service == 'Aeropuerto a Hotel')
                 <tr>
                     <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de llegada</h2>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">{{ __('booking.info_llegada') }}</h2>
                     </td>
                 </tr>
                 <tr>
@@ -297,11 +297,11 @@
                         <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
                             <tr>
                                 <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_arrival}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_arrival}} <br>
-                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_arrival}}<br>
-                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_arrival}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_arrival}}
+                                    <span style="font-weight: bold;">{{ __('booking.fecha') }}:</span>{{$booking->date_arrival}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.hora') }}:</span> {{$booking->time_arrival}} <br>
+                                    <span style="font-weight: bold;">{{ __('booking.aerolinea') }}:</span> {{$booking->airline_arrival}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.num_vuelo') }}:</span> {{$booking->flight_number_arrival}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.comentarios') }}:</span> {{ $booking->comments_arrival}}
                                 </td>
                             </tr>
                         </table>
@@ -310,7 +310,7 @@
             @elseif($booking->type_service == 'Hotel a Aeropuerto' )
                 <tr>
                     <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de salida</h2>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">{{ __('booking.info_salida') }}</h2>
                     </td>
                 </tr>
                 <tr>
@@ -318,12 +318,12 @@
                         <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
                             <tr>
                                 <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_departure}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_departure}} <br>
-                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_departure}}<br>
-                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_departure}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}<br>
-                                    <span style="font-weight: bold;">PICKUP:</span> {{ $pickup}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.fecha') }}:</span>{{$booking->date_departure}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.hora') }}:</span> {{$booking->time_departure}} <br>
+                                    <span style="font-weight: bold;">{{ __('booking.aerolinea') }}:</span> {{$booking->airline_departure}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.num_vuelo') }}:</span> {{$booking->flight_number_departure}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.comentarios') }}:</span> {{ $booking->comments_departure}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.pickup') }}:</span> {{ $pickup}}<br>
 
                                 </td>
                             </tr>
@@ -333,7 +333,7 @@
                 @elseif($booking->type_service == 'Tours')
                 <tr>
                     <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de salida</h2>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">{{ __('booking.info_salida') }}</h2>
                     </td>
                 </tr>
                 <tr>
@@ -341,9 +341,9 @@
                         <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
                             <tr>
                                 <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_departure}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_departure}} <br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}
+                                    <span style="font-weight: bold;">{{ __('booking.fecha') }}:</span>{{$booking->date_departure}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.hora') }}:</span> {{$booking->time_departure}} <br>
+                                    <span style="font-weight: bold;">{{ __('booking.comentarios') }}:</span> {{ $booking->comments_departure}}
                                 </td>
                             </tr>
                         </table>
@@ -352,7 +352,7 @@
                 @elseif($booking->type_service == 'Aeropuerto a Hotel a Aeropuerto')
                 <tr>
                     <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de llegada</h2>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">{{ __('booking.info_llegada') }}</h2>
                     </td>
                 </tr>
                 <tr>
@@ -360,11 +360,11 @@
                         <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
                             <tr>
                                 <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_arrival}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_arrival}} <br>
-                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_arrival}}<br>
-                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_arrival}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_arrival}}
+                                    <span style="font-weight: bold;">{{ __('booking.fecha') }}:</span>{{$booking->date_arrival}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.hora') }}:</span> {{$booking->time_arrival}} <br>
+                                    <span style="font-weight: bold;">{{ __('booking.aerolinea') }}:</span> {{$booking->airline_arrival}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.num_vuelo') }}:</span> {{$booking->flight_number_arrival}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.comentarios') }}:</span> {{ $booking->comments_arrival}}
                                 </td>
                             </tr>
                         </table>
@@ -372,7 +372,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de salida</h2>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">{{ __('booking.info_salida') }}</h2>
                     </td>
                 </tr>
                 <tr>
@@ -380,12 +380,12 @@
                         <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
                             <tr>
                                 <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$booking->date_departure}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$booking->time_departure}} <br>
-                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$booking->airline_departure}}<br>
-                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$booking->flight_number_departure}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $booking->comments_departure}}<br>
-                                    <span style="font-weight: bold;">PICKUP:</span> {{ $pickup}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.fecha') }}:</span>{{$booking->date_departure}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.hora') }}:</span> {{$booking->time_departure}} <br>
+                                    <span style="font-weight: bold;">{{ __('booking.aerolinea') }}:</span> {{$booking->airline_departure}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.num_vuelo') }}:</span> {{$booking->flight_number_departure}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.comentarios') }}:</span> {{ $booking->comments_departure}}<br>
+                                    <span style="font-weight: bold;">{{ __('booking.pickup') }}:</span> {{ $pickup}}<br>
                                 </td>
                             </tr>
                         </table>
@@ -394,28 +394,28 @@
             @endif
             @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
 
-            <h2 class="title-section">Preparate para tu viaje</h2>
+            <h2 class="title-section">{{ __('booking.preparate') }}</h2>
 
             <table cellspacing="0" cellpadding="0" class="arrival-info">
                 <tr>
                     <td class="centerText">
                         <br>
                         <img src="http://ag3luxury.com/assets/images/three-hours.png"   width="100" height="100"alt="3-horas"> <br>
-                        <span>VUELO INTERNACIONAL</span><br>
-                        Deberas presentarte en el aeropuerto 3 horas antes
+                        <span>{{ __('booking.vuelo_inter') }}</span><br>
+                        {{ __('booking.descripcion_inter') }}
                     </td>
                     <td class="centerText">
                         <br>
                         <img src="http://ag3luxury.com/assets/images/two-hours.png"   width="100" height="100" alt="2-horas"> <br>
-                        <span>VUELO NACIONAL</span><br>
-                        Deberas presentarte en el aeropuerto 3 horas antes
+                        <span>{{ __('booking.vuelo_nac') }}</span><br>
+                        {{ __('booking.descripcion_nac') }}
                     </td>
                 </tr>
             </table>
             @endif
             <tr>
                 <td>
-                    <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Metodo de pago: {{$booking->type_payment}}</h2>
+                    <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">{{ __('booking.metodo_pago') }}: {{$booking->type_payment}}</h2>
                 </td>
             </tr>
         </table>
@@ -424,7 +424,7 @@
     <table cellspacing="0" cellpadding="0" class="footer" style="width: 100%; background: #000000; color: #fff;">
         <tr>
             <td>
-                <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 24px;">Siguenos en nuestras redes sociales</h2>
+                <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 24px;">{{ __('booking.titulo_cuatro') }}</h2>
             </td>
         </tr>
         <tr>

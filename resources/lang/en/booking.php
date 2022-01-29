@@ -29,5 +29,9 @@ return [
     'vuelo_nac' => 'NATIONAL FLIGHT',
     'descripcion_nac' => 'You must show up at the airport 2 hours before',
     'metodo_pago' => 'Payment method',
-    'nota' => 'NOTE: IF YOU WANT TO MODIFY YOUR PICK-UP FOR YOUR RETURN TO THE AIRPORT CONTACT US'
+    'nota' => 'NOTE: IF YOU WANT TO MODIFY YOUR PICK-UP FOR YOUR RETURN TO THE AIRPORT CONTACT US',
+    "titulo_uno" => 'From The Airport To Your Destination',
+    "titulo_dos" => 'Your VIP Luxury Transportation, As You Deserve It',
+    "titulo_tres" => 'Reservation confirmation - AG3 Luxury Travel',
+    "titulo_cuatro" => 'Follow us on our social networks'
 ];
