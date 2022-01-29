@@ -46,14 +46,14 @@
 
                     <div class="col-lg-6">
                         <figure>
-                            <img src="{{ asset('assets/images/tours/palenque/palenque_1.jpg') }}" alt="palenque1" id="mainImg">
+                            <img src="{{ asset('assets/images/tours/palenque/palenque_1-min.jpg') }}" alt="palenque1" id="mainImg">
                         </figure>
                         <div class="thumb_img_list">
                             <ul>
-                                <li><img src="{{ asset('assets/images/tours/palenque/palenque_1.jpg') }}" alt="palenque1" id="thumb1"></li>
-                                <li><img src="{{ asset('assets/images/tours/palenque/palenque_2.jpg') }}" alt="palenque2" id="thumb2"></li>
-                                <li><img src="{{ asset('assets/images/tours/palenque/palenque_3.jpg') }}" alt="palenque3" id="thumb3"></li>
-                                <li><img src="{{ asset('assets/images/tours/palenque/palenque_4.jpg') }}" alt="palenque4" id="thumb4"></li>
+                                <li><img src="{{ asset('assets/images/tours/palenque/palenque_1-min.jpg') }}" alt="palenque1" id="thumb1"></li>
+                                <li><img src="{{ asset('assets/images/tours/palenque/palenque_2-min.jpg') }}" alt="palenque2" id="thumb2"></li>
+                                <li><img src="{{ asset('assets/images/tours/palenque/palenque_3-min.jpg') }}" alt="palenque3" id="thumb3"></li>
+                                <li><img src="{{ asset('assets/images/tours/palenque/palenque_4-min.jpg') }}" alt="palenque4" id="thumb4"></li>
                             </ul>
                         </div>
                     </div>

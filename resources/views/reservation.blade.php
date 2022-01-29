@@ -42,7 +42,7 @@
                                 <!-- section left -->
                                 <div class="col-md-3 left">
                                     <h4 class="mt-2 title-service">{{ __('transporte') }} {{ $tariff[0]->type_unit->type_units }}</h4>
-                                    <img class="service-img" src="{{ asset('assets/images/transport-suburban.png') }}" alt="transport-suburban">
+                                    <img class="service-img" src="{{ asset('assets/images/transport-suburban-min.png') }}" alt="transport-suburban">
                                     <ul>
                                         <li class="specifications"><i class="fas fa-users icons-specifications"></i> Max. 6 pax.</li>
                                         <li class="specifications"> <i class="fas fa-suitcase icons-specifications icon-second"></i>  Max. 6 {{ __('maletas') }}</li>
@@ -165,7 +165,7 @@
                                 <!-- section left -->
                                 <div class="col-md-3 left">
                                     <h4 class="mt-2 title-service">{{ __('transporte') }} {{ $tariff[2]->type_unit->type_units }}</h4>
-                                    <img class="service-img" src="{{ asset('assets/images/transport-van.png') }}" alt="transport-van">
+                                    <img class="service-img" src="{{ asset('assets/images/transport-van2.png') }}" alt="transport-van">
                                     <ul>
                                         <li class="specifications"><i class="fas fa-users icons-specifications"></i> Max. 7 pax.</li>
                                         <li class="specifications"><i class="fas fa-suitcase icons-specifications icon-second"></i> Max. 10 {{ __('maletas') }}</li>

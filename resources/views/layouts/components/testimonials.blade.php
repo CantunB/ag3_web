@@ -12,12 +12,12 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="testimonialBox">
-                            <img src="{{ asset('assets/images/quote.png') }}" alt="quote" class="quote">
+                            <img src="{{ asset('assets/images/testimonials/quote.png') }}" alt="quote" class="quote">
                             <div class="content">
                                 <p>{{ __('testimonio_uno') }}</p>
                                 <div class="details">
                                     <div class="imgBx">
-                                        <img src="{{ asset('assets/images/testimonial1.jpg') }}" alt="testimonial-1">
+                                        <img src="{{ asset('assets/images/testimonials/testimonial1.jpg') }}" alt="testimonial-1">
                                     </div>
                                     <div class="user">
                                         <h4>Michele Fortin</h4>
@@ -37,12 +37,12 @@
 
                     <div class="swiper-slide">
                         <div class="testimonialBox">
-                            <img src="{{ asset('assets/images/quote.png') }}" alt="quote" class="quote">
+                            <img src="{{ asset('assets/images/testimonials/quote.png') }}" alt="quote" class="quote">
                             <div class="content">
                                 <p>{{ __('testimonio_dos') }}</p>
                                 <div class="details">
                                     <div class="imgBx">
-                                        <img src="{{ asset('assets/images/testimonial3.jpg') }}" alt="testimonial-2">
+                                        <img src="{{ asset('assets/images/testimonials/testimonial3.jpg') }}" alt="testimonial-2">
                                     </div>
                                     <div class="user">
                                         <h4>Anna Valentina R</h4>
@@ -62,12 +62,12 @@
 
                     <div class="swiper-slide">
                         <div class="testimonialBox">
-                            <img src="{{ asset('assets/images/quote.png') }}" alt="quote" class="quote">
+                            <img src="{{ asset('assets/images/testimonials/quote.png') }}" alt="quote" class="quote">
                             <div class="content">
                                 <p>{{ __('testimonio_tres') }}</p>
                                 <div class="details">
                                     <div class="imgBx">
-                                        <img src="{{ asset('assets/images/testimonial4.jpg') }}" alt="testimonial-3">
+                                        <img src="{{ asset('assets/images/testimonials/testimonial4.jpg') }}" alt="testimonial-3">
                                     </div>
                                     <div class="user">
                                         <h4>Ana Juliana</h4>
@@ -87,12 +87,12 @@
 
                     <div class="swiper-slide">
                         <div class="testimonialBox">
-                            <img src="{{ asset('assets/images/quote.png') }}" alt="quote" class="quote">
+                            <img src="{{ asset('assets/images/testimonials/quote.png') }}" alt="quote" class="quote">
                             <div class="content">
                                 <p>{{ __('testimonio_cuatro') }}</p>
                                 <div class="details">
                                     <div class="imgBx">
-                                        <img src="{{ asset('assets/images/testimonial2.jpg') }}" alt="testimonial-4">
+                                        <img src="{{ asset('assets/images/testimonials/testimonial2.jpg') }}" alt="testimonial-4">
                                     </div>
                                     <div class="user">
                                         <h4>Oskar Koruco</h4>
@@ -112,12 +112,12 @@
 
                     <div class="swiper-slide">
                         <div class="testimonialBox">
-                            <img src="{{ asset('assets/images/quote.png') }}" alt="quote" class="quote">
+                            <img src="{{ asset('assets/images/testimonials/quote.png') }}" alt="quote" class="quote">
                             <div class="content">
                                 <p>{{ __('testimonio_cinco') }}</p>
                                 <div class="details">
                                     <div class="imgBx">
-                                        <img src="{{ asset('assets/images/testimonial5.jpg') }}" alt="testimonial-5">
+                                        <img src="{{ asset('assets/images/testimonials/testimonial5.jpg') }}" alt="testimonial-5">
                                     </div>
                                     <div class="user">
                                         <h4>Abel Fuerte</h4>

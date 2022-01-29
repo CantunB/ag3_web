@@ -53,8 +53,8 @@
                         <div class="thumb_img_list">
                             <ul>
                                 <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_1.jpg') }}" alt="bacalar1" id="thumb1"></li>
-                                <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_2.jpg') }}" alt="bacalar2" id="thumb2"></li>
-                                <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_3.jpg') }}" alt="bacalar3" id="thumb3"></li>
+                                <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_2-min.jpg') }}" alt="bacalar2" id="thumb2"></li>
+                                <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_3-min.jpg') }}" alt="bacalar3" id="thumb3"></li>
                                 <li><img src="{{ asset('assets/images/tours/bacalar/bacalar_4.jpg') }}" alt="bacalar4" id="thumb4"></li>
                             </ul>
                         </div>

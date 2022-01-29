@@ -4,7 +4,7 @@
     <div class="box-container">
         <div class="box">
             <div class="img-content">
-                <img src="{{ asset('assets/images/bacalar.jpg') }}" alt="bacalar">
+                <img src="{{ asset('assets/images/tours/bacalar-min.jpg') }}" alt="bacalar">
             </div>
             <div class="content">
                 <h4 class="text-center text-truncate"><i style="color: rgb(32, 190, 0)" class="fas fa-map-marker-alt"></i> Laguna Siete Col. Bacalar</h4>
@@ -26,7 +26,7 @@
 
         <div class="box">
             <div class="img-content">
-                <img src="{{ asset('assets/images/chichen-itza.jpg') }}" alt="chichen-itza">
+                <img src="{{ asset('assets/images/tours/chichen-itza.jpg') }}" alt="chichen-itza">
             </div>
             <div class="content">
                 <h4 class="text-center"><i style="color: rgb(32, 190, 0)" class="fas fa-map-marker-alt"></i> Chichen Itza, Yucatan</h4>
@@ -47,7 +47,7 @@
 
         <div class="box">
             <div class="img-content">
-                <img src="{{ asset('assets/images/palenque-chiapas.jpg') }}" alt="palenque-chiapas">
+                <img src="{{ asset('assets/images/tours/palenque-chiapas-min.jpg') }}" alt="palenque-chiapas">
             </div>
             <div class="content">
                 <h4 class="text-center"><i style="color: rgb(32, 190, 0)" class="fas fa-map-marker-alt"></i> Palenque, Chiapas</h4>
@@ -68,7 +68,7 @@
 
         <div class="box">
             <div class="img-content">
-                <img src="{{ asset('assets/images/calakmul-campeche.jpg') }}" alt="calakmul">
+                <img src="{{ asset('assets/images/tours/calakmul-campeche-min.jpg') }}" alt="calakmul">
             </div>
             <div class="content">
                 <h4 class="text-center"><i style="color: rgb(32, 190, 0)" class="fas fa-map-marker-alt"></i> Calakmul, Campeche</h4>
@@ -89,7 +89,7 @@
 
         <div class="box">
             <div class="img-content">
-                <img src="{{ asset('assets/images/ek-balam.jpg') }}" alt="ek-balam">
+                <img src="{{ asset('assets/images/tours/ek-balam-min.jpg') }}" alt="ek-balam">
             </div>
             <div class="content">
                 <h4 class="text-center text-truncate"><i style="color: rgb(32, 190, 0)" class="fas fa-map-marker-alt"></i> Ek Balam - Las Coloradas</h4>
@@ -110,7 +110,7 @@
 
         <div class="box">
             <div class="img-content">
-                <img src="{{ asset('assets/images/coba.jpg') }}" alt="coba">
+                <img src="{{ asset('assets/images/tours/coba-min.jpg') }}" alt="coba">
             </div>
             <div class="content">
                 <h4 class="text-center"><i style="color: rgb(32, 190, 0)" class="fas fa-map-marker-alt"></i> Coba - 3 Cenotes</h4>
