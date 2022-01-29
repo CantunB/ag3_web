@@ -52,7 +52,7 @@
                                 <li><img src="{{ asset('assets/images/tours/coba/coba_1.jpg') }}" alt="coba1" id="thumb1"></li>
                                 <li><img src="{{ asset('assets/images/tours/coba/coba_2.jpg') }}" alt="coba2" id="thumb2"></li>
                                 <li><img src="{{ asset('assets/images/tours/coba/coba_3.jpeg') }}" alt="coba3" id="thumb3"></li>
-                                <li><img src="{{ asset('assets/images/tours/coba/coba_4.jpg') }}" alt="coba4" id="thumb4"></li>
+                                <li><img src="{{ asset('assets/images/tours/coba/coba_4.JPG') }}" alt="coba4" id="thumb4"></li>
                             </ul>
                         </div>
                     </div>
