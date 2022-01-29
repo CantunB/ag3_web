@@ -105,7 +105,7 @@
                             <h4 class="title-unit">Transporte suburban</h4>
 
                             <div class="img-content">
-                                <img class="transport-img" src="{{ asset('assets/images/transport-suburban.png') }}" alt="transport-suburban">
+                                <img class="transport-img" src="{{ asset('assets/images/transport-suburban-min.png') }}" alt="transport-suburban">
                             </div>
 
                             <div class="button-vehicule d-flex justify-content-center">

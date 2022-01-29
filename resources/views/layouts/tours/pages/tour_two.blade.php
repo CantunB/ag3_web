@@ -51,9 +51,9 @@
                         <div class="thumb_img_list">
                             <ul>
                                 <li><img src="{{ asset('assets/images/tours/chichen-itza/picture1.jpg') }}" alt="picture1" id="thumb1"></li>
-                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture2.jpg') }}" alt="picture2" id="thumb2"></li>
-                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture3.jpg') }}" alt="picture3" id="thumb3"></li>
-                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture4.jpg') }}" alt="picture4" id="thumb4"></li>
+                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture2-min.jpg') }}" alt="picture2" id="thumb2"></li>
+                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture3-min.jpg') }}" alt="picture3" id="thumb3"></li>
+                                <li><img src="{{ asset('assets/images/tours/chichen-itza/picture4-min.jpg') }}" alt="picture4" id="thumb4"></li>
                             </ul>
                         </div>
                     </div>

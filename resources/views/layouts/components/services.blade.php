@@ -5,7 +5,7 @@
         <div class="services-content">
             <div class="row">
                 <div class="col-md-6 col-lg-4 d-flex flex-column justify-content-between">
-                    <img src="{{ asset('assets/images/airplane.svg') }}" alt="airplane">
+                    <img src="{{ asset('assets/images/services/airplane.svg') }}" alt="airplane">
                     <h4 class="text-center">{{__('primer_servicio')}}</h4>
                     <p>{{__('detalles_primer_servicio')}}</p>
                     {{-- <div class="btn">
@@ -13,7 +13,7 @@
                     </div> --}}
                 </div>
                 <div class="col-md-6 col-lg-4 d-flex flex-column justify-content-between">
-                    <img src="{{ asset('assets/images/hotel-hotel.svg') }}" alt="hotel-hotel">
+                    <img src="{{ asset('assets/images/services/hotel-hotel.svg') }}" alt="hotel-hotel">
                     <h4 class="text-center">{{__('segundo_servicio')}}</h4>
                     <p>{{__('detalles_segundo_servicio')}}</p>
                     {{-- <div class="btn">
@@ -21,7 +21,7 @@
                     </div> --}}
                 </div>
                 <div class="col-md-6 col-lg-4 d-flex flex-column justify-content-between">
-                    <img src="{{ asset('assets/images/open-transportation.svg') }}" alt="open-transportation">
+                    <img src="{{ asset('assets/images/services/open-transportation.svg') }}" alt="open-transportation">
                     <h4 class="text-center">{{__('tercer_servicio')}}</h4>
                     <p>{{__('detalles_tercer_servicio')}}</p>
                     {{-- <div class="btn">
@@ -29,7 +29,7 @@
                     </div> --}}
                 </div>
                 <div class="col-md-6 col-lg-6 d-flex flex-column justify-content-between">
-                    <img src="{{ asset('assets/images/transfer.svg') }}" alt="transfer">
+                    <img src="{{ asset('assets/images/services/transfer.svg') }}" alt="transfer">
                     <h4 class="text-center"> {{__('cuarto_servicio')}} </h4>
                     <p> {{__('detalles_cuarto_servicio')}} </p>
                     {{-- <div class="btn">
@@ -37,7 +37,7 @@
                     </div> --}}
                 </div>
                 <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-between">
-                    <img src="{{ asset('assets/images/wedding2.svg') }}" alt="transfer">
+                    <img src="{{ asset('assets/images/services/wedding2.svg') }}" alt="transfer">
                     <h4 class="text-center"> {{__('quinto_servicio')}} </h4>
                     <p> {{__('detalles_quinto_servicio')}} </p>
                     {{-- <div class="btn">

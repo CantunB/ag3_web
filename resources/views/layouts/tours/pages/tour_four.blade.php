@@ -51,8 +51,8 @@
                         <div class="thumb_img_list">
                             <ul>
                                 <li><img src="{{ asset('assets/images/tours/calakmul/calakmul_1.jpg') }}" alt="calakmul1" id="thumb1"></li>
-                                <li><img src="{{ asset('assets/images/tours/calakmul/calakmul_2.jpg') }}" alt="calakmul2" id="thumb2"></li>
-                                <li><img src="{{ asset('assets/images/tours/calakmul/calakmul_3.jpg') }}" alt="calakmul3" id="thumb3"></li>
+                                <li><img src="{{ asset('assets/images/tours/calakmul/calakmul_2-min.jpg') }}" alt="calakmul2" id="thumb2"></li>
+                                <li><img src="{{ asset('assets/images/tours/calakmul/calakmul_3-min.jpg') }}" alt="calakmul3" id="thumb3"></li>
                                 <li><img src="{{ asset('assets/images/tours/calakmul/calakmul_4.jpg') }}" alt="calakmul4" id="thumb4"></li>
                             </ul>
                         </div>
