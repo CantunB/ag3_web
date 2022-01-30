@@ -116,7 +116,7 @@
                    </div>
                </div>
                {{-- origen aeropuerto --}}
-               <div class="col-lg-3 mb-2" id="origen_default">
+               <div class="col-lg-4 mb-2" id="origen_default">
                    <div class="input-group ">
                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
                        <input type="text" readonly="readonly" id="origen_input_default"
@@ -127,7 +127,7 @@
 
 
                {{-- destino aeropuerto --}}
-               <div class="col-lg-3 mb-2" id="destino_default">
+               <div class="col-lg-4 mb-2" id="destino_default">
                    <div class="input-group ">
                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
                        <input type="text" readonly="readonly" id="destino_input_default"
@@ -216,7 +216,7 @@
                    <div class="input-group">
                        <span class="input-group-text" id="icon-date_comeback"><i class="fas fa-calendar-alt"></i></span>
                        <input type="hidden" class="form-control selector" aria-describedby="icon-date_comeback"
-                           placeholder="{{ __('Fecha de regreso') }}" name="date_comeback"
+                           placeholder="{{ __('fecha_regreso') }}" name="date_comeback"
                            style="background: #FFFFFF;">
                    </div>
                </div>
