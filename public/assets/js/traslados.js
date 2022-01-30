@@ -7,7 +7,7 @@ function validarForm(){
     else
         return false;
 }
-
+//Este es el nuevo archivo
 $(".btnComplete").on('click', function(e){
     const locationCotizacion = window.location.origin;
     const urlCotizacion = locationCotizacion + '/'+ lenguaje() + '/booking/quotes'
