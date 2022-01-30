@@ -2,10 +2,14 @@
     <div class="row">
         <!-- section left start -->
         <div class="col-md-12 col-lg-8 mt-4">
-            <div class="row">
+            {{-- <div class="row"> --}}
             <a class="mb-2 back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
-            </div>
-            <form id="quotes_form" method="POST" action="{{ route('quotes',app()->getLocale())}}">
+            <br>
+            <br>
+
+            {{-- </div> --}}
+            <form id="quotes_form" method="POST"  onsubmit="return validarForm();">
+            {{-- <form id="quotes_form" method="POST" action="{{ route('quotes',app()->getLocale())}}"> --}}
                 @csrf
                 <!-- customer information start  -->
                 <div class="row form-section mb-4">
@@ -83,7 +87,7 @@
 
                 </div>
                 <div class="row mb-4">
-                    <button type="submit" class="btn btn-success" id="btnBooking" >{{__('cotizar')}}</button>
+                    <button type="submit" class="btn btn-success" id="btnBookingQuotes" >{{__('cotizar')}}</button>
                     <p class="terms mt-2">{{__('Al hacer clic en el boton estas aceptando los')}} <a href="{{route('terms', app()->getLocale())}} ">{{__('terminos y condiciones')}} </a>.</p>
                 </div>
 

@@ -2,9 +2,15 @@
     <div class="row">
         {{-- section left start --}}
         <div class="col-lg-8 mt-4">
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                    <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> {{__('regresar')}}</a>
+                </div>
+            </div>
             <input type="hidden" id="type_service" value="{{ $booking['service']  }}">
             <!-- service-suburban start  -->
             <div class="row">
+
                 <div class="col mb-4 service-list">
                     <div class="row mb-4">
                         <!-- section left -->
@@ -249,7 +255,7 @@
                     <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_cuatro') }}</p>
                     <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_cinco') }}</p>
                     <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_seis') }}</p>
-                    <p class="mb-4"><i class="fas fa-check"></i> {{ __('wdos_txt_siete') }}</p>
+                    {{-- <p class="mb-4"><i class="fas fa-check"></i> {{ __('wdos_txt_siete') }}</p> --}}
                 </div>
             </div>
         </div>

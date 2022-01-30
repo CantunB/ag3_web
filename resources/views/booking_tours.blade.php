@@ -28,17 +28,15 @@
                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="unit-tab" data-bs-toggle="tab" data-bs-target="#unit"
-                            type="button" role="tab" aria-controls="unit" aria-selected="false">Seleccionar
-                            traslado</button>
+                            type="button" role="tab" aria-controls="unit" aria-selected="false"> {{__('seleccionar vehiculo')}} </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="information-tab" data-bs-toggle="tab" data-bs-target="#information"
-                            type="button" role="tab" aria-controls="information" aria-selected="true">Completar
-                            informacion</button>
+                            type="button" role="tab" aria-controls="information" aria-selected="true"> {{__('completar_info')}} </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link disabled" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment"
-                            type="button" role="tab" aria-controls="contact" aria-selected="false">Forma de pago</button>
+                            type="button" role="tab" aria-controls="contact" aria-selected="false"> {{__('forma de pago')}} </button>
                     </li>
                 </ul>
             </div>

@@ -51,6 +51,10 @@ class Quote extends Model
     {
         return $this->belongsTo(TypeUnit::class, 'request_unit');
     }
+    public function TypeTrip(): BelongsTo
+    {
+        return $this->belongsTo(TypeTrip::class, 'type_trip');
+    }
 
     public function Country(): BelongsTo
     {

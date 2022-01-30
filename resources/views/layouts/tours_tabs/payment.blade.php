@@ -58,13 +58,13 @@
                 <a class="mb-2 back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
                 </div>
                 <div class="container parent">
-                <h2 style="color: orange" class="text-center text-uppercase ">Selecciona un metodo de pago</h2>
+                <h2 style="color: orange" class="text-center text-uppercase "> {{__('seleccionar metodo pago')}} </h2>
                     <div class="row">
                         <div class='col text-center'>
-                        <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arrivo">
+                        <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arribo">
                         <label for="img1">
-                            <h3 class="mb-4">ARRIVO</h3>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcksclvcirts05OdENj2d5m4Okcw8K37HDQ&usqp=CAU" alt="ARRIVO" class="rounded">
+                            <h3 class="mb-4"> {{__('arribo')}} </h3>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcksclvcirts05OdENj2d5m4Okcw8K37HDQ&usqp=CAU" alt="ARRIBO" class="rounded">
                             <div class="tick_container">
                                 <div class="tick"><i class="fa fa-check"></i></div>
                             </div>
@@ -114,7 +114,7 @@
                         <div class="row">
                             <div class="p-5 col-md-12 text-center">
                                 <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-success" id="cash_submit" type="submit">FINALIZAR RESERVA</button>
+                                    <button class="btn btn-success" id="cash_submit" type="submit">{{__('finalizar reserva')}}</button>
                                 </div>
                             </div>
                         </div>

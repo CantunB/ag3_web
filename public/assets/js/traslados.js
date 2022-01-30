@@ -1,13 +1,18 @@
-    // let countries = $('.countries').select2({
-    //     theme: 'bootstrap-5',
-    // });
+function validarForm(){
+    $("#quotes_form").parsley();
+    $("#quotes_form").parsley().validate();
+    if ($("#quotes_form").parsley().isValid()){
+        return true;
+    }
+    else
+        return false;
+}
 
-    // let states = $('.states').select2({
-    //     theme: 'bootstrap-5',
-    // });
-
-$(document).ready(function() {
-    $(".btnComplete").on('click', function(e){
+$(".btnComplete").on('click', function(e){
+    const locationCotizacion = window.location.origin;
+    const urlCotizacion = locationCotizacion + '/'+ lenguaje() + '/booking/quotes'
+    // const urlVoucherPDF = locationTour + '/'+ lenguaje() + '/booking/pdf/quotes'
+    const urlIndex = locationCotizacion + '/' + lenguaje()
         e.preventDefault();
         let id = this.id;
         //Obtencion de unidad  por concatenacion de btn id
@@ -32,44 +37,91 @@ $(document).ready(function() {
 
         }
         $("#select_service").html(textUnit);
-        $("#btnBooking").click(function(){
-            $("#quotes_form").parsley();
-            $("#quotes_form").parsley().validate();
-                if ($("#quotes_form").parsley().isValid()){
-                    form = $('#quotes_form').serialize();
-                    var quotes_url = $('#quotes_url').attr('url');
-                    // $("#btnBooking").click(function(e) {
-                    //     e.preventDefault();
-                    //     $.ajax({
-                    //         type: "POST",
-                    //         url: quotes_url,
-                    //         data: form,
-                    //         dataType: "json",
-                    //         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        $("#btnBookingQuotes").click(function(e){
+            if(validarForm() == true){
+                e.preventDefault();
+                formCotizacion = $('#quotes_form').serialize();
+                const swalWithBootstrapButtons = Swal.mixin({
+                    customClass: {
+                    confirmButton: 'btn m-2 btn-success',
+                    cancelButton: 'btn  m-2 btn-secondary'
+                    },
+                    buttonsStyling: false
+                })
+                swalWithBootstrapButtons.fire({
+                    title: 'Confirmar tu cotizacion',
+                    text: "No podras cancelar el proceso!",
+                    icon: 'info',
+                    showCancelButton: true,
+                    confirmButtonText: 'Si, confirmar!',
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonText: 'No, cancelar!',
+                    allowOutsideClick: false,
+                    allowEscapeKey: false,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire({
+                            imageUrl: 'https://1.bp.blogspot.com/-a8mhRZqntj4/WuMnvABJUwI/AAAAAAADcxQ/yRg6wAzZKHct-lSyiH81mZF5vLU5SzF5ACLcBGAs/s1600/inboxiconanimation_30.gif',
+                            imageAlt: 'Completando cotizacion',
+                            title: 'Estamos haciendo un espacio para tu reserva...',
+                            showConfirmButton: false,
+                            allowOutsideClick: false,
+                            timer: 16000,
+                            allowEscapeKey: false,
+                            didOpen: () => {
+                                $.ajax({
+                                    type: "POST",
+                                    url: urlCotizacion,
+                                    data:  formCotizacion,
+                                    dataType: "json",
+                                    headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
 
-                    //         success: function(response){
-                    //             console.log('Formulario enviado');
+                                    success: function(response){
+                                        Swal.fire({
+                                            icon: 'success',
+                                            title: 'Volver al inicio',
+                                            text: 'Gracias por elegir AG3 Luxury Travel',
+                                            confirmButtonText: 'IR',
+                                            confirmButtonColor: '#3085d6',
+                                            allowOutsideClick: false,
+                                            allowEscapeKey: false,
+                                        }).then((result) => {
+                                            /* Read more about isConfirmed, isDenied below */
+                                            if (result.isConfirmed) {
+                                                window.location =  urlIndex;
+                                            }
+                                        })
+                                    },
+                                    error: function(response){
+                                        console.log(response);
+                                        var errors = response.responseJSON;
+                                        errorsHtml = '<ul>';
+                                        $.each(errors.errors,function (k,v) {
+                                        errorsHtml += '<li>'+ v + '</li>';
+                                        });
+                                        errorsHtml += '</ul>';
+                                        Swal.fire({
+                                            title: "Ooops!",
+                                            html: errorsHtml,
+                                            icon: "error",
+                                            confirmButtonText: "Volver!",
+                                            allowOutsideClick: false,
 
-                    //         },
-                    //         error: function(response){
-                    //             console.log(response);
-                    //             var errors = response.responseJSON;
-                    //             errorsHtml = '<ul>';
-                    //             $.each(errors.errors,function (k,v) {
-                    //             errorsHtml += '<li>'+ v + '</li>';
-                    //             });
-                    //             errorsHtml += '</ul>';
-                    //             Swal.fire({
-                    //                 title: "Ooops!",
-                    //                 html: errorsHtml,
-                    //                 icon: "error",
-                    //                 confirmButtonText: "Volver!",
-                    //             });
-                    //         }
-                    //     });
-                    // });
+                                        });
+                                    }
+                                });
+                            }
+                        })
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        swalWithBootstrapButtons.fire({
+                            icon: 'question',
+                            title: "Continua con tu cotización!",
+                            text: "Puedes editar tu cotización o elegir otro servicio",
+                        })
+                    }
+                })
 
-                }
+
+            }
         });
-    });
 });

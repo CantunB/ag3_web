@@ -231,8 +231,8 @@
                             <img src="http://ag3luxury.com/assets/images/logo.png" alt="logo-empresa" style="width: 100%; max-width: 100px; padding-left: 10px;">
                         </td>
                         <td class="details" style="color: #fff; text-align: right; padding-right: 10px;">
-                            <h2 style="margin-bottom: 0;">Del Aeropuerto A Tu Destino</h2>
-                            <h3 style="margin-top: 0;">Tu Transportacion VIP Luxury, Como Te Lo Mereces</h3>
+                            <h2 style="margin-bottom: 0;">{{ __('booking.titulo_uno') }}</h2>
+                            <h3 style="margin-top: 0;">{{ __('booking.titulo_dos') }}</h3>
                         </td>
                     </tr>
                 </table>
@@ -244,12 +244,12 @@
         <table cellspacing="0" cellpadding="0" class="email-content" style="width: 90%; margin-top: 20px; margin-bottom: 20px;">
             <tr>
                 <td>
-                    <h2 class="title-email" style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 26px;">Cotizacion de servicio AG3 Luxury Travel</h2>
+                    <h2 class="title-email" style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 26px;">{{__('booking.titulo_cinco')}}</h2>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion personal</h2>
+                    <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;"> {{__('booking.info_personal')}} </h2>
                 </td>
             </tr>
             <tr>
@@ -257,16 +257,16 @@
                     <table cellspacing="0" cellpadding="0" class="info-content" style="table-layout: fixed; width: 100%; font-size: 16px;">
                         <tr>
                             <td class="items" style="word-wrap: break-word; border: 2px solid #FACC01; padding: 10px;">
-                                <span style="font-weight: bold;">NOMBRE:</span> {{$quotes->FullName}}<br>
-                                <span style="font-weight: bold;">CORREO:</span> {{$quotes->email}} <br>
-                                <span style="font-weight: bold;">TELEFONO:</span> {{$quotes->phone}} <br>
-                                <span style="font-weight: bold;">PAIS:</span> {{$quotes->Country->name}}<br>
-                                <span style="font-weight: bold;">ESTADO:</span> {{$quotes->State->name}}<br>
-                                <span style="font-weight: bold;">SERVICIO:</span> {{ $quotes->type_service }}<br>
-                                <span style="font-weight: bold;">ORIGEN:</span> {{$quotes->origin}} <br>
-                                <span style="font-weight: bold;">DESTINO:</span> {{$quotes->destiny}} <br>
-                                <span style="font-weight: bold;">VEHICULO SOLICITADO:</span> {{$quotes->TypeUnit->type_units}}<br>
-                                <span style="font-weight: bold;">PASAJEROS:</span> {{$quotes->passengers}} <br>
+                                <span style="font-weight: bold;">{{__('booking.nombre')}}:</span> {{$quotes->FullName}}<br>
+                                <span style="font-weight: bold;">{{__('booking.correo')}}:</span> {{$quotes->email}} <br>
+                                <span style="font-weight: bold;">{{__('booking.telefono')}}:</span> {{$quotes->phone}} <br>
+                                <span style="font-weight: bold;">{{__('booking.pais')}}:</span> {{$quotes->Country->name}}<br>
+                                <span style="font-weight: bold;">{{__('booking.estado')}}:</span> {{$quotes->State->name}}<br>
+                                <span style="font-weight: bold;">{{__('booking.servicio')}}:</span> {{ $quotes->type_service }}<br>
+                                <span style="font-weight: bold;">{{__('booking.origen')}}:</span> {{$quotes->origin}} <br>
+                                <span style="font-weight: bold;">{{__('booking.destino')}}:</span> {{$quotes->destiny}} <br>
+                                <span style="font-weight: bold;">{{__('booking.vehiculo')}}:</span> {{$quotes->TypeUnit->type_units}} {{$quotes->TypeTrip->type_trip}}<br>
+                                <span style="font-weight: bold;">{{__('booking.pasajeros')}}:</span> {{$quotes->passengers}} <br>
                             </td>
                             <td class="service-img" style="word-wrap: break-word;">
                                @if($quotes->request_unit == 1)
@@ -281,10 +281,10 @@
                     </table>
                 </td>
             </tr>
-            @if($quotes->type_service == 'Aeropuerto a Hotel')
+            {{-- @if($quotes->type_trip == 1) --}}
                 <tr>
                     <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de llegada</h2>
+                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Fecha de servicio</h2>
                     </td>
                 </tr>
                 <tr>
@@ -292,98 +292,14 @@
                         <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
                             <tr>
                                 <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$quotes->date_arrival}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$quotes->time_arrival}} <br>
-                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$quotes->airline_arrival}}<br>
-                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$quotes->flight_number_arrival}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $quotes->comments_arrival}}
+                                    <span style="font-weight: bold;">FECHA:</span>{{$quotes->date_service}}<br>
+                                    <span style="font-weight: bold;">HORA:</span> {{$quotes->time_service}} <br>
                                 </td>
                             </tr>
                         </table>
                     </td>
                 </tr>
-            @elseif($quotes->type_service == 'Hotel a Aeropuerto' )
-                <tr>
-                    <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de salida</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
-                            <tr>
-                                <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$quotes->date_departure}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$quotes->time_departure}} <br>
-                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$quotes->airline_departure}}<br>
-                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$quotes->flight_number_departure}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $quotes->comments_departure}}
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                @elseif($quotes->type_service == 'Tours')
-                <tr>
-                    <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de salida</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
-                            <tr>
-                                <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$quotes->date_departure}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$quotes->time_departure}} <br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $quotes->comments_departure}}
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                @elseif($quotes->type_service == 'Aeropuerto a Hotel a Aeropuerto')
-                <tr>
-                    <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de llegada</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
-                            <tr>
-                                <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$quotes->date_arrival}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$quotes->time_arrival}} <br>
-                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$quotes->airline_arrival}}<br>
-                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$quotes->flight_number_arrival}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $quotes->comments_arrival}}
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">Informacion de salida</h2>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <table cellspacing="0" cellpadding="0" class="arrival-info" style="width: 100%; border: 2px solid #FACC01; font-size: 16px;">
-                            <tr>
-                                <td style="padding: 10px;">
-                                    <span style="font-weight: bold;">FECHA:</span>{{$quotes->date_departure}}<br>
-                                    <span style="font-weight: bold;">HORA:</span> {{$quotes->time_departure}} <br>
-                                    <span style="font-weight: bold;">AEROLINEA:</span> {{$quotes->airline_departure}}<br>
-                                    <span style="font-weight: bold;">NUMERO DE VUELO:</span> {{$quotes->flight_number_departure}}<br>
-                                    <span style="font-weight: bold;">COMENTARIOS:</span> {{ $quotes->comments_departure}}
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            @endif
+            {{-- @endif --}}
         </table>
     </center>
 

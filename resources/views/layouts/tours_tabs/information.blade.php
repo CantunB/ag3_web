@@ -16,7 +16,7 @@
 
                 <!-- customer information start  -->
                 <div class="row form-section mb-4">
-                    <h5 class="mt-2"><small class="number__section">01</small> Informacion del cliente</h5>
+                    <h5 class="mt-2"><small class="number__section">01</small> {{__('informacion cliente')}} </h5>
                     <div class="col-sm-4 col-md-4 mb-1">
                         <label for="name" class="form-label">Nombre</label>
                         <div class="input-group">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <label for="paterno" class="form-label">Apellido Paterno</label>
+                        <label for="paterno" class="form-label"> {{__('apellido paterno')}} </label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-user"><i class="fas fa-user input__icon"></i></span>
                             <input oninput="write_name()" data-parsley-minlength="3" required type="text"
@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4 col-md-4">
-                        <label for="materno" class="form-label">Apellido Materno</label>
+                        <label for="materno" class="form-label"> {{__('apellido materno')}} </label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-user"><i class="fas fa-user input__icon"></i></span>
                             <input oninput="write_name()" data-parsley-minlength="3" type="text" class="form-control"
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 mb-1">
-                        <label for="phone-number" class="form-label">Numero Telefonico</label>
+                        <label for="phone-number" class="form-label">{{__('telefono')}}</label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-phone"><i
                                     class="fas fa-phone input__icon"></i></span>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6">
-                        <label for="email" class="form-label">Correo Electronico</label>
+                        <label for="email" class="form-label">{{__('correo electronico')}}</label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-email"><i
                                     class="fas fa-envelope input__icon"></i></span>
@@ -60,12 +60,12 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
-                        <label for="countries" class="form-label">País</label>
+                        <label for="countries" class="form-label">{{__('pais')}}</label>
                         <div class="input-group">
                             <label for="icon-globe" class="input-group-text"><i
                                     class="fas fa-globe-americas input__icon"></i></label>
                             <select required id="countries" name="country_id" class="form-select countries">
-                                <option selected value="null" disabled>Selecciona un pais...</option>
+                                <option selected value="null" disabled> {{__('selecciona un pais')}} </option>
                                 @foreach ($countries as $country)
                                     <option value="{{ $country->id }}">{{ $country->name }}</option>
                                 @endforeach
@@ -73,12 +73,12 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 mb-4">
-                        <label for="states" class="form-label">Estado</label>
+                        <label for="states" class="form-label">{{__('estado')}}</label>
                         <div class="input-group">
                             <label for="icon-state" class="input-group-text"><i
                                     class="fas fa-location-arrow input__icon"></i></label>
                             <select required id="states" name="state_id" class="form-select states">
-                                <option selected value="null" disabled>Selecciona un estado...</option>
+                                <option selected value="null" disabled> {{__('selecciona un estado')}} </option>
                             </select>
                         </div>
                     </div>
@@ -86,19 +86,19 @@
                 <!-- customer information end -->
 
                 <div class="row form-section mb-4">
-                    <h5 class="mt-2"><small class="number__section">02</small> Informacion para tu reserva
+                    <h5 class="mt-2"><small class="number__section">02</small> {{__('informacion reserva')}}
                     </h5>
                     <div class="col-sm-6 col-md-12 mb-1">
-                        <label for="arrival" class="form-label">Ubicacion de abordaje</label>
+                        <label for="arrival" class="form-label">{{__('ubicacion abordaje')}}</label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-plane"><i
                                     class="fas fa-map-marked-alt input__icon"></i></span>
                             <input required type="text" class="form-control" id="origen" name="origin"
-                                placeholder="Ingresa tu origen" aria-describedby="icon-date">
+                                placeholder="{{__('ingresa tu origen')}}" aria-describedby="icon-date">
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3 mb-1">
-                        <label for="arrival" class="form-label">Pasajeros</label>
+                        <label for="arrival" class="form-label"> {{__('pasajeros')}} </label>
                         <div class="input-group num-block num-in">
                             <span class="input-group-text" id="icon-plane"><i
                                     class="fas fa-restroom input__icon"></i></span>
@@ -121,7 +121,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-5">
-                        <label for="date" class="form-label">Fecha de servicio</label>
+                        <label for="date" class="form-label"> {{__('fecha')}} </label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-date"><i
                                     class="fas fa-calendar-alt input__icon"></i></span>
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 mb-1">
-                        <label for="hour" class="form-label">Hora de servicio</label>
+                        <label for="hour" class="form-label"> {{__('hora')}} </label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-hour"><i
                                     class="fas fa-clock input__icon"></i></span>
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 mb-4">
-                        <label for="c_arrival" class="form-label">Comentarios</label>
+                        <label for="c_arrival" class="form-label"> {{__('comentarios')}} </label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-comments"><i
                                     class="fas fa-comments input__icon"></i></span>
@@ -152,7 +152,7 @@
 
                 <!-- section total start -->
                 <div class="row form-section d-flex align-items-center mb-4 total">
-                    <h6 class="col">Total a pagar</h6>
+                    <h6 class="col"> {{__('total a pagar')}} </h6>
                     <input readonly type="hidden" class="form-control" name="destiny" aria-describedby="icon-hour"
                         value="PALENQUE, CHIAPAS">
                     <input readonly type="hidden" class="form-control" name="type_service"
@@ -176,9 +176,8 @@
                 <!-- section total end -->
 
                 <div class="row mb-4">
-                    <button class="btn btn-success nexttab btnPayment" id="btnPayment">Continuar</button>
-                    <p class="terms mt-2">Al hacer clic en el boton estas aceptando los <a href="{{route('terms', app()->getLocale())}}">terminos y
-                            condiciones</a>.</p>
+                    <button class="btn btn-success nexttab btnPayment" id="btnPayment">{{__('continuar')}}</button>
+                    <p class="terms mt-2">{{__('Al hacer clic en el boton estas aceptando los')}} <a href="{{route('terms', app()->getLocale())}}">{{__('terminos y condiciones')}}</a>.</p>
                 </div>
 
             </form>
@@ -189,32 +188,31 @@
         <div class="col-md-12 col-lg-4 mt-4">
             <div class="row justify-content-end">
                 <div class="col-md-12 col-lg-11 mb-4 reservation__summary">
-                    <h5 class="title__reservation mt-2">Resumen de reservacion</h5>
-                    <p class="title mb-0 text-left">Tipo de servicio</p>
+                    <h5 class="title__reservation mt-2"> {{__('resumen')}} </h5>
+                    <p class="title mb-0 text-left">{{__('tipo_servicio')}}</p>
                     <p class="description text-left"><i class="fas fa-sync-alt icon-resume"></i> Tours</p>
-                    <p class="title mb-0">Hacia</p>
+                    <p class="title mb-0">{{ __('hacia') }}</p>
                     <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $tours[0] }}</p>
-                    <p class="title mb-0">Servicio</p>
+                    <p class="title mb-0">{{__('servicios')}}</p>
                     <p class="description" id="select_service"><i class="fas fa-shuttle-van icon-resume"></i></p>
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">
-                    <h5 class="title__widget mt-2">¿Necesitas ayuda con tu reservacion?</h5>
-                    <p>Estariamos mas que felices de ayudarte. Nuestro call center esta a su servicio.</p>
+                    <h5 class="title__widget mt-2">{{ __('widget_uno') }}</h5>
+                    <p>{{ __('widget_text') }}</p>
                     <hr>
-                    <p class="text-phone">Contactanos: +52 (998) 387 02 29</p>
+                    <p class="text-phone">{{__('widget_cont')}}: +52 (998) 387 02 29</p>
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">
-                    <h5 class="title__widget mt-2">¿Que incluye mi reservacion?</h5>
-                    <p class="mb-0"><i class="fas fa-check"></i> Recibimiento en tu lugar de preferencia
-                    </p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Aire acondicionado</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Seguro de pasajero</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Monitoreo de reserva</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Servicio de transporte 24 hrs.</p>
-                    <p class="mb-4"><i class="fas fa-check"></i> Conductor profesional bilingue</p>
-                    {{-- <p class="mb-4"><i class="fas fa-check"></i> No hay tarifas por cambios de vuelo</p> --}}
+                    <h5 class="title__widget mt-2">{{ __('widget_dos') }}</h5>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_uno') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_dos') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_tres') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_cuatro') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_cinco') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_seis') }}</p>
+                    {{-- <p class="mb-4"><i class="fas fa-check"></i> {{ __('wdos_txt_siete') }}</p> --}}
                 </div>
             </div>
         </div>

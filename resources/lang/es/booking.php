@@ -33,5 +33,6 @@ return [
     "titulo_uno" => 'Del Aeropuerto A Tu Destino',
     "titulo_dos" => 'Tu Transportación VIP Luxury, Como Te Lo Mereces',
     "titulo_tres" => 'Confirmación de reservación - AG3 Luxury Travel',
-    "titulo_cuatro" => 'Síguenos en nuestras redes sociales'
+    "titulo_cuatro" => 'Síguenos en nuestras redes sociales',
+    "titulo_cinco" => 'Cotizacion de servicio - AG3 Luxury Travel'
 ];

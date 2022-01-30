@@ -133,5 +133,13 @@
     "tipo de servicio" : "Type of service",
     "arribo" : "ARRIVAL",
     "cotizar" : "Quote",
-    "booking_mail": "Booking Confirmation AG3 Luxury Travel"
+    "booking_mail": "Booking Confirmation AG3 Luxury Travel",
+    "informacion reserva" : "Information for your booking",
+    "ubicacion abordaje" : "Boarding location",
+    "ingresa tu origen" : "Enter your origin",
+    "seleccionar vehiculo" : "Select vehicle",
+    "seleccionar metodo pago" : "Select a payment method",
+    "finalizar reserva" : "End reservation",
+    "regresar" : "BACK"
+
 }

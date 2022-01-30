@@ -236,7 +236,9 @@ class BookingController extends Controller
         $quotes = Quote::create($request->all());
         //return $quotes;
         Mail::to('cantunberna@gmail.com')->send(new QuoteMail($quotes));
-        return redirect()->route('index', App::getLocale());
+        return response()->json(['data' => $quotes], 201);
+
+        //return redirect()->route('index', App::getLocale());
     }
 
 

@@ -20,6 +20,7 @@
 </head>
     <body>
         @include('layouts.components.new-header')
+
         <div class="container">
             <div class="mt-3 steps">
                 <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">

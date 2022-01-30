@@ -61,7 +61,7 @@
                 </div>
 
                 <div class="container parent">
-                <h2 style="color: orange" class="text-center text-uppercase ">Selecciona un metodo de pago</h2>
+                <h2 style="color: orange" class="text-center text-uppercase "> {{__('seleccionar metodo pago')}} </h2>
                     <div class="row">
                         <div class='col text-center'>
                         <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arribo">
@@ -117,7 +117,7 @@
                         <div class="row">
                             <div class="p-5 col-md-12 text-center">
                                 <div class="d-grid gap-2 col-6 mx-auto">
-                                    <button class="btn btn-success" id="cash_submit" type="submit">FINALIZAR RESERVA</button>
+                                    <button class="btn btn-success" id="cash_submit" type="submit"> {{__('finalizar reserva')}} </button>
                                 </div>
                             </div>
                         </div>

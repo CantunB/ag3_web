@@ -109,7 +109,7 @@
                 <div class="col-md-6 mb-4">
                     <div class="row">
                         <div class="col-md-11 content-unit">
-                            <h4 class="title-unit">Transporte suburban</h4>
+                            <h4 class="title-unit">{{__('transporte')}} suburban</h4>
 
                             <div class="img-content">
                                 <img class="transport-img" src="{{ asset('assets/images/transport-suburban-min.png') }}" alt="transport-suburban">
@@ -118,7 +118,7 @@
                             <div class="button-vehicule d-flex justify-content-center">
                                 <input type="hidden" name="unit" id="opt2_unit"  value="1">
                                 <input type="hidden" name="type_trip" id="opt2_type_trip" value="2">
-                                <button type="button" class="button-pre btnComplete" id="opt2">Seleccionar vehiculo</button>
+                                <button type="button" class="button-pre btnComplete" id="opt2">{{__('seleccionar vehiculo')}}</button>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                 <div class="col-md-6">
                     <div class="row justify-content-end">
                         <div class="col-md-11 content-unit">
-                            <h4 class="title-unit">Transporte van</h4>
+                            <h4 class="title-unit">{{__('transporte')}} van</h4>
 
                             <div class="img-content">
                                 <img class="transport-img" src="{{ asset('assets/images/transport-van2.png') }}" alt="transport-van">
@@ -136,7 +136,7 @@
                             <div class="button-vehicule d-flex justify-content-center">
                                 <input type="hidden" name="unit" id="opt4_unit" value="2">
                                 <input type="hidden" name="type_trip"  id="opt4_type_trip"  value="2">
-                                <button type="button" class="button-pre btnComplete" id="opt4">seleccionar vehiculo</button>
+                                <button type="button" class="button-pre btnComplete" id="opt4">{{__('seleccionar vehiculo')}}</button>
                             </div>
                         </div>
                     </div>
@@ -244,29 +244,29 @@
         <div class="col-md-12 col-lg-4 mt-4">
             <div class="row justify-content-end">
                 <div class="col-md-12 col-lg-11 mb-4 reservation__summary">
-                    <h5 class="title__reservation mt-2">Resumen de reservacion</h5>
-                    <p class="title mb-0 text-left">Tipo de servicio</p>
+                    <h5 class="title__reservation mt-2">{{ __('resumen') }}</h5>
+                    <p class="title mb-0 text-left">{{ __('tipo_servicio') }}</p>
                     <p class="description text-left"><i class="fas fa-sync-alt icon-resume"></i> Tours</p>
-                    <p class="title mb-0">Hacia</p>
+                    <p class="title mb-0">{{ __('hacia') }}</p>
                     <p class="description"><i class="fas fa-map-marker-alt icon-resume"></i> {{ $tours[0] }}</p>
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">
-                    <h5 class="title__widget mt-2">¿Necesitas ayuda con tu reservacion?</h5>
-                    <p>Estariamos mas que felices de ayudarte. Nuestro call center esta a su servicio.</p>
+                    <h5 class="title__widget mt-2">{{ __('widget_uno') }}</h5>
+                    <p>{{ __('widget_text') }}</p>
                     <hr>
-                    <p class="text-phone">Contactanos: +52 (998) 387 02 29</p>
+                    <p class="text-phone">{{__('widget_cont')}}: +52 (998) 387 02 29</p>
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">
-                    <h5 class="title__widget mt-2">¿Que incluye mi reservacion?</h5>
-                    <p class="mb-0"><i class="fas fa-check"></i> Recibimiento en tu lugar de preferencia</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Aire acondicionado</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Seguro de pasajero</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Monitoreo de reserva</p>
-                    <p class="mb-0"><i class="fas fa-check"></i> Servicio de transporte 24 hrs.</p>
-                    <p class="mb-4"><i class="fas fa-check"></i> Conductor profesional bilingue</p>
-                    {{-- <p class="mb-4"><i class="fas fa-check"></i> No hay tarifas por cambios de vuelo</p> --}}
+                    <h5 class="title__widget mt-2">{{ __('widget_dos') }}</h5>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_uno') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_dos') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_tres') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_cuatro') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_cinco') }}</p>
+                    <p class="mb-0"><i class="fas fa-check"></i> {{ __('wdos_txt_seis') }}</p>
+                    {{-- <p class="mb-4"><i class="fas fa-check"></i> {{ __('wdos_txt_siete') }}</p> --}}
                 </div>
             </div>
         </div>
