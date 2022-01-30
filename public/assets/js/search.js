@@ -104,9 +104,9 @@ $(document).ready(function(){
                     // Elementos visibles y configuraciones
                         $("#services-content").removeClass("col-lg-3").addClass("col-lg-4");
                         origen_default.show();
-                        $("#origen_input_default").attr("readonly", false).attr("placeholder", "Ingresa tu origen").val("");
+                        $("#origen_input_default").attr("readonly", false).val("");
                         destino_default.show();
-                        $("#destino_input_default").attr("readonly", false).attr("placeholder", "Ingresa tu destino").val("");
+                        $("#destino_input_default").attr("readonly", false).val("");
                         date_content.addClass("offset-lg-2");
                         passengers.removeClass("offset-lg-1");
                         button.removeClass("offset-lg-5").addClass("col-lg-2");
