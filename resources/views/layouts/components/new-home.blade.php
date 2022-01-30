@@ -121,7 +121,7 @@
                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
                        <input type="text" readonly="readonly" id="origen_input_default"
                            class="form-control search_input_hotel" name="origen"
-                           value="Aeropuerto Internacional de Cancun">
+                           value="Aeropuerto Internacional de Cancun" placeholder="{{ __('ingresa_origen') }}">
                    </div>
                </div>
 
@@ -132,7 +132,7 @@
                        <span class="input-group-text"><i class="fas fa-hotel"></i></span>
                        <input type="text" readonly="readonly" id="destino_input_default"
                            class="form-control search_input_hotel" name="destino"
-                           value="Aeropuerto Internacional de Cancun">
+                           value="Aeropuerto Internacional de Cancun" placeholder="{{ __('ingresa_destino') }}">
                    </div>
                </div>
 

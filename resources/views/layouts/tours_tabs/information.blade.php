@@ -18,7 +18,7 @@
                 <div class="row form-section mb-4">
                     <h5 class="mt-2"><small class="number__section">01</small> {{__('informacion cliente')}} </h5>
                     <div class="col-sm-4 col-md-4 mb-1">
-                        <label for="name" class="form-label">Nombre</label>
+                        <label for="name" class="form-label">{{ __('nombre') }}</label>
                         <div class="input-group">
                             <span class="input-group-text" id="icon-user"><i class="fas fa-user input__icon"></i></span>
                             <input oninput="write_name()" data-parsley-minlength="3" required type="text"
@@ -127,7 +127,7 @@
                                     class="fas fa-calendar-alt input__icon"></i></span>
                             <input required style="background: #FFFFFF;" type="date" class="form-control selector"
                                 id="date_departure" name="d_departure" aria-describedby="icon-date"
-                                placeholder="Selecciona una fecha">
+                                placeholder="{{ __('select_fecha') }}">
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-4 mb-1">
