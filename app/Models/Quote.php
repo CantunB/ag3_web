@@ -25,16 +25,16 @@ class Quote extends Model
         'origin',
         'destiny',
         'passengers',
-        'date_arrival',
-        'time_arrival',
+        'date_service',
+        'time_service',
         'round_service',
-        'date_departure',
-        'time_departure',
+        'date_comeback',
+        'time_comeback',
         'type_trip',
         'request_unit',
         // 'price',
         // 'type_payment',
-        'status_payment',
+        'status_quotes',
     ];
 
     public function getFullNameAttribute()
