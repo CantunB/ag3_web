@@ -35,7 +35,7 @@ class BookingMail extends Mailable
         return $this->subject(__('booking_mail'))
                     ->view('emails.booking')
                     ->attach(
-                        public_path('booking/'.$this->booking->id.'.pdf'),
+                        public_path('booking/'.$this->booking->slug.'.pdf'),
                     [
                         'as' =>  __('booking_mail').'.pdf',
                         'mime' => 'application/pdf',

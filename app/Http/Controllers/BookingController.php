@@ -147,10 +147,10 @@ class BookingController extends Controller
     public function payment(Request $request)
     {
         //return $request->all();
-        $id = IdGenerator::generate(['table' => 'bookings', 'length' => 8, 'prefix' =>'BOOK-']);
+        $slug = IdGenerator::generate(['table' => 'bookings', 'field'=>'slug', 'length' => 8, 'prefix' =>'BOOK-']);
 
         $booking = new Booking();
-        $booking->id = $id;
+        $booking->slug = $slug;
         $booking->name = $request->name;
         $booking->paterno = $request->paterno;
         $booking->materno = $request->materno;
@@ -205,7 +205,7 @@ class BookingController extends Controller
         /*  SECTION[pdf] Se crea el pdf  */
         $voucher_pdf = PDF::loadView('pdf.voucher', compact('booking','pickup_formateado'));
         $path = public_path('booking');
-        $fileName =  $booking->id . '.' . 'pdf' ;
+        $fileName =  $booking->slug . '.' . 'pdf' ;
         $voucher_pdf->save($path . '/' . $fileName);
 
         /** SECTION Envio de correo electronico */
@@ -222,9 +222,10 @@ class BookingController extends Controller
 
     public function voucher(Request $request)
     {
-        $id = $request->id;
-        $booking = Booking::with(['TypeUnit','Country','State'])->findOrFail($id);
-        $fileName =  $booking->id . '.' . 'pdf' ;
+        $slug = $request->slug;
+        // $booking = Booking::with(['TypeUnit','Country','State'])->findOrFail($id);
+        $booking = Booking::with(['TypeUnit','Country','State'])->where('slug',$slug)->first();
+        $fileName =  $booking->slug . '.' . 'pdf' ;
         $pdf = public_path('booking/'.$fileName);
 
         return response()->download($pdf);

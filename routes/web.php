@@ -20,7 +20,7 @@ Route::group([
 
     Route::post('contact', [ContactController::class, 'contact'])->name('contact');
     //Route::view('testimonials', 'pages.testimonialss')->name('testimonials');
-     Route::view('terms', 'layouts.components.terminos')->name('terms');
+    Route::view('terms', 'layouts.components.terminos')->name('terms');
     // Route::view('privacy', 'pages.privacy')->name('privacy');
     // Route::get('{any}', [App\Http\Controllers\Controller::class, 'index'])->name('index');
     /** PAYMENT */

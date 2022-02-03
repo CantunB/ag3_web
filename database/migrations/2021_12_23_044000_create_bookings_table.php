@@ -14,7 +14,8 @@ class CreateBookingsTable extends Migration
     public function up()
     {
         Schema::create('bookings', function (Blueprint $table) {
-            $table->string('id');
+            $table->id();
+            $table->string('slug');
             $table->string('name');
             $table->string('paterno');
             $table->string('materno')->nullable();
@@ -44,8 +45,8 @@ class CreateBookingsTable extends Migration
             $table->string('type_payment')->nullable();
             $table->string('transaction_id')->nullable();
             $table->string('paypal_id')->nullable();
-            $table->tinyInteger('status_payment')->default('0')->nullable();
-            $table->tinyInteger('status_booking')->default('0')->nullable();
+            $table->tinyInteger('status_payment')->default('0');
+            $table->tinyInteger('status_booking')->default('0');
             $table->timestamps();
         });
     }
