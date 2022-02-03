@@ -418,8 +418,9 @@
                     <h2 class="title-section" style="background: #FACC01; color: #212529; padding: 5px 10px 5px 10px; margin-bottom: 10px; font-size: 24px;">{{ __('booking.metodo_pago') }}:
                         @if ($booking->type_payment == 'Arribo')
                         {{__('arribo')}}
-                        @endif
+                        @else
                         {{$booking->type_payment}}
+                        @endif
                     </h2>
                 </td>
             </tr>
