@@ -314,7 +314,7 @@
                 <table cellspacing="0" cellpadding="0" class="social" style="table-layout: fixed; width: 100%; margin-bottom: 10px;">
                     <tr>
                         <td align="center" valign="middle" style="word-wrap: break-word;">
-                            <a href="https://www.facebook.com/transfercancun/"
+                            <a href="https://www.facebook.com/ag3luxury/"
                                 style="text-decoration: none; color: #fff;">
                                 <img src="http://ag3luxury.com/assets/images/icons/facebook.png" alt="facebook-icon"
                                     width="30" height="30"

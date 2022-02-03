@@ -244,7 +244,7 @@
                     <h5 class="title__widget mt-2">{{ __('widget_uno') }}</h5>
                     <p>{{ __('widget_text') }}</p>
                     <hr>
-                    <p class="text-phone">{{ __('widget_cont') }}: +52 (938) 172 6488</p>
+                    <p class="text-phone">{{ __('widget_cont') }}: +52 998 523 7742</p>
                 </div>
 
                 <div class="col-md-12 col-lg-11 mb-4 widget">

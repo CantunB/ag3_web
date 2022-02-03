@@ -143,6 +143,8 @@
     "seleccionar vehiculo" : "Select vehicle",
     "seleccionar metodo pago" : "Select a payment method",
     "finalizar reserva" : "End reservation",
-    "regresar" : "BACK"
-
+    "regresar" : "BACK",
+    "confirmar_reserva" :"Confirm your reservation",
+    "cancelacion_reserva" :"You will not be able to cancel the process!",
+    "espacio_reserva" : "We are making a space for your reservation..."
 }

@@ -83,7 +83,7 @@
     </div>
     <div class="menu_social">
 
-        <div class="menu_phone ml-auto"><a href="tel:9381726488">Call us: 9381726488</a> </div>
+        <div class="menu_phone ml-auto"><a href="tel:9985237742">Call us: +52 998 523 7742</a> </div>
         <ul class="d-flex flex-row align-items-start justify-content-start">
             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 

@@ -12,13 +12,13 @@ $("#cash_submit").click(function(e) {
         buttonsStyling: false
     })
     swalWithBootstrapButtons.fire({
-        title: 'Confirmar tu reservacion',
-        text: "No podras cancelar el proceso!",
+        title: locale_translate()[0],
+        text: locale_translate()[1],
         icon: 'info',
         showCancelButton: true,
-        confirmButtonText: 'Si, confirmar!',
+        confirmButtonText: locale_translate()[2],
         confirmButtonColor: '#3085d6',
-        cancelButtonText: 'No, cancelar!',
+        cancelButtonText: locale_translate()[3],
         allowOutsideClick: false,
         allowEscapeKey: false,
     }).then((result) => {
@@ -26,7 +26,7 @@ $("#cash_submit").click(function(e) {
             Swal.fire({
                 imageUrl: 'https://1.bp.blogspot.com/-a8mhRZqntj4/WuMnvABJUwI/AAAAAAADcxQ/yRg6wAzZKHct-lSyiH81mZF5vLU5SzF5ACLcBGAs/s1600/inboxiconanimation_30.gif',
                 imageAlt: 'Completando reserva',
-                title: 'Estamos haciendo un espacio para tu reserva...',
+                title: locale_translate()[4],
                 showConfirmButton: false,
                 allowOutsideClick: false,
                 timer: 16000,
@@ -42,13 +42,13 @@ $("#cash_submit").click(function(e) {
                         success: function(response){
                            //console.log('Formulario enviado');
 
-                           Swal.fire({
-                            title: "¿Desea descargar el comprobante de reserva?",
-                            text: "Su reservación se ha realizado correctamente", //response.data,
+                        Swal.fire({
+                            title: locale_translate()[5],
+                            text: locale_translate()[6], //response.data,
                             icon: "success",
                             showCancelButton: true,
-                            confirmButtonText: 'Descargar',
-                            cancelButtonText: 'Cancelar',
+                            confirmButtonText: locale_translate()[7],
+                            cancelButtonText: locale_translate()[8],
                             confirmButtonColor: '#3085d6',
                             cancelButtonColor: '#d33',
                             allowOutsideClick: false,
@@ -68,7 +68,7 @@ $("#cash_submit").click(function(e) {
                                         var blob = new Blob([response]);
                                         var link = document.createElement('a');
                                         link.href = window.URL.createObjectURL(blob);
-                                        link.download = "ComprobanteAg3.pdf";
+                                        link.download = locale_translate()[9]+".pdf";
                                         link.click();
                                     },
                                     error: function(blob){
@@ -77,8 +77,8 @@ $("#cash_submit").click(function(e) {
                                 });
                                 let timerInterval
                                 Swal.fire({
-                                    title: 'Descargando!',
-                                    html: 'Tu archivo estara listo en...  <b></b> milliseconds.',
+                                    title: locale_translate()[10],
+                                    html: locale_translate()[11],
                                     timer: 2500,
                                     timerProgressBar: true,
                                     allowOutsideClick: false,
@@ -96,9 +96,9 @@ $("#cash_submit").click(function(e) {
                                 didClose: () => {
                                     Swal.fire({
                                         icon: 'success',
-                                        title: 'Volver al inicio',
-                                        text: 'Gracias por elegir AG3 Luxury Travel',
-                                        confirmButtonText: 'IR',
+                                        title: locale_translate()[12],
+                                        text: locale_translate()[13],
+                                        confirmButtonText: locale_translate()[14],
                                         confirmButtonColor: '#3085d6',
                                         allowOutsideClick: false,
                                         allowEscapeKey: false,
@@ -111,17 +111,17 @@ $("#cash_submit").click(function(e) {
                                 }
                                 }).then((result) => {
                                   /* Read more about handling dismissals below */
-                                    if (result.dismiss === Swal.DismissReason.timer) {
-                                        console.log('I was closed by the timer')
-                                    }
+                                if (result.dismiss === Swal.DismissReason.timer) {
+                                    console.log('I was closed by the timer')
+                                }
                                 })
                             }
                             else if (result.dismiss === Swal.DismissReason.cancel) {
                                 swalWithBootstrapButtons.fire({
-                                    title: 'Volver al inicio',
-                                    text: 'Gracias por elegir AG3 Luxury Travel',
+                                    title: locale_translate()[12],
+                                    text: locale_translate()[13],
                                     icon: 'success',
-                                    confirmButtonText: 'IR',
+                                    confirmButtonText: locale_translate()[14],
                                     confirmButtonColor: '#3085d6',
                                     allowOutsideClick: false,
                                     allowEscapeKey: false,
@@ -157,8 +157,8 @@ $("#cash_submit").click(function(e) {
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             swalWithBootstrapButtons.fire({
                 icon: 'question',
-                title: "Continua con tu reserva!",
-                text: "Puedes volver elegir otro metodo de pago",
+                title: locale_translate()[16],
+                text: locale_translate()[17],
             })
         }
     })

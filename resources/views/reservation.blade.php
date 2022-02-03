@@ -319,7 +319,7 @@
                             <h5 class="title__widget mt-2">{{ __('widget_uno') }}</h5>
                             <p>{{ __('widget_text') }}</p>
                             <hr>
-                            <p class="text-phone">{{ __('widget_cont') }}: +52 (938) 172 6488</p>
+                            <p class="text-phone">{{ __('widget_cont') }}: +52 998-523-7742</p>
                         </div>
 
                         <div class="col-md-12 col-lg-11 mb-4 widget">
@@ -339,7 +339,7 @@
             </div>
         </div>
         <!-- section content end -->
-        <a href="https://wa.me/5219381726488?text=Me%20gustaría%20informacion%20acerca%20de%20los%20servicios" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+        <a href="https://wa.me/5219985237742?text=Me%20gustaría%20informacion%20acerca%20de%20los%20servicios" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
         @include('layouts.components.new-footer')
         @include('layouts.components.scripts')

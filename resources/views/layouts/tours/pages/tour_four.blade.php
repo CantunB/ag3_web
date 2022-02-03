@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-lg-6">
 
-                        <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> Regresar</a>
+                        <a class="back" href="javascript:history.go(-1)"><i class="fas fa-arrow-left"></i> {{__('regresar')}}</a>
 
                         <div class="title">
                             <h1 class="title-tour">calakmul, campeche</h1>

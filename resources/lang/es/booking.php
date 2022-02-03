@@ -29,7 +29,7 @@ return [
     'vuelo_nac' => 'VUELO NACIONAL',
     'descripcion_nac' => 'Deberás presentarte en el aeropuerto 2 horas antes',
     'metodo_pago' => 'Método de pago',
-    'nota' => 'NOTA: SI DESEA MODIFICAR SU PICK-UP PARA SU RETORNO AL AEROPUERTO CONTACTANOS',
+    'nota' => 'NOTA: SI DESEA MODIFICAR SU PICK-UP PARA SU RETORNO AL AEROPUERTO CONTACTANOS AL +52 998 523 7742',
     'titulo_uno' => 'Del Aeropuerto A Tu Destino',
     'titulo_dos' => 'Tu Transportación VIP Luxury, Como Te Lo Mereces',
     'titulo_tres' => 'Confirmación de reservación - AG3 Luxury Travel',

@@ -59,7 +59,7 @@
 
             @include('layouts.components.about')
 
-            <a href="https://wa.me/5219381726488?text=Me%20gustaría%20informacion%20acerca%20de%20los%20servicios" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+            <a href="https://wa.me/+5219985237742?text=Me%20gustaría%20informacion%20acerca%20de%20los%20servicios" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
             @include('layouts.components.new-footer')
             @include('layouts.components.scripts')

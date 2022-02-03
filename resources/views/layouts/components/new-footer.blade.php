@@ -28,10 +28,10 @@
             <div class="col-sm-6 col-md-3 mt-2">
                 <h3> {{__('siguenos')}} </h3>
                 <div class="d-flex flex-column">
-                    <a href="https://www.facebook.com/transfercancun/" target="blank"><i class="face fab fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.facebook.com/ag3luxury/" target="blank"><i class="face fab fa-facebook-f"></i> Facebook</a>
                     <a href="https://www.instagram.com/ag3_luxurytravel/" target="blank"><i class="insta fab fa-instagram"></i> Instagram</a>
                     <a href="https://twitter.com/eulloagle/" target="blank"><i class="twit fab fa-twitter"></i> Twitter</a>
-                    <a href="https://api.whatsapp.com/send?phone=5219381726488" target="blank"><i class="whats fab fa-whatsapp"></i> Whatsapp</a>
+                    <a href="https://api.whatsapp.com/send?phone=5219985237742" target="blank"><i class="whats fab fa-whatsapp"></i> Whatsapp</a>
                 </div>
             </div>
             <div class="col-12 mt-2 copyright">

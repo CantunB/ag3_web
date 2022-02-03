@@ -180,7 +180,7 @@
             </tr>
         </table>
     @elseif ( $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
-    <table cellspacing="0" cellpadding="0">
+    <table cellspacing="0" cellpadding="0" class="arrival-info">
         <tr>
             <td>
                 <h2 class="title-section">{{ __('booking.info_llegada') }}</h2>

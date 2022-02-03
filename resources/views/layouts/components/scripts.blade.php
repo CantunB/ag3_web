@@ -26,6 +26,7 @@
     </script>
 
     <script>
+
         function lang_main(){
             var locale =  lenguaje();
             if (locale == 'es') {
@@ -52,6 +53,8 @@
             }
         }
     </script>
+
+    <script src="{{ asset('assets/js/lang.js') }}"></script>
 
 {{--  /* -------------------------------------------------------------------------- */  --}}
     <script src="{{ asset('assets/js/scripts/home.js') }}"></script>

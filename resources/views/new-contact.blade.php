@@ -51,7 +51,7 @@
                     </div>
                     <div class="col-md-3 text-center">
                         <i class="fas fa-phone cell-phone"></i>
-                        <p><a href="tel:9381726488">938-137-8856</a></p>
+                        <p><a href="tel:9985237742">+52 998-523-7742</a></p>
                     </div>
                     <div class="col-md-6 text-center">
                         <i class="fas fa-envelope email"></i>

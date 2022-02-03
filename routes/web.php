@@ -7,7 +7,7 @@ use App\Http\Controllers\ToursController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BookingController;
 
-Route::redirect('/', 'es')->name('main');
+Route::redirect('/', 'en')->name('main');
 
 Route::group([
     'prefix' => '{language}',
