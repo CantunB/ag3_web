@@ -94,7 +94,7 @@
                             <img src="http://ag3luxury.com/assets/images/logo.png" alt="logo-empresa">
                         </td>
                         <td class="details">
-                            <span>{{ __('booking.no_servicio') }}:</span> {{ $booking->id }}<br>
+                            <span>{{ __('booking.no_servicio') }}:</span> {{ $booking->slug }}<br>
                             <span>{{ __('booking.fecha_creacion') }}:</span> {{ \Carbon\Carbon::now()->toDateString() }}
                         </td>
                     </tr>
@@ -247,6 +247,7 @@
         @if ($booking->type_payment == 'Arribo')
         {{__('arribo')}}
         @endif
+        {{$booking->type_payment}}
     </h2>
     @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
     <table cellspacing="0" cellpadding="0" class="arrival-info">

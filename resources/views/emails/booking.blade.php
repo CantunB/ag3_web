@@ -419,6 +419,7 @@
                         @if ($booking->type_payment == 'Arribo')
                         {{__('arribo')}}
                         @endif
+                        {{$booking->type_payment}}
                     </h2>
                 </td>
             </tr>

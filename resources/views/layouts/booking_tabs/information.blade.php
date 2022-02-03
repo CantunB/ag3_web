@@ -90,7 +90,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-arrival input__icon"></i></span>
-                                <select required id="airline_arrival" name="a_arrival"  class="form-select airlines_arrival" aria-describedby="icon-plane">
+                                <select required id="airline_arrival" name="airline_arrival"  class="form-select airlines_arrival" aria-describedby="icon-plane">
                                     <option selected value="null" disabled> {{__('selecciona una aerolinea')}} </option>
                                     @foreach ($airlines as $airline)
                                         <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
@@ -105,7 +105,7 @@
                                         class="fas fa-hashtag input__icon"></i></span>
                                         <span class="input-group-text iata" id="iata_arrival"></span>
                                 <input oninput="iata_code_arrival()" required type="text" class="form-control " id="flight_number_arrival" aria-describedby="icon-hashtag">
-                                <input  type="hidden" id="iata_airline_arrival" name="fn_arrival">
+                                <input  type="hidden" id="iata_airline_arrival" name="flight_number_arrival">
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
@@ -121,7 +121,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="date" id="date_arrival" name="d_arrival" class="form-control" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date)->format('Y-m-d') }}">
+                                <input readonly type="date" id="date_arrival" name="date_arrival" class="form-control" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date)->format('Y-m-d') }}">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
@@ -129,7 +129,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="hour" name="t_arrival" aria-describedby="icon-hour" value="{{ $pickup }}">
+                                <input readonly type="text" class="form-control" id="hour" name="time_arrival" aria-describedby="icon-hour" value="{{ $pickup }}">
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
@@ -137,7 +137,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
-                                <input type="text" class="form-control" id="c_arrival" aria-describedby="icon-comments">
+                                <input type="text" class="form-control" id="comments_arrival" aria-describedby="icon-comments">
                             </div>
                         </div>
                 </div>
@@ -151,7 +151,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-departure input__icon"></i></span>
-                                        <select required id="airline_departure" name="a_departure" class="form-select airlines_departure" aria-describedby="icon-plane">
+                                        <select required id="airline_departure" name="airline_departure" class="form-select airlines_departure" aria-describedby="icon-plane">
                                             <option selected value="null" disabled> {{__('selecciona una aerolinea')}} </option>
                                             @foreach ($airlines as $airline)
                                                 <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
@@ -166,7 +166,7 @@
                                         class="fas fa-hashtag input__icon"></i></span>
                                 <span class="input-group-text iata" id="iata_departure"></span>
                                 <input oninput="iata_code_departure()" required type="text" class="form-control " id="flight_number_departure" aria-describedby="icon-hashtag">
-                                <input  type="hidden" id="iata_airline_departure" name="fn_departure">
+                                <input  type="hidden" id="iata_airline_departure" name="flight_number_departure">
 
                             </div>
                         </div>
@@ -183,7 +183,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="date" class="form-control" id="date_departure" name="d_departure" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date)->format('Y-m-d') }}">
+                                <input readonly type="date" class="form-control" id="date_departure" name="date_departure" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date)->format('Y-m-d') }}">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
@@ -191,7 +191,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="hour" name="t_departure" aria-describedby="icon-hour" value="{{ $pickup }}">
+                                <input readonly type="text" class="form-control" id="hour" name="time_departure" aria-describedby="icon-hour" value="{{ $pickup }}">
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
@@ -199,7 +199,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
-                                <input type="text" class="form-control" id="c_departure" aria-describedby="icon-comments">
+                                <input type="text" class="form-control" id="comments_departure" aria-describedby="icon-comments">
                             </div>
                         </div>
                 </div>
@@ -213,7 +213,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-arrival input__icon"></i></span>
-                                        <select required id="airline_arrival" name="a_arrival" class="form-select airlines_arrival" aria-describedby="icon-plane">
+                                        <select required id="airline_arrival" name="airline_arrival" class="form-select airlines_arrival" aria-describedby="icon-plane">
                                             <option selected value="null" disabled>{{__('selecciona una aerolinea')}}</option>
                                             @foreach ($airlines as $airline)
                                                 <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
@@ -228,7 +228,7 @@
                                         class="fas fa-hashtag input__icon"></i></span>
                                         <span class="input-group-text iata" id="iata_arrival"></span>
                                         <input oninput="iata_code_arrival()" required type="text" class="form-control " id="flight_number_arrival" aria-describedby="icon-hashtag">
-                                        <input  type="hidden" id="iata_airline_arrival" name="fn_arrival">
+                                        <input  type="hidden" id="iata_airline_arrival" name="flight_number_arrival">
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
@@ -244,7 +244,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="date" class="form-control" id="date_arrival" name="d_arrival" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date)->format('Y-m-d') }}">
+                                <input readonly type="date" class="form-control" id="date_arrival" name="date_arrival" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date)->format('Y-m-d') }}">
 
                             </div>
                         </div>
@@ -253,7 +253,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="hour" name="t_arrival" aria-describedby="icon-hour" value="{{ $pickup }}">
+                                <input readonly type="text" class="form-control" id="hour" name="time_arrival" aria-describedby="icon-hour" value="{{ $pickup }}">
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
@@ -261,7 +261,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
-                                <input type="text" class="form-control" id="c_arrival" name="c_arrival" aria-describedby="icon-comments">
+                                <input type="text" class="form-control" id="c_arrival" name="comments_arrival" aria-describedby="icon-comments">
                             </div>
                         </div>
                         <h5 class="title-arrival mb-0"> {{__('informacion salida')}} </h5>
@@ -270,7 +270,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-plane"><i
                                         class="fas fa-plane-departure input__icon"></i></span>
-                                    <select required id="airline_departure" name="a_departure" class="form-select airlines_departure" aria-describedby="icon-plane">
+                                    <select required id="airline_departure" name="airline_departure" class="form-select airlines_departure" aria-describedby="icon-plane">
                                         <option selected value="null" disabled> {{__('selecciona una aerolinea')}} </option>
                                         @foreach ($airlines as $airline)
                                             <option value="{{ $airline->airline }}">{{ $airline->airline }}</option>
@@ -285,7 +285,7 @@
                                         class="fas fa-hashtag input__icon"></i></span>
                                 <span class="input-group-text iata" id="iata_departure"></span>
                                 <input oninput="iata_code_departure()" required type="text" class="form-control " id="flight_number_departure" aria-describedby="icon-hashtag">
-                                <input  type="hidden" id="iata_airline_departure" name="fn_departure">
+                                <input  type="hidden" id="iata_airline_departure" name="flight_number_departure">
                             </div>
                         </div>
                         <div class="col-md-12 mb-1">
@@ -301,7 +301,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-date"><i
                                         class="fas fa-calendar-alt input__icon"></i></span>
-                                <input readonly type="date" class="form-control" id="date" name="d_departure" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date_comeback)->format('Y-m-d') }}">
+                                <input readonly type="date" class="form-control" id="date" name="date_departure" aria-describedby="icon-date" value="{{ Carbon\Carbon::parse($date_comeback)->format('Y-m-d') }}">
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 mb-1">
@@ -309,7 +309,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-hour"><i
                                         class="fas fa-clock input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="hour" name="t_departure" aria-describedby="icon-hour" value="{{ $time_comeback }}">
+                                <input readonly type="text" class="form-control" id="hour" name="time_departure" aria-describedby="icon-hour" value="{{ $time_comeback }}">
 
                             </div>
                         </div>
@@ -318,7 +318,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
-                                <input type="text" class="form-control" id="c_departure" name="c_departure" aria-describedby="icon-comments">
+                                <input type="text" class="form-control" id="c_departure" name="comments_departure" aria-describedby="icon-comments">
                             </div>
                         </div>
                 </div>
