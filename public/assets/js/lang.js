@@ -1,4 +1,4 @@
-function locale_translate(dict){
+function locale_translate(){
     var locale =  lenguaje();
             if (locale == 'es') {
                 return [
