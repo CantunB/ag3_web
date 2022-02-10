@@ -148,42 +148,10 @@ class BookingController extends Controller
     {
         //return $request->all();
         $slug = IdGenerator::generate(['table' => 'bookings', 'field'=>'slug', 'length' => 8, 'prefix' =>'BOOK-']);
-
         $booking = Booking::create($request->all());
         $booking->slug = $slug;
         $booking->save();
-        // $booking = new Booking();
-        // $booking->slug = $slug;
-        // $booking->name = $request->name;
-        // $booking->paterno = $request->paterno;
-        // $booking->materno = $request->materno;
-        // $booking->email = $request->email;
-        // $booking->phone = $request->phone;
-        // $booking->country_id = $request->country_id;
-        // $booking->state_id = $request->state_id;
-        // $booking->type_service = $request->type_service;
-        // $booking->origin = $request->origin;
-        // $booking->destiny = $request->destiny;
-        // $booking->passengers = $request->passengers;
-        // $booking->airline_arrival = $request->a_arrival;
-        // $booking->flight_number_arrival = $request->fn_arrival;
-        // $booking->date_arrival = $request->d_arrival;
-        // $booking->time_arrival = $request->t_arrival;
-        // $booking->comments_arrival = $request->c_arrival;
-        // $booking->round_service = $request->round_service;
-        // $booking->airline_departure = $request->a_departure;
-        // $booking->flight_number_departure = $request->fn_departure;
-        // $booking->date_departure = $request->d_departure;
-        // $booking->time_departure = $request->t_departure;
-        // $booking->comments_departure = $request->c_departure;
-        // $booking->request_unit = $request->request_unit;
-        // $booking->price = $request->price;
-        // $booking->divisa = $request->divisa;
-        // $booking->type_payment = $request->type_payment;
-        // $booking->transaction_id = $request->transaction_id;
-        // $booking->status_payment = $request->status_payment;
-        // $booking->status_booking = $request->status_booking;
-        // $booking->save();
+
 
         /* NOTE En caso de requerir pickup por zona es necesario realizar la busqueda del destino */
         // if ($request->type_service == "Hotel a Aeropuerto")  { //Aeropuerto a Hotel (Origen - Destino)

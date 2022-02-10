@@ -25,7 +25,7 @@ class Booking extends Model
         'type_service',
         'origin',
         'destiny',
-        'passenger',
+        'passengers',
         'airline_arrival',
         'flight_number_arrival',
         'date_arrival',
