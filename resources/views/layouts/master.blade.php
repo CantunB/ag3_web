@@ -32,6 +32,16 @@
         gtag('config', 'G-578QPHP39F');
         </script>
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-224030629-1">
+        </script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-224030629-1');
+        </script>
+
 </head>
     <body>
         <div id="app" class="super_container">
