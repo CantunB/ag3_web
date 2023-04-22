@@ -11,7 +11,15 @@ class ContactController extends Controller
 {
     public function contact(ContactRequest $request){
         $contact = $request->all();
-        Mail::to('cantunberna@gmail.com')->queue(new ContactMail($contact));
+
+        $ccEmails = ['cantunberna97@gmail.com'];
+
+        // Mail::to('cantunberna@gmail.com')->queue(new ContactMail($contact));
+
+        Mail::to('cantunberna@gmail.com')
+        ->cc($ccEmails)
+        ->bcc('sistemas@ccontento.com')
+        ->queue(new ContactMail($contact));
         return response()->json(['data' => 'Mensaje enviado correctamente'], 201);
     }
 }

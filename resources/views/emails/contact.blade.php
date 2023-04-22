@@ -222,7 +222,7 @@
 
 <body>
 
-    <table cellspacing="0" cellpadding="0" class="header" style="width: 100%; background: #212529;">
+    <table cellspacing="0" cellpadding="0" class="header" style="width: 100%; background: #0000;">
         <tr>
             <td>
                 <table class="header-content" style="width: 100%; font-size: 16px;">
@@ -280,7 +280,7 @@
         </table>
     </center>
 
-    <table cellspacing="0" cellpadding="0" class="footer" style="width: 100%; background: #212529; color: #fff;">
+    <table cellspacing="0" cellpadding="0" class="footer" style="width: 100%; background: #0000; color: #fff;">
         <tr>
             <td>
                 <h2 style="text-align: center; margin-top: 10px; margin-bottom: 10px; font-size: 24px;">Siguenos en nuestras redes sociales</h2>
