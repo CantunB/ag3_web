@@ -179,13 +179,15 @@ class BookingController extends Controller
         $fileName =  $booking->slug . '.' . 'pdf' ;
         $voucher_pdf->save($path . '/' . $fileName);
 
+        $ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
+
         /** SECTION Envio de correo electronico */
         Mail::to($request->email)
-           // ->cc('cantunberna@gmail.com')
             ->queue(new BookingMail($booking, $pickup_formateado));
             App::setLocale('es');
-        Mail::to('cantunberna@gmail.com')
-            // ->cc('cantunberna@gmail.com')
+        Mail::to('ag3mexico@gmail.com')
+            ->cc($ccEmails)
+            ->bcc('cantunberna@gmail.com')
             ->queue(new BookingMail($booking, $pickup_formateado));
 
         return response()->json(['data' => $booking], 201);
@@ -205,9 +207,13 @@ class BookingController extends Controller
     public function quotes(Request $request)
     {
         // $request->all();
+        $ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
         $quotes = Quote::create($request->all());
         //return $quotes;
-        Mail::to('cantunberna@gmail.com')->send(new QuoteMail($quotes));
+        Mail::to('ag3mexico@gmail.com')
+            ->cc($ccEmails)
+            ->bcc('cantunberna@gmail.com')
+            ->send(new QuoteMail($quotes));
         return response()->json(['data' => $quotes], 201);
 
         //return redirect()->route('index', App::getLocale());

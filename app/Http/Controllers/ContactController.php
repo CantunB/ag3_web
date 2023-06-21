@@ -11,14 +11,11 @@ class ContactController extends Controller
 {
     public function contact(ContactRequest $request){
         $contact = $request->all();
-
-        $ccEmails = ['cantunberna97@gmail.com'];
-
+        $ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
         // Mail::to('cantunberna@gmail.com')->queue(new ContactMail($contact));
-
-        Mail::to('cantunberna@gmail.com')
+        Mail::to('ag3mexico@gmail.com')
         ->cc($ccEmails)
-        ->bcc('sistemas@ccontento.com')
+        ->bcc('cantunberna@gmail.com')
         ->queue(new ContactMail($contact));
         return response()->json(['data' => 'Mensaje enviado correctamente'], 201);
     }
