@@ -206,7 +206,6 @@ class BookingController extends Controller
 
     public function quotes(Request $request)
     {
-        // $request->all();
         $ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
         $quotes = Quote::create($request->all());
         //return $quotes;
