@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="col-12 mt-2 copyright">
-                <h6 class="text-center mt-2">{{__('Creado por')}} <a href="https://www.stigmacode.com/">StigmaCode</a> & <span>JS Arthuro</span> | {{__('derechos reservados')}} © {{ now()->year }}</h6>
+                <h6 class="text-center mt-2">{{__('Creado por')}} <a href="https://www.cantun.com/" target="_blank">Cantun</a> & <span>JS Arthuro</span> | {{__('derechos reservados')}} © {{ now()->year }}</h6>
             </div>
         </div>
     </div>

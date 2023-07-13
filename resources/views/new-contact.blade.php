@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-md-6 text-center">
                         <i class="fas fa-envelope email"></i>
-                        <p>contacto@ag3luxurytravel.com</p>
+                        <p>ag3mexico@gmail.com</p>
                     </div>
                 </div>
 
