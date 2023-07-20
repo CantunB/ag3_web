@@ -3,7 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use Illuminate\Support\Facades\Config;
+use App\Models\Currency;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -23,6 +24,19 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
+
+        // view()->composer(['layouts.master','new-home'], function($view){
+        // $currency = Currency::where('Languague',Config::get('app.locale'))->get();
+        $currency_dolar = Currency::where('Languague','en')->first()->CurrencyValue;
+        $currency_euro = Currency::where('Languague','fr')->first()->CurrencyValue;
+        // $currency_dolar = $currency_dolar->CurrencyValue;
+        //     $view->with([
+        //         'currency_dolar' => $currency_dolar
+        //     ]);
+        // });
+
+        view()->share('currency_dolar', $currency_dolar);
+        view()->share('currency_euro', $currency_euro);
     }
 }

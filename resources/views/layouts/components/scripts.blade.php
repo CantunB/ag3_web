@@ -236,8 +236,8 @@
         */
         //var value = 1250;
         var peso = 1;  // Valor de divisa Peso
-        var dolar = 19.50; //Valor de divisa Dollar
-        var euro = 21.50; //Valor de divisa Euro
+        var dolar = {{ $currency_dolar }} //Valor de divisa Dollar
+        var euro = {{ $currency_euro }}; //Valor de divisa Euro
 
         window.addEventListener('load', function(){
             var array = new Array();

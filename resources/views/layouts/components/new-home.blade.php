@@ -93,7 +93,7 @@
 
 <div class="container search">
     <div class="search_content">
-        <form class="row my-2" action="{{ route('vehicles', app()->getLocale()) }}" method="POST"
+        <form class="row my-4" action="{{ route('vehicles', app()->getLocale()) }}" method="POST"
             id="form_search" autocomplete="off">
             @csrf
             @method('POST')

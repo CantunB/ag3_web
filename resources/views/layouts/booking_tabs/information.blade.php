@@ -137,7 +137,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
-                                <input type="text" class="form-control" id="comments_arrival" aria-describedby="icon-comments">
+                                <input type="text" class="form-control" name="comments_arrival" id="comments_arrival" aria-describedby="icon-comments">
                             </div>
                         </div>
                 </div>
@@ -199,7 +199,7 @@
                             <div class="input-group">
                                 <span class="input-group-text" id="icon-comments"><i
                                         class="fas fa-comments input__icon"></i></span>
-                                <input type="text" class="form-control" id="comments_departure" aria-describedby="icon-comments">
+                                <input type="text" class="form-control" name="comments_departure" id="comments_departure" aria-describedby="icon-comments">
                             </div>
                         </div>
                 </div>

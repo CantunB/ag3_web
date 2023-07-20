@@ -80,7 +80,7 @@ class BookingController extends Controller
         }
         /** Se obtiene las tarifas disponibles  de acuerdo a la zona obtenia anteriormente con el destino  */
        // $tariff = DB::table('tariff_hotels')->where('id_zona', $search_destino->zona)->get();
-        $tariff = Tariff::with(['type_unit', 'type_trip'])->where('id_zona', $search_destino->zona)->get();
+        $tariff = Tariff::with(['type_unit', 'type_trip'])->where('id_zona', $search_destino->id_zona)->get();
 
 
         $booking = collect([
@@ -182,13 +182,13 @@ class BookingController extends Controller
         $ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
 
         /** SECTION Envio de correo electronico */
-        Mail::to($request->email)
-            ->queue(new BookingMail($booking, $pickup_formateado));
-            App::setLocale('es');
-        Mail::to('ag3mexico@gmail.com')
-            ->cc($ccEmails)
-            ->bcc('cantunberna@gmail.com')
-            ->queue(new BookingMail($booking, $pickup_formateado));
+        // Mail::to($request->email)
+        //     ->queue(new BookingMail($booking, $pickup_formateado));
+        //     App::setLocale('es');
+        // Mail::to('ag3mexico@gmail.com')
+        //     ->cc($ccEmails)
+        //     ->bcc('cantunberna@gmail.com')
+        //     ->queue(new BookingMail($booking, $pickup_formateado));
 
         return response()->json(['data' => $booking], 201);
     }
