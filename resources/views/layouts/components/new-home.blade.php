@@ -176,8 +176,9 @@
             </div>
 
             {{-- hora --}}
+
             <div class="col-lg-2 mb-2" id="time-content">
-            {{--  <span class="" id="icon-time"><i class="fas fa-clock"></i></span>  --}}
+            {{--  <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="More Info"></i>  --}}
 
                 <div class="input-group">
                     <span class="input-group-text" id="icon-time"><i class="fas fa-clock"></i></span>
