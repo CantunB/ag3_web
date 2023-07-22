@@ -13,8 +13,6 @@
 
 <!-- Spiner input -->
 <link rel="stylesheet" href="{{ asset('css/spiner.css') }}">
-
-
 <header class="header">
     <nav class="navbar navbar-expand-lg bg-dark" aria-label="navbar-ag3">
         <div class="container">
@@ -179,11 +177,13 @@
 
             <div class="col-lg-2 mb-2" id="time-content">
             {{--  <i class="fa fa-info-circle text-muted float-right" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="More Info"></i>  --}}
-
                 <div class="input-group">
                     <span class="input-group-text" id="icon-time"><i class="fas fa-clock"></i></span>
                     <input type="time" class="form-control search_input_3 " aria-describedby="icon-time"
                         placeholder="{{ __('hora') }}" name="pickup" id="time_arrival" required>
+                    <span class="input-group-text" id="icon-info" data-toggle="tooltip" data-placement="right"
+                    title=""><i id="tooltip_time" style="color: #f5b403" class="fas fa-info-circle"></i></span>
+
                 </div>
 
             </div>
@@ -232,6 +232,8 @@
                     <input type="time" class="form-control" aria-describedby="icon-time_comeback"
                         placeholder="{{ __('Hora de regreso') }}" name="time_comeback"
                         style="background: #FFFFFF;">
+                    <span class="input-group-text" id="icon-info"><i id="tooltip_time"  style="color: #f5b403" class="fas fa-info-circle" data-toggle="tooltip" data-placement="right" title="Información acerca del tiempo" ></i></span>
+
                 </div>
             </div>
 

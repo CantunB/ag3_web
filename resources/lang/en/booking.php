@@ -56,5 +56,9 @@ return [
     'cancelacion_opcion_cinco' => '5. In departure services (Hotel-Airport) the 100% refund will be made when the cancellation is made 24 hours in advance, upon departure from the Pick Up hotel. The 50% refund of this service will be made when the cancellation is made 12 hours before departure from the Hotel Pick Up at the indicated time.',
     'cancelacion_opcion_seis' => '6. Cancellations of less than 12 hours or in case of not using the Departure service (Hotel-Airport) due to reasons attributed to the client will not be entitled to any refund.',
 
-    'cancelacion_txt_dos' => 'After the notification made by the client for the cancellation of their service to the email ag3mexico@gmail.com or to the telephone number: +52 998 523 7742, (call or WhatsApp, AG3 de México SA de CV will have 72 hours to make the refund, credit, to the bank card account from which the reservation was charged, depending on the assumption of the time of the cancellation.'
+    'cancelacion_txt_dos' => 'After the notification made by the client for the cancellation of their service to the email ag3mexico@gmail.com or to the telephone number: +52 998 523 7742, (call or WhatsApp, AG3 de México SA de CV will have 72 hours to make the refund, credit, to the bank card account from which the reservation was charged, depending on the assumption of the time of the cancellation.',
+
+    'tooltip_services_ah' => '1 - The time requested when it is a <strong style="color:#f5b403">Airport-Hotel</strong> service is the estimated arrival time at the terminal.',
+    'tooltip_services_ha' => '2 - The requested time when it is a <strong style="color:#f5b403">Hotel-Airport</strong> service is the departure time of your flight.',
+    'tooltip_services_aha' => '3 - The times requested when it is a service <strong style="color:#f5b403">Airport-Hotel-Airport</strong> is the departure time of your flight and the estimated time of arrival back to the terminal.',
 ];

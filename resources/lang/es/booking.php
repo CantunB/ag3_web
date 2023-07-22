@@ -56,5 +56,9 @@ return [
     'cancelacion_opcion_cinco' => '5. En los servicios de salida (Hotel-Aeropuerto) el reembolso del 100% se efectuara cuando la cancelación se haga con 24 horas de anticipación, a la salida del hotel Pick Up. El reembolso del 50% de este servicio se hará cuando la cancelación se haga con 12 horas de anticipación a la salida del Hotel Pick Up de la hora indicada.',
     'cancelacion_opcion_seis' => '6. Las cancelaciones menores a 12 horas o en caso no utilizar del servicio de Salida (Hotel-Aeropuerto) por causa imputadas al cliente no tendrá derecho a ningún reembolso.',
 
-    'cancelacion_txt_dos' => 'Después de la notificación que hagan el cliente por la cancelación de su servicio al correo electrónico ag3mexico@gmail.com o al número de teléfono: +52 998 523 7742, (llame o WhatsApp, AG3 de México SA de CV tendrá 72 horas para hacer el reembolso, abono, a la cuenta de la tarjeta bancaria de donde se cargó la reserva, dependiendo del supuesto del tiempo de la cancelación.'
+    'cancelacion_txt_dos' => 'Después de la notificación que hagan el cliente por la cancelación de su servicio al correo electrónico ag3mexico@gmail.com o al número de teléfono: +52 998 523 7742, (llame o WhatsApp, AG3 de México SA de CV tendrá 72 horas para hacer el reembolso, abono, a la cuenta de la tarjeta bancaria de donde se cargó la reserva, dependiendo del supuesto del tiempo de la cancelación.',
+
+    'tooltip_services_ah' => '1 - El horario solicitado cuando es un servicio <strong style="color:#f5b403">Aeropuerto-Hotel</strong> es el horario de llegada estimado a la terminal.',
+    'tooltip_services_ha' => '2 - El horario solicitado cuando es un servicio <strong style="color:#f5b403">Hotel-Aeropuerto</strong> es el horario de salida de su vuelo.',
+    'tooltip_services_aha' => '3 - Los horarios solicitados cuando es un servicio <strong style="color:#f5b403">Aeropuerto-Hotel-Aeropuerto</strong> es el horario de salida de su vuelo y el horario de llegada estimado de regreso a la terminal.',
 ];

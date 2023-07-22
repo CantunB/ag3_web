@@ -13,13 +13,12 @@
     * STUB
 --}}
 
-{{-- /* -------------------------------LARAVEL MIX VUE JS------------------------------------------- */ --}}
+{{-------------------------------- /* LARAVEL MIX VUE JS */ --------------------------------------------}}
 <script src="{{ mix('/js/app.js') }}"></script>
 
-{{-- /* --------------------------LENGUAJE------------------------------------------------ */ --}}
+{{--------------------------- /* LENGUAJE */ -------------------------------------------------}}
     <script>
         function lenguaje() {
-            {{-- //return n1 + n2; // devolvemos el valor de la suma --}}
             var idioma =  "{{ app()->getLocale() }}";
             return idioma;
         }
@@ -55,44 +54,30 @@
     </script>
 
     <script src="{{ asset('assets/js/lang.js') }}"></script>
-
-{{--  /* -------------------------------------------------------------------------- */  --}}
     <script src="{{ asset('assets/js/scripts/home.js') }}"></script>
-
 {{-- -------------------------------Typed.js v2.0.12 --------------------------------------- --}}
     <script src="{{ asset('assets/js/scripts/typed.js') }}"></script>
-
 {{----------------------------Main.js---------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/main.js') }}"></script>
-
 {{----------------------------jQuery v3.6.0----------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/jquery.min.js') }}"></script>
-
 {{----------------------------Select2 v4.0.13----------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/select2.full.min.js') }}"></script>
-
 {{-------------------------------FontAwesome-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/41bcea2ae3.js') }}"></script>
-
 {{------------------------------Flatpickr v4.6.9--------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/flatpickr.js') }}"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
-
-
 {{------------------------------ Dark Mode --------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/dark-mode.js') }}"></script>
-
 {{-------------------------------Gallery-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/gallery.js') }}"></script>
-
 {{-------------------------------Tours-show-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/tours-show.js') }}"></script>
-
 {{-------------------------------Testimonials-------------------------------------------}}
     <script src="{{ asset('assets/js/scripts/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('assets/js/scripts/testimonials.js') }}"></script>
-
 {{--  /* ----------------------------------Maquetar imagenes ---------------------------------------- */  --}}
     <script src="{{ asset('assets/js/holder.js')}}"></script>
 {{---------------------------ParsleyJS Validation----------------------------------------------}}
@@ -112,15 +97,15 @@
             }
         }
     </script>
-{{----------------------- TODO SWEETALERT  --------------------------------------------------}}
+{{----------------------- /* TODO SWEETALERT  */ --------------------------------------------------}}
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-{{---------------------------- TODO CONTACT FORM  ----------------------------------------}}
+{{---------------------------- /*TODO CONTACT FORM */ ----------------------------------------}}
     <script src="{{ asset('assets/js/contact.js') }}"></script>
-{{----------------------- TODO INPUTS SELECTS (SELECT 2)  ---------------------------------}}
+{{----------------------- /*TODO INPUTS SELECTS (SELECT 2) */ ---------------------------------}}
     <script src="{{ asset('assets/js/selects.js') }}"></script>
-{{------------------------  TODO FORMULARIO DE BUSQUEDA  -----------------------------------}}
+{{------------------------ /* TODO FORMULARIO DE BUSQUEDA */ -----------------------------------}}
     <script src="{{ asset('assets/js/search.js') }}"></script>
-{{------------------------  TODO INPUTS DE TIEMPO Y FECHA (FLATPICKR)  -------------------------------}}
+{{------------------------ /* TODO INPUTS DE TIEMPO Y FECHA (FLATPICKR) */ -------------------------------}}
     <script>
         $(".selector").flatpickr({
                 minDate: "today",
@@ -151,24 +136,40 @@
 {{-- /* -------------------TODO IATA CODE DROPDOWN DEPENDENT AIRLINTE------------------------------------------------------- */ --}}
     <script src="{{ asset('assets/js/airlines_iata.js') }}"></script>
 
-{{---------------------  TODO --------------------------}}
+{{--------------------- /*  TODO */--------------------------}}
     <script src="{{ asset('assets/js/booking.js') }}"></script>
 
-{{---------------------  TODO --------------------------}}
+{{---------------------/*  TODO TRASLADOS */ --------------------------}}
     <script src="{{ asset('assets/js/traslados.js') }}"></script>
 
-{{---------------------  SECTION[metodos pago] RadioButton para seleccionar el metodo de pago --------------------------}}
-    <script src="{{ asset('assets/js/method_payment.js') }}"></script>
+{{---------------------/* TODO CDN TOOLTIP TYPI.JS */-------------}}
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+        tippy('#tooltip_time', {
+            content: '<ul><li>{!! __('booking.tooltip_services_ah') !!}<br></li><li>{!! __('booking.tooltip_services_ha') !!}<br></li><li>{!! __('booking.tooltip_services_aha') !!}</li></ul>',
+            arrow: true,
+            animation: 'scale-subtle',
+            allowHTML: true,
+            theme: 'gradient',
+            followCursor: true,
 
-{{---------------------  SECTION[metodo de pago arrivo] Envio de formulario por ajax--------------------------}}
+
+        });
+    </script>
+
+
+{{--------------------- /*  SECTION[metodos pago] RadioButton para seleccionar el metodo de pago */ --------------------------}}
+    <script src="{!! asset('assets/js/method_payment.js') !!}"></script>
+
+{{---------------------  /* SECTION[metodo de pago arrivo] Envio de formulario por ajax */--------------------------}}
     <script src="{{ asset('assets/js/arrivo.js') }}"></script>
 
-{{---------------------  SECTION[metodo de pago por paypal] Envio de formulario por ajax --------------------------}}
+{{--------------------- /* SECTION[metodo de pago por paypal] Envio de formulario por ajax */ --------------------------}}
     <script src="{{ asset('assets/js/paypal.js') }}"></script>
 
-{{-- /* ------------------------------INPUT SPINNER-------------------------------------------- */ --}}
+{{-------------------------------- /* INPUT SPINNER */ ----------------------------------------------}}
     <script>
-        /////////////////// product +/-
         $(document).ready(function() {
             $('.num-in span').click(function () {
                 var $input = $(this).parents('.num-block').find('input.in-num');
@@ -190,51 +191,31 @@
                 $(this).parents('.num-block').find(('.minus')).removeClass('dis');
                 }
             }
-
             $input.change();
             return false;
             });
-
         });
-        // product +/-
     </script>
 
- {{-- /* -----------------------------API DIVISAS--------------------------------------------- */ --}}
+ {{------------------------------- /*API DIVISAS */--------------------------------------------}}
     <script>
         const formatterPeso = new Intl.NumberFormat('es-ES', {
             style: 'currency',
             currency: 'MXN',
             minimumFractionDigits: 0
         })
-        //console.log(formatterPeso.format(value))
-        // → $ 12.500
-
         const formatterDolar = new Intl.NumberFormat('en-US', {
             style: 'currency',
             currency: 'USD'
         })
-        //console.log(formatterDolar.format(value))
-        // → $12,500.00
-
         const formatterEuro = new Intl.NumberFormat('de-DE', {
             style: 'currency',
             currency: 'EUR'
         })
-        //console.log(formatterEuro.format(value))
-        // → 12.500,00 €
-
-        // el yen japonés no tiene ninguna subdivisión
         const formatterYenes = new Intl.NumberFormat("ja-JP", {
             style: 'currency',
             currency: 'JPY'
         })
-        //console.log(formatterYenes.format(value))
-        // → ￥12,500
-
-        /**
-        *DECLARACION DE LAS MONEDAS
-        */
-        //var value = 1250;
         var peso = 1;  // Valor de divisa Peso
         var dolar = {{ $currency_dolar }} //Valor de divisa Dollar
         var euro = {{ $currency_euro }}; //Valor de divisa Euro
