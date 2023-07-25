@@ -244,8 +244,8 @@
     @endif
 
     <h2 class="title-section"><span>{{ __('booking.metodo_pago') }}:</span>
-        @if ($booking->type_payment == 'Arribo')
-        {{__('arribo')}}
+        @if ($booking->type_payment == 'Al llegar')
+        {{__('arrival')}}
         @else
             {{$booking->type_payment}}
         @endif

@@ -146,5 +146,7 @@
     "regresar" : "BACK",
     "confirmar_reserva" :"Confirm your reservation",
     "cancelacion_reserva" :"You will not be able to cancel the process!",
-    "espacio_reserva" : "We are making a space for your reservation..."
+    "espacio_reserva" : "We are making a space for your reservation...",
+    "arrival": "Arrival"
+
 }

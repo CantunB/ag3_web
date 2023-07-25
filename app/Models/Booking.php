@@ -39,6 +39,7 @@ class Booking extends Model
         'comments_departure',
         'request_unit',
         'price',
+        'price_mx',
         'divisa',
         'type_payment',
         'transaction_id',

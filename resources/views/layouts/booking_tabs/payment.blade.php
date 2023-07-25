@@ -64,9 +64,9 @@
                 <h2 style="color: orange" class="text-center text-uppercase  "> {{__('seleccionar metodo pago')}} </h2>
                     <div class="row">
                         <div class='col text-center'>
-                        <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="Arribo">
+                        <input type="radio" name="type_payment" id="img1" class="d-none imgbgchk" value="{{__('arrival')}}">
                         <label for="img1">
-                            <h3 class="mb-4 option-payment" style="color:#FF8427"><strong>{{__('arribo')}}</strong></h3>
+                            <h3 class="mb-4 option-payment" style="color:#FF8427"><strong>{{__('arrival')}}</strong></h3>
                             <img src="{{ asset('assets/images/arrival-man.png') }}" alt="ARRIVO" class="rounded">
                             <div class="tick_container">
                                 <div class="tick"><i class="fa fa-check"></i></div>
@@ -76,8 +76,8 @@
                         <div class='col text-center'>
                         <input type="radio" name="type_payment" id="img2" class="d-none imgbgchk" value="Paypal">
                             <label for="img2">
-                            <h3 class="mb-4 option-payment" style="color:#FF8427"><strong>PAYPAL</strong></h3>
-                            <img src="https://bamboocycles.com/wp-content/uploads/2020/05/paypal-logo.png" alt="PAYPAL" class="rounded">
+                            <h3 class="mb-4 option-payment" style="color:#FF8427"><strong>Paypal</strong></h3>
+                            <img src="https://bamboocycles.com/wp-content/uploads/2020/05/paypal-logo.png" alt="Paypal" class="rounded">
                             <div class="tick_container">
                                 <div class="tick"><i class="fa fa-check"></i></div>
                             </div>

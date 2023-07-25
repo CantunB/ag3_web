@@ -367,7 +367,7 @@
                 <!-- section total start -->
                 <div class="row form-section d-flex align-items-center mb-4 total">
                     <h6 class="col">{{__('total a pagar')}}</h6>
-                    <input readonly type="hidden" class="form-control" id="price_mx" aria-describedby="icon-hour" value="{{ $price_mx }}">
+                    <input readonly type="hidden" class="form-control" name="price_mx" id="price_mx" aria-describedby="icon-hour" value="{{ $price_mx }}">
                     <input readonly type="hidden" class="form-control" name="price" id="price" aria-describedby="icon-hour" value="{{ $price }}">
                     <input readonly type="hidden" class="form-control" name="divisa" id="divisa" aria-describedby="icon-hour" value="{{ $divisa }}">
                     <input readonly type="hidden" class="form-control" name="request_unit" aria-describedby="icon-hour" value="{{ $type_unit->id }}">

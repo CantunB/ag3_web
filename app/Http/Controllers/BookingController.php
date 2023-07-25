@@ -146,11 +146,19 @@ class BookingController extends Controller
 
     public function payment(Request $request)
     {
-        //return $request->all();
+        // return $request->all();
         $slug = IdGenerator::generate(['table' => 'bookings', 'field'=>'slug', 'length' => 8, 'prefix' =>'BOOK-']);
+
+        // $lang = app()->getLocale();
+        // $lang_es = App::setLocale('es');
         $booking = Booking::create($request->all());
-        $booking->slug = $slug;
-        $booking->save();
+        $book = $booking;
+        $book->slug = $slug;
+        if ($request->type_payment === "Arrival" OR $request->type_payment === "Arrivée") {
+            $book->type_payment = 'Al llegar';
+        }
+
+        $book->save();
 
 
         /* NOTE En caso de requerir pickup por zona es necesario realizar la busqueda del destino */
@@ -182,6 +190,7 @@ class BookingController extends Controller
         $ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
 
         /** SECTION Envio de correo electronico */
+
         Mail::to($request->email)
             ->queue(new BookingMail($booking, $pickup_formateado));
             App::setLocale('es');
@@ -190,6 +199,7 @@ class BookingController extends Controller
             ->bcc('cantunberna@gmail.com')
             ->queue(new BookingMail($booking, $pickup_formateado));
 
+        // Mail::to('cantunberna@gmail.com')  ->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $booking], 201);
     }
 
