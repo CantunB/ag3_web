@@ -217,8 +217,8 @@
             currency: 'JPY'
         })
         var peso = 1;  // Valor de divisa Peso
-        var dolar = {{ $currency_dolar }} //Valor de divisa Dollar
-        var euro = {{ $currency_euro }}; //Valor de divisa Euro
+        var dolar = {!! $currency_dolar !!}; //Valor de divisa Dollar
+        var euro = {!! $currency_euro !!}; //Valor de divisa Euro
 
         window.addEventListener('load', function(){
             var array = new Array();

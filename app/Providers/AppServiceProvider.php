@@ -28,8 +28,8 @@ class AppServiceProvider extends ServiceProvider
 
         // view()->composer(['layouts.master','new-home'], function($view){
         // $currency = Currency::where('Languague',Config::get('app.locale'))->get();
-        $currency_dolar = Currency::where('Languague','en')->first()->CurrencyValue;
-        $currency_euro = Currency::where('Languague','fr')->first()->CurrencyValue;
+        $currency_dolar = Currency::where('Languague','en')->pluck('CurrencyValue')->first();
+        $currency_euro = Currency::where('Languague','fr')->pluck('CurrencyValue')->first();
         // $currency_dolar = $currency_dolar->CurrencyValue;
         //     $view->with([
         //         'currency_dolar' => $currency_dolar
