@@ -187,12 +187,12 @@ class BookingController extends Controller
             ->queue(new BookingMail($booking, $pickup_formateado));
         App::setLocale('es');
 
-        // Mail::to('ag3mexico@gmail.com')
-        //     ->cc($ccEmails)
-        //     ->bcc('cantunberna@gmail.com')
-        //     ->queue(new BookingMail($booking, $pickup_formateado));
+        Mail::to('ag3mexico@gmail.com')
+            ->cc($ccEmails)
+            ->bcc('cantunberna@gmail.com')
+            ->queue(new BookingMail($booking, $pickup_formateado));
 
-        Mail::to('cantunberna@gmail.com')->queue(new BookingMail($booking, $pickup_formateado));
+        // $mail_test = Mail::to('cantunberna@gmail.com')->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $booking], 201);
     }
 
