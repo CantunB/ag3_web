@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Haruncpi\LaravelIdGenerator\IdGenerator;
+
 class Booking extends Model
 {
     use HasFactory;
@@ -70,5 +72,12 @@ class Booking extends Model
     public function State(): BelongsTo
     {
         return $this->belongsTo(State::class, 'state_id');
+    }
+
+    public static function boot() {
+        parent::boot();
+        self::creating(function ($model) {
+            $model->slug = IdGenerator::generate(['table' => 'bookings', 'field'=>'slug', 'length' => 8, 'prefix' =>'BOOK-']);
+        });
     }
 }

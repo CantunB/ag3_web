@@ -136,7 +136,7 @@
             </td>
         </tr>
     </table>
-    @if ( $booking->type_service == "Aeropuerto a Hotel")
+    @if ( $booking->type_service == __('Aeropuerto a Hotel'))
         <h2 class="title-section">{{ __('booking.info_llegada') }}</h2>
 
         <table cellspacing="0" cellpadding="0" class="arrival-info">
@@ -150,7 +150,7 @@
                 </td>
             </tr>
         </table>
-    @elseif ( $booking->type_service == "Hotel a Aeropuerto" )
+    @elseif ( $booking->type_service == __('Hotel a Aeropuerto') )
         <h2 class="title-section">{{ __('booking.info_salida') }}</h2>
 
         <table cellspacing="0" cellpadding="0" class="arrival-info">
@@ -179,7 +179,7 @@
                 </td>
             </tr>
         </table>
-    @elseif ( $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
+    @elseif ( $booking->type_service == __('Aeropuerto a Hotel a Aeropuerto'))
     <table cellspacing="0" cellpadding="0" class="arrival-info">
         <tr>
             <td>
@@ -220,7 +220,7 @@
 
     @endif
 
-    @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
+    @if ( $booking->type_service == __('Hotel a Aeropuerto') || $booking->type_service == __('Aeropuerto a Hotel a Aeropuerto'))
 
     <h2 class="title-section">{{ __('booking.preparate') }}</h2>
 
@@ -250,7 +250,7 @@
             {{$booking->type_payment}}
         @endif
     </h2>
-    @if ( $booking->type_service == "Hotel a Aeropuerto" || $booking->type_service == "Aeropuerto a Hotel a Aeropuerto")
+    @if ( $booking->type_service == __('Hotel a Hotel') || $booking->type_service ==__('Aeropuerto a Hotel a Aeropuerto'))
     <table cellspacing="0" cellpadding="0" class="arrival-info">
         <tr>
             <td class="centerText">

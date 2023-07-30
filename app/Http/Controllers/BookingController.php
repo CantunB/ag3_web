@@ -21,6 +21,7 @@ use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\App;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
 
 class BookingController extends Controller
 {
@@ -30,13 +31,13 @@ class BookingController extends Controller
 
         //Lista de servicios que son aceptados al realizar la busqueda
         $list_services = [
-            1 => 'Aeropuerto a Hotel',
-            2 => 'Hotel a Aeropuerto',
-            3 => 'Hotel a Hotel',
-            4 => 'Aeropuerto a Hotel a Aeropuerto',
-            5 => 'Traslados'
+            1 => __('Aeropuerto a Hotel'),
+            2 => __('Hotel a Aeropuerto'),
+            3 =>  __('Hotel a Hotel'),
+            4 =>  __('Aeropuerto a Hotel a Aeropuerto'),
+            5 => __('Traslado')
         ];
-        //Se obtiene el nombre del servicio de acuerdo a la opcion enviada y la lista de servicios disponibles
+        //Se obtiene el nombre del servicio d e acuerdo a la opcion enviada y la lista de servicios disponibles
         foreach ($list_services as $list_service) {
             $service = array($list_services[$request->services]);
         }
@@ -146,19 +147,11 @@ class BookingController extends Controller
 
     public function payment(Request $request)
     {
-        // return $request->all();
-        $slug = IdGenerator::generate(['table' => 'bookings', 'field'=>'slug', 'length' => 8, 'prefix' =>'BOOK-']);
-
-        // $lang = app()->getLocale();
         // $lang_es = App::setLocale('es');
         $booking = Booking::create($request->all());
-        $book = $booking;
-        $book->slug = $slug;
-        if ($request->type_payment === "Arrival" OR $request->type_payment === "Arrivée") {
-            $book->type_payment = 'Al llegar';
-        }
-
-        $book->save();
+        // if ($request->type_payment === "Arrival" OR $request->type_payment === "Arrivée") {
+        //     $book->type_payment = 'Al llegar';
+        // }
 
 
         /* NOTE En caso de requerir pickup por zona es necesario realizar la busqueda del destino */
@@ -173,10 +166,10 @@ class BookingController extends Controller
         * NOTE Los calculos se realizan dependiendo el servicio
         */
         $pickup_formateado = '';
-        if ($request->type_service == "Hotel a Aeropuerto" || $request->type_service == 'Aeropuerto a Hotel a Aeropuerto'){
+        if ($request->type_service ==  __('Hotel a Aeropuerto') || $request->type_service == __('Aeropuerto a Hotel a Aeropuerto')){
             // $time_departure = Carbon::parse($request->t_departure);
             // $time_parse = $time_departure->isoFormat('h:mm:ss a');
-            $tiempo_Formateado =  Carbon::parse($request->t_departure);
+            $tiempo_Formateado =  Carbon::parse($booking->time_departure);
             $subtraction = $tiempo_Formateado->subHours(3);
             $pickup_formateado = $subtraction->format('H:i:s');
         }
@@ -193,13 +186,14 @@ class BookingController extends Controller
 
         Mail::to($request->email)
             ->queue(new BookingMail($booking, $pickup_formateado));
-            App::setLocale('es');
-        Mail::to('ag3mexico@gmail.com')
-            ->cc($ccEmails)
-            ->bcc('cantunberna@gmail.com')
-            ->queue(new BookingMail($booking, $pickup_formateado));
+        App::setLocale('es');
 
-        // Mail::to('cantunberna@gmail.com')  ->queue(new BookingMail($booking, $pickup_formateado));
+        // Mail::to('ag3mexico@gmail.com')
+        //     ->cc($ccEmails)
+        //     ->bcc('cantunberna@gmail.com')
+        //     ->queue(new BookingMail($booking, $pickup_formateado));
+
+        Mail::to('cantunberna@gmail.com')->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $booking], 201);
     }
 

@@ -81,7 +81,7 @@
                 <!-- customer information end -->
 
                 <!-- travel information start -->
-                @if($service === 'Aeropuerto a Hotel')
+                @if($service === __('Aeropuerto a Hotel'))
                 <div class="row form-section mb-4">
                     <h5 class="mt-2"><small class="number__section">02</small> {{__('informacion del viaje')}} </h5>
                         <h5 class="title-arrival mb-0">{{__('informacion llegada')}}</h5>
@@ -142,7 +142,7 @@
                         </div>
                 </div>
 
-                @elseif($service === 'Hotel a Aeropuerto')
+                @elseif($service === __('Hotel a Aeropuerto'))
                 <div class="row form-section mb-4">
                     <h5 class="mt-2"><small class="number__section">02</small>{{__('informacion del viaje')}}</h5>
                     <h5 class="title-arrival mb-0">{{__('informacion salida')}}</h5>
@@ -204,7 +204,7 @@
                         </div>
                 </div>
 
-                @elseif($service === 'Aeropuerto a Hotel a Aeropuerto')
+                @elseif($service === __('Aeropuerto a Hotel a Aeropuerto'))
                 <div class="row form-section mb-4">
                     <h5 class="mt-2"><small class="number__section">02</small> {{__('informacion del viaje')}}</h5>
                         <h5 class="title-arrival mb-0">{{__('informacion llegada')}}</h5>

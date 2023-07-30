@@ -100,11 +100,11 @@
                                     <li class="text-center sub_sen"><i class="fas fa-check"></i></li>
                                     <li class="text-center sub_red"><i class="fas fa-check"></i></li>
                                 </ul>
-                                <ul class="table-row mb-0">
+                                {{--  <ul class="table-row mb-0">
                                     <li class="mb-4">{{ __('serv_txt_siete') }}</li>
                                     <li class="text-center sub_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center sub_red"><i class="fas fa-check"></i></li>
-                                </ul>
+                                </ul>  --}}
                                 <ul class="table-row mb-0">
                                     <li></li>
                                     <li class="text-center price-eco sub_sen"><p class="prices"></p></li>
@@ -223,11 +223,11 @@
                                     <li class="text-center van_sen"><i class="fas fa-check"></i></li>
                                     <li class="text-center van_red"><i class="fas fa-check"></i></li>
                                 </ul>
-                                <ul class="table-row mb-0">
+                                {{--  <ul class="table-row mb-0">
                                     <li class="mb-4">{{ __('serv_txt_siete') }}</li>
                                     <li class="text-center van_sen"><i class="fas fa-times"></i></li>
                                     <li class="text-center van_red"><i class="fas fa-check"></i></li>
-                                </ul>
+                                </ul>  --}}
                                 <ul class="table-row mb-0">
                                     <li></li>
                                     <li class="text-center price-eco van_sen"><p class="prices"></p></li>
