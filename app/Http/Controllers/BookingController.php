@@ -153,7 +153,6 @@ class BookingController extends Controller
         //     $book->type_payment = 'Al llegar';
         // }
 
-
         /* NOTE En caso de requerir pickup por zona es necesario realizar la busqueda del destino */
         // if ($request->type_service == "Hotel a Aeropuerto")  { //Aeropuerto a Hotel (Origen - Destino)
         //     $obtain_zone = Hotel::where('hotel', $request->origin)
