@@ -127,10 +127,15 @@
                         <div class="col-sm-6 col-md-6 mb-1">
                             <label for="hour" class="form-label">{{__('hora de llegada')}}</label>
                             <div class="input-group">
-                                <span class="input-group-text" id="icon-hour"><i
-                                        class="fas fa-clock input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="hour" name="time_arrival" aria-describedby="icon-hour" value="{{ $pickup }}">
+                                    <span class="input-group-text" id="icon-hour">
+                                        <i class="fas fa-clock input__icon"></i>
+                                    </span>
+                                        <input readonly type="text" class="form-control" id="hour" name="time_arrival" aria-describedby="icon-hour" value="{{ $pickup }}" />
+                                    {{--  <span class="input-group-text" id="icon-info" data-toggle="tooltip" data-placement="right" title="">
+                                        <i id="tooltip_time_arrival" style="color: #FF8427" class="fas fa-info-circle"></i>
+                                    </span>  --}}
                             </div>
+
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
                             <label for="c_arrival" class="form-label">{{__('comentarios')}}</label>
@@ -189,9 +194,13 @@
                         <div class="col-sm-6 col-md-6 mb-1">
                             <label for="hour" class="form-label"> {{__('hora de salida')}} </label>
                             <div class="input-group">
-                                <span class="input-group-text" id="icon-hour"><i
-                                        class="fas fa-clock input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="hour" name="time_departure" aria-describedby="icon-hour" value="{{ $pickup }}">
+                                    <span class="input-group-text" id="icon-hour">
+                                        <i class="fas fa-clock input__icon"></i>
+                                    </span>
+                                        <input readonly type="text" class="form-control" id="hour" name="time_departure" aria-describedby="icon-hour" value="{{ $pickup }}">
+                                    {{--  <span class="input-group-text" id="icon-info" data-toggle="tooltip" data-placement="right" title="">
+                                        <i id="tooltip_time_departure" style="color: #FF8427" class="fas fa-info-circle"></i>
+                                    </span>  --}}
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
@@ -251,9 +260,13 @@
                         <div class="col-sm-6 col-md-6 mb-1">
                             <label for="hour" class="form-label"> {{__('hora de llegada')}} </label>
                             <div class="input-group">
-                                <span class="input-group-text" id="icon-hour"><i
-                                        class="fas fa-clock input__icon"></i></span>
-                                <input readonly type="text" class="form-control" id="hour" name="time_arrival" aria-describedby="icon-hour" value="{{ $pickup }}">
+                                <span class="input-group-text" id="icon-hour">
+                                    <i class="fas fa-clock input__icon"></i>
+                                </span>
+                                    <input readonly type="text" class="form-control" id="hour" name="time_arrival" aria-describedby="icon-hour" value="{{ $pickup }}">
+                                {{--  <span class="input-group-text" id="icon-info" data-toggle="tooltip" data-placement="right" title="">
+                                    <i id="tooltip_time_arrival" style="color: #FF8427" class="fas fa-info-circle"></i>
+                                </span>  --}}
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">
@@ -307,10 +320,13 @@
                         <div class="col-sm-6 col-md-6 mb-1">
                             <label for="hour" class="form-label"> {{__('hora de salida')}} </label>
                             <div class="input-group">
-                                <span class="input-group-text" id="icon-hour"><i
-                                        class="fas fa-clock input__icon"></i></span>
+                                <span class="input-group-text" id="icon-hour">
+                                    <i class="fas fa-clock input__icon"></i>
+                                </span>
                                 <input readonly type="text" class="form-control" id="hour" name="time_departure" aria-describedby="icon-hour" value="{{ $time_comeback }}">
-
+                                {{--  <span class="input-group-text" id="icon-info" data-toggle="tooltip" data-placement="right" title="">
+                                    <i id="tooltip_time_departure" style="color: #FF8427" class="fas fa-info-circle"></i>
+                                </span>  --}}
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 mb-4">

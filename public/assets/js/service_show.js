@@ -1,11 +1,15 @@
 $(document).ready(function(){
     service = $("#type_service").val();
     switch(service) {
-        case 'Aeropuerto a Hotel a Aeropuerto':
+        case locale_translate()[18]:
             $('.sub_sen').hide();
             $('.van_sen').hide();
         break;
-        case 'Hotel a Aeropuerto':
+        case locale_translate()[19]:
+            $('.sub_red').hide();
+            $('.van_red').hide();
+        break;
+        case locale_translate()[20]:
             $('.sub_red').hide();
             $('.van_red').hide();
         break;

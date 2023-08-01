@@ -149,14 +149,13 @@
         tippy('#tooltip_time', {
             content: '<ul><li>{!! __('booking.tooltip_services_ah') !!}<br></li><li>{!! __('booking.tooltip_services_ha') !!}<br></li><li>{!! __('booking.tooltip_services_aha') !!}</li></ul>',
             arrow: true,
-            animation: 'scale-subtle',
+            animation: 'scale-subtle', 
             allowHTML: true,
             theme: 'gradient',
             followCursor: true,
-
-
         });
     </script>
+
 
 
 {{--------------------- /*  SECTION[metodos pago] RadioButton para seleccionar el metodo de pago */ --------------------------}}

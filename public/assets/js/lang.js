@@ -19,7 +19,11 @@ function locale_translate(){
                     'IR',  //14
                     'Volver',  //15
                     'Continua con tu reserva!',  //16
-                    'Puedes volver elegir otro metodo de pago' //17
+                    'Puedes volver elegir otro metodo de pago', //17
+                    'Aeropuerto-Hotel-Aeropuerto', //18
+                    'Aeropuerto-Hotel',   //19
+                    'Hotel-Aeropuerto', //20
+                    'Hotel-Hotel'
                 ];
             }else if (locale == 'en') {
                 return  [
@@ -40,7 +44,11 @@ function locale_translate(){
                     'GO',
                     'Return',
                     'Continue with your reservation!',
-                    'You can return to choose another payment method'
+                    'You can return to choose another payment method',
+                    'Airport-Hotel-Airport', //18
+                    'Airport-Hotel',   //19
+                    'Hotel-Airport', //20
+                    'Hotel-Hotel'
                 ];
             }else if (locale == 'fr') {
                 return [
@@ -61,8 +69,11 @@ function locale_translate(){
                     'ALLER',
                     'Retourner',
                     'Continuez votre réservation!',
-                    'Vous pouvez revenir pour choisir un autre mode de paiement'
-
+                    'Vous pouvez revenir pour choisir un autre mode de paiement',
+                    'Aéroport-Hôtel-Aéroport', //18
+                    'Aéroport-Hôtel',   //19
+                    'Hôtel-Aéroport', //20
+                    'Hôtel-Hôtel'
                 ];
             }
 }
