@@ -100,8 +100,8 @@ class ToursController extends Controller
             ],
             4 => ['tour' => 'Calakmul, Campeche',
                     'price' => [
-                        'suburban'=> '',
-                        'van'=> '',
+                        'suburban'=> '19987.50',
+                        'van'=>'15346.50',
                 ]
             ],
             5 => ['tour' => 'Ek Balam - Las Coloradas',
@@ -121,7 +121,6 @@ class ToursController extends Controller
             $tours = array($list_tours[$id]);
             $tours = Arr::flatten($tours);
         }
-        //return $tours;
         $data['countries'] = Country::get(["name","id"]);
 
         return view('booking_tours', $data, compact('tours'));

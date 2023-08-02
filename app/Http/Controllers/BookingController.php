@@ -147,6 +147,7 @@ class BookingController extends Controller
 
     public function payment(Request $request)
     {
+        // return $request->all();
         // $lang_es = App::setLocale('es');
         $booking = Booking::create($request->all());
         // if ($request->type_payment === "Arrival" OR $request->type_payment === "Arrivée") {
@@ -187,12 +188,12 @@ class BookingController extends Controller
             ->queue(new BookingMail($booking, $pickup_formateado));
         App::setLocale('es');
 
-        Mail::to('ag3mexico@gmail.com')
-            ->cc($ccEmails)
-            ->bcc('cantunberna@gmail.com')
-            ->queue(new BookingMail($booking, $pickup_formateado));
+        // Mail::to('ag3mexico@gmail.com')
+        //     ->cc($ccEmails)
+        //     ->bcc('cantunberna@gmail.com')
+        //     ->queue(new BookingMail($booking, $pickup_formateado));
 
-        // $mail_test = Mail::to('cantunberna@gmail.com')->queue(new BookingMail($booking, $pickup_formateado));
+        $mail_test = Mail::to('cantunberna@gmail.com')->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $booking], 201);
     }
 

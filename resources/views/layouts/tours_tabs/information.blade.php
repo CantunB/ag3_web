@@ -126,7 +126,7 @@
                             <span class="input-group-text" id="icon-date"><i
                                     class="fas fa-calendar-alt input__icon"></i></span>
                             <input required style="background: #FFFFFF;" type="date" class="form-control selector"
-                                id="date_departure" name="d_departure" aria-describedby="icon-date"
+                                id="date_departure" name="date_departure" aria-describedby="icon-date"
                                 placeholder="{{ __('select_fecha') }}">
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                         <div class="input-group">
                             <span class="input-group-text" id="icon-hour"><i
                                     class="fas fa-clock input__icon"></i></span>
-                            <input required type="time" class="form-control" id="hour" name="t_departure"
+                            <input required type="time" class="form-control" id="hour" name="time_departure"
                                 aria-describedby="icon-hour" value="">
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                         <div class="input-group">
                             <span class="input-group-text" id="icon-comments"><i
                                     class="fas fa-comments input__icon"></i></span>
-                            <input type="text" class="form-control" id="c_arrival" name="c_departure"
+                            <input type="text" class="form-control" id="c_arrival" name="comments_departure"
                                 aria-describedby="icon-comments">
                         </div>
                     </div>
