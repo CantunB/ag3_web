@@ -178,23 +178,21 @@ class BookingController extends Controller
         $mail_client = Mail::to($request->email)->queue(new BookingMail($booking, $pickup_formateado));
         $lang_es = App::setLocale('es');
         /*  STUB[mailowners] - Envio de correo en modo produccion */
-        // $mail_owners = Mail::to($this->director)
-        //                 ->cc($this->ccEmails)
-        //                 ->bcc($this->owner)
-        //                 ->queue(new BookingMail($booking, $pickup_formateado));
+        $mail_owners = Mail::to($this->director)
+                        ->cc($this->ccEmails)
+                        ->bcc($this->owner)
+                        ->queue(new BookingMail($booking, $pickup_formateado));
         /* STUB[mailtest] Envio de correo para pruebas */
-        $mail_test = Mail::to($this->owner)->queue(new BookingMail($booking, $pickup_formateado));
+        // $mail_test = Mail::to($this->owner)->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $booking], 201);
     }
 
     public function voucher(Request $request)
     {
         $slug = $request->slug;
-        // $booking = Booking::with(['TypeUnit','Country','State'])->findOrFail($id);
         $booking = Booking::with(['TypeUnit','Country','State'])->where('slug',$slug)->first();
         $fileName =  $booking->slug . '.' . 'pdf' ;
         $pdf = public_path('booking/'.$fileName);
-
         return response()->download($pdf);
     }
 
@@ -202,12 +200,12 @@ class BookingController extends Controller
     {
         $quotes = Quote::create($request->all());
         /*  STUB[mailowners] - Envio de correo en modo produccion */
-        // $mail_owners = Mail::to($this->director)
-        //                 ->cc($this->ccEmails)
-        //                 ->bcc($this->owner)
-        //                             ->send(new QuoteMail($quotes));
+        $mail_owners = Mail::to($this->director)
+                        ->cc($this->ccEmails)
+                        ->bcc($this->owner)
+                                    ->send(new QuoteMail($quotes));
         /* STUB[mailtest] Envio de correo para pruebas */
-        $mail_test = Mail::to($this->owner)->queue(new BookingMail($booking, $pickup_formateado));
+        // $mail_test = Mail::to($this->owner)->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $quotes], 201);
         //return redirect()->route('index', App::getLocale());
     }
@@ -221,4 +219,7 @@ class BookingController extends Controller
         Mail::to('cantunberna@gmail.com')->send(new ExampleMail());
     }
 
+    /**VITANNI pagina anillos
+     *
+     */
 }
