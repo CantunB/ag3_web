@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Haruncpi\LaravelIdGenerator\IdGenerator;
+use Carbon\Carbon;
 
 class Booking extends Model
 {
@@ -74,10 +75,27 @@ class Booking extends Model
         return $this->belongsTo(State::class, 'state_id');
     }
 
+    /**
+     * Function to create automatic slug to bookings
+     * @return Haruncpi\LaravelIdGenerator\IdGenerator;
+     */
     public static function boot() {
         parent::boot();
         self::creating(function ($model) {
             $model->slug = IdGenerator::generate(['table' => 'bookings', 'field'=>'slug', 'length' => 8, 'prefix' =>'BOOK-']);
         });
+    }
+
+    /*
+    * REVIEW Obtenida la hora del servicio se hacen los calculos para obtener el pickup
+    * NOTE Los calculos se realizan dependiendo el servicio
+    */
+    public function pickup($type_service,$time)
+    {
+        if ($type_service ==  __('Hotel a Aeropuerto') || $type_service == __('Aeropuerto a Hotel a Aeropuerto')){
+            $time_formmated =  Carbon::parse($time);
+            $subtraction = $time_formmated->subHours(3);
+            return $pickup_converted = $subtraction->format('H:i:s');
+        }
     }
 }

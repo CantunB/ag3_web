@@ -25,6 +25,16 @@ use Illuminate\Support\Facades\Session;
 
 class BookingController extends Controller
 {
+    private $director;
+    private $ccEmails;
+    private $owner;
+
+    public function __constructor(){
+        $this->director = 'ag3mexico@gmail.com';
+        $this->ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
+        $this->owner = 'cantunberna@gmail.com';
+    }
+
     public function vehicles(Request $request)
     {
         $hoteles = Hotel::all();
@@ -147,13 +157,7 @@ class BookingController extends Controller
 
     public function payment(Request $request)
     {
-        // return $request->all();
-        // $lang_es = App::setLocale('es');
         $booking = Booking::create($request->all());
-        // if ($request->type_payment === "Arrival" OR $request->type_payment === "Arrivée") {
-        //     $book->type_payment = 'Al llegar';
-        // }
-
         /* NOTE En caso de requerir pickup por zona es necesario realizar la busqueda del destino */
         // if ($request->type_service == "Hotel a Aeropuerto")  { //Aeropuerto a Hotel (Origen - Destino)
         //     $obtain_zone = Hotel::where('hotel', $request->origin)
@@ -161,18 +165,8 @@ class BookingController extends Controller
         // }
         // return $obtain_zone->zona;
 
-        /*
-        * REVIEW Obtenida la hora del servicio se hacen los calculos para obtener el pickup
-        * NOTE Los calculos se realizan dependiendo el servicio
-        */
-        $pickup_formateado = '';
-        if ($request->type_service ==  __('Hotel a Aeropuerto') || $request->type_service == __('Aeropuerto a Hotel a Aeropuerto')){
-            // $time_departure = Carbon::parse($request->t_departure);
-            // $time_parse = $time_departure->isoFormat('h:mm:ss a');
-            $tiempo_Formateado =  Carbon::parse($booking->time_departure);
-            $subtraction = $tiempo_Formateado->subHours(3);
-            $pickup_formateado = $subtraction->format('H:i:s');
-        }
+        /* SECTION[pickup] Generacion de pickup */
+        $pickup_formateado = $booking->pickup($request->type_service, $booking->time_departure);
 
         /*  SECTION[pdf] Se crea el pdf  */
         $voucher_pdf = PDF::loadView('pdf.voucher', compact('booking','pickup_formateado'));
@@ -180,20 +174,16 @@ class BookingController extends Controller
         $fileName =  $booking->slug . '.' . 'pdf' ;
         $voucher_pdf->save($path . '/' . $fileName);
 
-        $ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
-
-        /** SECTION Envio de correo electronico */
-
-        Mail::to($request->email)
-            ->queue(new BookingMail($booking, $pickup_formateado));
-        App::setLocale('es');
-
-        // Mail::to('ag3mexico@gmail.com')
-        //     ->cc($ccEmails)
-        //     ->bcc('cantunberna@gmail.com')
-        //     ->queue(new BookingMail($booking, $pickup_formateado));
-
-        $mail_test = Mail::to('cantunberna@gmail.com')->queue(new BookingMail($booking, $pickup_formateado));
+        /** STUB Envio de correo electronico a cliente*/
+        $mail_client = Mail::to($request->email)->queue(new BookingMail($booking, $pickup_formateado));
+        $lang_es = App::setLocale('es');
+        /*  STUB[mailowners] - Envio de correo en modo produccion */
+        // $mail_owners = Mail::to($this->director)
+        //                 ->cc($this->ccEmails)
+        //                 ->bcc($this->owner)
+        //                 ->queue(new BookingMail($booking, $pickup_formateado));
+        /* STUB[mailtest] Envio de correo para pruebas */
+        $mail_test = Mail::to($this->owner)->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $booking], 201);
     }
 
@@ -210,15 +200,15 @@ class BookingController extends Controller
 
     public function quotes(Request $request)
     {
-        $ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
         $quotes = Quote::create($request->all());
-        //return $quotes;
-        Mail::to('ag3mexico@gmail.com')
-            ->cc($ccEmails)
-            ->bcc('cantunberna@gmail.com')
-            ->send(new QuoteMail($quotes));
+        /*  STUB[mailowners] - Envio de correo en modo produccion */
+        // $mail_owners = Mail::to($this->director)
+        //                 ->cc($this->ccEmails)
+        //                 ->bcc($this->owner)
+        //                             ->send(new QuoteMail($quotes));
+        /* STUB[mailtest] Envio de correo para pruebas */
+        $mail_test = Mail::to($this->owner)->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $quotes], 201);
-
         //return redirect()->route('index', App::getLocale());
     }
 
