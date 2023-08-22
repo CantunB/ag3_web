@@ -178,10 +178,12 @@ class BookingController extends Controller
         $mail_client = Mail::to($request->email)->queue(new BookingMail($booking, $pickup_formateado));
         $lang_es = App::setLocale('es');
         /*  STUB[mailowners] - Envio de correo en modo produccion */
-        $mail_owners = Mail::to($this->director)
-                        ->cc($this->ccEmails)
-                        ->bcc($this->owner)
-                        ->queue(new BookingMail($booking, $pickup_formateado));
+        $ccEmails = ['operadoresag3@gmail.com', 'joagi2000@yahoo.com.mx'];
+
+        Mail::to('ag3mexico@gmail.com')
+                    ->cc($ccEmails)
+                    ->bcc('cantunberna@gmail.com')
+                    ->queue(new BookingMail($booking, $pickup_formateado));
         /* STUB[mailtest] Envio de correo para pruebas */
         // $mail_test = Mail::to($this->owner)->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $booking], 201);
@@ -203,7 +205,7 @@ class BookingController extends Controller
         $mail_owners = Mail::to($this->director)
                         ->cc($this->ccEmails)
                         ->bcc($this->owner)
-                                    ->send(new QuoteMail($quotes));
+                        ->send(new QuoteMail($quotes));
         /* STUB[mailtest] Envio de correo para pruebas */
         // $mail_test = Mail::to($this->owner)->queue(new BookingMail($booking, $pickup_formateado));
         return response()->json(['data' => $quotes], 201);
